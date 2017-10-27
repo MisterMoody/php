@@ -2,44 +2,35 @@
 /* ===================================== */
 /* UNIVERSAL Styles ==================== */
 /* ===================================== */
-/**/
-.grid, .grid-2, .grid-3 {padding-bottom: 44px;}
 
-/**/
+/*
 *, *:before, *:after {
   box-sizing: border-box;
-}
-body {
-  margin: 0 8px;    /*Applies Stickyness @ Top & Bottom / Otherwise Apply height: 100vh; to .wrapper Class */
-	font-family: 'Raleway', sans-serif;  /* Try 'Lato' Font */
-  background-color: #fff;
-  transition: background-color .5s;
-  color: #444;
-}
-h1, h2, h3, h4, h5 p {margin: 0 0 1em 0;}
-h1, h2, h3, h4, h5 {text-align: center; font-variant: small-caps;}
-p {
-  text-align: justify;
-  padding-bottom: 1em;  /*Used to Clear Space Between ROWs*/
-}
-a {color: #000;}
-/*pre {white-space: pre-wrap;}*/
-/**/
-/*Align Code-Block within an <ol> == Not Suitable 'IF' Outside*/
-pre {margin-left: -141px; margin-top: -24px; margin-bottom: -44px;}
-code {
-  font-family: monospace;
-  font-size: 16px;
-  /*line-height: 140%;*/
-}
-code:hover {color: red;}
-/**/
-/*NOT = Find a Solution to Indent Sentences*/
-/*
-c1 {text-indent: 4px ;}
-c2 {text-indent: 8px;}
-c3 {text-indent: 12px;}
+} 
 */
+/***************************************/
+/***************************************/
+
+/*FONT*/
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  src: url('raleway_thin-webfont.eot'); /*IE9 Compat Modes*/
+  src: url('raleway_thin-webfont.woff');  
+  src: url('raleway_thin-webfont.otf');
+  src: url('raleway_thin-webfont.svg');
+}
+
+/*  */
+/*PAGE OVERFLOW - Hides Horizontal-Overflow & SCROLLBAR*/
+body {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  padding: 1em;
+}
+/*  */
 
 
 /* ===================================== */
@@ -53,100 +44,21 @@ c3 {text-indent: 12px;}
 /* <NAV> CONTAINER ============================= */
 /* ============================================= */
 /**/
-/**/
-/*Unordered List*/
-ul {
-  list-style-type: none; 
-  margin: 0;
-  padding: 0;
-}
-/*Nav List-Items*/
-li a {
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0 16px 0 0;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-li a:hover {
-  color: #ccc;
-}
-li a.active {
-  text-decoration: line-through;
-  text-decoration-color: #ccc;
-  text-decoration-style: dotted;
-}
-/*WebDev Logo*/
-ul > li > a.navLogo {
-  margin: 0 24px 0 0;
+/*NAVIGATION-BACKGROUND COLOR*/
+.navbar {
+  background: #fff;
 }
 /**/
-/**/
-/*Sidebar*/
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-#main {
-  transition: margin-left .5s;
-  position: fixed;
-  top: 8px;
-  right: 4px;
-}
-/* ============================================= */
-/* ============================================= */
 
-/*Ordered-List Styles*/
-ol > li {margin: 0 24px 0 0;}
-ol {
-  margin: 0 53px;
-  font-size: 2.2vw;
-  font-family: monospace;
-  }
-/*OL Paragraph Styles*/
-p.notes {
-  font-size: 1.8vw;
+/* ============================================= */
+/* ============================================= */
+.nav {
+  text-align: center;
 }
 
 /* ============================================= */
 /* ============================================= */
-.table {
-  /*overflow: auto;
-  display: table;
-  display: block;*/
-  width: 100%;
-  margin: 100px;
-}
-.tr {
-  height: 100px;
-}
+
 
 
 /* ===================================== 
@@ -161,143 +73,12 @@ p.notes {
 
 /*MEDIA QUERIES*/
 /* @MIN-Width: 768 *****************************************/
-@media screen and (min-width: 768px) {
-  body {}
-  /**/
-  /**/
-  /*Universal Styles*/
-  h1, h2, h3, h4, p {
-    margin: 0 53px;
-    font-size: 2.6vw;
-  }
-  /**/
-  /**/
-  /*Nav & Sidebar Styles*/
-  ul {
-    display: inline;
-    list-style-type: none; 
-    font-size: 1.5em;
-    margin: 0;
-    padding: 0;
-  }
-  /*Page Alignment*/
-  ul > li {
-    margin: 10px 0 44px 16px;
-  }
-  /*Nav List-Items*/
-  li a {
-    display: block;
-    float: left;
-    /*text-align: center;*/
-    margin: 0 0 0 32px;
-    padding: 0 16px 0 32px;
-    text-decoration: none;
-    cursor: crosshair;
-  }
-  li a:hover {
-    color: #000;
-  }
-  /**/
-  /*Styles on Hover*/
-  li > a {
-    position: relative;
-  }
-  li > a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #ccc;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.5s ease-in-out 0s;
-    transition: all 0.5s ease-in-out 0s;
-  }
-  li > a:hover::before {
-    visibility: visible;
-    -webkit-transform: scaleX(0.5);
-  }
-    /*WebDev Logo*/
-  ul > li > a.navLogo {
-    width: 244px;
-  }
-  ul > li > a.navLogo:hover {
-    text-decoration: none;
-      transform: scaleX(0);
-  }
-
-  /**/
-  /*Sidebar*/
-  /**/
-  .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-  }
-  .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-  }
-  .sidenav a:hover {
-      color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-  }
-  #main {
-      transition: margin-left .5s;
-      padding: 16px;
-  }
-  
-  /**/
-  /*Ordered-List Styles*/
-  /**/
-  ol > li {margin: 0 24px 0 0;}
-  ol {
-    margin: 0 53px;
-    font-size: 2.2vw;
-    font-family: monospace;
-    }
-  p {font-size: 2vw;}
-  /*OL Paragraph/Sub-Ol Styles*/
-  p.notes, li.notes {
-    font-size: 1.8vw;
-    padding-bottom: 0.5em;
-    text-align: left;
-    }
-  span.highlight {
-    background-color: #eee;
-    font-style: italic;
-    border-radius: 2px;
-  }
-  /*OL TABLE Style*/
-}
-
+@media screen and (min-width: 768px) {}
 /***********************************************************/
 
 
 /* @MIN-Width: 950 *****************************************/
-@media screen and (min-width: 950px) {
-
-}
+@media screen and (min-width: 950px) {}
 /***********************************************************/
 
 
