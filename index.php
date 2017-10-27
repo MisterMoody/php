@@ -1,3 +1,9 @@
+<?php
+$date = date_default_timezone_set('EST');
+
+?>
+
+<!-- ********************************************************* -->
 <!DOCTYPE html>
 <html lang="en">
   
@@ -7,12 +13,20 @@
     <meta name="description" content="PHP Self-Directing Guidebook">
     <meta name="keywords" content="Mister Moody, Web Design, PHP, CSS, HTML">
     <meta name="author" content="Ray Moody">
+    <meta name="twitter:title" content="@Mister_Moody" />        
+    <meta name="twitter:site" content="http://mistermoody.com" />
+    <!-- Browser Tab Icon -->
+    <!--<link rel="shortcut icon" href="img/me.jpg" type="img/m" class="rounded">--> 
+    <!-- TITLE -->
     <title>PHP 101</title>
-    <!-- Gridlex GRID CDN **(REQUIRED)** -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
-    <!-- Custom MAIN-PAGE CSS Grid & Styles -->   
-    <link rel="stylesheet" href="styles.css"> 
-    <!-- Font -->       
+    <!-- *********** CSS Implementations ************ -->
+    <!-- BOOTSTRAP *CDN* Compiled & Minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- CUSTOM Styles -->   
+    <link rel="stylesheet" href="styles.css">        
+    <!-- Font Awesome ICONS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTS -->       
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
 	  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Raleway" rel="stylesheet">
   </head>
@@ -21,34 +35,51 @@
     <!-- ********************************************************* -->
     <!-- *************** <NAVIGATION> CONTAINER[S] *************** -->
     <!-- ********************************************************* -->
-    <!-- MAIN-NAV -->
-    <nav class="grid" id="">
-      <div class="col_sm-12_sm-6">
-          <ul class="siteNav">
-            <li><a class="navLogo">PHP 101</a></li>
-            <li><a href="design.html">Basics</a></li>
-            <li><a href="develop.html">Advanced</a></li>
-            <li><a href="projectmanagement.html">Scripts</a></li>
-            <li id="main"  style="background-color: #fff;">
-              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-            </li>
-          </ul>
+    <nav class="navbar sticky-top navbar-expand-md navbar-toggleable-sm navbar-light"> 
+      <a class="navbar-brand"><span class="font-weight-bold navPhone pl-1">PHP 101</span>
+        <!--<span class="font-weight-bold navPhone pl-1"><i class="fa fa-phone d-lg-inline-block"></i> +1.502.558.9240 </span>-->
+        <!--<img src="..." width="30" height="30" class="d-inline-block align-top" alt="">-->
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
+          <li class="nav-item active text-right">
+            <a class="nav-link" href="index.html"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">xxx</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" src="#" href="moodyCV.docx" alt="Download My Resume">yyy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">zzz</a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">502WEST</a>
+              <a class="dropdown-item" href="#">CLIL</a>
+            </div>
+          </li>
+          --> <!-- HIDDEN Nav Items -->
+        </ul>
       </div>
-      
-    </nav>
-    <!-- SIDEBAR -->
-    <nav id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#intro">Introduction</a>
-      <a href="#setup">Getting Started</a>
-      <a href="#vc">Version Control</a>
-      <a href="#">Resources</a>
-    </nav>
+     </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
-
+    
     
     <!-- ********************************************************* -->
+    <!-- *************** <MAIN> CONTAINER ************************ -->
     <!-- ********************************************************* -->
     <!-- 1-COL -->
     <!--<div class="grid">
@@ -61,33 +92,95 @@
       <div class="col-12"></div>
     </div>-->
     <!-- -->
-    <!-- INTRODUCTION -->
-    <div class="grid">
-      <div class="col-12">
-        <h2 id="intro">Introduction to PHP</h2>
+    <div class="container">
+      <!-- -->
+      <!-- -->
+      <!-- INTRODUCTION-->
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center font-weight-bold mb-2">Introduction to PHP</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+        </div>
       </div>
       <!-- -->
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+      <!-- -->
+      <!-- BUILD a LOCAL ENVIRONMENT -->
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center font-weight-bold mb-2">Build a Local Environment</h1>
+          <p>Work on any web project is made simple when working in a local environment as you can save time by being able to work offline while testing the visual display and functionality of an application. When working with PHP, there are a few tools that you can use to meet the needs for said objective and this involves using a &#40;1&#41; virtual machine that will enable testing of user input that will be stored in a database, &#40;2&#41; an actual database and &#40;3&#41; an administrative interface to control data within the database. <i>*Explore the tabs below to learn more about related technologies*</i></p>
+        </div>
+        <div class="col-12 mb-3">
+          <nav class="nav nav-tabs" id="myTab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-xampp-tab" data-toggle="tab" href="#nav-xampp" role="tab" aria-controls="nav-xampp" aria-selected="true"><b>&#40;1&#41; XAMPP</b></a>
+            <a class="nav-item nav-link" id="nav-mysql-tab" data-toggle="tab" href="#nav-mysql" role="tab" aria-controls="nav-mysql" aria-selected="false"><b>&#40;2&#41; MySQL</b></a>
+            <a class="nav-item nav-link" id="nav-phpadmin-tab" data-toggle="tab" href="#nav-phpadmin" role="tab" aria-controls="nav-phpadmin" aria-selected="false"><b>&#40;3&#41; phpMyAdmin</b></a>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <!-- -->
+            <div class="tab-pane fade show active" id="nav-xampp" role="tabpanel" aria-labelledby="nav-xampp-tab">
+              <p>XAMPP is a local virtual machine that acts as a local web server in your computer. </p>
+              <!--<ol type="a">
+                <li>aaaaaaaa</li>
+                <li>bbbbbbbb</li>
+                <li>cccccccc</li>
+              </ol>
+                <p>Display Errors via <code>C:/xampp/index.php</code> and open <code>php.ini</code> File.</p>-->
+              <p>Donec ut ligula eget dolor pellentesque vestibulum vel in elit.</p>
+            </div>
+            <!-- -->
+            <div class="tab-pane fade" id="nav-mysql" role="tabpanel" aria-labelledby="nav-mysql-tab">
+              <p>MySQL is an open-source relational database management system based on the Structured Query Language designed for managing data held in a RDBMS. </p>
+              <!--<ol type="a">
+                <li>aaaaaaaa</li>
+                <li>bbbbbbbb</li>
+                <li>cccccccc</li>
+              </ol>
+              <p>Donec ut ligula eget dolor pellentesque vestibulum vel in elit.</p>-->
+            </div>
+            <!-- -->
+            <div class="tab-pane fade" id="nav-phpadmin" role="tabpanel" aria-labelledby="nav-phpadmin-tab">
+              <p>phpMyAdmin is an amazing administrative tool developers utilize to manage MySQL databases. It features an intuitive web interface to control frequently used operations that include managing databases, indexes, users, persimissions and so much more. Anything that you might need your database for such as the import and export of SQL data, transforming dation into another format and creating complex Queries. <i>**It should be noted that MySQL has a similiar tool known as 'Workbenc.h'</i></p>
+              <!--<ol type="a">
+                  <li>aaaaaaaa</li>
+                  <li>bbbbbbbb</li>
+                  <li>cccccccc</li>
+                </ol>-->
+              <p>Access phpMyAdmin via  <code>C:/xampp/bin/phpMyAdmin/config.inc.php</code></p>
+              <p>phpMyAdmin for Xampp: https://stackoverflow.com/questions/17759776/how-to-get-login-option-for-phpmyadmin-in-xampp</p>
+              <p><b><i>*Step-by-Step Setup Coming Soon*</i></b></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <h4>Summary</h4>
+          <p>Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+        </div>
+        <!-- -->
+        <div class="col-lg-12"></div>
+        
+        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
+        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
       </div>
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+      
+      
+      <!-- -->
+      <!-- -->
+      <!-- -->
+      <!-- -->
+      
+      
+      <!-- RESOURCES -->
+      <div class="col-lg-12">
+        <h4>Resources</h4>
+        <ol>
+          <li>Official <a href="http://php.net">PHP</a></li>
+          <li>PHP <a href="http://foundationphp.com/tutorials.php">Tutorials</a></li>
+        </ol>
       </div>
+      <!-- -->
     </div>
-    <!-- -->
-    <!-- -->
-    <!-- GETTING STARTED -->
-    <div class="grid">
-      <div class="col-12">
-        <h3 id="setup">Getting Started</h3>
-      </div>
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
-      </div>
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
-      </div>
-    </div>
+    
     <!-- -->
     <!-- -->
     <!-- Version Control -->
@@ -96,13 +189,6 @@
         <h3 id="vc">Version Control</h3>
       </div>
       <div class="col-12">
-        <p><span><a href="https://github.com">Github</a></span> to maintain project code is a reliable version control system that I use to maintain project code, but it can also be used as an <i>SFTP Client</i>, enabling developers to load their project files synchronously. Here, I only cover installation and setup.</p>
-        
-        <h4>Git Account Configuration &amp; Customization</h4>
-        <p><span><a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Setup</a></span> and <span><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">Customize</a></span> a Git account by following some simple instructions.</p>
-        
-        <h4>Utilizing a Repositiory</h4>
-        <p>After setting up and configuring your account, you can now begin storing code. The list below gives details as to the entire process of creating, adding, commiting and pushing code from your IDE to your repo. </p>
         <ol>
           <li>Create the Repo</li>
           <p class="notes">From your account, Click <span class="highlight">New repository</span>.  Give the repo a name and brief description of the project objective. You want to <i>Initialize the Repo with a README</i> only if you are building a code from scratch, which is exactly what should be done here.</p>
@@ -122,30 +208,32 @@
           <p class="notes">That's it! Follow these three commands to modify any file in the future.  As well, there are several other commands that can be useful throughout your workflow such as <span class="highlight">Removing Files</span> or <span class="highlight">Cleaning the repo</span>, and this <span><a href="http://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></span> can show you how!</p>
         </ol>
       </div>
-      <div class="col-12"></div>
     </div>-->
     <!-- -->
     <!-- -->
 
+    <!-- ************ --> <!-- Use a Font-Awesome heart 'fa fa-heart' -->
+    <!-- ** FOOTER ** -->
+    <div class="container">
+      <div class="row no-gutters clearfix">
+        <div class="col-6">
+          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <span>&#9829;</span> by Mister Moody.</h6>
+        </div>
+        <div class="col-6">
+          <h6 class="text-right"><?php echo date("D d M "); echo date(" g:i a T"); ?></h6>
+        </div>
+      </div>
+    </div>
+    <!-- END of FOOTER --> 
+    <!-- ************ -->
+    
     <!-- *********************************************************************** -->
     <!-- *********************************************************************** -->
-
+    <!-- ** jQuery, Popper & BOOTSTRAP *CDN* Compiled and Minified JavaScript ************ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- ********************************************************************************* -->
     
-    
-    <!-- JS 4 Sidebar-Navigation -->
-    <script>
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-        document.body.style.backgroundColor = "white";
-    }
-    </script>
-     
   </body>
 </html>
