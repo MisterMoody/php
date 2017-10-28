@@ -121,7 +121,7 @@ $date = date_default_timezone_set('EST');
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
-          <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Writing Variables</a>
+          <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Variables &amp; Data&#45;Types</a>
           <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
@@ -147,12 +147,39 @@ $date = date_default_timezone_set('EST');
                 &#60;&#47;footer&#62;
                 </code>
                 <br>
+                <i>Learn more about the <a href="php.net/manual/en/function.date.php">date ()</a> Function.</i>
+                <br>
+                <br>
                 &#40;2&#41; The second method allows you to import a <code>xxx.php</code> File directly from its <i>Root</i> Folder using the Include function, like so: <code>&#60;?php include 'inc/xxxxx.php'?&#62;</code> where inc is the Folder where all scripts are placed.</p>
             </div>
             <!-- Variables -->
-            <div class="tab-pane fade" id="v-pills-variables" role="tabpanel" aria-labelledby="v-pills-variables-tab">Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus</div>
-            <!-- -->
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">In libero purus, volutpat ut lobortis vitae</div>
+            <div class="tab-pane fade" id="v-pills-variables" role="tabpanel" aria-labelledby="v-pills-variables-tab">
+              <p>All <i>Variables</i> begin with <code>&#36;</code> and be followed by an <code>&#95;</code> or a letter. Names themselves are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.
+              <br>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.
+              <br><i>Learn more about the <a href="https://www.w3schools.com/php/php_variables.asp">Variables</a>.</i>
+              </p>
+              
+              <p>Variables can store different types of data which includes Strings, Integers, Floats, Booleans, Arrays and Objects. You can use the <code>var&#95;dump&#40;x&#41;</code> Function to <i>return the data&#45;type</i> in the console.</p>
+              <ol>
+                <li><i>Strings</i> are a <i>sequence of characters</i> and are always encapsulated with single&#45;quotes <code>&#39;xxx&#39;</code> or double &#45;quotes <code>&#34;xxx&#34;</code>.</li>
+                <li><i>Integers</i> are <i>non&#45;decimal numbers</i> <i>decimal numbers</i> <code>1.52</code> that can be positive or negative.</li>
+                <li><i>Floats</i> are <i>decimal numbers</i> <code>1.52</code>  that can be positive or negative.</li>
+                <li><i>Booleans</i> are often used in conditional testing and represent if something is <code>true</code> or <code>false</code>.</li>
+                <li><i>Arrays</i> store multiple&#45;values into a single variable <code>&#36;cars &#61; array&#40;&#34;Toyota&#34;&#34;Honda&#34;&#34;Nissan&#34;&#41;;</code>.</li>
+                <li><i>Objects</i> store data then provides information on how to process that data.</li>
+              </ol>
+              <p>You can combine multipe variables via <i>Concatenation</i> 
+                <br><code>&#36;string &#61; Ask . &#39;&#36;name&#39; . &#39;for the answer&#39;</code>
+              
+                <br><i>Learn more about <a href="https://www.w3schools.com/php/php_datatypes.asp">Data&#45;Types</a> 
+                <sup><a href="http://php.net/manual/en/language.types.string.php">1</a></sup> <sup><a href="http://php.net/manual/en/function.var-dump.php">2</a></sup> <sup><a href="http://php.net/manual/en/function.is-int.php">3</a></sup>.</i>
+              </p>
+            </div>
+            <!-- Operators -->
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            
+            <br><i>Learn more about <sup><a href="http://php.net/manual/en/language.operators.string.php">Operators</a></sup>.</i>
+            </div>
             <!-- -->
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Sed non finibus nibh, eu rhoncus purus</div>
             
