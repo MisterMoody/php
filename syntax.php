@@ -120,16 +120,17 @@ $date = date_default_timezone_set('EST');
       <div class="row">
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
+          <a class="nav-link" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
           <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Variables &amp; Data&#45;Types</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link active" id="v-pills-operators-tab" data-toggle="pill" href="#v-pills-operators" role="tab" aria-controls="v-pills-operators" aria-selected="false">Operators &amp; Logic</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <!--<a class="nav-link" id="v-pills-xxxxxxx-tab" data-toggle="pill" href="#v-pills-xxxxxxx" role="tab" aria-controls="v-pills-xxxxxxx" aria-selected="false">xxxxx</a>-->
         </div>
         </div>
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
             <!-- Implement PHP -->
-            <div class="tab-pane fade show active" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
+            <div class="tab-pane fade" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
               <p>When creating a PHP file, it is vital to use the <code>.php</code> File Extension. Once you have established your template, you initiate a PHP script by invoking a  <i>Code Block</i>, which is essentially a container for the functionality being implemented.</p>
               <p>This is how you write a code block: <code>&#60;?php...?&#62;. </code>The code written here will produce the functionality of your objective. You can <i>Display a Message</i> &#40;ie results&#41; in the browser by using <code>echo 'xxx';</code> or <code>print 'xxx';</code>, but there are differences.<sup><a href="https://www.w3schools.com/php/php_echo_print.asp"> 1 </a><a href="https://www.phptpoint.com/php-echo-print"> 2 </a></sup></p> 
               <p>It is important to use <i>Comments</i> with your code to properly maintain it. When structuring my comments, I prefer using a <i>Single&#45;Line Comment</i>  <code>&#47;&#42;&#42;&#47;</code> for simple explanations and for more elaborate explanations I utilize a <i>Doc&#45;Block</i>, which is a Single&#47;Line Comment that uses multiple lines of comment and where each line begins with an <code>&#42;</code>.</p>
@@ -147,12 +148,14 @@ $date = date_default_timezone_set('EST');
                 &#60;&#47;footer&#62;
                 </code>
                 <br>
+                In the previous code, the <code>date&#40;&#41;</code> Function would yield this result: <i><b><?php echo date('g i a T') ?></b></i>.
+                <br>
                 <i>Learn more about the <a href="php.net/manual/en/function.date.php">date ()</a> Function.</i>
                 <br>
                 <br>
                 &#40;2&#41; The second method allows you to import a <code>xxx.php</code> File directly from its <i>Root</i> Folder using the Include function, like so: <code>&#60;?php include 'inc/xxxxx.php'?&#62;</code> where inc is the Folder where all scripts are placed.</p>
             </div>
-            <!-- Variables -->
+            <!-- Variables & Data-Types -->
             <div class="tab-pane fade" id="v-pills-variables" role="tabpanel" aria-labelledby="v-pills-variables-tab">
               <p>All <i>Variables</i> begin with <code>&#36;</code> and be followed by an <code>&#95;</code> or a letter. Names themselves are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.
               <br>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.
@@ -176,12 +179,98 @@ $date = date_default_timezone_set('EST');
               </p>
             </div>
             <!-- Operators -->
-            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            
-            <br><i>Learn more about <sup><a href="http://php.net/manual/en/language.operators.string.php">Operators</a></sup>.</i>
+            <div class="tab-pane fade show active" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
+              <p><i>Operators</i> are used to <i>perform operations on variables and values</i>. </p>
+              <ol>
+                <li><i>Assignment Operators</i> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code></li>
+                <p></p>
+                <li><i>Arithmetic Operators</i> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.
+                  <table style="width: 100%;"><tr>
+                      <th>x + y</th>
+                      <th>x - y</th>
+                      <th>x * y</th>
+                      <th>x / y</th>
+                    </tr>
+                    <tr>
+                      <td><code>&#36;x <b>&#43;&#61;</b> 2;</code></td>
+                      <td><code>&#36;x <b>&#45;&#61;</b> 2;</code></td>
+                      <td><code>&#36;x <b>&#42;&#61;</b> 2;</code></td>
+                      <td><code>&#36;x <b>&#47;&#61;</b> 2;</code></td>
+                    </tr>
+                  </table>                  
+                </li>
+                <p></p>
+                <li><i>Comparison Operators</i> are used to compare the values of variables and yield a result. 
+                  <table style="width: 100%;">
+                    <tr>
+                      <th>equal to</th>
+                      <th>not equal</th>
+                      <th>identical</th>
+                      <th>not identical</th>
+                    </tr>
+                    <tr>
+                      <td><code>&#61;&#61;</code></td>
+                      <td><code>&#33;&#61;</code></td>
+                      <td><code>&#61;&#61;&#61;</code></td>
+                      <td><code>&#33;&#61;&#61;</code></td>
+                    </tr>
+                    <tr>
+                      <th>greater than</th>
+                      <th>greater or equal to</th>
+                      <th>less than</th>
+                      <th>less or equal to</th>
+                    </tr>
+                    <tr>
+                      <td><code>&#62;</code></td>
+                      <td><code>&#62;&#61;</code></td>
+                      <td><code>&#60;</code></td>
+                      <td><code>&#60;&#61;</code></td>
+                    </tr>
+                  </table>
+                </li>
+                <p></p>
+                <li><i>Logical Operators</i> are used to combine <i>Conditional statements</i>.
+                  <table style="width: 100%;"><tr>
+                      <th>and</th>
+                      <th>or</th>
+                      <th>not</th>
+                    </tr>
+                    <tr>
+                      <td><code>&amp;&amp;</code></td>
+                      <td><code>&#124;&#124;</code></td>
+                      <td><code>&#33;</code></td>
+                    </tr>
+                  </table>
+                </li>
+                  <i>Learn more about <a href="http://php.net/manual/en/language.operators.php">Operators</a>  <sup><a href="http://php.net/manual/en/language.operators.arithemetic.php">1</a></sup> 
+                <sup><a href="http://php.net/manual/en/language.operators.comparison.php">2</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">3</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">4</a></sup> <sup><a href="https://www.w3schools.com/php/php_operators.asp">5</a></sup>.</i>
+              </ol>
+              
+              <p><i>Logic</i> is how a <i>control structure</i> is devised based on a given condition. </p>
+              <ol>
+                <li><i>xxx</i> .... </li>
+                <p></p>
+                <li><i>Logical Operators</i> are used to combine <i>Conditional statements</i>.
+                  <table style="width: 100%;"><tr>
+                      <th>and</th>
+                      <th>or</th>
+                      <th>not</th>
+                    </tr>
+                    <tr>
+                      <td><code>&amp;&amp;</code></td>
+                      <td><code>&#124;&#124;</code></td>
+                      <td><code>&#33;</code></td>
+                    </tr>
+                  </table>
+                </li>
+                  <!--<i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Logic</a>  <sup><a href="https://www.w3schools.com/php/php_if_else.asp">1</a></sup> 
+                <sup><a href="http://php.net/manual/en/language.php">2</a></sup> <sup><a href="http://php.net/manual/en/language.php">3</a></sup> <sup><a href="http://php.net/manual/en/language.php">4</a></sup> <sup><a href="http://php.net/manual/en/language.php">5</a></sup>.</i>-->
+              </ol>
             </div>
             <!-- -->
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Sed non finibus nibh, eu rhoncus purus</div>
+            <!-- -->
+            <!--<div class="tab-pane fade" id="v-pills-xxxxx" role="tabpanel" aria-labelledby="v-pills-xxxxx-tab">Sed non finibus nibh, eu rhoncus purus</div>-->
             
           </div>
         </div>
