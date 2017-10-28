@@ -120,24 +120,43 @@ $date = date_default_timezone_set('EST');
       <div class="row">
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-codeblock-tab" data-toggle="pill" href="#v-pills-codeblock" role="tab" aria-controls="v-pills-codeblock" aria-selected="true">Code Block</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link active" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
+          <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Writing Variables</a>
           <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
         </div>
         </div>
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-codeblock" role="tabpanel" aria-labelledby="v-pills-codeblock-tab">
-            When creating a PHP file, it is vital to use the <code>.php</code> File Extension. <br>&#40;<i>This script file can then be run in the console for testing</i>&#41;.
-            <br>Once you have established your template, you can begin writing PHP. 
-            <br>Writing a script begins and ends with a <i>Code Block</i>, which is essentially a container. 
-            <p>This is how you write a code block: <code>&#60;?php...?&#62;</code></p> 
+            <!-- Implement PHP -->
+            <div class="tab-pane fade show active" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
+              <p>When creating a PHP file, it is vital to use the <code>.php</code> File Extension. Once you have established your template, you initiate a PHP script by invoking a  <i>Code Block</i>, which is essentially a container for the functionality being implemented.</p>
+              <p>This is how you write a code block: <code>&#60;?php...?&#62;. </code>The code written here will produce the functionality of your objective. You can <i>Display a Message</i> &#40;ie results&#41; in the browser by using <code>echo 'xxx';</code> or <code>print 'xxx';</code>, but there are differences.<sup><a href="https://www.w3schools.com/php/php_echo_print.asp"> 1 </a><a href="https://www.phptpoint.com/php-echo-print"> 2 </a></sup></p> 
+              <p>It is important to use <i>Comments</i> with your code to properly maintain it. When structuring my comments, I prefer using a <i>Single&#45;Line Comment</i>  <code>&#47;&#42;&#42;&#47;</code> for simple explanations and for more elaborate explanations I utilize a <i>Doc&#45;Block</i>, which is a Single&#47;Line Comment that uses multiple lines of comment and where each line begins with an <code>&#42;</code>.</p>
+              <p>Finally, there are two ways to <i>Inject PHP</i> into an HTML File.
+                <br>&#40;1&#41; The first method is to write the <i>Variables</i> above the <code>&#60;&#33;DOCTYPE html&#62;</code> then invoke a <i>Code Block</i> on the <i>hmtl Tag</i> that you want to use the Variable and <i>Display the Message</i>. 
+                <code>
+                <br>&#60;?php
+                &#36;date = date&#95;default&#95;timezone&#95;set&#40;&#39;EST&#39;&#40;;
+                ?&#62; 
+                <br>....
+                <br>&#60;&#33;DOCTYPE html&#62;
+                <br>....
+                <br>&#60;footer&#62; 
+                &#60;?php echo &#36;date&#40;&#34;g i a T&#34;&#41; ?&#62; 
+                &#60;&#47;footer&#62;
+                </code>
+                <br>
+                &#40;2&#41; The second method allows you to import a <code>xxx.php</code> File directly from its <i>Root</i> Folder using the Include function, like so: <code>&#60;?php include 'inc/xxxxx.php'?&#62;</code> where inc is the Folder where all scripts are placed.</p>
+            </div>
+            <!-- Variables -->
+            <div class="tab-pane fade" id="v-pills-variables" role="tabpanel" aria-labelledby="v-pills-variables-tab">Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus</div>
+            <!-- -->
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">In libero purus, volutpat ut lobortis vitae</div>
+            <!-- -->
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Sed non finibus nibh, eu rhoncus purus</div>
+            
           </div>
-          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus</div>
-          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">In libero purus, volutpat ut lobortis vitae</div>
-          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Sed non finibus nibh, eu rhoncus purus</div>
-        </div>
         </div>
       </div>
       <!-- -->
@@ -151,7 +170,7 @@ $date = date_default_timezone_set('EST');
         <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>-->
       
       
-      <!-- Vertical Tabs for PHP Syntax -->
+      <!-- Vertical Tabs -->
       <!--<div class="row">
         <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">Writing PHP</h1>
@@ -182,7 +201,7 @@ $date = date_default_timezone_set('EST');
       
       
       <!-- RESOURCES -->
-      <div class="row">
+      <!--<div class="row">
         <div class="col-lg-12">
           <h4>Resources</h4>
           <ol>
@@ -191,7 +210,7 @@ $date = date_default_timezone_set('EST');
             <li>PHP <a href="http://foundationphp.com/tutorials.php">Tutorials</a></li>
           </ol>
         </div>
-      </div>
+      </div>-->
       <!-- -->
     </div>
     
