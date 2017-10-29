@@ -232,6 +232,42 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
       
+       <!-- Unit Converter: Milies to Kilometers -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <code>
+            &#60;?php
+            <br>&#36;miles &#61; 2.5;
+            <br>&#36;mile_to_km &#61; 1.60934;
+            <br>&#36;kilometers &#61; &#36;miles &#42; &#36;mile_to_km;
+            <br>
+            <br>echo &#34;Distance:&#34;;
+            <br>echo &#34;&#36;miles&#34;;
+            <br>echo &#34;miles &#61; &#34;;
+            <br>echo &#34;&#36;kilometers&#34;;
+            <br>echo &#34;km&#34;;
+            <br>?&#62;
+          </code>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <h3><a href="">Unit Converter: Miles to Kilometers</a></h3>
+          <p>This script uses a <i>conditional statement</i> that converts Miles to Kilometers and will <code>output</code> the following results:</p>
+          <?php 
+          
+          $miles = 2.5;
+          $mile_to_km = 1.60934;
+          $kilometers = $miles * $mile_to_km;
+          
+          echo "<p>Distance: ";
+          echo $miles;
+          echo " miles = ";
+          echo $kilometers;
+          echo " km</p>";
+          ?>
+          <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
+        </div>
+      </div>
       
       <!-- RESOURCES -->
       <div class="row">
