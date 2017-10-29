@@ -178,7 +178,7 @@ $date = date_default_timezone_set('EST');
                 <sup><a href="http://php.net/manual/en/language.types.string.php">1</a></sup> <sup><a href="http://php.net/manual/en/function.var-dump.php">2</a></sup> <sup><a href="http://php.net/manual/en/function.is-int.php">3</a></sup>.</i>
               </p>
             </div>
-            <!-- Operators -->
+            <!-- Operators & Logic -->
             <div class="tab-pane fade show active" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
               <p><i>Operators</i> are used to <i>perform operations on variables and values</i>. </p>
               <ol>
@@ -246,25 +246,35 @@ $date = date_default_timezone_set('EST');
                 <sup><a href="http://php.net/manual/en/language.operators.comparison.php">2</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">3</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">4</a></sup> <sup><a href="https://www.w3schools.com/php/php_operators.asp">5</a></sup>.</i>
               </ol>
               
-              <p><i>Logic</i> is how a <i>control structure</i> is devised based on a given condition. </p>
+              <p><i>Logic</i> is how a <i>control structure</i> is devised based on a given condition of which the <i>expression is evaluated to its Boolean value</i>. </p>
               <ol>
-                <li><i>xxx</i> .... </li>
+                <li>The <i><b>if Clause</b></i> executes code if <i>one condition is true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored. In the example below, the expression will evaluate to <code>true</code> because <i>10 is greater than 5</i>.</li>
+                <code>
+                  &#36;a &#61; 10;
+                  <br> &#36;b &#61; 5;
+                  <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;echo &#34;a is greater than b&#34;;&#125;                
+                </code>
                 <p></p>
-                <li><i>Logical Operators</i> are used to combine <i>Conditional statements</i>.
-                  <table style="width: 100%;"><tr>
-                      <th>and</th>
-                      <th>or</th>
-                      <th>not</th>
-                    </tr>
-                    <tr>
-                      <td><code>&amp;&amp;</code></td>
-                      <td><code>&#124;&#124;</code></td>
-                      <td><code>&#33;</code></td>
-                    </tr>
-                  </table>
-                </li>
-                  <!--<i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Logic</a>  <sup><a href="https://www.w3schools.com/php/php_if_else.asp">1</a></sup> 
-                <sup><a href="http://php.net/manual/en/language.php">2</a></sup> <sup><a href="http://php.net/manual/en/language.php">3</a></sup> <sup><a href="http://php.net/manual/en/language.php">4</a></sup> <sup><a href="http://php.net/manual/en/language.php">5</a></sup>.</i>-->
+                <li>The <i><b>if...else Clause</b></i> executes code if <i>a condition is true, but executes another code if the condition is false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.</li>
+                <code>
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br>if &#40;&#36;t &#60; &#34;20&#34;
+                  &#123;echo &#34;Have a good day&#33;&#34;;&#125;
+                  <br>else &#123;echo &#34;Have a good night&#33;&#34;;&#125;
+                </code>
+                <p></p>
+                <li>The <i><b>if...else/if...else Clause</b></i> executes <i>different codes for more than two conditions</i>. In the example below, the expression will output <code>&#34;Have a good morning&#33;&#34;</code> if it is earlier than <code>10am</code>. If the time is between <code>10am - 8pm</code>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. And if it is later than <code>8pm</code>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</li>
+                <code>
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br>if &#40;&#36;t &#60; &#34;10&#34;&#41;
+                    &#123;echo &#34;Have a good morning&#33;&#34;;&#125;
+                  <br>elseif &#40;&#36;t &#60; &#34;20&#34;&#41;  
+                    &#123;echo &#34;Have a good day&#33;&#34;;&#125;
+                  <br>else &#123; echo &#34;Have a good night&#33;&#34;;&#125;
+                </code>
+                <p></p>
+                <i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Control Structures</a>  <sup><a href="https://www.w3schools.com/php/php_if_else.asp">1</a></sup> 
+                <sup><a href="http://php.net/manual/en/language.control-structures.elseif.php">2</a></sup>.</i>
               </ol>
             </div>
             <!-- -->
