@@ -120,21 +120,21 @@ $date = date_default_timezone_set('EST');
             <div class="carousel-item active">
               <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
-                <h3>Test</h3>
+                <h3>1111</h3>
                 <p>......</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="Second slide">
               <div class="carousel-caption d-none d-md-block">
-                <h3>Test</h3>
+                <h3>2222</h3>
                 <p>......</p>
               </div>
             </div>
             <div class="carousel-item">
               <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="Third slide">
               <div class="carousel-caption d-none d-md-block">
-                <h3>Test</h3>
+                <h3>3333</h3>
                 <p>......</p>
               </div>
             </div>
@@ -154,25 +154,28 @@ $date = date_default_timezone_set('EST');
       
       <!-- GPA Challenge -->
       <div class="row mb-3">
-        <div class="col-12">
+        <div class="col-6">
           <code>
-          &#60;?php
-          <br>&#36;student1Name &#61; &#39;Ray&#39;;
-          <br>&#36;student1GPA &#61; 3.5;
-          <br>
-          <br>&#36;student2Name &#61; &#39;James&#39;;
-          <br>&#36;student2GPA &#61; 4.0;
-          <br>
-          <br>if &#34;&#36;student1GPA &#61;&#61; 4.0&#34; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
-          <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
-          <br>
-          <br>if &#34;&#36;student2GPA &#61;&#61; 4.0&#34; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
-          <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
-          <br>
-          <br>?&#62;
+            &#60;?php
+            <br>&#36;student1Name &#61; &#39;Ray&#39;;
+            <br>&#36;student1GPA &#61; 3.5;
+            <br>
+            <br>&#36;student2Name &#61; &#39;James&#39;;
+            <br>&#36;student2GPA &#61; 4.0;
+            <br>
+            <br>if &#40;&#34;&#36;student1GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
+            <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
+            <br>
+            <br>if &#40;&#34;&#36;student2GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
+            <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
+            <br>
+            <br>?&#62;
           </code>
         </div>
-        <div class="col-12">
+        <!-- -->
+        <div class="col-6">
+          <h3><a href="https://teamtreehouse.com/library/php-basics-2/daily-exercise-program/conditionalls">GPA Challenge</a></h3>
+          <p>This script uses a <i>conditional statement</i> that queries multiple conditions and will <code>output</code> the following results:</p>
           <?php 
           $student1Name = 'Ray';
           $student1GPA = 3.5;
@@ -180,16 +183,51 @@ $date = date_default_timezone_set('EST');
           $student2Name = 'James';
           $student2GPA = 4.0;
           
-          if ($student1GPA == 4.0) {echo "$student1Name made the Honor Roll";}
-          else { echo "$student1Name has a GPA of $studen1GPA";}
+          if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
+          else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}
           
-          if ($student2GPA == 4.0) {echo "$student2Name made the Honor Roll";}
-          else { echo "$student2Name has a GPA of $studen2GPA";}
+          if ($student2GPA == 4.0) {echo "<p>$student2Name made the Honor Roll</p>";}
+          else { echo "<p>$student2Name has a GPA of $student2GPA</p>";}
           ?>
         </div>
       </div>
       
-      
+      <!-- Unit Converter: Pounds to Kilograms -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <code>
+            &#60;?php
+            <br>&#36;pounds &#61; 180;
+            <br>&#36;lb_to_kg &#61; 0.453592;
+            <br>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;
+            <br>
+            <br>echo &#34;Weight:&#34;;
+            <br>echo &#34;&#36;pounds&#34;;
+            <br>echo &#34;lb &#61; &#34;;
+            <br>echo &#34;&#36;kilograms&#34;;
+            <br>echo &#34;kg&#34;;
+            <br>?&#62;
+          </code>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <h3><a href="">Unit Converter: Pounds to Kilograms</a></h3>
+          <p>This script uses a <i>conditional statement</i> that converts Pounds to Kilograms and will <code>output</code> the following results:</p>
+          <?php 
+          
+          $pounds = 180;
+          $lb_to_kg = 0.453592;
+          $kilograms = $pounds * $lb_to_kg;
+          
+          echo "<p>Weight: ";
+          echo $pounds;
+          echo " lb = ";
+          echo $kilograms;
+          echo " kg</p>";
+          ?>
+          <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
+        </div>
+      </div>
       
       <!-- -->
       <!-- -->
