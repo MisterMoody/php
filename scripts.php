@@ -191,6 +191,8 @@ $date = date_default_timezone_set('EST');
           ?>
         </div>
       </div>
+      <!-- -->
+      <!-- -->
       
       <!-- Unit Converter: Pounds to Kilograms -->
       <div class="row mb-3">
@@ -228,11 +230,10 @@ $date = date_default_timezone_set('EST');
           <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
         </div>
       </div>
-      
       <!-- -->
       <!-- -->
       
-       <!-- Unit Converter: Milies to Kilometers -->
+      <!-- Unit Converter: Milies to Kilometers -->
       <div class="row mb-3">
         <div class="col-6">
           <code>
@@ -268,7 +269,61 @@ $date = date_default_timezone_set('EST');
           <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
         </div>
       </div>
+      <!-- -->
+      <!-- -->
       
+      
+      
+      
+      
+      <!-- The date() Function -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <code>
+            &#60;?php
+            <br>
+            <br>&#36;date &#61; date_default_timezone_set&#40;&#39;EST&#39;&#41;;
+            <br>
+            <br>echo &#34;Today is &#34;; &#62;&#62;&#62; echo date&#40;&#34;D d M, Y&#34;&#41;&#34;;
+            <br>
+            <br>echo &#34;The current time is&#34;; &#62;&#62;&#62; echo date&#40;&#34;g i a T&#34;&#41;&#34;;
+            <br>
+            <br>echo &#34;Last Modified&#34;; &#62;&#62;&#62; echo date&#40;&#34;F d Y g:i:s&#34;&#41;&#34;;
+            <br>
+            <br>echo &#34;Week of the Year&#34;; &#62;&#62;&#62; echo date&#40;&#34;W&#34;&#41;&#34;;
+            <br>
+            <br>?&#62;
+          </code>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <h3><a href="">The date&#40;&#41; Function</a></h3>
+          <p>This script uses the <code>date&#40;&#41;;</code> Function to <i>structure time</i> based on established parameters and will <code>output</code> the following results:</p>
+          <?php 
+          
+          $date = date_default_timezone_set('EST');
+          
+          echo "<p>Today is ";
+          echo date('D M d, Y');
+          echo " </p>";
+          
+          echo "<p>The current time is ";
+          echo date('g i a T');
+          echo " </p>";
+          
+          echo "<p>Last modified ";
+          echo date('F d Y g:i:s', getlastmod());
+          echo " </p>";
+          
+          echo "<p>Week of the Year ";
+          echo date('W');
+          echo " </p>";
+          ?>
+          <p><i>Learn more about the <a href="http://php.net/manual/en/function.date.php">date()</a> Function.</i></p>
+        </div>
+      </div>
+      <!-- -->
+      <!-- -->
       <!-- RESOURCES -->
       <div class="row">
         <div class="col-lg-12">
