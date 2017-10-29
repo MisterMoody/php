@@ -1,4 +1,5 @@
 <?php
+/* dateTime VAR*/
 $date = date_default_timezone_set('EST');
 
 ?>
@@ -10,7 +11,7 @@ $date = date_default_timezone_set('EST');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PHP Self-Directing Guidebook">
+    <meta name="description" content="A Self-Directing Guidebook  to Building an Application Using PHP">
     <meta name="keywords" content="Mister Moody, Web Design, PHP, CSS, HTML">
     <meta name="author" content="Ray Moody">
     <meta name="twitter:title" content="@Mister_Moody" />        
@@ -49,13 +50,17 @@ $date = date_default_timezone_set('EST');
             <a class="nav-link" href="index.html"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">xxx</a>
+            <a class="nav-link" src="#" href="syntax.php" alt="PHP Snytax">Syntax</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" src="#" href="moodyCV.docx" alt="Download My Resume">yyy</a>
+            <a class="nav-link" src="#" href="#" alt="xxxx">Scripts</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">zzz</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">aaa</a>
+              <a class="dropdown-item" href="#">bbb</a>
+            </div>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
@@ -117,7 +122,7 @@ $date = date_default_timezone_set('EST');
             <a class="nav-item nav-link" id="nav-phpadmin-tab" data-toggle="tab" href="#nav-phpadmin" role="tab" aria-controls="nav-phpadmin" aria-selected="false"><b>&#40;3&#41; phpMyAdmin</b></a>
           </nav>
           <div class="tab-content" id="nav-tabContent">
-            <!-- -->
+            <!-- *Xampp* -->
             <div class="tab-pane fade show active" id="nav-xampp" role="tabpanel" aria-labelledby="nav-xampp-tab">
               <p>XAMPP is a local virtual machine that acts as a local web server in your computer. </p>
               <!--<ol type="a">
@@ -125,10 +130,11 @@ $date = date_default_timezone_set('EST');
                 <li>bbbbbbbb</li>
                 <li>cccccccc</li>
               </ol>
-                <p>Display Errors via <code>C:/xampp/index.php</code> and open <code>php.ini</code> File.</p>-->
-              <p>Donec ut ligula eget dolor pellentesque vestibulum vel in elit.</p>
+                <p>Display Errors via <code>C:/xampp/index.php</code> and open <code>php.ini</code> File.</p>
+              <p>Donec ut ligula eget dolor pellentesque vestibulum vel in elit.</p>-->
+              <p><b><i>*Step-by-Step Setup Coming Soon*</i></b></p>
             </div>
-            <!-- -->
+            <!-- *MySQL* -->
             <div class="tab-pane fade" id="nav-mysql" role="tabpanel" aria-labelledby="nav-mysql-tab">
               <p>MySQL is an open-source relational database management system based on the Structured Query Language designed for managing data held in a RDBMS. </p>
               <!--<ol type="a">
@@ -137,8 +143,9 @@ $date = date_default_timezone_set('EST');
                 <li>cccccccc</li>
               </ol>
               <p>Donec ut ligula eget dolor pellentesque vestibulum vel in elit.</p>-->
+              <p><b><i>*Step-by-Step Setup Coming Soon*</i></b></p>
             </div>
-            <!-- -->
+            <!-- *phpMyAdmin* -->
             <div class="tab-pane fade" id="nav-phpadmin" role="tabpanel" aria-labelledby="nav-phpadmin-tab">
               <p>phpMyAdmin is an amazing administrative tool developers utilize to manage MySQL databases. It features an intuitive web interface to control frequently used operations that include managing databases, indexes, users, persimissions and so much more. Anything that you might need your database for such as the import and export of SQL data, transforming dation into another format and creating complex Queries. <i>**It should be noted that MySQL has a similiar tool known as 'Workbenc.h'</i></p>
               <!--<ol type="a">
@@ -146,8 +153,8 @@ $date = date_default_timezone_set('EST');
                   <li>bbbbbbbb</li>
                   <li>cccccccc</li>
                 </ol>-->
-              <p>Access phpMyAdmin via  <code>C:/xampp/bin/phpMyAdmin/config.inc.php</code></p>
-              <p>phpMyAdmin for Xampp: https://stackoverflow.com/questions/17759776/how-to-get-login-option-for-phpmyadmin-in-xampp</p>
+              <!--<p>Access phpMyAdmin via  <code>C:/xampp/bin/phpMyAdmin/config.inc.php</code></p>
+              <p>phpMyAdmin for Xampp: https://stackoverflow.com/questions/17759776/how-to-get-login-option-for-phpmyadmin-in-xampp</p>-->
               <p><b><i>*Step-by-Step Setup Coming Soon*</i></b></p>
             </div>
           </div>

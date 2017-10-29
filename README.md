@@ -1,2 +1,2 @@
 # php
-PHP Self-Directing Guidebook  
+A Self-Directing Guidebook to Building an Application Using PHP 
