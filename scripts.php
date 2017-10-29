@@ -152,6 +152,42 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
       
+      <!-- GPA Challenge -->
+      <div class="row mb-3">
+        <div class="col-12">
+          <code>
+          &#60;?php
+          <br>&#36;student1Name &#61; &#39;Ray&#39;;
+          <br>&#36;student1GPA &#61; 3.5;
+          <br>
+          <br>&#36;student2Name &#61; &#39;James&#39;;
+          <br>&#36;student2GPA &#61; 4.0;
+          <br>
+          <br>if &#34;&#36;student1GPA &#61;&#61; 4.0&#34; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
+          <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
+          <br>
+          <br>if &#34;&#36;student2GPA &#61;&#61; 4.0&#34; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
+          <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
+          <br>
+          <br>?&#62;
+          </code>
+        </div>
+        <div class="col-12">
+          <?php 
+          $student1Name = 'Ray';
+          $student1GPA = 3.5;
+          
+          $student2Name = 'James';
+          $student2GPA = 4.0;
+          
+          if ($student1GPA == 4.0) {echo "$student1Name made the Honor Roll";}
+          else { echo "$student1Name has a GPA of $studen1GPA";}
+          
+          if ($student2GPA == 4.0) {echo "$student2Name made the Honor Roll";}
+          else { echo "$student2Name has a GPA of $studen2GPA";}
+          ?>
+        </div>
+      </div>
       
       
       
