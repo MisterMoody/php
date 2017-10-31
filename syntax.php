@@ -47,13 +47,13 @@ $date = date_default_timezone_set('EST');
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
           <li class="nav-item active text-right">
-            <a class="nav-link" href="index.html"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
+            <a class="nav-link" href="index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" src="#" href="syntax.php" alt="PHP Snytax">Syntax</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" src="#" href="#" alt="xxxx">Scripts</a>
+            <a class="nav-link" src="#" href="scripts.php" alt="PHP Scripts">Scripts</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database</a>
@@ -120,9 +120,9 @@ $date = date_default_timezone_set('EST');
       <div class="row">
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <a class="nav-link" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
+          <a class="nav-link active" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
           <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Variables &amp; Data&#45;Types</a>
-          <a class="nav-link active" id="v-pills-operators-tab" data-toggle="pill" href="#v-pills-operators" role="tab" aria-controls="v-pills-operators" aria-selected="false">Operators &amp; Logic</a>
+          <a class="nav-link" id="v-pills-operators-tab" data-toggle="pill" href="#v-pills-operators" role="tab" aria-controls="v-pills-operators" aria-selected="false">Operators &amp; Logic</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
           <!--<a class="nav-link" id="v-pills-xxxxxxx-tab" data-toggle="pill" href="#v-pills-xxxxxxx" role="tab" aria-controls="v-pills-xxxxxxx" aria-selected="false">xxxxx</a>-->
         </div>
@@ -130,7 +130,7 @@ $date = date_default_timezone_set('EST');
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
             <!-- Implement PHP -->
-            <div class="tab-pane fade" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
+            <div class="tab-pane fade show active" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
               <p>When creating a PHP file, it is vital to use the <code>.php</code> File Extension. Once you have established your template, you initiate a PHP script by invoking a  <i>Code Block</i>, which is essentially a container for the functionality being implemented.</p>
               <p>This is how you write a code block: <code>&#60;?php...?&#62;. </code>The code written here will produce the functionality of your objective. You can <i>Display a Message</i> &#40;ie results&#41; in the browser by using <code>echo 'xxx';</code> or <code>print 'xxx';</code>, but there are differences.<sup><a href="https://www.w3schools.com/php/php_echo_print.asp"> 1 </a><a href="https://www.phptpoint.com/php-echo-print"> 2 </a></sup></p> 
               <p>It is important to use <i>Comments</i> with your code to properly maintain it. When structuring my comments, I prefer using a <i>Single&#45;Line Comment</i>  <code>&#47;&#42;&#42;&#47;</code> for simple explanations and for more elaborate explanations I utilize a <i>Doc&#45;Block</i>, which is a Single&#47;Line Comment that uses multiple lines of comment and where each line begins with an <code>&#42;</code>.</p>
@@ -179,7 +179,7 @@ $date = date_default_timezone_set('EST');
               </p>
             </div>
             <!-- Operators & Logic -->
-            <div class="tab-pane fade show active" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
+            <div class="tab-pane fade" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
               <p><i>Operators</i> are used to <i>perform operations on variables and values</i>. </p>
               <ol>
                 <li><i>Assignment Operators</i> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code></li>
@@ -273,8 +273,25 @@ $date = date_default_timezone_set('EST');
                   <br>else &#123; echo &#34;Have a good night&#33;&#34;;&#125;
                 </code>
                 <p></p>
-                <i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Control Structures</a>  <sup><a href="https://www.w3schools.com/php/php_if_else.asp">1</a></sup> 
-                <sup><a href="http://php.net/manual/en/language.control-structures.elseif.php">2</a></sup>.</i>
+                <div class="list-group">
+                  <i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Control </a><a href="https://www.w3schools.com/php/php_if_else.asp">Structures</a></i>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.if.php">if</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.elseifphp">else if</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.while.php">while</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.do.while.php">do-while</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.for.php">for</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.foreach.php">for each</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.break.php">break</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.continue.php">continue</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.switch.php">switch</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.declare.php">declare</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.return.php">return</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.require.php">require</a>
+                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.include.php">include</a>
+                </div>
+                
+              
+                
               </ol>
             </div>
             <!-- -->
