@@ -121,8 +121,11 @@ $date = date_default_timezone_set('EST');
         <div class="col-3">
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
           <a class="nav-link active" id="v-pills-implement-tab" data-toggle="pill" href="#v-pills-implement" role="tab" aria-controls="v-pills-implement" aria-selected="true">Implement PHP</a>
-          <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Variables &amp; Data&#45;Types</a>
-          <a class="nav-link" id="v-pills-operators-tab" data-toggle="pill" href="#v-pills-operators" role="tab" aria-controls="v-pills-operators" aria-selected="false">Operators &amp; Logic</a>
+          <a class="nav-link" id="v-pills-inject-tab" data-toggle="pill" href="#v-pills-inject" role="tab" aria-controls="v-pills-inject" aria-selected="false">Inject PHP</a>
+          <a class="nav-link" id="v-pills-variables-tab" data-toggle="pill" href="#v-pills-variables" role="tab" aria-controls="v-pills-variables" aria-selected="false">Variables </a>
+          <a class="nav-link" id="v-pills-datatype-tab" data-toggle="pill" href="#v-pills-datatype" role="tab" aria-controls="v-pills-datatype" aria-selected="false">Data&#45;Types</a>
+          <a class="nav-link" id="v-pills-operators-tab" data-toggle="pill" href="#v-pills-operators" role="tab" aria-controls="v-pills-operators" aria-selected="false">Operators</a>
+          <a class="nav-link" id="v-pills-logic-tab" data-toggle="pill" href="#v-pills-logic" role="tab" aria-controls="v-pills-logic" aria-selected="false">Control Structures</a>
           <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
           <!--<a class="nav-link" id="v-pills-xxxxxxx-tab" data-toggle="pill" href="#v-pills-xxxxxxx" role="tab" aria-controls="v-pills-xxxxxxx" aria-selected="false">xxxxx</a>-->
         </div>
@@ -131,10 +134,15 @@ $date = date_default_timezone_set('EST');
           <div class="tab-content" id="v-pills-tabContent">
             <!-- Implement PHP -->
             <div class="tab-pane fade show active" id="v-pills-implement" role="tabpanel" aria-labelledby="v-pills-implement-tab">
+              <h5>Creating a PHP File &amp; Writing Code Blocks</h5>
               <p>When creating a PHP file, it is vital to use the <code>.php</code> File Extension. Once you have established your template, you initiate a PHP script by invoking a  <i>Code Block</i>, which is essentially a container for the functionality being implemented.</p>
               <p>This is how you write a code block: <code>&#60;?php...?&#62;. </code>The code written here will produce the functionality of your objective. You can <i>Display a Message</i> &#40;ie results&#41; in the browser by using <code>echo 'xxx';</code> or <code>print 'xxx';</code>, but there are differences.<sup><a href="https://www.w3schools.com/php/php_echo_print.asp"> 1 </a><a href="https://www.phptpoint.com/php-echo-print"> 2 </a></sup></p> 
               <p>It is important to use <i>Comments</i> with your code to properly maintain it. When structuring my comments, I prefer using a <i>Single&#45;Line Comment</i>  <code>&#47;&#42;&#42;&#47;</code> for simple explanations and for more elaborate explanations I utilize a <i>Doc&#45;Block</i>, which is a Single&#47;Line Comment that uses multiple lines of comment and where each line begins with an <code>&#42;</code>.</p>
-              <p>Finally, there are two ways to <i>Inject PHP</i> into an HTML File.
+            </div>
+            <!-- Inject PHP -->
+            <div class="tab-pane fade" id="v-pills-inject" role="tabpanel" aria-labelledby="v-pills-inject-tab">
+            <h5>Inject PHP into a Website</h5>
+              <p>There are two ways to <i>Inject PHP</i> into an HTML File.
                 <br>&#40;1&#41; The first method is to write the <i>Variables</i> above the <code>&#60;&#33;DOCTYPE html&#62;</code> then invoke a <i>Code Block</i> on the <i>hmtl Tag</i> that you want to use the Variable and <i>Display the Message</i>. 
                 <code>
                 <br>&#60;?php
@@ -153,38 +161,52 @@ $date = date_default_timezone_set('EST');
                 <i>Learn more about the <a href="php.net/manual/en/function.date.php">date ()</a> Function.</i>
                 <br>
                 <br>
-                &#40;2&#41; The second method allows you to import a <code>xxx.php</code> File directly from its <i>Root</i> Folder using the Include function, like so: <code>&#60;?php include 'inc/xxxxx.php'?&#62;</code> where inc is the Folder where all scripts are placed.</p>
+                &#40;2&#41; The second method allows you to import a <code>xxx.php</code> File directly from its <i>Root</i> Folder into the <code>&#60;div&#62;</code> using the <code>include</code> function, like so: <code>&#60;?php include 'inc/xxxxx.php'?&#62;</code> where inc is the Folder where all scripts are placed.</p>
             </div>
-            <!-- Variables & Data-Types -->
+            <!-- Variables -->
             <div class="tab-pane fade" id="v-pills-variables" role="tabpanel" aria-labelledby="v-pills-variables-tab">
-              <p>All <i>Variables</i> begin with <code>&#36;</code> and be followed by an <code>&#95;</code> or a letter. Names themselves are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.
-              <br>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.
-              <br><i>Learn more about the <a href="https://www.w3schools.com/php/php_variables.asp">Variables</a>.</i>
+              <p><i>Variables</i> are used to store information and follow these <i>naming conventions</i>: begin with <code>&#36;</code> and be followed by an <code>&#95;</code> or a letter; are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.</p>
+              <p>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.
+              <br>Learn more about the <a href="https://www.w3schools.com/php/php_variables.asp">Variables</a> 
+                <a href="http://php.net/manual/en/ref.var.php">Reference Functions</a>
+                <a href="http://php.net/manual/en/language.variables.scope.php">Scope</a>.
               </p>
               
-              <p>Variables can store different types of data which includes Strings, Integers, Floats, Booleans, Arrays and Objects. You can use the <code>var&#95;dump&#40;x&#41;</code> Function to <i>return the data&#45;type</i> in the console.</p>
-              <ol>
-                <li><i>Strings</i> are a <i>sequence of characters</i> and are always encapsulated with single&#45;quotes <code>&#39;xxx&#39;</code> or double &#45;quotes <code>&#34;xxx&#34;</code>.</li>
-                <li><i>Integers</i> are <i>non&#45;decimal numbers</i> <i>decimal numbers</i> <code>1.52</code> that can be positive or negative.</li>
-                <li><i>Floats</i> are <i>decimal numbers</i> <code>1.52</code>  that can be positive or negative.</li>
-                <li><i>Booleans</i> are often used in conditional testing and represent if something is <code>true</code> or <code>false</code>.</li>
-                <li><i>Arrays</i> store multiple&#45;values into a single variable <code>&#36;cars &#61; array&#40;&#34;Toyota&#34;&#34;Honda&#34;&#34;Nissan&#34;&#41;;</code>.</li>
-                <li><i>Objects</i> store data then provides information on how to process that data.</li>
-              </ol>
-              <p>You can combine multipe variables via <i>Concatenation</i> 
-                <br><code>&#36;string &#61; Ask . &#39;&#36;name&#39; . &#39;for the answer&#39;</code>
-              
-                <br><i>Learn more about <a href="https://www.w3schools.com/php/php_datatypes.asp">Data&#45;Types</a> 
-                <sup><a href="http://php.net/manual/en/language.types.string.php">1</a></sup> <sup><a href="http://php.net/manual/en/function.var-dump.php">2</a></sup> <sup><a href="http://php.net/manual/en/function.is-int.php">3</a></sup>.</i>
-              </p>
+              <p>Variables can store different types of data. You can use the <code>var&#95;dump&#40;x&#41;</code> Function to <i>return the data&#45;type</i> in the console.</p>
             </div>
-            <!-- Operators & Logic -->
-            <div class="tab-pane fade" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
-              <p><i>Operators</i> are used to <i>perform operations on variables and values</i>. </p>
+            <!-- Data-Types -->
+            <div class="tab-pane fade" id="v-pills-datatype" role="tabpanel" aria-labelledby="v-pills-datatype-tab">
+              <h5>Learn More about <a href="http://php.net/manual/en/language.types.php">Data&#45;<a href="https://www.w3schools.com/php/php_datatypes.asp">Types</a></a></h5>
               <ol>
-                <li><i>Assignment Operators</i> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code></li>
+                <li><a href="http://php.net/language.types.string">Strings</a> are a <i>sequence of characters</i> encapsulated with quotes <code>&#39;xxx&#39;</code> or <code>&#34;xxx&#34;</code>.</li>
+                <p><a href="http://php.net/ref.strings">Reference of String Functions </a>
+                &#47; <a href="https://www.w3schools.com/php/php_ref_string.asp">String Functions</a>
+                &#47; <a href="https://www.tutorialspoint.com/php/php_strings.htm">Examples</a>
+                &#47; <a href="http://php.net/manual/en/function.var-dump.php">var&#95;dump&#40;&#41;</a></p>
+                
+                <li><a href="http://php.net/manual/en/language.types.integer.php">Integers</a> are <i>non&#45;decimal numbers</i> <code>1</code> that can be positive or negative. <a href="http://php.net/manual/en/language.types.float.php">Floats</a> are <i>decimal numbers</i> <code>1.52</code>  that can be positive or negative.</li>
+                <p><a href="http://vegibit.com/php-integers-and-floating-point-values/">Integers &amp; Floats</a> 
+                &#47; <a href="http://php.net/manual/en/function.is-integer.php">is_integer</a> <a href=""></a> 
+                &#47; <a href="https://teamtreehouse.com/library/integers">Tutorial</a></p>
+                
+                
+                <li><a href="http://php.net/manual/en/language.types.boolean.php">Booleans</a> are used in conditional testing to confirm if something is <code>true</code> or <code>false</code>.</li>
                 <p></p>
-                <li><i>Arithmetic Operators</i> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.
+                
+                <li><a href="http://php.net/manual/en/language.types.array.php">Arrays</a> store multiple&#45;values into a single variable <code>&#36;cars &#61; array&#40;&#34;Toyota&#34;&#34;Honda&#34;&#34;Nissan&#34;&#41;;</code>.</li>
+                <p></p>
+                
+                <li><a href="http://php.net/manual/en/language.types.object.php">Objects</a> store data then provides information on how to process that data.</li>
+                <p><a href="http://php.net/manual/en/language.oop5.php">Reference for Classes and Objects</a></p>
+              </ol>
+            </div>
+            <!-- Operators -->
+            <div class="tab-pane fade" id="v-pills-operators" role="tabpanel" aria-labelledby="v-pills-operators-tab">
+              <p><a href="http://php.net/manual/en/language.operators.php">Operators</a> are used to <i>perform operations on variables and values</i>. </p>
+              <ol>
+                <li><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code></li>
+                <p></p>
+                <li><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.
                   <table style="width: 100%;"><tr>
                       <th>x + y</th>
                       <th>x - y</th>
@@ -200,7 +222,7 @@ $date = date_default_timezone_set('EST');
                   </table>                  
                 </li>
                 <p></p>
-                <li><i>Comparison Operators</i> are used to compare the values of variables and yield a result. 
+                <li><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result. 
                   <table style="width: 100%;">
                     <tr>
                       <th>equal to</th>
@@ -229,7 +251,7 @@ $date = date_default_timezone_set('EST');
                   </table>
                 </li>
                 <p></p>
-                <li><i>Logical Operators</i> are used to combine <i>Conditional statements</i>.
+                <li><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.
                   <table style="width: 100%;"><tr>
                       <th>and</th>
                       <th>or</th>
@@ -242,20 +264,20 @@ $date = date_default_timezone_set('EST');
                     </tr>
                   </table>
                 </li>
-                  <i>Learn more about <a href="http://php.net/manual/en/language.operators.php">Operators</a>  <sup><a href="http://php.net/manual/en/language.operators.arithemetic.php">1</a></sup> 
-                <sup><a href="http://php.net/manual/en/language.operators.comparison.php">2</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">3</a></sup> <sup><a href="http://php.net/manual/en/language.operators.assignment.php">4</a></sup> <sup><a href="https://www.w3schools.com/php/php_operators.asp">5</a></sup>.</i>
               </ol>
-              
-              <p><i>Logic</i> is how a <i>control structure</i> is devised based on a given condition of which the <i>expression is evaluated to its Boolean value</i>. </p>
+            </div>
+            <!-- Control Structures (Logic) -->
+            <div class="tab-pane fade" id="v-pills-logic" role="tabpanel" aria-labelledby="v-pills-logic-tab">
+              <p><a href="http://php.net/manual/en/language.operators.logical.php">Logic</a> is a type of <a href="http://php.net/manual/en/language.control-structures.php"><i>Control Structure</i></a> that is devised based on a given condition of which the <i>expression is evaluated to its Boolean value</i>. </p>
               <ol>
-                <li>The <i><b>if Clause</b></i> executes code if <i>one condition is true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored. In the example below, the expression will evaluate to <code>true</code> because <i>10 is greater than 5</i>.</li>
+                <li>The <a href="http://php.net/manual/en/control-structures.if.php">if</a> Conditional executes code if <i>one condition is true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored. In the example below, the expression will evaluate to <code>true</code> because <i>10 is greater than 5</i>.</li>
                 <code>
                   &#36;a &#61; 10;
                   <br> &#36;b &#61; 5;
                   <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;echo &#34;a is greater than b&#34;;&#125;                
                 </code>
-                <p></p>
-                <li>The <i><b>if...else Clause</b></i> executes code if <i>a condition is true, but executes another code if the condition is false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.</li>
+                <p></p>https://www.w3schools.com/php/php_if_else.asp
+                <li>The <a href="http://php.net/manual/en/control-structures.if.php">if</a>...<a href="http://php.net/manual/en/control-structures.else.php">else</a> Conditional executes code if <i>a condition is true, else it will execute another code if the condition is false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.</li>
                 <code>
                   &#36;t &#61; date&#40;&#34;H&#34;&#41;;
                   <br>if &#40;&#36;t &#60; &#34;20&#34;
@@ -263,7 +285,7 @@ $date = date_default_timezone_set('EST');
                   <br>else &#123;echo &#34;Have a good night&#33;&#34;;&#125;
                 </code>
                 <p></p>
-                <li>The <i><b>if...else/if...else Clause</b></i> executes <i>different codes for more than two conditions</i>. In the example below, the expression will output <code>&#34;Have a good morning&#33;&#34;</code> if it is earlier than <code>10am</code>. If the time is between <code>10am - 8pm</code>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. And if it is later than <code>8pm</code>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</li>
+                <li>The <a href="http://php.net/manual/en/control-structures.elseif.php">else/if</a> executes <i>different codes for more than two conditions</i>. The elseif statement is only executed if the preceding if expression and any preceding elseif expressions evaluated to FALSE, and the current elseif expression evaluated to TRUE. In the example below, the expression will output <code>&#34;Have a good morning&#33;&#34;</code> if it is earlier than <code>10am</code>. If the time is between <code>10am - 8pm</code>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. And if it is later than <code>8pm</code>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</li>
                 <code>
                   &#36;t &#61; date&#40;&#34;H&#34;&#41;;
                   <br>if &#40;&#36;t &#60; &#34;10&#34;&#41;
@@ -273,25 +295,19 @@ $date = date_default_timezone_set('EST');
                   <br>else &#123; echo &#34;Have a good night&#33;&#34;;&#125;
                 </code>
                 <p></p>
-                <div class="list-group">
-                  <i>Learn more about <a href="http://php.net/manual/en/language.control-structures.php">Control </a><a href="https://www.w3schools.com/php/php_if_else.asp">Structures</a></i>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.if.php">if</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.elseifphp">else if</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.while.php">while</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.do.while.php">do-while</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.for.php">for</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.foreach.php">for each</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.break.php">break</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.continue.php">continue</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.switch.php">switch</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/language.control-structures.declare.php">declare</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.return.php">return</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.require.php">require</a>
-                  <a class="list-group-item d-flex justify-content-between align-items-center" href="http://php.net/manual/en/function.include.php">include</a>
-                </div>
-                
-              
-                
+                <p>Other Control Structures include
+                  <a href="http://php.net/manual/en/language.control-structures.while.php">while</a> 
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.do.while.php">do-while</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.for.php">for</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.foreach.php">for each</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.break.php">break</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.continue.php">continue</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.switch.php">switch</a>
+                  &#47; <a href="http://php.net/manual/en/language.control-structures.declare.php">declare</a></p>
+                <p>Associated Functions 
+                  &#47; <a href="http://php.net/manual/en/function.return.php">return</a>
+                  &#47; <a href="http://php.net/manual/en/function.require.php">require</a>
+                  &#47; <a href="http://php.net/manual/en/function.include.php">include</a></p>
               </ol>
             </div>
             <!-- -->
