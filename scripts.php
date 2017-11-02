@@ -47,7 +47,7 @@ $date = date_default_timezone_set('EST');
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
           <li class="nav-item active text-right">
-            <a class="nav-link" href="index.html"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
+            <a class="nav-link" href="index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" src="#" href="syntax.php" alt="PHP Snytax">Syntax</a>
@@ -104,49 +104,9 @@ $date = date_default_timezone_set('EST');
       <!-- Scripts -->
       <div class="row">
         <!-- -->
-        <div class="col-6">
+        <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">PHP Scripts</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.</p>
-          <p><a href="https://www.w3schools.com/php/php_examples.asp">PHP Examples</a></p>
-        </div>
-        <!-- -->
-        <div id="carouselExampleIndicators" class="carousel slide col-6" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>1111</h3>
-                <p>......</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="Second slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>2222</h3>
-                <p>......</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://via.placeholder.com/250x150" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h3>3333</h3>
-                <p>......</p>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Check out these <a href="https://www.w3schools.com/php/php_examples.asp">PHP Examples</a></p>
         </div>
       </div>
       <!-- -->
