@@ -86,19 +86,10 @@ $date = date_default_timezone_set('EST');
     <div class="container">
       <!-- -->
       <!-- -->
-      <!-- INTRODUCTION-->
-      <div class="row">
-        <div class="col-12">
-          <h1 class="text-center font-weight-bold mb-2">Basic PHP Syntax</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
-        </div>
-      </div>
-      <!-- -->
-      <!-- -->
       <!-- PHP Syntax INTRO -->
       <div class="row">
         <div class="col-12">
-          <h1 class="text-center font-weight-bold mb-2">Writing PHP</h1>
+          <h1 class="text-center font-weight-bold mb-2">Basic PHP Syntax</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>          
         </div>  
       </div>
@@ -189,65 +180,13 @@ $date = date_default_timezone_set('EST');
               <ol>
                 <li><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code></li>
                 <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.
-                  <table style="width: 100%;"><tr>
-                      <th>x + y</th>
-                      <th>x - y</th>
-                      <th>x * y</th>
-                      <th>x / y</th>
-                    </tr>
-                    <tr>
-                      <td><code>&#36;x <b>&#43;&#61;</b> 2;</code></td>
-                      <td><code>&#36;x <b>&#45;&#61;</b> 2;</code></td>
-                      <td><code>&#36;x <b>&#42;&#61;</b> 2;</code></td>
-                      <td><code>&#36;x <b>&#47;&#61;</b> 2;</code></td>
-                    </tr>
-                  </table>                  
-                </li>
+                <li><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.</li>
                 <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result. 
-                  <table style="width: 100%;">
-                    <tr>
-                      <th>equal to</th>
-                      <th>not equal</th>
-                      <th>identical</th>
-                      <th>not identical</th>
-                    </tr>
-                    <tr>
-                      <td><code>&#61;&#61;</code></td>
-                      <td><code>&#33;&#61;</code></td>
-                      <td><code>&#61;&#61;&#61;</code></td>
-                      <td><code>&#33;&#61;&#61;</code></td>
-                    </tr>
-                    <tr>
-                      <th>greater than</th>
-                      <th>greater or equal to</th>
-                      <th>less than</th>
-                      <th>less or equal to</th>
-                    </tr>
-                    <tr>
-                      <td><code>&#62;</code></td>
-                      <td><code>&#62;&#61;</code></td>
-                      <td><code>&#60;</code></td>
-                      <td><code>&#60;&#61;</code></td>
-                    </tr>
-                  </table>
-                </li>
+                <li><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.</li>
                 <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.
-                  <table style="width: 100%;"><tr>
-                      <th>and</th>
-                      <th>or</th>
-                      <th>not</th>
-                    </tr>
-                    <tr>
-                      <td><code>&amp;&amp;</code></td>
-                      <td><code>&#124;&#124;</code></td>
-                      <td><code>&#33;</code></td>
-                    </tr>
-                  </table>
-                </li>
+                <li><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.</li>
               </ol>
+              <p>Learn more about <a href="control_structures.php#assignmentoperator">Operators</a>.</p>
             </div>
             
           </div>

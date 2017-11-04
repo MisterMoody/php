@@ -227,25 +227,25 @@ $date = date_default_timezone_set('EST');
           <p> Below is a list of the types of operators that you will need to familiarize yourself with when dealing with conditional statements.</p>
           <nav class="nav nav-tabs" id="myTab" role="tablist">
             <!-- Assignment -->
-            <a class="nav-item nav-link active" id="nav-assignment-tab" data-toggle="tab" href="#nav-assignment" role="tab" aria-controls="nav-assignment" aria-selected="false">Assignment</a>
+            <a class="nav-item nav-link active" id="nav-assignment-tab" data-toggle="tab" href="#assignmentoperator" role="tab" aria-controls="nav-assignment" aria-selected="false">Assignment</a>
             <!-- Arithmetic -->
-            <a class="nav-item nav-link" id="nav-arithmetic-tab" data-toggle="tab" href="#nav-arithmetic" role="tab" aria-controls="nav-arithmetic" aria-selected="false">Arithmetic</a>
+            <a class="nav-item nav-link" id="nav-arithmetic-tab" data-toggle="tab" href="#arithmeticoperator" role="tab" aria-controls="nav-arithmetic" aria-selected="false">Arithmetic</a>
             <!-- Comparison -->
-            <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#nav-comparison" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
+            <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#comparisonoperator" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
             <!-- Logical -->
-            <a class="nav-item nav-link" id="nav-logical-tab" data-toggle="tab" href="#nav-logical" role="tab" aria-controls="nav-logical" aria-selected="false">Logical</a>
+            <a class="nav-item nav-link" id="nav-logical-tab" data-toggle="tab" href="#logicaloperator" role="tab" aria-controls="nav-logical" aria-selected="false">Logical</a>
             <!-- Concatenation -->
-            <a class="nav-item nav-link" id="nav-concatenation-tab" data-toggle="tab" href="#nav-concatenation" role="tab" aria-controls="nav-concatenation" aria-selected="false">Concatenation</a>
+            <a class="nav-item nav-link" id="nav-concatenation-tab" data-toggle="tab" href="#concatenation" role="tab" aria-controls="nav-concatenation" aria-selected="false">Concatenation</a>
             <!-- xxx -->
             <!--<a class="nav-item nav-link" id="nav-xxx-tab" data-toggle="tab" href="#nav-xxx" role="tab" aria-controls="nav-xxx" aria-selected="false">xxx</a>-->
           </nav>
           <div class="tab-content" id="nav-tabContent">
             <!-- Assignment -->
-            <div class="tab-pane fade show active" id="nav-assignment" role="tabpanel" aria-labelledby="nav-assignment-tab">
-              <p><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code> uses = to put a Value into a Variable</p>
+            <div class="tab-pane fade show active" id="assignmentoperator" role="tabpanel" aria-labelledby="nav-assignment-tab">
+              <p><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code>.</p>
             </div>
             <!-- Arithmetic -->
-            <div class="tab-pane fade" id="nav-arithmetic" role="tabpanel" aria-labelledby="nav-arithmetic-tab">
+            <div class="tab-pane fade" id="arithmeticoperator" role="tabpanel" aria-labelledby="nav-arithmetic-tab">
               <p><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  
               <br>These can be used together with the <code>assignment operator</code> to create a shorthand.</p> 
                 <table style="width: 100%;">
@@ -258,8 +258,8 @@ $date = date_default_timezone_set('EST');
                 </table>
             </div>
             <!-- Comparison -->
-            <div class="tab-pane fade" id="nav-comparison" role="tabpanel" aria-labelledby="nav-comparison-tab">
-              <p><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.  seeks Equal / Identical Values</p>
+            <div class="tab-pane fade" id="comparisonoperator" role="tabpanel" aria-labelledby="nav-comparison-tab">
+              <p><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.</p>
                   <table style="width: 100%;">
                     <tr>
                       <th>equal to <code>&#61;&#61;</code></th>
@@ -276,7 +276,7 @@ $date = date_default_timezone_set('EST');
                   </table>
             </div>
             <!-- Logical -->
-            <div class="tab-pane fade" id="nav-logical" role="tabpanel" aria-labelledby="nav-logical-tab">
+            <div class="tab-pane fade" id="logicaloperator" role="tabpanel" aria-labelledby="nav-logical-tab">
               <p><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.</p>
                   <table style="width: 100%;"><tr>
                       <th>and <code>&amp;&amp;</code></th>
@@ -286,7 +286,7 @@ $date = date_default_timezone_set('EST');
                   </table>
             </div>
             <!-- Concatenation -->
-            <div class="tab-pane fade" id="nav-concatenation" role="tabpanel" aria-labelledby="nav-concatenation-tab">
+            <div class="tab-pane fade" id="concatenation" role="tabpanel" aria-labelledby="nav-concatenation-tab">
               <p><a href="http://php.net/manual/en/language.operators.comparison.php">Concatenation</a>	uses <code>.</code> to create a New String by Combining Multiple Strings together.</p>
             </div>
             <!-- xxx -->

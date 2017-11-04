@@ -47,35 +47,21 @@ $date = date_default_timezone_set('EST');
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
           <li class="nav-item active text-right">
-            <a class="nav-link" href="index.html"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" src="#" href="syntax.php" alt="PHP Snytax">Syntax</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" src="#" href="#" alt="xxxx">Scripts</a>
+            <a class="nav-link" href="index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">aaa</a>
-              <a class="dropdown-item" href="#">bbb</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="syntax/syntax.php">Basics</a>
+              <a class="dropdown-item" href="syntax/control_structures.php">Control Structures</a>
+              <a class="dropdown-item" href="#">xxx</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>
             </div>
-          </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
+            <a class="nav-link" src="#" href="scripts.php" alt="PHP Scripts">Scripts</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">502WEST</a>
-              <a class="dropdown-item" href="#">CLIL</a>
-            </div>
-          </li>
-          --> <!-- HIDDEN Nav Items -->
         </ul>
       </div>
      </nav>
@@ -176,15 +162,18 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
       
-      
+      <!-- -->
       <!-- RESOURCES -->
-      <div class="col-lg-12">
-        <h4>Resources</h4>
-        <ol>
-          <li>Official <a href="http://php.net">PHP</a></li>
-          <li>PHP <a href="http://foundationphp.com/tutorials.php">Tutorials</a></li>
-        </ol>
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Resources</h4>
+          <ol>
+            <li>111 <a href="">xxx</a></li>
+            <li>111 <a href="">xxx</a></li>
+          </ol>
+        </div>
       </div>
+      <!-- -->
       <!-- -->
     </div>
     
