@@ -52,8 +52,8 @@ $date = date_default_timezone_set('EST');
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="syntax/syntax.php">Basics</a>
-              <a class="dropdown-item" href="syntax/control_structures.php">Control Structures</a>
+              <a class="dropdown-item" href="syntax.php">Basics</a>
+              <a class="dropdown-item" href="control_structures.php">Control Structures</a>
               <a class="dropdown-item" href="#">xxx</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Examples</a>
@@ -72,11 +72,13 @@ $date = date_default_timezone_set('EST');
     <!-- ********************************************************* -->
     <!-- *************** <MAIN> CONTAINER ************************ -->
     <!-- ********************************************************* -->
-    <!-- -->
-    <!-- PHP Control Structures-->
+    
+    <!-- --------------------------------------------------------- -->    
+    <!-- --------------------------------------------------------- -->
+    <!-- ----------------- PHP Control Structures ---------------- -->
     <div class="container">
-      <!-- -->
-      <!-- -->
+      <!-- ------------------------------------------------------- -->
+      <!-- ------------------------------------------------------- -->
       <!--Part I:  Conditional Statements & Logical Operators -->
       <div class="row">
         <div class="col-12">
@@ -89,8 +91,7 @@ $date = date_default_timezone_set('EST');
           <p></p>          
         </div>
       </div>
-      <!-- -->
-      <!-- -->
+      <!-- ------------------------------------------------------- -->
       <!-- Vertical Tabs for Conditional Statements -->      
       <div class="row mb-5">
         <div class="col-12">
@@ -217,40 +218,48 @@ $date = date_default_timezone_set('EST');
           </div>
         </div>
       </div>
-      <!-- -->
-      <!-- -->
+      <!-- ------------------------------------------------------- -->
       <!-- Horizontal Tabs for Logicial Operators -->
       <div class="row mb-5">
         <div class="col-12">
           <h4>Logical Operators</h4>
           <p><a href="http://php.net/manual/en/language.operators.php">Operators</a> are used to perform operations that compare variables and values before returning a true/false result. As opposed to keywords, operators take the form of math characters such as <code>&#62; &#43; &#45; &#42; &#61; &#60;</code>.</p>
+          <p> Below is a list of the types of operators that you will need to familiarize yourself with when dealing with conditional statements.</p>
           <nav class="nav nav-tabs" id="myTab" role="tablist">
-            <!-- Conditional Statements -->
-            <a class="nav-item nav-link" id="nav-conditionalstatements-tab" data-toggle="tab" href="#nav-conditionalstatements" role="tab" aria-controls="nav-conditionalstatements" aria-selected="true">Conditional Statements</a>
-            <!-- Logical Operators -->
-            <a class="nav-item nav-link" id="nav-logicoperators-tab" data-toggle="tab" href="#nav-logicoperators" role="tab" aria-controls="nav-logicoperators" aria-selected="false">Logical Operators</a>
+            <!-- Assignment -->
+            <a class="nav-item nav-link active" id="nav-assignment-tab" data-toggle="tab" href="#nav-assignment" role="tab" aria-controls="nav-assignment" aria-selected="false">Assignment</a>
+            <!-- Arithmetic -->
+            <a class="nav-item nav-link" id="nav-arithmetic-tab" data-toggle="tab" href="#nav-arithmetic" role="tab" aria-controls="nav-arithmetic" aria-selected="false">Arithmetic</a>
+            <!-- Comparison -->
+            <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#nav-comparison" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
+            <!-- Logical -->
+            <a class="nav-item nav-link" id="nav-logical-tab" data-toggle="tab" href="#nav-logical" role="tab" aria-controls="nav-logical" aria-selected="false">Logical</a>
+            <!-- Concatenation -->
+            <a class="nav-item nav-link" id="nav-concatenation-tab" data-toggle="tab" href="#nav-concatenation" role="tab" aria-controls="nav-concatenation" aria-selected="false">Concatenation</a>
+            <!-- xxx -->
+            <!--<a class="nav-item nav-link" id="nav-xxx-tab" data-toggle="tab" href="#nav-xxx" role="tab" aria-controls="nav-xxx" aria-selected="false">xxx</a>-->
           </nav>
           <div class="tab-content" id="nav-tabContent">
-            <!-- Conditional Statements -->
-            <div class="tab-pane fade" id="nav-conditionalstatements" role="tabpanel" aria-labelledby="nav-conditionalstatements-tab">
-              <p></p>
+            <!-- Assignment -->
+            <div class="tab-pane fade show active" id="nav-assignment" role="tabpanel" aria-labelledby="nav-assignment-tab">
+              <p><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code> uses = to put a Value into a Variable</p>
             </div>
-            <!-- Logical Operators -->
-            <div class="tab-pane fade" id="nav-logicoperators" role="tabpanel" aria-labelledby="nav-logicoperators-tab">
-              <ol>
-                <li><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code> uses = to put a Value into a Variable</li>
-                <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  These can be used together with the <code>assignment operator</code> to create a shorthand. 
-                  <table style="width: 100%;"><tr>
-                      <th>x + y <code>&#36;x <b>&#43;&#61;</b> 2;</code></th>
-                      <th>x - y <code>&#36;x <b>&#45;&#61;</b> 2;</code></th>
-                      <th>x * y <code>&#36;x <b>&#42;&#61;</b> 2;</code></th>
-                      <th>x / y <code>&#36;x <b>&#47;&#61;</b> 2;</code></th>
-                    </tr>
-                  </table>                  
-                </li>
-                <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.  seeks Equal / Identical Values
+            <!-- Arithmetic -->
+            <div class="tab-pane fade" id="nav-arithmetic" role="tabpanel" aria-labelledby="nav-arithmetic-tab">
+              <p><a href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic Operators</a> are used to add, subtract, multiply etc. Variables. <code>&#36;x <b>&#43;</b> &#36;y</code>.  
+              <br>These can be used together with the <code>assignment operator</code> to create a shorthand.</p> 
+                <table style="width: 100%;">
+                  <tr>
+                    <th>x + y <code>&#36;x <b>&#43;&#61;</b> 2;</code></th>
+                    <th>x - y <code>&#36;x <b>&#45;&#61;</b> 2;</code></th>
+                    <th>x * y <code>&#36;x <b>&#42;&#61;</b> 2;</code></th>
+                    <th>x / y <code>&#36;x <b>&#47;&#61;</b> 2;</code></th>
+                  </tr>
+                </table>
+            </div>
+            <!-- Comparison -->
+            <div class="tab-pane fade" id="nav-comparison" role="tabpanel" aria-labelledby="nav-comparison-tab">
+              <p><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.  seeks Equal / Identical Values</p>
                   <table style="width: 100%;">
                     <tr>
                       <th>equal to <code>&#61;&#61;</code></th>
@@ -265,27 +274,31 @@ $date = date_default_timezone_set('EST');
                       <th>less or equal to <code>&#60;&#61;</code></th>
                     </tr>
                   </table>
-                </li>
-                <p></p>
-                <li><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.
+            </div>
+            <!-- Logical -->
+            <div class="tab-pane fade" id="nav-logical" role="tabpanel" aria-labelledby="nav-logical-tab">
+              <p><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.</p>
                   <table style="width: 100%;"><tr>
                       <th>and <code>&amp;&amp;</code></th>
                       <th>or <code>&#124;&#124;</code></th>
                       <th>not <code>&#33;</code></th>
                     </tr>
                   </table>
-                  Concatenation	uses . to create a New String by Combining Multiple Strings together.  http://php.net/manual/en/language.operators.comparison.php
-                </li>
-              </ol>
             </div>
+            <!-- Concatenation -->
+            <div class="tab-pane fade" id="nav-concatenation" role="tabpanel" aria-labelledby="nav-concatenation-tab">
+              <p><a href="http://php.net/manual/en/language.operators.comparison.php">Concatenation</a>	uses <code>.</code> to create a New String by Combining Multiple Strings together.</p>
+            </div>
+            <!-- xxx -->
+            <!--<div class="tab-pane fade" id="nav-xxx" role="tabpanel" aria-labelledby="nav-xxx-tab">
+              <p><a href="http://php.net/manual/en/language.operators.assignment.php">Assignment Operators</a> assign values to variables. <code>&#36;x <b>&#61;</b> &#36;y</code> uses = to put a Value into a Variable</p>
+            </div>-->
             <!-- -->
-            <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">ghost screeen</div>
           </div>
         </div>
       </div>
-      <!-- -->
-      <!-- -->
-      
+      <!-- ------------------------------------------------------- -->
+     
       
       
       
@@ -355,7 +368,8 @@ $date = date_default_timezone_set('EST');
       </div>
       <!-- -->
       <!-- -->
-      
+    <!-- --------------------------------------------------------- -->
+    <!-- --------------------------------------------------------- -->       
       <!-- -->
       <!-- -->
       <!-- <div class="col-12">
