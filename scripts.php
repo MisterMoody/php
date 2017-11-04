@@ -49,39 +49,25 @@ $date = date_default_timezone_set('EST');
           <li class="nav-item active text-right">
             <a class="nav-link" href="index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" src="#" href="syntax.php" alt="PHP Snytax">Syntax</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="syntax/syntax.php">Basics</a>
+              <a class="dropdown-item" href="syntax/control_structures.php">Control Structures</a>
+              <a class="dropdown-item" href="#">xxx</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" src="#" href="scripts.php" alt="PHP Scripts">Scripts</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Database</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">aaa</a>
-              <a class="dropdown-item" href="#">bbb</a>
-            </div>
-          </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">502WEST</a>
-              <a class="dropdown-item" href="#">CLIL</a>
-            </div>
-          </li>
-          --> <!-- HIDDEN Nav Items -->
         </ul>
       </div>
      </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
-    
+       
     
     <!-- ********************************************************* -->
     <!-- *************** <MAIN> CONTAINER ************************ -->
@@ -233,9 +219,6 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       
       
-      
-      
-      
       <!-- The date() Function -->
       <div class="row mb-3">
         <div class="col-6">
@@ -284,6 +267,116 @@ $date = date_default_timezone_set('EST');
       </div>
       <!-- -->
       <!-- -->
+      
+      
+      <!-- Message to Student -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <code>
+            &#60;?php
+            <br>&#36;firstName &#61; &#39;Ray&#39;;
+            <br>&#36;lastName &#61; &#39;Moody&#39;;
+            <br>&#36;currentGrad &#61; 12;
+            <br>&#36;finalAverage &#61; .80;
+            <br>&#36;messageBody &#61; &#39; &#39;;
+            <br>
+            <br>?&#62;
+            
+            <br>if (!$firstName || !$lastName) &#123;
+            <br>    echo &#34;Please enter a student name&#34;;
+            <br>
+            <br>&#125; elseif &#40;$currentGrade &#60; 9 || $currentGrade &#62; 12&#41; &#123;
+            <br>    echo &#34;This is for high school students. Enter a grade between 9 and 12.&#34;;	
+            <br>
+            <br>&#125; else &#123;
+            <br>if &#40;$finalAverage &#60; .70&#41; &#123;
+            <br>    &#36;messageBody = 'We look forward to seeing you at summer school, flunky!';
+            <br>
+            <br>  &#125; else &#123;
+            <br>
+            <br>switch ($currentGrade) &#123;
+            <br>        case 9:
+            <br>          &#36;messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!';
+            <br>          break;
+            <br>
+            <br>        case 10:
+                      &#36;messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!';
+            <br>          break;
+            <br>
+            <br>        case 11:
+            <br>          &#36;messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!';
+            <br>          break;
+            <br>
+            <br>        case 12:
+                      &#36;messageBody = 'Congratulations on graduating High School! Good luck!';
+            <br>          break;
+            <br>
+            <br>        default:
+            <br>          &#36;messageBody = 'Error: Grade level is not 9-12!';
+                  &#125;
+              &#125;
+              echo "Dear &#36;firstName &#36;lastName\n";	
+              echo &#36;messageBody;
+          &#125;
+            
+          </code>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <h3><a href="">Letter to Student</a></h3>
+          <p>This script <i>sends a message</i> to students based on their grade level and final grade point average [<a href="https://teamtreehouse.com/library/schools-out">Tutorial</a>] and will <code>output</code> the following results:</p>
+          <?php 
+          //Variables
+          $firstName = 'Ray ';	
+          $lastName = 'Moody';
+          $currentGrade = 12;
+          $finalAverage = .80;
+          $messageBody = '';
+          //Check for Values of Required Variables
+            //if NOT firstName 'or' lastName
+            //if less than grade 9 'or' greater than grade 12
+              //Nested Conditions
+                //Display Message  >>  $messageBody
+          if (!$firstName || !$lastName) {
+              echo 'Please enter a student name';
+          } elseif ($currentGrade < 9 || $currentGrade > 12) {
+              echo 'This is for high school students. Enter a grade between 9 and 12.';	
+          } else {
+              if ($finalAverage < .70) {
+                $messageBody = 'We look forward to seeing you at summer school, flunky!';
+              } else {
+                  switch ($currentGrade) {
+                    case 9:
+                      $messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!';
+                      break;
+
+                    case 10:
+                      $messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!';
+                      break;
+
+                    case 11:
+                      $messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!';
+                      break;
+
+                    case 12:
+                      $messageBody = 'Congratulations on graduating High School! Good luck!';
+                      break;
+                    default:
+                      $messageBody = 'Error: Grade level is not 9-12!';
+                  }
+              }
+              echo "Dear $firstName $lastName\n";	
+              echo $messageBody;
+          }
+          ?>
+        </div>
+      </div>
+      <!-- -->
+      <!-- -->
+            
+      
+      
+      
       <!-- RESOURCES -->
       <div class="row">
         <div class="col-lg-12">
