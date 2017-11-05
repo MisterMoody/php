@@ -92,7 +92,7 @@ $date = date_default_timezone_set('EST');
         <!-- -->
         <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">PHP Scripts</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Check out these <a href="https://www.w3schools.com/php/php_examples.asp">PHP Examples</a></p>
+          <p>These are some basic <a href="https://www.w3schools.com/php/php_examples.asp">PHP Script Examples</a> that I have encountered in my web development journey. For each example, I provide the actual code via <code>&#60;html&#62;</code> as well as a description of how the code is processed when injected into html. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis.</p>
         </div>
       </div>
       <!-- -->
@@ -313,12 +313,10 @@ $date = date_default_timezone_set('EST');
             <br>
             <br>        default:
             <br>          &#36;messageBody = 'Error: Grade level is not 9-12!';
-                  &#125;
-              &#125;
-              echo "Dear &#36;firstName &#36;lastName\n";	
-              echo &#36;messageBody;
-          &#125;
-            
+            <br>          echo "Dear &#36;firstName &#36;lastName\n";	
+            <br>      echo &#36;messageBody;
+            <br>&#125;
+            <br>&#63;&#62;
           </code>
         </div>
         <!-- -->
@@ -373,7 +371,61 @@ $date = date_default_timezone_set('EST');
       </div>
       <!-- -->
       <!-- -->
-            
+       
+      <!-- User 'Privilege' based on 'Role' -->
+      <div class="row mb-3">
+        <div class="col-6">
+          <code>
+          if &#40;&#33;isset&#34;&#36;role&#41;&#41; &#123;	&#36;role &#61; &#39;subscriber&#39;;		&#125;
+          <br>
+          <br>switch &#40;&#36;role&#41; &#123;
+          <br>  case &#34;admin&#34;&#58;
+          <br>    echo &#34;As an admin, you can add, edit, or delete any post.&#34;;
+          <br>    break;
+          <br>
+          <br>  case &#34;editor&#34;&#58;
+          <br>    echo &#34;As an editor, you can add or edit any post, and delete your own posts.&#34;;
+          <br>    break;
+          <br>
+          <br>  case &#34;author&#34;&#58;
+          <br>    echo &#34;As an author, you can add, edit, or delete your own post.&#34;;
+          <br>    break;
+          <br>
+          <br>  default&#58;
+          <br>    echo &#34;You do not have access to this page. Please contact your administrator.&#34;;
+          <br>    break;
+          <br>&#125;
+          <br>&#63;&#62;
+          </code>
+        </div>
+        <div class="col-6">
+          <h3>User Privilege based on Role</h3>
+          <p></p>
+          <?php
+          if (!isset($role)) {	$role = 'admin';		}
+
+          switch ($role) {
+            case "admin":
+              echo "As an admin, you can add, edit, or delete any post.";
+              break;
+
+            case "editor";
+              echo "As an editor, you can add or edit any post, and delete your own posts.";
+              break;
+
+            case "author";
+              echo "As an author, you can add, edit, or delete your own post.";
+              break;
+
+            default:
+              echo "You do not have access to this page. Please contact your administrator.";
+              break;
+          }
+          ?>
+        </div>
+      </div>
+      <!-- -->
+      <!-- -->
       
       
       
