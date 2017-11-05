@@ -119,11 +119,12 @@ $date = date_default_timezone_set('EST');
                 <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;echo &#34;a is greater thab&#34;;&#125;                
               </code>
               </p>
+              <p></p>
             </div>
             <!-- -->
             <!-- if...else -->
             <div class="tab-pane fade" id="else" role="tabpanel" aria-labelledby="v-pills-else-tab">
-              <p>The <a href="http://php.net/manual/en/control-structures.if.php">if</a>...<a href="http://php.net/manual/en/control-structures.else.php">else</a> Conditional executes code if <i>a condition evaluates to true, otherwise another block of code is executed if condition evaluates to false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.
+              <p>The <a href="http://php.net/manual/en/control-structures.else.php">if...else</a> Conditional executes code if <i>a condition evaluates to true, otherwise another block of code is executed if condition evaluates to false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.
               <br><br>
               <code>
                 &#36;t &#61; date&#40;&#34;H&#34;&#41;;
@@ -203,11 +204,12 @@ $date = date_default_timezone_set('EST');
             <!-- Other Statments -->
             <div class="tab-pane fade" id="otherstatements" role="tabpanel" aria-labelledby="v-pills-otherstatements-tab">
               <p>Other Control Structures include
-                &#47; <a href="http://php.net/manual/en/language.control-structures.break.php">break</a>
+                <a href="http://php.net/manual/en/language.control-structures.break.php">break</a>
                 &#47; <a href="http://php.net/manual/en/language.control-structures.continue.php">continue</a>
                 &#47; <a href="http://php.net/manual/en/language.control-structures.declare.php">declare</a></p>
+              <p><a href="http://php.net/manual/en/control-structures.alternative-syntax.php">Alternative</a> Syntax for Control Structures</p>
               <p>Associated Functions 
-                &#47; <a href="http://php.net/manual/en/function.return.php">return</a>
+                <a href="http://php.net/manual/en/function.return.php">return</a>
                 &#47; <a href="http://php.net/manual/en/function.require.php">require</a>
                 &#47; <a href="http://php.net/manual/en/function.include.php">include</a></p>
             </div>
