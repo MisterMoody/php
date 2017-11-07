@@ -128,8 +128,8 @@ $date = date_default_timezone_set('EST');
               <br><br>
               <code>
                 &#36;t &#61; date&#40;&#34;H&#34;&#41;;
-                <br>if &#40;&#36;t &#60; &#34;20&#34;&#41;
-                &#123;echo &#34;Have a good day&#33;&#34;;&#125;
+                <br>if &#40;&#36;t &#60; &#34;20&#34;&#41; &#123;
+                echo &#34;Have a good day&#33;&#34;;&#125;
                 <br>else &#123;echo &#34;Have a good night&#33;&#34;;&#125;
               </code>
               </p>
@@ -276,20 +276,118 @@ $date = date_default_timezone_set('EST');
                       <th>less or equal to <code>&#60;&#61;</code></th>
                     </tr>
                   </table>
+              <!-- Examples -->
+              <div class="row mt-3">
+                <div class="col-12">
+                  <p>The example below provides a <code>code</code> example of a <i>greater than or equal to elseif conditional statement</i>.</p>
+                </div>
+                <div class="col-6">
+                  <code>
+                    &#60;?php
+                    <br>&#36;score&#61; 80;
+                    <br>
+                    <br>if &#40;&#39;&#36;score &#62;&#61; 80&#39;&#41; &#123;
+                    <br>echo &#39;&#36;Fantanstic work! Level Up!&#39;; 
+                    <br>&#125; elseif &#40;&#39;&#36;score &#62;&#61; 60&#39;&#41; &#123;
+                    <br>echo &#39;&#36;Good job. Level Up!'&#39;; 
+                    <br>&#125; elseif &#40;&#34;&#36;score &#60;&#61; 59&#34;&#41; &#123;
+                    <br>echo &#39;&#36;You should practice more before trying this level again.''&#39;; &#125;
+                    <br>&#125; else &#123;
+                    <br>echo &#39;&#36;Please try again.&#39;;
+                    <br>&#125;
+                    <br>
+                    <br>?&#62;
+                  </code>
+                </div>
+                <div class="col-6">
+                  <h3><a href="">&#62;&#61; and &#60;&#61;</a></h3>
+                  <p>This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. The code on the left will <code>output</code> the following results:</p>
+                  <?php
+                  $score = 22;
+                  if ($score >= 80) {
+                      echo 'Fantanstic work! Level Up!';
+                  } elseif ($score >= 60) {
+                    echo 'Good job. Level Up!';
+                  } elseif ($score <= 59) {
+                    echo 'You should practice more before trying this level again.';
+                  } else {
+                      echo 'Please try again!';
+                  }
+                  ?>
+                </div>
+              </div>
+              <!-- -->
             </div>
             <!-- Logical -->
             <div class="tab-pane fade" id="logicaloperator" role="tabpanel" aria-labelledby="nav-logical-tab">
               <p><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.</p>
-                  <table style="width: 100%;"><tr>
-                      <th>and <code>&amp;&amp;</code></th>
-                      <th>or <code>&#124;&#124;</code></th>
-                      <th>not <code>&#33;</code></th>
-                    </tr>
-                  </table>
+                <table style="width: 100%;">
+                  <tr>
+                    <th>and <code>&amp;&amp;</code></th>
+                    <th>or <code>&#124;&#124;</code></th>
+                    <th>not <code>&#33;</code></th>
+                  </tr>
+                </table>
+              <p>Learn more about <a href="https://teamtreehouse.com/library/booleans">How to Compare Boolean Values</a>.</p>
+              <p><a href="http://php.net/manual/en/language.operators.logical.php">Logic Operators</a> are used to test multiple conditions and are useful to combine Nested <code>if</code> statements. For example, if you want to match a range of numbers between 10 and 1000 you would create two test: one to query if <code>&#36;xxx &#62;&#61; 10</code> and the second to query if <code>&#36;xxx &#60;&#61; 1000</code> <br>'&&' Operator Evaluates if BOTH Conditions are TRUE. 
+              <br>'||' Operator Evaluates if EITHER Condition is TRUE.
+              <br>The '&&' and "||" has higher precendence than 'and' and 'or'. 
+              <br>'is_string()' Evaluates if the Variable Value is a String Type.</p>
+              <!-- Examples -->
+              <div class="row mt-3">
+                <div class="col-12">
+                  <p>The example below provides a <code>code</code> example of a <i>Nested if conditional statement</i>.</p>
+                </div>
+                <div class="col-6">
+                  <code>
+                    &#60;?php
+                    <br>&#36;num &#61; 100;
+                    <br>
+                    <br>if &#40;&#36;num &#60;&#61; 10 &amp;&amp; &#36;num &#62;&#61; 1000&#41; &#123;
+                    <br>echo &#39;&#36;Number is WITHIN the Range&#39;; 
+                    <br>&#125; else  &#123;
+                    <br>echo &#39;&#36;Number is GREATER than 1000, NOT Within Range&#39;; 
+                    <br>&#125; else  &#123;
+                    <br>echo &#39;&#36;Number is LESS than 10, NOT within Range&#39;;
+                    <br>&#125;
+                    <br>
+                    <br>?&#62;
+                  </code>
+                </div>
+                <div class="col-6">
+                  <h3>Nested <code>if</code> Conditional Statement</h3>
+                  <p>This script uses an Nested <code>if</code> <i>conditional statement</i> that queries <i>a number within a specific range</i>. This script queries if the number is greater than 10 but less than 1000. The nested condition in this example can output statements for whether the number is within the range or not. If the variable value is outside of the range, it will state whether it is greater than or less than, respectively. The code on the left will <code>output</code> the following results:</p>
+                  <?php
+                  $num = 100;
+                  if ($num >= 10) {
+                    if ($num >= 10 && $num <= 1000) {
+                        echo 'Number is Within the Range';
+                    } else { 
+                        echo 'Number is GREATER than 1000, NOT Within Range';
+                    }
+                  } else {
+                      echo 'Number is LESS than 10, NOT Within Range'; {
+                      }
+                  }
+                  ?>
+                </div>
+              </div>
+              <!-- -->
             </div>
             <!-- Concatenation -->
             <div class="tab-pane fade" id="concatenation" role="tabpanel" aria-labelledby="nav-concatenation-tab">
               <p><a href="http://php.net/manual/en/language.operators.comparison.php">Concatenation</a>	uses <code>.</code> to create a New String by Combining Multiple Strings together.</p>
+              <p>
+                <?php
+            /*$num = 1000;
+
+            if ($num == 10 || is_string($num)) {
+              echo '10 or string';
+            } else {
+              echo 'Not 10 or string';
+            }*/
+            /*Will Evaluate as TRUE only if the number 10 or a 'string' is present*/
+            ?></p>
             </div>
             <!-- xxx -->
             <!--<div class="tab-pane fade" id="nav-xxx" role="tabpanel" aria-labelledby="nav-xxx-tab">
@@ -297,6 +395,45 @@ $date = date_default_timezone_set('EST');
             </div>-->
             <!-- -->
           </div>
+          
+
+<?php
+/*$num = 1001;
+
+if ($num >= 10) {
+	if ($num <= 1000) {
+			echo 'Number is Within the Range';
+	} else { 
+			echo 'Number is GREATER than 1000, NOT Within Range';
+	}
+} else {
+		echo 'Number is LESS than 10, NOT Within Range'; {
+		}
+}*/
+?>
+
+<?php
+/*$num = 100;
+
+if ($num >= 10 && $num <= 1000) {
+			echo 'Number is Within the Range';
+	} else { 
+			echo 'Number is NOT Within the Range';
+	}*/
+?>
+
+<?php
+/*$num = 1000;
+
+if ($num == 10 || is_string($num)) {
+	echo '10 or string';
+} else {
+	echo 'Not 10 or string';
+}*/
+/*Will Evaluate as TRUE only if the number 10 or a 'string' is present*/
+?>
+
+          
         </div>
       </div>
       <!-- ------------------------------------------------------- -->
@@ -371,49 +508,10 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
     <!-- --------------------------------------------------------- -->
-    <!-- --------------------------------------------------------- -->       
-      <!-- -->
-      <!-- -->
-      <!-- <div class="col-12">
-          <h4>Summary</h4>
-          <p>Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
-        </div>
-        
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>-->
- 
+    <!-- --------------------------------------------------------- -->        
     </div>
+   
     
-    <!-- -->
-    <!-- -->
-    <!-- Version Control -->
-    <!--<div class="grid">
-      <div class="col-12">
-        <h3 id="vc">Version Control</h3>
-      </div>
-      <div class="col-12">
-        <ol>
-          <li>Create the Repo</li>
-          <p class="notes">From your account, Click <span class="highlight">New repository</span>.  Give the repo a name and brief description of the project objective. You want to <i>Initialize the Repo with a README</i> only if you are building a code from scratch, which is exactly what should be done here.</p>
-          
-          <li>Clone Repo to Computer</li>
-          <p class="notes">Cloning the repo is a multi-step process. First, from the repo click the 'Clone or Download' button. Next, <span class="highlight">Copy</span> the <span class="highlight">https://github.com/User/project.git</span> link.</p>
-          <p class="notes">Now, open the <span class="highlight">Control Panel</span> and access the <span class="highlight">C:\xampp\htodcs folder</span>. [Use the 'cd.. / cd ' commands to move down and up within the C:\ directory, respectively.]</p>
-          <p class="notes">Type <span class="highlight">git clone</span> then paste the repo link in the format provided above.</p>
-          
-          <li>Build the Project</li>
-          <p class="notes">If you already have files to build upon, simply copy and paste them into the repo folder.  Otherwise, create an index.html file and add it to the repo folder. Once you have done this, type <span class="highlight">git status</span>, which is a command that will allow you to <i>view the status of all project files</i>. Notice how the files are labled <span class="highlight">untracked</span>? That means that the file has not been uploaded from the computer to the Git repo online. Upload any file from the console using three simple commands: <span class="highlight">Add</span>, <span class="highlight">Commit</span> and <span class="highlight">Push</span>. Those commands are as follow:</p>
-          <ol type="a">
-            <li class="notes">git add fileName.extension</li>
-            <li class="notes">git commit -m "Changes Made to fileName.ext"</li>
-            <li class="notes">git push -u origin master</li>
-          </ol>
-          <p class="notes">That's it! Follow these three commands to modify any file in the future.  As well, there are several other commands that can be useful throughout your workflow such as <span class="highlight">Removing Files</span> or <span class="highlight">Cleaning the repo</span>, and this <span><a href="http://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></span> can show you how!</p>
-        </ol>
-      </div>
-    </div>-->
-    <!-- -->
-    <!-- -->
 
     <!-- ************ --> <!-- Use a Font-Awesome heart 'fa fa-heart' -->
     <!-- ** FOOTER ** -->
