@@ -90,7 +90,22 @@ $date = date_default_timezone_set('EST');
       <div class="row">
         <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">Introduction to PHP</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+          <p><a href="https://www.w3schools.com/php/php_intro.asp">PHP</a> is a hypertext preprocessor server-side scripting language that is used to create dynamic web page content, encrypt data and collect form data. It also has superpowers that allow developers to modify data within a database as well as create, open, read, write, delete and close files on a server. The language itself is not limited to output html, but can also output images, PDF files and other text formats.</p>
+          <p>PHP also offers <a href="http://php.net/manual/en/features.commandline.php">Command Line</a> usage for simple text processing tasks. And best of all, PHP can be used to create client-side and cross-platform applications using the extension <a href="http://gtk.php.net">PHP-GTK</a>. Learn more about the <a href="http://php.net/manual/en/history.php.php">History</a> of <a href="http://php.net/credits.php">PHP</a></p>
+          <p>This course focuses on best practices required when developing a web project and is divided into modules that include:</p>
+          <ol type="i">
+            <li>Setting up a suitable Developers Environment, Accessible Locally</li>
+            <li>Learning basic Syntax to Implement PHP and Inject into a Program.</li>
+            <li>Using Comparison Operators to Compare and Manipulate Variable Values</li>
+            <li>Using <i>Conditional Statements</i> to Add Logic to a Program</li>
+            <li>ddddddddddddddddd</li>
+            <li>ddddddddddddddddd</li>
+            <li>ddddddddddddddddd</li>
+            <li>ddddddddddddddddd</li>
+            <li>ddddddddddddddddd</li>
+            <li>ddddddddddddddddd</li>
+          </ol>
+          <p>That said, lets get started by setting up our developer environment.</p>
         </div>
       </div>
       <!-- -->
@@ -149,29 +164,6 @@ $date = date_default_timezone_set('EST');
           <h4>Summary</h4>
           <p>Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
         </div>
-        <!-- -->
-        <div class="col-lg-12"></div>
-        
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
-      </div>
-      
-      
-      <!-- -->
-      <!-- -->
-      <!-- -->
-      <!-- -->
-      
-      <!-- -->
-      <!-- RESOURCES -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>Resources</h4>
-          <ol>
-            <li>111 <a href="">xxx</a></li>
-            <li>111 <a href="">xxx</a></li>
-          </ol>
-        </div>
       </div>
       <!-- -->
       <!-- -->
@@ -213,7 +205,7 @@ $date = date_default_timezone_set('EST');
     <div class="container">
       <div class="row no-gutters clearfix">
         <div class="col-6">
-          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <span>&#9829;</span> by Mister Moody.</h6>
+          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <span>&#9829;</span> <i class="fa fa-heartbeat fa-pulsate" aria-hidden="true"></i> by Mister Moody.</h6>
         </div>
         <div class="col-6">
           <h6 class="text-right"><?php echo date("D d M "); echo date(" g:i a T"); ?></h6>
