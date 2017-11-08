@@ -72,17 +72,6 @@ $date = date_default_timezone_set('EST');
     <!-- ********************************************************* -->
     <!-- *************** <MAIN> CONTAINER ************************ -->
     <!-- ********************************************************* -->
-    <!-- 1-COL -->
-    <!--<div class="grid">
-      <div class="col-12">
-        <h3>COLUMN 1 OF 1</h3>
-      </div>
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
-      </div>
-      <div class="col-12"></div>
-    </div>-->
-    <!-- -->
     <div class="container">
       <!-- -->
       <!-- -->
@@ -90,7 +79,7 @@ $date = date_default_timezone_set('EST');
       <div class="row">
         <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">Basic PHP Syntax</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>          
+          <p>The process of writing PHP begins with being able to &#40;a&#41; <i>create a file</i> with the PHP extension, use &#40;b&#41; <i>code blocks</i> to write PHP code, use &#40;c&#41; <i>comments</i> to document code functionality, &#40;d&#41; <i>inject</i> PHP into an html file and &#40;e&#41; <i>display a message</i> in the browser. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>          
         </div>  
       </div>
       <!-- Vertical Tabs for PHP Syntax -->      
@@ -194,43 +183,15 @@ $date = date_default_timezone_set('EST');
       </div>
       <!-- -->
       <!-- -->
-      <!-- <div class="col-12">
-          <h4>Summary</h4>
-          <p>Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. Morbi bibendum magna eu.</p>
+      <div class="row">
+        <div class="col-12">
+          <h2>Other Elements</h2>
+          <p><b>Escape Sequences</b> are used primarily with<i>double-quoted strings</i> to denote special meaning. The backslash character <code>&#92;</code> is used to define the special treatment for how the next character is used. The escape sequence takes on a different purpose depending on if it is followed by an alphanumeric character or a special character, resulting in a new line or parse in that location, respectively.
+            Watch the <a href="https://teamtreehouse.com/library/escape-sequence">tutorial</a>  and learn more about <a href="http://php.net/manual/en/regexp.reference.escape.php">Escape Sequences</a>.</p>
         </div>
-        
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>
-        <div class="col-md-6">am maximus consectetur iaculis. Pellentesque et ultricies magna.Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed non finibus nibh, eu rhoncus purus. Ut pulvinar quam nec tristique interdum. In libero purus, volutpat ut lobortis vitae, dapibus sit amet arcu. </div>-->
+      </div>
     </div>
     
-    <!-- -->
-    <!-- -->
-    <!-- Version Control -->
-    <!--<div class="grid">
-      <div class="col-12">
-        <h3 id="vc">Version Control</h3>
-      </div>
-      <div class="col-12">
-        <ol>
-          <li>Create the Repo</li>
-          <p class="notes">From your account, Click <span class="highlight">New repository</span>.  Give the repo a name and brief description of the project objective. You want to <i>Initialize the Repo with a README</i> only if you are building a code from scratch, which is exactly what should be done here.</p>
-          
-          <li>Clone Repo to Computer</li>
-          <p class="notes">Cloning the repo is a multi-step process. First, from the repo click the 'Clone or Download' button. Next, <span class="highlight">Copy</span> the <span class="highlight">https://github.com/User/project.git</span> link.</p>
-          <p class="notes">Now, open the <span class="highlight">Control Panel</span> and access the <span class="highlight">C:\xampp\htodcs folder</span>. [Use the 'cd.. / cd ' commands to move down and up within the C:\ directory, respectively.]</p>
-          <p class="notes">Type <span class="highlight">git clone</span> then paste the repo link in the format provided above.</p>
-          
-          <li>Build the Project</li>
-          <p class="notes">If you already have files to build upon, simply copy and paste them into the repo folder.  Otherwise, create an index.html file and add it to the repo folder. Once you have done this, type <span class="highlight">git status</span>, which is a command that will allow you to <i>view the status of all project files</i>. Notice how the files are labled <span class="highlight">untracked</span>? That means that the file has not been uploaded from the computer to the Git repo online. Upload any file from the console using three simple commands: <span class="highlight">Add</span>, <span class="highlight">Commit</span> and <span class="highlight">Push</span>. Those commands are as follow:</p>
-          <ol type="a">
-            <li class="notes">git add fileName.extension</li>
-            <li class="notes">git commit -m "Changes Made to fileName.ext"</li>
-            <li class="notes">git push -u origin master</li>
-          </ol>
-          <p class="notes">That's it! Follow these three commands to modify any file in the future.  As well, there are several other commands that can be useful throughout your workflow such as <span class="highlight">Removing Files</span> or <span class="highlight">Cleaning the repo</span>, and this <span><a href="http://ndpsoftware.com/git-cheatsheet.html">Git Cheatsheet</a></span> can show you how!</p>
-        </ol>
-      </div>
-    </div>-->
     <!-- -->
     <!-- -->
 
