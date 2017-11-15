@@ -8,8 +8,7 @@
   box-sizing: border-box;
 } 
 */
-/***************************************/
-/***************************************/
+/*  */
 
 /*FONT*/
 @font-face {
@@ -20,6 +19,7 @@
   src: url('raleway_thin-webfont.otf');
   src: url('raleway_thin-webfont.svg');
 }
+/*  */
 
 /*  */
 /*PAGE OVERFLOW - Hides Horizontal-Overflow & SCROLLBAR*/
@@ -55,8 +55,23 @@ body {
 .nav > .nav-tabs {
   text-align: center;
 }
+/**/
 
 /* ============================================= */
+
+/* <Sidebar> =================================== */
+#sideNav {
+   background-color: yellow;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+}
+
+#content {
+  float: left;
+    width: 84%;
+    margin-left: 200px;
+}
 /* ============================================= */
 
 
