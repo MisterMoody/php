@@ -32,7 +32,22 @@ body {
 }
 /*  */
 
+/*Unordered Lists*/
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+ul > li {
+  color: #bbb;
+}
+ul > li:hover {
+  color: #000;
+}
+/*  */
 
+/*  */
+
+/*  */
 /* ===================================== */
 /* ===================================== */
 
