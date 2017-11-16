@@ -83,7 +83,7 @@ $date = date_default_timezone_set('EST');
         <nav id="sideNav" class="col-lg-3">
           <h4>Arrays 101</h4>
           <ul>
-            <li id="">Intro</li>
+            <li id=""><a id="fade" href="#">Intro</a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -97,26 +97,105 @@ $date = date_default_timezone_set('EST');
           
           <!-- *********** <SECTION 1> ************ -->
           <h1>Introduction to Arrays</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
+          <p>In PHP, an <b>Array</b> is <i>a Compound Variable-type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys.  This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc.
+          <br>In essence, an Array is a simple list of <i>Values</i> that can be other Arrays, Associative Arrays and Multidimensional Arrays. This article first looks at some basic elements and useful functions of an <i>Indexed Array</i> that will enable us to:</p>
+          <ol>
+            <li>Create an Array and Assign it Values</li>
+            <li>Query Array Variable Values [General &amp; Specific]</li>
+          </ol>
+          <h4>1. How to Create an Array</h4>
+          <p>There are two ways to create an Array.</p>
+          
+          <div class="row">
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h5>Traditional Method</h5>
+              <p>Write the Variable Name, followed by the Assignment Operator and then the built-in Array function:<br><code>$variable = array('val1', 'val2');</code>.</p>
             </div>
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h5>Best Practice</h5>
+              <p>PHP 5.4 introduced a shorthand syntax, which omits the 'array' keyword and replaces the Parenthese with Brackets:<br><code>$variable = ['val1', 'val2'];</code></p>
             </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+            <div class="col-12">
+              <p>In both cases, the <i>List of Values</i> is placed within the Array. Each Value must be surrounded by Quotes <code>'value' / "value"</code>, and all Values must be separated by Commas <code>,</code>.</p>
+              <p>This is an Example of an Array List: 
+              <br><code>$variable = ['Conditionals', 'Arrays', 'Loops'];</code>
+              <br>Now, lets take a look at the inner workings of this Array.</p>
             </div>
           </div>
+          <!-- -->         
+          <h4>2. How to Query an Array Variable Value</h4>
+          <p>PHP has a useful function to Query or View an Array Variable <i>Type and its Values</i>. Using the <code>var_dump();</code> Function, we can learn (a) Array Size, (b) the Key-Indexed Position of that Elements Value, and (c) Element Type. This function is useful when using the <i>Console</i> and in order to access a particular script, you must navigate to the folder then enter <code>php fileName.php</code>. Following this method will reveal the following:</p>
+          <div class="row">
+            <div class="col-6">
+              <h5>Script</h5>
+              <p></p>
+              1: <code>$learn = ['HTML', 'CSS' 'PHP'];</code>
+              <br>2: <code>var_dump($learn);</code>
+            </div>
+            <div class="col-6">
+              <h5>Query Results</h5>
+              <p>3: <code>array(3)</code> {
+              <br>4:<code>[0]=></code>
+              <br>5:<code>string(4) "HTML"</code>
+              <br>6:<code>[1]=></code>
+              <br>7:<code>string(3) "CSS"</code>
+              <br>8:<code>[2]=></code>
+              <br>9:<code>string(3) "PHP"</code> }</p>
+            </div>
+            <div class="col-12">
+              <p></p>
+              <h5>Query Explained</h5>
+              <p>(a) Lines 1 &amp; 2 represent the <i>Script</i> that is run inside of <i>Code Blocks</i> <code>&#60;?php ... ?&#62;</code>. Lines 3 &#45; 10 is the <i>Output</i> produced by the Script (ie. Line 1). Line 3 <code>array(3)</code> declares the Array <i>Size</i> and this Array has 3 Elements (ie Values).</p>
+              <p>(b) Lines 4, 6 &amp; 8 <code>[0]=></code> <code>[1]=></code> <code>[2]=></code> highlights the <i>Key-Indexed Position</i> of that Elements VALUE within the Array. By default indexed positions begin at <code>[0]</code>. The <code>=></code> represents the relationship between the Key (ie Variable) and its Value; it is called a <i>Double-Arrow</i>. All Elements require a Key, which PHP assigns automatically by incrementing the largest previously used <i>Integer Key</i>.
+              <br><b>**Include how to Specify my Own Key == See <i>ASSOCIATIVE ARRAYS</i></b><br>
+              (c) Lines 5, 7 &amp; 9 <code>string(4) "HTML"</code> represents the <i>Variable Type</i> and the <i>Character Length</i> along with the actual Variable Value. So the first element has a <i>Key</i> of <code>0</code>, is of the <i>Type</i> <code>string</code> and has a <i>Character Length</i> of <code>4</code>.</p>
+              
+              <h5>Specific Query</h5>
+              <p>If you only want to <i>View a Specific Element</i> and as the above example, use the <code>echo</code> Function; simply echo the <i>Variable Name</i> followed by the <i>Key</i>:
+              <br><code>echo $variableName[Key #];</code></p>
+              
+              <h5>General Query</h5>
+              <p>If you only want to <i>View the Element Values</i>, use the <code>echo</code> Function: <br><code>echo implode("\n", $variableName);</code>
+              <br>the escape character <code>\n</code> is used to start a new line for each Value in the Array <code>$learn</code>.
+              <br>The <code>implode();</code> Function is used to <i>Display Array Values</i> that are then combined into a Single String of Values. These items can then be separated into a new string using another string of your choosing.<code>?????NOT Clear????</code></p>
+            </div>
+          </div>
+          
+          <!--<div class="row">
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>-->
+          <!--<div class="row mb-4">
+            <div class="col-6">
+              <h3>aaa</h3>
+              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+            </div>
+            <div class="col-6">
+              <h3>aaa</h3>
+              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+            </div>
+            <div class="col-6">
+              <h3>aaa</h3>
+              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+            </div>
+            <div class="col-6">
+              <h3>aaa</h3>
+              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+            </div>
+          </div>-->
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li>What is an <a id="fade"  href="http://php.net/manual/en/language.types.array.php">Array</a>?</li>
+            <li>List of Array <a id="fade" href="http://php.net/manual/en/function.array.php">Functions</a></li>
+            <li>List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
+          </ul>
           <!-- ************************************ -->
           
           <!-- ************************************ -->
