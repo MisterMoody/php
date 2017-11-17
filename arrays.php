@@ -83,7 +83,15 @@ $date = date_default_timezone_set('EST');
         <nav id="sideNav" class="col-lg-3">
           <h4>Arrays 101</h4>
           <ul>
-            <li id=""><a id="fade" href="#">Intro</a></li>
+            <li><a id="fade" href="#content">Intro</a></li>
+            <li><a id="fade" href="#createArray">Create an Array</a></li>
+            <li><a id="fade" href="#queryArray">Query an Array</a></li>
+            <li><a id="fade" href="#addArray">Add to an Array</a></li>
+            <!--<li><a id="fade" href="#createArray">Create an Array</a></li>
+            <li><a id="fade" href="#createArray">Create an Array</a></li>
+            <li><a id="fade" href="#createArray">Create an Array</a></li>
+            <li><a id="fade" href="#createArray">Create an Array</a></li>
+            <li><a id="fade" href="#createArray">Create an Array</a></li>-->
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -98,12 +106,20 @@ $date = date_default_timezone_set('EST');
           <!-- *********** <SECTION 1> ************ -->
           <h1>Introduction to Arrays</h1>
           <p>In PHP, an <b>Array</b> is <i>a Compound Variable-type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys.  This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc.
-          <br>In essence, an Array is a simple list of <i>Values</i> that can be other Arrays, Associative Arrays and Multidimensional Arrays. This article first looks at some basic elements and useful functions of an <i>Indexed Array</i> that will enable us to:</p>
+          <br>In essence, an Array is a simple list of <i>Values</i> that can be other Arrays, Associative Arrays and Multidimensional Arrays. This article provides an overview of the most essential elements regarding <i>Indexed Arrays</i> and will cover the following:</p>
           <ol>
             <li>Create an Array and Assign it Values</li>
             <li>Query Array Variable Values [General &amp; Specific]</li>
+            <!--<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>-->
           </ol>
-          <h4>1. How to Create an Array</h4>
+          <h4 id="createArray">1. How to Create an Array</h4>
           <p>There are two ways to create an Array.</p>
           
           <div class="row">
@@ -123,7 +139,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
           <!-- -->         
-          <h4>2. How to Query an Array Variable Value</h4>
+          <h4 id="queryArray">2. How to Query an Array Variable Value</h4>
           <p>PHP has a useful function to Query or View an Array Variable <i>Type and its Values</i>. Using the <code>var_dump();</code> Function, we can learn (a) Array Size, (b) the Key-Indexed Position of that Elements Value, and (c) Element Type. This function is useful when using the <i>Console</i> and in order to access a particular script, you must navigate to the folder then enter <code>php fileName.php</code>. Following this method will reveal the following:</p>
           <div class="row">
             <div class="col-6">
@@ -192,18 +208,42 @@ $date = date_default_timezone_set('EST');
           <!-- RESOURCES-->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li>What is an <a id="fade"  href="http://php.net/manual/en/language.types.array.php">Array</a>?</li>
-            <li>List of Array <a id="fade" href="http://php.net/manual/en/function.array.php">Functions</a></li>
-            <li>List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
+            <li><a id="fade" href="https://teamtreehouse.com/library/indexed-arrays">Tutorial</a> on Indexed-Arrays</li>
+            <li>What is an <a id="fade"  href="http://php.net/manual/en/language.types.array.php">Array</a>? &#47;&#47; List of Array <a id="fade" href="http://php.net/manual/en/function.array.php">Functions</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
           </ul>
           <!-- ************************************ -->
           
           <!-- ************************************ -->
           <!-- *********** <SECTION 2> ************ -->
-          <h1>Arrays 2</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
+          <h1>Manipulating Arrays</h1>
+          <p>PHP has several built-in Functions that enables developers to<i>Add, Remove, Edit</i> or make general changes to the Content within an Array.</p>
+          <!-- -->
+          <!-- -->
+          <h4 id="addArray">1. How to Add to an Array</h4>
+          <p>There are three ways to Add Content to an Array depending on ones objective.</p>
+          <!-- -->
+          <h5>(a) Add a Single Value to End of Array</h5>
+          <p><code>$var[] = 'new element';</code>.</p>
+          <!-- -->
+          <h5>(b) Add Multiple Values to End of Array</h5>
+          <p><code>array_push($arrayName, 'item1', 'item2');</code></p>
+          <!-- -->
+          <h5>(c) Add Multiple Values to Beginning of Array</h5>
+          <p><code>array_unshift($arrayName, 'item1', 'item2');</code></p>
+          <p>As you see, the simplest ways to add a Value to an Array is to <i>add brackets</i> after a Variable and assigning its value. This method is practical only if you want to add a single value.  When appending or prepending multiple values to an Array, it is best to use built-in Functions <code>arry_push();</code> &amp; <code>arry_unshift();</code>, respectively. For all cases. the size of the Array automatically increments by the number of variables pushed for all methods. As well, the Index-Key will automaitcally update when values are prepended.</p>
+          <!-- -->
+          <!-- -->
+          <!--<div class="row">
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>-->
+          <!--<div class="row mb-4">
             <div class="col-6">
               <h3>aaa</h3>
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
@@ -220,7 +260,18 @@ $date = date_default_timezone_set('EST');
               <h3>aaa</h3>
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
             </div>
-          </div>
+          </div>-->
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href="https://teamtreehouse.com/library/adding-array-elements">Tutorial</a> on Adding to an Array &#47;&#47; Array <a id="fade" href="http://php.net/manual/en/language.types.array.php">Types</a></li>
+            <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php"><code>array_push($arrayName, 'item1', 'item2');</code></a></li>
+            <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php"><code>array_unshift($arrayName, 'item1', 'item2');</code></a></li>            
+          </ul>
           <!-- ************************************ -->
           
           <!-- ************************************ -->
@@ -246,6 +297,24 @@ $date = date_default_timezone_set('EST');
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
             </div>
           </div>
+          <!--<div class="row">
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>-->
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+          </ul>
           <!-- ************************************ -->
           
           <!-- ************************************ -->
@@ -271,6 +340,24 @@ $date = date_default_timezone_set('EST');
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
             </div>
           </div>
+          <!--<div class="row">
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>-->
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+          </ul>
           <!-- ************************************ -->
           
           <!-- ************************************ -->
@@ -296,6 +383,24 @@ $date = date_default_timezone_set('EST');
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
             </div>
           </div>
+          <!--<div class="row">
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>-->
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li> <a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+          </ul>
           <!-- ************************************ -->
           
           
