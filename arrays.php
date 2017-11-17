@@ -86,9 +86,10 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href="#content">Intro</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#queryArray">Query an Array</a></li>
+            <li></li>
             <li><a id="fade" href="#addArray">Add to an Array</a></li>
+            <li><a id="fade" href="#removeArray">Remove from an Array</a></li>
             <!--<li><a id="fade" href="#createArray">Create an Array</a></li>
-            <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>-->
@@ -216,10 +217,10 @@ $date = date_default_timezone_set('EST');
           <!-- ************************************ -->
           <!-- *********** <SECTION 2> ************ -->
           <h1>Manipulating Arrays</h1>
-          <p>PHP has several built-in Functions that enables developers to<i>Add, Remove, Edit</i> or make general changes to the Content within an Array.</p>
+          <p>PHP has several built-in Functions that enables developers to update general changes to the Content within an Array.</p>
           <!-- -->
           <!-- -->
-          <h4 id="addArray">1. How to Add to an Array</h4>
+          <h4 id="addArray">1. How to Add a Value to an Array</h4>
           <p>There are three ways to Add Content to an Array depending on ones objective.</p>
           <!-- -->
           <h5>(a) Add a Single Value to End of Array</h5>
@@ -230,7 +231,38 @@ $date = date_default_timezone_set('EST');
           <!-- -->
           <h5>(c) Add Multiple Values to Beginning of Array</h5>
           <p><code>array_unshift($arrayName, 'item1', 'item2');</code></p>
+          <!-- -->
           <p>As you see, the simplest ways to add a Value to an Array is to <i>add brackets</i> after a Variable and assigning its value. This method is practical only if you want to add a single value.  When appending or prepending multiple values to an Array, it is best to use built-in Functions <code>arry_push();</code> &amp; <code>arry_unshift();</code>, respectively. For all cases. the size of the Array automatically increments by the number of variables pushed for all methods. As well, the Index-Key will automaitcally update when values are prepended.</p>
+          <!-- RESOURCES-->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href="https://teamtreehouse.com/library/adding-array-elements">Tutorial</a> on Adding to an Array &#47;&#47; Array <a id="fade" href="http://php.net/manual/en/language.types.array.php">Types</a></li>
+            <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php"><code>array_push($arrayName, 'item1', 'item2');</code></a></li>
+            <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php"><code>array_unshift($arrayName, 'item1', 'item2');</code></a></li>            
+          </ul>
+          <!-- ************************************ -->
+          <!-- -->
+          <!-- -->
+          <h4 id="removeArray">2. How to Remove a Value from an Array</h4>
+          <p>There are also methods to Remove Content from an Array.</p>
+          <!-- -->
+          <h5>(a) Remove a Value from the Beginning of Array</h5>
+          <p><code>array_shift($variableName);</code></p>
+          <!-- -->
+          <h5>(b) Remove a Value from the End of Array</h5>
+          <p><code>array_pop($variableName);</code></p>
+          <!-- -->
+          <h5>(c) Remove a Specific-Value from an Array via its Index-Key Position</h5>
+          <p><code>unset($array[Key1], $array[Key2], etc.);</code></p>
+          <!-- -->
+          <h5>(d) Refresh the Index-Key Positions of Array Elements</h5>
+          <p><code>$arrayName = array_values();</code></p>
+          <!-- -->
+          <p><i>Methods (a) and (b)</i> will return the element to be reused as it can be assigned to a variable. Equally important is the fact that these elements are automatically re-assigned an Index-Key Position. <i>Method (c)</i> is a more advanced function that takes multiple-parameters allowing removal of more than one element at a time and could potentially delete contents of an entire Array. <i>Method (d)</i> will actually create a new Array by assigning results back to the original Array. This is like a <i>Refresh</i> of Array Keys, appropriately indexing them! </p>
           <!-- -->
           <!-- -->
           <!--<div class="row">
@@ -261,18 +293,39 @@ $date = date_default_timezone_set('EST');
               <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
             </div>
           </div>-->
-          <!-- RESOURCES-->
+          <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
             <li><a id="fade"  href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href="https://teamtreehouse.com/library/adding-array-elements">Tutorial</a> on Adding to an Array &#47;&#47; Array <a id="fade" href="http://php.net/manual/en/language.types.array.php">Types</a></li>
-            <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php"><code>array_push($arrayName, 'item1', 'item2');</code></a></li>
-            <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php"><code>array_unshift($arrayName, 'item1', 'item2');</code></a></li>            
+            <li><a id="fade" href="https://teamtreehouse.com/library/removing-array-elements">Tutorial</a> on How to Remove Values from Arrays</li>
+				    <li>Remove an Element from the Beginning of an Array with <a id="fade" href="http://php.net/manual/en/function.array-shift.php"><code>array_shift();</code></a></li>
+				    <li>Remove an Element from the End of an Array with <a id="fade" href="http://php.net/manual/en/function.array-pop.php"><code>array_pop();</code></a> </li>
+				    <li>Remove a Specific-Element from an Array with <a id="fade" href="http://php.net/manual/en/function.unset.php"><code>unset();</code></a> Unset a given Varaible *Warning* <i><code>unset($array);0</code></i> will remove an entire Array. === Need to Learn More!</li>
+				    <li>???<a id="fade" href="http://php.net/manual/en/function.array-splice.php"><code>array_splice();</code></a></li>
           </ul>
           <!-- ************************************ -->
+          <!-- -->
+          <!-- -->
+          <h4 id="editArray">2. How to Edit a Value within an Array</h4>
+          <p>There are also methods to Edit Content within an Array.</p>
+          <!-- -->
+          <h5>(a) Remove a Value from the Beginning of Array</h5>
+          <p><code>array_shift($variableName);</code></p>
+          <!-- -->
+          <!-- RESOURCES -->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade"  href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+          </ul>
+          <!-- ************************************ -->
+          
+          
           
           <!-- ************************************ -->
           <!-- *********** <SECTION 3> ************ -->
