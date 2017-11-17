@@ -241,8 +241,8 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href="https://teamtreehouse.com/library/adding-array-elements">Tutorial</a> on Adding to an Array &#47;&#47; Array <a id="fade" href="http://php.net/manual/en/language.types.array.php">Types</a></li>
-            <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php"><code>array_push($arrayName, 'item1', 'item2');</code></a></li>
-            <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php"><code>array_unshift($arrayName, 'item1', 'item2');</code></a></li>            
+            <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php">array_push($arrayName, 'item1', 'item2');</a></li>
+            <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php">array_unshift($arrayName, 'item1', 'item2');</a></li>            
           </ul>
           <!-- ************************************ -->
           <!-- -->
@@ -301,19 +301,22 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href="https://teamtreehouse.com/library/removing-array-elements">Tutorial</a> on How to Remove Values from Arrays</li>
-				    <li>Remove an Element from the Beginning of an Array with <a id="fade" href="http://php.net/manual/en/function.array-shift.php"><code>array_shift();</code></a></li>
-				    <li>Remove an Element from the End of an Array with <a id="fade" href="http://php.net/manual/en/function.array-pop.php"><code>array_pop();</code></a> </li>
-				    <li>Remove a Specific-Element from an Array with <a id="fade" href="http://php.net/manual/en/function.unset.php"><code>unset();</code></a> Unset a given Varaible *Warning* <i><code>unset($array);0</code></i> will remove an entire Array. === Need to Learn More!</li>
-				    <li>???<a id="fade" href="http://php.net/manual/en/function.array-splice.php"><code>array_splice();</code></a></li>
+				    <li>Remove an Element from the Beginning of an Array with <a id="fade" href="http://php.net/manual/en/function.array-shift.php">array_shift();</a></li>
+				    <li>Remove an Element from the End of an Array with <a id="fade" href="http://php.net/manual/en/function.array-pop.php">array_pop();</a> </li>
+				    <li>Remove a Specific-Element from an Array with <a id="fade" href="http://php.net/manual/en/function.unset.php">unset();</a> Unset a given Varaible *Warning* <i><code>unset($array);0</code></i> will remove an entire Array. === Need to Learn More!</li>
           </ul>
           <!-- ************************************ -->
           <!-- -->
           <!-- -->
-          <h4 id="editArray">2. How to Edit a Value within an Array</h4>
-          <p>There are also methods to Edit Content within an Array.</p>
+          <h4 id="editArray">3. How to Edit a Value within an Array</h4>
+          <p>There is also a method to Edit Content within an Array.</p>
           <!-- -->
-          <h5>(a) Remove a Value from the Beginning of Array</h5>
-          <p><code>array_shift($variableName);</code></p>
+          <h5>Replace a Portion of an Array</h5>
+          <p><code>$arrayName[key# to Replace] = 'new value';</code></p>
+          <!-- -->
+          <p>This method uses a specific <i>String-Value</i> to replace one value with another by simply specifying an element using its <i>Key</i>. In the example above, the <code>'new value';</code> will replace the value of the <code>key#</code> being replaced.</p>
+          
+          [also see array_replace();]
           <!-- -->
           <!-- RESOURCES -->
           <ul>
@@ -322,6 +325,11 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
+            <li><a href="https://teamtreehouse.com/library/editing-array-elements">Tutorial</a> on How to Edit/Update Values within an Array</li>
+					<li>Replace a Portion of an Array with the <a id="fade" href="http://php.net/manual/en/function.array-splice.php">array_splice();</a> Function</li>
+					<li>Replace Elements from Passed Arrays with the <a id="fade" href="http://php.net/manual/en/function.array-replace.php">array_replace();</a> Function</li>
+					<li>Create a 2-in-1 Array with the <a id="fade" href="http://php.net/manual/en/function.array-combine.php">array_combine();</a> Function</li>
+					<li>Merge Elements of Multiple Arrays with the <a id="fade" href="http://php.net/manual/en/function.array-merge.php">array_merge();</a> Function</li>
           </ul>
           <!-- ************************************ -->
           
