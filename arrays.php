@@ -86,12 +86,12 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href="#content">Intro</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#queryArray">Query an Array</a></li>
-            <li></li>
+            <li>[ii] Manipulating Arrays</li>
             <li><a id="fade" href="#addArray">Add to an Array</a></li>
             <li><a id="fade" href="#removeArray">Remove from an Array</a></li>
+            <li><a id="fade" href="#editArray">Edit within an Array</a></li>
+            <li><a id="fade" href="#sortArray">Sort within an Array</a></li>
             <!--<li><a id="fade" href="#createArray">Create an Array</a></li>
-            <li><a id="fade" href="#createArray">Create an Array</a></li>
-            <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>-->
           </ul>
         </nav>
@@ -105,24 +105,20 @@ $date = date_default_timezone_set('EST');
         <div id="content" class="col-lg-9">
           
           <!-- *********** <SECTION 1> ************ -->
+          <!--    INTRODUCTION / TYPES of ARRAYS    -->
           <h1>Introduction to Arrays</h1>
-          <p>In PHP, an <b>Array</b> is <i>a Compound Variable-type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys.  This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc.
-          <br>In essence, an Array is a simple list of <i>Values</i> that can be other Arrays, Associative Arrays and Multidimensional Arrays. This article provides an overview of the most essential elements regarding <i>Indexed Arrays</i> and will cover the following:</p>
-          <ol>
-            <li>Create an Array and Assign it Values</li>
-            <li>Query Array Variable Values [General &amp; Specific]</li>
-            <!--<li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>-->
-          </ol>
+          <p>In PHP, an <b>Array</b> is <i>a Compound Variable-Type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys. This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc. This section focuses on the most essential elements regarding PHP Arrays including <i>Types of Arrays</i>, <i>Creating an Array and Assiging it Values</i>, <i>Querying Array Variable Values [General &amp; Specific]</i> and <i>Manipulating Array Elements</i>.</p>
+          <!-- -->
+          <h1>Types of Arrays</h1>
+          <p>Before divining into the inner workings of an Array its important to note that there are three distinctive types of Arrays that serve different purposes depending on the objective.</p>
+          
+          
+          <!-- *********** <SECTION 2> ************ -->
+          <!-- -->
+          
+          <!-- CREATE ARRAY-->
           <h4 id="createArray">1. How to Create an Array</h4>
           <p>There are two ways to create an Array.</p>
-          
           <div class="row">
             <div class="col-6">
               <h5>Traditional Method</h5>
@@ -139,7 +135,8 @@ $date = date_default_timezone_set('EST');
               <br>Now, lets take a look at the inner workings of this Array.</p>
             </div>
           </div>
-          <!-- -->         
+          <!-- -->   
+          <!-- QUERY ARRAY-->
           <h4 id="queryArray">2. How to Query an Array Variable Value</h4>
           <p>PHP has a useful function to Query or View an Array Variable <i>Type and its Values</i>. Using the <code>var_dump();</code> Function, we can learn (a) Array Size, (b) the Key-Indexed Position of that Elements Value, and (c) Element Type. This function is useful when using the <i>Console</i> and in order to access a particular script, you must navigate to the folder then enter <code>php fileName.php</code>. Following this method will reveal the following:</p>
           <div class="row">
@@ -171,10 +168,10 @@ $date = date_default_timezone_set('EST');
               <p>If you only want to <i>View a Specific Element</i> and as the above example, use the <code>echo</code> Function; simply echo the <i>Variable Name</i> followed by the <i>Key</i>:
               <br><code>echo $variableName[Key #];</code></p>
               
-              <h5>General Query</h5>
-              <p>If you only want to <i>View the Element Values</i>, use the <code>echo</code> Function: <br><code>echo implode("\n", $variableName);</code>
+              <h5>Format Query</h5>
+              <p>If you only want to <i>View the Element Values</i>, use the <code>implode();</code> Function: <br><code>echo implode("\n", $variableName);</code>
               <br>the escape character <code>\n</code> is used to start a new line for each Value in the Array <code>$learn</code>.
-              <br>The <code>implode();</code> Function is used to <i>Display Array Values</i> that are then combined into a Single String of Values. These items can then be separated into a new string using another string of your choosing.<code>?????NOT Clear????</code></p>
+              <br>The <code>implode();</code> Function is used to <i>Display Array Values</i> that are then combined into a Single String of Values. These items are then properly formatted in a readable fashion.</p>
             </div>
           </div>
           
@@ -215,11 +212,11 @@ $date = date_default_timezone_set('EST');
           <!-- ************************************ -->
           
           <!-- ************************************ -->
-          <!-- *********** <SECTION 2> ************ -->
+          <!-- *********** <SECTION 3> ************ -->
           <h1>Manipulating Arrays</h1>
           <p>PHP has several built-in Functions that enables developers to update general changes to the Content within an Array.</p>
           <!-- -->
-          <!-- -->
+          <!-- ADD ARRAY-->
           <h4 id="addArray">1. How to Add a Value to an Array</h4>
           <p>There are three ways to Add Content to an Array depending on ones objective.</p>
           <!-- -->
@@ -236,17 +233,13 @@ $date = date_default_timezone_set('EST');
           <!-- RESOURCES-->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
             <li><a id="fade" href="https://teamtreehouse.com/library/adding-array-elements">Tutorial</a> on Adding to an Array &#47;&#47; Array <a id="fade" href="http://php.net/manual/en/language.types.array.php">Types</a></li>
             <li>Append Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-push.php">array_push($arrayName, 'item1', 'item2');</a></li>
             <li>Prepend Multiple Values to an Array with <a id="fade" href="http://php.net/manual/en/function.array-unshift.php">array_unshift($arrayName, 'item1', 'item2');</a></li>            
           </ul>
           <!-- ************************************ -->
           <!-- -->
-          <!-- -->
+          <!-- REMOVE ARRAY -->
           <h4 id="removeArray">2. How to Remove a Value from an Array</h4>
           <p>There are also methods to Remove Content from an Array.</p>
           <!-- -->
@@ -263,43 +256,9 @@ $date = date_default_timezone_set('EST');
           <p><code>$arrayName = array_values();</code></p>
           <!-- -->
           <p><i>Methods (a) and (b)</i> will return the element to be reused as it can be assigned to a variable. Equally important is the fact that these elements are automatically re-assigned an Index-Key Position. <i>Method (c)</i> is a more advanced function that takes multiple-parameters allowing removal of more than one element at a time and could potentially delete contents of an entire Array. <i>Method (d)</i> will actually create a new Array by assigning results back to the original Array. This is like a <i>Refresh</i> of Array Keys, appropriately indexing them! </p>
-          <!-- -->
-          <!-- -->
-          <!--<div class="row">
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-          </div>-->
-          <!--<div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>-->
           <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
             <li><a id="fade" href="https://teamtreehouse.com/library/removing-array-elements">Tutorial</a> on How to Remove Values from Arrays</li>
 				    <li>Remove an Element from the Beginning of an Array with <a id="fade" href="http://php.net/manual/en/function.array-shift.php">array_shift();</a></li>
 				    <li>Remove an Element from the End of an Array with <a id="fade" href="http://php.net/manual/en/function.array-pop.php">array_pop();</a> </li>
@@ -307,7 +266,7 @@ $date = date_default_timezone_set('EST');
           </ul>
           <!-- ************************************ -->
           <!-- -->
-          <!-- -->
+          <!-- EDIT ARRAY -->
           <h4 id="editArray">3. How to Edit a Value within an Array</h4>
           <p>There is also a method to Edit Content within an Array.</p>
           <!-- -->
@@ -315,28 +274,49 @@ $date = date_default_timezone_set('EST');
           <p><code>$arrayName[key# to Replace] = 'new value';</code></p>
           <!-- -->
           <p>This method uses a specific <i>String-Value</i> to replace one value with another by simply specifying an element using its <i>Key</i>. In the example above, the <code>'new value';</code> will replace the value of the <code>key#</code> being replaced.</p>
-          
-          [also see array_replace();]
-          <!-- -->
           <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
             <li><a href="https://teamtreehouse.com/library/editing-array-elements">Tutorial</a> on How to Edit/Update Values within an Array</li>
+            <li>Quiz<a id="fade" href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/modifying-arrays">Challenge</a></li>
 					<li>Replace a Portion of an Array with the <a id="fade" href="http://php.net/manual/en/function.array-splice.php">array_splice();</a> Function</li>
 					<li>Replace Elements from Passed Arrays with the <a id="fade" href="http://php.net/manual/en/function.array-replace.php">array_replace();</a> Function</li>
 					<li>Create a 2-in-1 Array with the <a id="fade" href="http://php.net/manual/en/function.array-combine.php">array_combine();</a> Function</li>
 					<li>Merge Elements of Multiple Arrays with the <a id="fade" href="http://php.net/manual/en/function.array-merge.php">array_merge();</a> Function</li>
           </ul>
           <!-- ************************************ -->
-          
-          
+          <!-- -->
+          <!-- SORT ARRAY -->
+          <h4 id="sortArray">4. How to Sort Values within an Array</h4>
+          <p>There are also methods to Sort Content within an Array. <b>Sorting</b> allows developers to organize large amounts of data, either by sorting via Keys or Values. For example, a library indexes its books by genre, author name, date published, etc. PHP offers various solutions to sort data based on specified criteria.</p>
+          <!-- -->
+          <h5>(a) Sort Associative Array Elements</h5>
+          <p><code>sort($varName);</code>
+          <br>This function <i>WILL</i> Re-Index Key Positions.</p>
+          <!-- -->
+          <h5>(b) Sort Associative Array Elements by Alphabetical VALUE</h5>
+          <p><code>asort($varName);</code>
+          <br>This <i>will NOT</i> change Re-Index Key Positions.</p>
+          <!-- -->
+          <h5>(c) Sort Associative Array Elements by Numerical KEY</h5>
+          <p><code>ksort($varName);</code></p>
+          <!-- -->
+          <h5>(d) Randomly Sort Array Elements by VALUE</h5>
+          <p><code>shuffle($varName);</code></p>
+          <!-- -->
+          <!-- RESOURCES -->
+          <ul>
+            <li><b>RESOURCES</b></li>
+            <li><a id="fade" href="https://teamtreehouse.com/library/sorting-arrays">Tutorial</a> on Sorting Arrays &#47;&#47; Sorting <a id="fade" href="http://php.net/manual/en/array.sorting.php">Documentation</a> &#47;&#47; Sort <a id="fade" href="http://php.net/manual/en/function.sort.ph">Function</a></li>
+            <li>Sort Array Values Alphabetically with the <a id="fade" href="http://php.net/manual/en/function.asort.php"><code>asort();</code></a> Function</li>
+            <li>Sort Array Values Numerically with the <a id="fade" href="http://php.net/manual/en/function.ksort.php">ksort();</a> Function</li>
+            <li><a id="fade" href=""></a></li>
+            <li>Shuffle the Contents of an Array with the <a id="fade">shuffle();</a> Function</li>
+          </ul>
+          <!-- ************************************ -->
           
           <!-- ************************************ -->
-          <!-- *********** <SECTION 3> ************ -->
+          <!-- *********** <SECTION 4> ************ -->
           <h1>Arrays 3</h1>
           <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
                 ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
@@ -379,7 +359,7 @@ $date = date_default_timezone_set('EST');
           <!-- ************************************ -->
           
           <!-- ************************************ -->
-          <!-- *********** <SECTION 4> ************ -->
+          <!-- *********** <SECTION 5> ************ -->
           <h1>Arrays 4</h1>
           <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
                 ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
@@ -422,7 +402,7 @@ $date = date_default_timezone_set('EST');
           <!-- ************************************ -->
           
           <!-- ************************************ -->
-          <!-- *********** <SECTION 5> ************ -->
+          <!-- *********** <SECTION 6> ************ -->
           <h1>Arrays 5</h1>
           <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
                 ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
