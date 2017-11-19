@@ -92,8 +92,8 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href="#removeArray">Remove from an Array</a></li>
             <li><a id="fade" href="#editArray">Edit within an Array</a></li>
             <li><a id="fade" href="#sortArray">Sort within an Array</a></li>
-            <!--<li><a id="fade" href="#createArray">Create an Array</a></li>
-            <li><a id="fade" href="#createArray">Create an Array</a></li>-->
+            <li><a id="fade" href="#mixDataTypes">Mixing Data-Types</a></li>
+            <!--<li><a id="fade" href="#createArray">Create an Array</a></li>-->
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -173,7 +173,7 @@ $date = date_default_timezone_set('EST');
               <p>Multidimensional-Array <a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">Code Challenge</a></p>
             </div>
           </div>
-          <p>Finally, there is the super-powerful <i>Multidimensional-Array</i> which is actually a Associative-Array of Information for Each Item Nested amongst a group of other Associative-Arrays. In a Multidimensional-Array, a Key in the outer Array contains a secondary inner Array; the Key can be numeric or a string. For example, you can add a <i>Priority</i> to indicate which item to complete first in a todo list. Could possibly set a due date or mark an item when complete.</p>
+          <p>Finally, there is the super-powerful <i>Multidimensional-Array</i> which is actually an Associative-Array of Information for Each Item Nested amongst a group of other Associative-Arrays. In a Multidimensional-Array, a Key in the outer Array contains a secondary inner Array; the Key can be numeric or a string. For example, you can add a <i>Priority</i> to indicate which item to complete first in a todo list. Could possibly set a due date or mark an item when complete.</p>
           
           <!-- *********** <SECTION 2> ************ -->
           <!-- -->
@@ -257,9 +257,11 @@ $date = date_default_timezone_set('EST');
           <!-- RESOURCES-->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li><a id="fade" href="https://teamtreehouse.com/library/indexed-arrays">Tutorial</a> on Indexed-Arrays &#47;&#47; <a id="fade" href="https://teamtreehouse.com/library/associative-arrays">Tutorial</a> on Associative-Arrays</li>
+            <li>Tutorials on <a id="fade" href="https://teamtreehouse.com/library/indexed-arrays">Indexed-Arrays</a> &#47;&#47; <a id="fade" href="https://teamtreehouse.com/library/associative-arrays">Associative-Arrays</a> &#47;&#47; <a href="https://teamtreehouse.com/library/multidimensional-arrays">Multidimensional Arrays</a></li>
             <li>What is an <a id="fade"  href="http://php.net/manual/en/language.types.array.php">Array</a>? &#47;&#47; List of Array <a id="fade" href="http://php.net/manual/en/function.array.php">Functions</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
-            <li><a id="fade" href="http://php.net/manual/en/function.extract.php">extract</a> Function will Import Variables into the Current Symbol Table from an Array</li>
+            <li></li>
+            <li>Import Variables from an Array with the <a id="fade" href="http://php.net/manual/en/function.extract.php">extract</a> Function</li>
+            <li>A-A<a id="fade" href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/associative-quiz">Quiz</a> &#47;&#47; M-A <a id="fade" href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">QUIZ</a> and <a id="fade" href="https://teamtreehouse.com/community/multidimentional-array-questioning-the-question">Answers</a></li>
           </ul>
           <!-- ************************************ -->
           
@@ -366,6 +368,49 @@ $date = date_default_timezone_set('EST');
             <li>Shuffle the Contents of an Array with the <a id="fade">shuffle();</a> Function</li>
           </ul>
           <!-- ************************************ -->
+          <!-- -->
+          <!-- MIXING DATA-TYPES -->
+          <h4 id="mixDataTypes">Mixing Data-Types</h4>
+          <ul>
+            <li>RESOURCES</li>
+            <li><a href="https://teamtreehouse.com/library/mixing-data-types-in-arrays">Tutorial</a> on Mixing Data-Types and Key Casting</li>
+          </ul>
+          <p>Getting the most from Data by understanding how Array Keys work and what Data-Type Values can be used. For starters, Keys are case-sensitive and must be unique, otherwise they run the risk of being overwritten. 
+          <br>More importantly, an Array Key can either be an Integer or a String (the actual Value can be any type) or a combination of the two.</p>
+          <div class="row">
+            <div class="col-6">
+              <p><b>Key Casting</b> is when valid data-types are Converted/Truncated into an Integer data-type as suggested below:</p>
+              <ul>
+            <li><b>Strings</b> that contain only numbers will be Cast to an Integer</li>
+            <li><b>Floats</b> will be Cast to an Integer</li>
+            <li><b>Booleans</b> will be Cast to the Integer 1 if True or 0 if False</li>
+          </ul>
+            </div>
+            <div class="col-6">
+              <p>Demonstrate Data-Type Casting</p>
+            <code>&#60;&#63;php</code>
+            <br><code>$keys = array&#40;</code>
+            <br><code>1 => 'a',</code>				//Integer <sup>with Value of 1</sup>
+            <br><code>'1' => 'b',	</code>			//String <sup>with Value of 1</sup>
+            <br><code>1.5 => 'c',</code>			//Float
+            <br><code>true => 'd'</code>			//Boolean
+            <br><code>var_dump($keys);</code>
+            <br><code>&#63;&#62;</code>
+              <p>When implementing the <code>var_dump();</code> Function, we can better understand the Casting effect. Because ALL the Keys in this example are Cast to 1, the Value will be overwritten on every new Element. And the last assigned value 'd' is the only remaining Element. The actual result will display:</p>
+              <?php
+              $keys = array(
+              1 => 'a',				//Integer 1
+              //String 1
+              '1' => 'b',
+              //Float
+              1.5 => 'c',
+              //Boolean
+              true => 'd'
+            );
+            var_dump($keys);
+            ?>
+            </div>
+          </div>
           
           <!-- ************************************ -->
           <!-- *********** <SECTION 4> ************ -->
@@ -452,50 +497,7 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
           </ul>
           <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 6> ************ -->
-          <h1>Arrays 5</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!--<div class="row">
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-          </div>-->
-          <!-- RESOURCES-->
-          <ul>
-            <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-          </ul>
-          <!-- ************************************ -->
-          
+                    
           
           
         </div>
@@ -508,7 +510,8 @@ $date = date_default_timezone_set('EST');
     <!-- ******************************************************* -->
     <!-- -->
     <!-- -->
-
+    <!-- -->
+    <!-- -->
     <!-- ************ --> <!-- Use a Font-Awesome heart 'fa fa-heart' -->
     <!-- ** FOOTER ** -->
     <div class="container">
@@ -523,7 +526,10 @@ $date = date_default_timezone_set('EST');
     </div>
     <!-- END of FOOTER --> 
     <!-- ************ -->
-    
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->    
     <!-- *********************************************************************** -->
     <!-- *********************************************************************** -->
     <!-- ** jQuery, Popper & BOOTSTRAP *CDN* Compiled and Minified JavaScript ************ -->
