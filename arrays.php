@@ -1,7 +1,6 @@
 <?php
 /* dateTime VAR*/
 $date = date_default_timezone_set('EST');
-
 ?>
 
 <!-- ********************************************************* -->
@@ -93,7 +92,6 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href="#editArray">Edit within an Array</a></li>
             <li><a id="fade" href="#sortArray">Sort within an Array</a></li>
             <li><a id="fade" href="#mixDataTypes">Mixing Data-Types</a></li>
-            <!--<li><a id="fade" href="#createArray">Create an Array</a></li>-->
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -265,6 +263,7 @@ $date = date_default_timezone_set('EST');
           </ul>
           <!-- ************************************ -->
           
+          
           <!-- ************************************ -->
           <!-- *********** <SECTION 3> ************ -->
           <h1>Manipulating Arrays</h1>
@@ -412,8 +411,9 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
           
+          
           <!-- ************************************ -->
-          <!-- *********** <SECTION 4> ************ -->
+          <!-- *********** <SECTION 3> ************ -->
           <h1>Arrays 3</h1>
           <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
                 ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
@@ -454,52 +454,8 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
           </ul>
           <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 5> ************ -->
-          <h1>Arrays 4</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!--<div class="row">
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-          </div>-->
-          <!-- RESOURCES-->
-          <ul>
-            <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-          </ul>
-          <!-- ************************************ -->
+                              
                     
-          
-          
         </div>
         <!-- \End of MAIN-CONTENT -->
       </div>
@@ -512,7 +468,6 @@ $date = date_default_timezone_set('EST');
     <!-- -->
     <!-- -->
     <!-- -->
-    <!-- ************ --> <!-- Use a Font-Awesome heart 'fa fa-heart' -->
     <!-- ** FOOTER ** -->
     <div class="container">
       <div class="row no-gutters clearfix">
@@ -537,6 +492,5 @@ $date = date_default_timezone_set('EST');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <!-- ********************************************************************************* -->
-    
   </body>
 </html>
