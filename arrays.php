@@ -84,9 +84,10 @@ $date = date_default_timezone_set('EST');
           <h4>Arrays 101</h4>
           <ul>
             <li><a id="fade" href="#content">Intro</a></li>
+            <li>Types of Arrays</li>
             <li><a id="fade" href="#createArray">Create an Array</a></li>
             <li><a id="fade" href="#queryArray">Query an Array</a></li>
-            <li>[ii] Manipulating Arrays</li>
+            <li>Manipulating Arrays</li>
             <li><a id="fade" href="#addArray">Add to an Array</a></li>
             <li><a id="fade" href="#removeArray">Remove from an Array</a></li>
             <li><a id="fade" href="#editArray">Edit within an Array</a></li>
@@ -110,8 +111,69 @@ $date = date_default_timezone_set('EST');
           <p>In PHP, an <b>Array</b> is <i>a Compound Variable-Type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys. This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc. This section focuses on the most essential elements regarding PHP Arrays including <i>Types of Arrays</i>, <i>Creating an Array and Assiging it Values</i>, <i>Querying Array Variable Values [General &amp; Specific]</i> and <i>Manipulating Array Elements</i>.</p>
           <!-- -->
           <h1>Types of Arrays</h1>
-          <p>Before divining into the inner workings of an Array its important to note that there are three distinctive types of Arrays that serve different purposes depending on the objective.</p>
-          
+          <p>Before diving into the inner workings of an Array its important to note that there are three distinctive types of Arrays that serve different purposes depending on the objective. For example, an <i>Indexed-Array</i> shares similarities with an <i>Associative-Array</i> with the exception being that Values of an Indexed-Array are assigned a numeric Key-position by default, whereas you manually assign the Key-position of an Associative-Array, which makes it easier to comprehend the actual code. </p>
+          <div class="row">
+            <div class="col-6">
+              <h5>Indexed-Array</h5>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h5>Associative-Array</h5>
+              <p><code>$variable = [</code>
+              <br><code>'specify Key1' => 'specify Value1',</code>
+              <br><code>'specify Key2' => 'specify Value2'</code>
+              <br><code>];</code></p>
+              <?php
+              /*$contacts = [array(]'Alena Holligan', 'Dave McFarland', 'Treasure Porth', 'Andrew Chalkley'];
+              $contacts = [
+                ['name' => 'Alena Holligan',
+                'email' => 'alena.holligan@teamtreehouse.com'],
+                ['name' => 'Dave McFarland',
+                'email' => 'dave.mcfarland@teamtreehouse.com'],
+                ['name' => 'Treasure Porth',
+                'email' => 'treasure.porth@teamtreehouse.com'],
+                ['name' => 'Andrew Chalkley',
+                'email' => 'andrew.chalkley@teamtreehouse.com'],
+              ];
+              echo "<ul>\n";
+              //$contacts[0] will return 'Alena Holligan' in our simple array of names.
+              echo "<li>". $contacts[0]['name'] . " : ". $contacts[0]['email'] ."</li>\n";
+              echo "<li>". $contacts[1]['name'] . " : ". $contacts[1]['email'] ."</li>\n";
+              echo "<li>". $contacts[2]['name'] . " : ". $contacts[2]['email'] ."</li>\n";
+              echo "<li>". $contacts[3]['name'] . " : ". $contacts[3]['email'] ."</li>\n"; 
+              echo "</ul>\n";*/
+              ?>
+            </div>
+            <div class="col-12">
+              <h5>Multidimensional-Array</h5>
+              <p></p>
+              <?php
+              //Associative Array of Details
+              //Task 1 "Todo List Item"
+              /*$list[] = [
+                 'title' => 'Laundry',
+                 'priority' => 2,
+                 'due' => '',
+                 'complete' => true,
+              ];
+              //Task 2 "Todo List Item"
+              $list[] = [
+                'title' => 'Clean fridge',
+                'priority' => 2,
+                'due' => '',
+                'complete' => true,
+              ];
+
+              //View Structured Info about Variables, Expression, Data-Types & Values
+              //var_dump($list);
+
+              //Access 'Element' of First List
+              //echo $list[0]['title'];*/
+              ?>
+              <p>Multidimensional-Array <a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">Code Challenge</a></p>
+            </div>
+          </div>
+          <p>Finally, there is the super-powerful <i>Multidimensional-Array</i> which is actually a Associative-Array of Information for Each Item Nested amongst a group of other Associative-Arrays. In a Multidimensional-Array, a Key in the outer Array contains a secondary inner Array; the Key can be numeric or a string. For example, you can add a <i>Priority</i> to indicate which item to complete first in a todo list. Could possibly set a due date or mark an item when complete.</p>
           
           <!-- *********** <SECTION 2> ************ -->
           <!-- -->
@@ -174,17 +236,6 @@ $date = date_default_timezone_set('EST');
               <br>The <code>implode();</code> Function is used to <i>Display Array Values</i> that are then combined into a Single String of Values. These items are then properly formatted in a readable fashion.</p>
             </div>
           </div>
-          
-          <!--<div class="row">
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-          </div>-->
           <!--<div class="row mb-4">
             <div class="col-6">
               <h3>aaa</h3>
@@ -206,8 +257,9 @@ $date = date_default_timezone_set('EST');
           <!-- RESOURCES-->
           <ul>
             <li><b>RESOURCES</b></li>
-            <li><a id="fade" href="https://teamtreehouse.com/library/indexed-arrays">Tutorial</a> on Indexed-Arrays</li>
+            <li><a id="fade" href="https://teamtreehouse.com/library/indexed-arrays">Tutorial</a> on Indexed-Arrays &#47;&#47; <a id="fade" href="https://teamtreehouse.com/library/associative-arrays">Tutorial</a> on Associative-Arrays</li>
             <li>What is an <a id="fade"  href="http://php.net/manual/en/language.types.array.php">Array</a>? &#47;&#47; List of Array <a id="fade" href="http://php.net/manual/en/function.array.php">Functions</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
+            <li><a id="fade" href="http://php.net/manual/en/function.extract.php">extract</a> Function will Import Variables into the Current Symbol Table from an Array</li>
           </ul>
           <!-- ************************************ -->
           
