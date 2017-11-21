@@ -426,6 +426,135 @@ $date = date_default_timezone_set('EST');
       </div>
       <!-- -->
       <!-- -->
+      
+      <!-- Working with Arrays -->
+      <div class="row mb-3">
+        <div id="arrays" class="col-12"><h3>Working with Arrays</h3></div>
+        <!-- Associative Array-->
+        <div class="col-7">
+          <h5>Associative-Array EXAMPLE</h5>
+          <p><code>&#60;?php</code>
+          <br><code>$contacts = ['James Moody', 'Ray Moody']; </code>
+          <br><code>$contacts = [</code>
+          <br><code>['name' => 'James Moody',</code>
+          <br><code>'email' => 'jmoody@world.com'],</code>
+          <br><code>['name' => 'Ray Moody',</code>
+          <br><code>'email' => 'rmoody@world.com'],</code>
+          <br><code>];</code>
+          <br>
+          <br><code>echo $contacts[1]['name'] . " : ". $contacts[1]['email'];</code>
+          <br><code>?&#62;</code></p>
+        </div>
+        <!-- -->
+        <div class="col-5">
+          <h5><a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/associative-quiz">Build a Contact List</a></h5>
+          <p>This script will <code>output</code> the following results:</p>
+          <?php
+          $contacts = ['James Moody', 'Ray Moody'];
+          $contacts = [
+            ['name' => 'James Moody',
+            'email' => 'jmoody@world.com'],
+            ['name' => 'Ray Moody',
+            'email' => 'rmoody@world.com'],
+          ];
+          //$contacts[1] will return 'Ray Moody' in this Array of Contacts.
+          echo $contacts[1]['name'] . " : ". $contacts[1]['email'];
+          ?>
+        </div>
+        
+        <!-- Multidimensional Array -->
+        <div class="col-6">
+          <h5>Multidimensional-Array EXAMPLE</h5>
+          <p>//Task 1 "Todo List Item"
+            <br><code>&#60;?php</code>
+            <br><code>$list[] = [</code>
+            <br><code>'title' => 'Laundry',</code>
+            <br><code>'priority' => 2,</code>
+            <br><code>'due' => '',</code>
+            <br><code>'complete' => true,</code>
+            <br><code>];</code>
+            <br>//Task 2 "Todo List Item"
+            <br><code>$list[] = [</code>
+            <br><code>'title' => 'Clean fridge',</code>
+            <br><code>'priority' => 2,</code>
+            <br><code>'due' => '',</code>
+            <br><code>'complete' => true,</code>
+            <br><code>];</code>
+            <br>
+            <br><code>var_dump("\n", $list);</code>
+            <br><code>?&#62;</code></p>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <h5><a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">Multidimensional-Array</a></h5>
+          <p>This script will <code>output</code> the following results:</p>
+          <?php
+              //Associative Array of Details
+              //Task 1 "Todo List Item"
+              $list[] = [
+                 'title' => 'Laundry',
+                 'priority' => 2,
+                 'due' => '',
+                 'complete' => true,
+              ];
+              //Task 2 "Todo List Item"
+              $list[] = [
+                'title' => 'Clean fridge',
+                'priority' => 2,
+                'due' => '',
+                'complete' => true,
+              ];
+
+              //View Structured Info about Variables, Expression, Data-Types & Values
+              var_dump("\n", $list);
+
+              //Access 'Element' of First List
+              //echo $list[0]['title'];
+              ?>
+          <p></p>
+          <p>The <code>var_dump();</code> Function indicates that this Array is <i>a <b>String</b> of Two Arrays</i></p>
+        </div>
+        
+
+        <!--<div class="col-6">
+          <code>
+            &#60;?php
+            <br>&#36;student1Name &#61; &#39;Ray&#39;;
+            <br>&#36;student1GPA &#61; 3.5;
+            <br>
+            <br>&#36;student2Name &#61; &#39;James&#39;;
+            <br>&#36;student2GPA &#61; 4.0;
+            <br>
+            <br>if &#40;&#34;&#36;student1GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
+            <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
+            <br>
+            <br>if &#40;&#34;&#36;student2GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
+            <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
+            <br>
+            <br>?&#62;
+          </code>
+        </div>
+        <!-- -->
+        <!--<div class="col-6">
+          <h3><a href="https://teamtreehouse.com/library/php-basics-2/daily-exercise-program/conditionalls">GPA Challenge</a></h3>
+          <p>This script uses a <i>conditional statement</i> that queries multiple conditions and will <code>output</code> the following results:</p>
+          <?php 
+          $student1Name = 'Ray';
+          $student1GPA = 3.5;
+          
+          $student2Name = 'James';
+          $student2GPA = 4.0;
+          
+          if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
+          else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}
+          
+          if ($student2GPA == 4.0) {echo "<p>$student2Name made the Honor Roll</p>";}
+          else { echo "<p>$student2Name has a GPA of $student2GPA</p>";}
+          ?>
+        </div>-->
+      </div>
+      <!-- -->
+      <!-- -->
     </div>
 
     
