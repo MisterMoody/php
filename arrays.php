@@ -109,92 +109,55 @@ $date = date_default_timezone_set('EST');
           <p>In PHP, an <b>Array</b> is <i>a Compound Variable-Type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys. This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc. This section focuses on the most essential elements regarding PHP Arrays including <i>Types of Arrays</i>, <i>Creating an Array and Assiging it Values</i>, <i>Querying Array Variable Values [General &amp; Specific]</i> and <i>Manipulating Array Elements</i>.</p>
           <!-- -->
           <h1>Types of Arrays</h1>
-          <p>Before diving into the inner workings of an Array its important to note that there are three distinctive types of Arrays that serve different purposes depending on the objective. For example, an <i>Indexed-Array</i> shares similarities with an <i>Associative-Array</i> with the exception being that Values of an Indexed-Array are assigned a numeric Key-position by default, whereas you manually assign the Key-position of an Associative-Array, which makes it easier to comprehend the actual code. </p>
-          <div class="row">
-            <div class="col-6">
-              <h5>Indexed-Array</h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5>Associative-Array</h5>
-              <p><code>$variable = [</code>
-              <br><code>'specify Key1' => 'specify Value1',</code>
-              <br><code>'specify Key2' => 'specify Value2'</code>
-              <br><code>];</code></p>
-              <?php
-              /*$contacts = [array(]'Alena Holligan', 'Dave McFarland', 'Treasure Porth', 'Andrew Chalkley'];
-              $contacts = [
-                ['name' => 'Alena Holligan',
-                'email' => 'alena.holligan@teamtreehouse.com'],
-                ['name' => 'Dave McFarland',
-                'email' => 'dave.mcfarland@teamtreehouse.com'],
-                ['name' => 'Treasure Porth',
-                'email' => 'treasure.porth@teamtreehouse.com'],
-                ['name' => 'Andrew Chalkley',
-                'email' => 'andrew.chalkley@teamtreehouse.com'],
-              ];
-              echo "<ul>\n";
-              //$contacts[0] will return 'Alena Holligan' in our simple array of names.
-              echo "<li>". $contacts[0]['name'] . " : ". $contacts[0]['email'] ."</li>\n";
-              echo "<li>". $contacts[1]['name'] . " : ". $contacts[1]['email'] ."</li>\n";
-              echo "<li>". $contacts[2]['name'] . " : ". $contacts[2]['email'] ."</li>\n";
-              echo "<li>". $contacts[3]['name'] . " : ". $contacts[3]['email'] ."</li>\n"; 
-              echo "</ul>\n";*/
-              ?>
-            </div>
-            <div class="col-12">
-              <h5>Multidimensional-Array</h5>
-              <p></p>
-              <?php
-              //Associative Array of Details
-              //Task 1 "Todo List Item"
-              /*$list[] = [
-                 'title' => 'Laundry',
-                 'priority' => 2,
-                 'due' => '',
-                 'complete' => true,
-              ];
-              //Task 2 "Todo List Item"
-              $list[] = [
-                'title' => 'Clean fridge',
-                'priority' => 2,
-                'due' => '',
-                'complete' => true,
-              ];
-
-              //View Structured Info about Variables, Expression, Data-Types & Values
-              //var_dump($list);
-
-              //Access 'Element' of First List
-              //echo $list[0]['title'];*/
-              ?>
-              <p>Multidimensional-Array <a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">Code Challenge</a></p>
-            </div>
-          </div>
-          <p>Finally, there is the super-powerful <i>Multidimensional-Array</i> which is actually an Associative-Array of Information for Each Item Nested amongst a group of other Associative-Arrays. In a Multidimensional-Array, a Key in the outer Array contains a secondary inner Array; the Key can be numeric or a string. For example, you can add a <i>Priority</i> to indicate which item to complete first in a todo list. Could possibly set a due date or mark an item when complete.</p>
+          <p>There are three distinctive types of Arrays:</p>
+          <ol type="a">
+            <li>Indexed-Array</li>
+            <li>Associative-Array</li>
+            <li>Multidimensional-Array</li>
+          </ol>
+          <p>An <b>Indexed-Array</b> has Values that are assigned a <i>numeric Index-Key Position</i> by Default. 
+            <br>An <b>Associative-Array</b> has Values that developers <i>manually assign Index-Key Positions</i> using Keywords, making it easier to comprehend and manage code. 
+            <br>A <b>Multidimensional-Array</b> is actually <i>an Associative-Array of Information for Each Nested-Item amongst a group of other Associative-Arrays</i>. In a Multidimensional-Array, a Key in the outer Array contains a secondary inner Array; the Key can be numeric or a string. For example, you can add a <i>Priority</i> to indicate which item to complete first in a todo list. Could possibly set a due date or mark an item when complete.</p>
           
           <!-- *********** <SECTION 2> ************ -->
           <!-- -->
           
           <!-- CREATE ARRAY-->
           <h4 id="createArray">1. How to Create an Array</h4>
-          <p>There are two ways to create an Array.</p>
+          <p>Traditionally, the built-in <code>array();</code> Function was used to create an Array whereas you would create the Variable Name, use the Assignment Operator and then Assign Values to the Function. However, a shorthand syntax was introduced by PHP 5.4 which omits the 'array' Keyword and replaces the 'Parentheses' with 'Brackets.' In either case, every Value must be surrounded by Quotes <code>'value' / "value"</code>, and all Values must be separated by Commas <code>,</code>.</p>
+          <!-- Example of Array Types -->
           <div class="row">
-            <div class="col-6">
-              <h5>Traditional Method</h5>
-              <p>Write the Variable Name, followed by the Assignment Operator and then the built-in Array function:<br><code>$variable = array('val1', 'val2');</code>.</p>
+            <div class="col-md-6">
+              <h5>Indexed-Array (Best Practice)</h5>
+              <p><code>$variable = ['Value1', 'Value2'];</code></p>
             </div>
-            <div class="col-6">
-              <h5>Best Practice</h5>
-              <p>PHP 5.4 introduced a shorthand syntax, which omits the 'array' keyword and replaces the Parenthese with Brackets:<br><code>$variable = ['val1', 'val2'];</code></p>
+            <div class="col-md-6">
+              <h5>Indexed-Array (Traditional) </h5>
+              <p><code>$variable = array('Value1', 'Value2');</code></p>
             </div>
-            <div class="col-12">
-              <p>In both cases, the <i>List of Values</i> is placed within the Array. Each Value must be surrounded by Quotes <code>'value' / "value"</code>, and all Values must be separated by Commas <code>,</code>.</p>
-              <p>This is an Example of an Array List: 
-              <br><code>$variable = ['Conditionals', 'Arrays', 'Loops'];</code>
-              <br>Now, lets take a look at the inner workings of this Array.</p>
+            <div class="col-md-6">
+              <h5>Associative-Array</h5>
+              <p><code>$variable = [</code>
+              <br><code>'specify Key1' => 'Value1',</code>
+              <br><code>'specify Key2' => 'Value2'</code>
+              <br><code>];</code></p>
+            </div>
+            <div class="col-md-6">
+              <h5>Multidimensional-Array</h5>
+              <p>//Associative Array of "List Item" Details
+              <br>//Task 1 "Todo List Item"
+              <br><code>$list[] = [</code>
+              <br><code>'specify Key1' => 'Value1',</code>
+              <br><code>'specify Key2' => 'Value2',</code>
+              <br><code>];</code>
+              <br>//Task 2 "Todo List Item"
+              <br><code>$list[] = [</code>
+              <br><code>'specify Key1' => 'Value1',</code>
+              <br><code>'specify Key2' => 'Value2',</code>
+              <br><code>];</code></p>
             </div>
           </div>
+          <p>View the Scripts to learn more about <a href="scripts.php/#arrays">Working with Associative and Multidimensional Arrays</a></p>
           <!-- -->   
           <!-- QUERY ARRAY-->
           <h4 id="queryArray">2. How to Query an Array Variable Value</h4>
