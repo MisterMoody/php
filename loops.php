@@ -85,8 +85,8 @@ $date = date_default_timezone_set('EST');
           <ul>
             <li id=""><a id="fade" href="#">Intro</a></li>
             <li>Types of Loops</li>
-            <li id=""><a id="fade" href="#whileLoop">while &#47; do-while</a></li>
-            <li id=""><a id="fade" href="#forLoop">for &#47; foreach</a></li>
+            <li id=""><a id="fade" href="#whileLoop">while</a> &#47; <a id="fade" href="#dowhileLoop">do-while</a></li>
+            <li id=""><a id="fade" href="#forLoop">for</a> &#47; <a id="fade" href="#foreachLoop">foreach</a></li>
             <li id=""><a id="fade" href="#loopArray">Looping an Array</a></li>
             <li></li>
           </ul>
@@ -108,7 +108,7 @@ $date = date_default_timezone_set('EST');
           <p><code>while () { ..... }</code> Statement are continuously executed provided that the Expression evaluates to <code>true</code>. The Value of these Expressions <i>are checked at the Beginning of every Iteration</i>, so no following statement will execute IF the expression evaluates to <code>false</code>.</p>
           <p></p>          
           
-          <h4>[2] do-while Loops</h4>
+          <h4 id="dowhileLoop">[2] do-while Loops</h4>
           <p><code>do { ... } while ( ... );</code> Statements differ from <i>while Loops</i> in that they are checked at the <i>End of every Iteration</i>, so all code is Iterated at least once before the Condtion is checked.</p>
           <p>In the examples below, these two Loops are used to <i>Create a List of Years from 1917 to 2017</i> that starts at the Current Year and goes back 100 years. The first line <b>Sets a Variable</b> <code>$currentYear</code> that uses the <code>date('');</code> Function to Count from the <i>Current Year</i>. 
           <br>The second line <i>Adds a Variable </i><code>$year</code> for the <i>Year to Begin its Count, Subtracting 100 from the <code>$currentYear</code> Variable</i>.
@@ -116,7 +116,7 @@ $date = date_default_timezone_set('EST');
           <br>The <code>echo $year . "&#60; /&#62;\n";</code> Statement will <b>Print a Year on a New Line</b>. Because the Statement is Run before the Condition in the <code>do { ... } while ();</code> Loop, a List of Years will be Displayed before the Condition is ever tested.</p>
           <div class="row">
             <div class="col-6">
-              <h5>while LOOP Example</h5>
+              <h5><code>while(){}</code> LOOP Example</h5>
               <p><code>$currentYear = date('Y');</code>
               <br><code>$year = $currentYear - 100;</code>
               <br>
@@ -124,7 +124,7 @@ $date = date_default_timezone_set('EST');
               <br><code>echo $year . "&#60;br /&#62;\n";</code></p>
             </div>
             <div class="col-6">
-              <h5>do-while LOOP Example</h5>
+              <h5><code>do {} while()</code> LOOP Example</h5>
               <p><code>$currentYear = date('Y');</code>
               <br><code>$year = $currentYear - 100;</code>
               <br>
@@ -141,7 +141,7 @@ $date = date_default_timezone_set('EST');
 				  <br>(3) <b>expr3</b> is the <i>Incrementor</i>, Executed at the <u>End of each INTERATION</u>. *Each of the expressions can be empty or contain multiple expressions separated by commas. In the example below, the <code>for(){}</code> Loop is used to Create a List of 100 years, and is the preferred Loop to use in this situation, in comparison to the <code>do-while</code> Loop.</p>
           <div class="row">
             <div class="col-12">
-              <h5>More for LOOP Example</h5>
+              <h5><code>for(){}</code> LOOP Examples</h5>
               <p>//Create a List of 100 Years
               <br><code>for ($year = date('Y') - 99; $year &#60; date('Y'); $year++) { echo $year . "\n"; }</code></p>
             </div>
@@ -159,7 +159,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
           <!-- -->
-          <h4 id="loopArray">[4] Looping through an Array</h4>
+          <h5 id="loopArray">**** Looping through an Array with a <code>for(){}</code> LOOP ****</h5>
           <p>As of PHP 7, use the <code>for(){}</code> and <code>foreach(){}</code> Loops to Iterate through an Array.</p>
           <div class="row">
             <div class="col-6">
@@ -185,6 +185,40 @@ $date = date_default_timezone_set('EST');
               <p></p>
             </div>
           </div>
+          <!-- -->
+          <h4 id="foreachLoop">[4] foreach Loops</h4>
+          <p>The <code>foreach(){}</code> Construct provides an easy way to <i>Iterate over Arrays</i> to take the item value or the key value as well, but not the Key on its own. It can also be used with <i>Objects</i>, but cannot be used with a <i>Variable</i>. There are two syntaxes:</p>
+				<div class="row">
+					<div class="col-6">
+						<p>//Syntax #1
+						<br><code>foreach (array_expression as $value)
+    				<br>statement</code></p>
+					</div>
+					<div class="col-6">
+						<p>//Syntax #2
+						<br><code>foreach (array_expr as $key => $value)
+    				<br>statement</code></p>
+					</div>
+					<div class="col-12">
+						<p><code>Syntax #1</code> loops over the array given by array_expression. On each iteration, the value of the current element is assigned to $value and the internal array pointer is advanced by one (so on the next iteration, you'll be looking at the next element). <code>Syntax #2</code> allows you to Access the Key along with its Value by additionally assigning the current element's key to the $key variable on each iteration.</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-6">
+						<h5>foreach LOOP Example</h5>
+						<p><code>include 'list.php';
+							<br>
+							<br>foreach ($list as $item) {
+							<br>echo $item['title'] . "\n";
+							<br>}</code></p>
+					</div>
+					<div class="col-6">
+						<h5>Query Explained</h5>
+						<p>(1) The <code>include</code> Statement is used to include <i>Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script</i>. (2) <code>$list</code> tells the Loop which Array to use. (3) The keyword <i>as</i> is used... (4) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. (*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. (*) <code>$item</code> is now an Associative-Array with a named Key and Value.</p>
+					</div>
+				</div>		
+          
           <!--<div class="row mb-4">
             <div class="col-6">
               <h3>aaa</h3>
@@ -217,6 +251,7 @@ $date = date_default_timezone_set('EST');
               <a id="fade" href="http://php.net/manual/en/control-structures.for.php">for</a>  &#47;&#47; 
               <a id="fade" href="http://php.net/manual/en/control-structures.foreach.php">for-each</a></li>
           </ul>
+          
           <!-- ************************************ -->
           <!-- ************************************ -->
           
