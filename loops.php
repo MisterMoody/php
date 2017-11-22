@@ -84,7 +84,11 @@ $date = date_default_timezone_set('EST');
           <h4>Loops 101</h4>
           <ul>
             <li id=""><a id="fade" href="#">Intro</a></li>
-            <li id=""><a id="fade" href="#whileLoop">while Loop</a></li>
+            <li>Types of Loops</li>
+            <li id=""><a id="fade" href="#whileLoop">while &#47; do-while</a></li>
+            <li id=""><a id="fade" href="#forLoop">for &#47; foreach</a></li>
+            <li id=""><a id="fade" href="#loopArray">Looping an Array</a></li>
+            <li></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -100,13 +104,16 @@ $date = date_default_timezone_set('EST');
           <h1>Introduction to Loops</h1>
           <p>In PHP, a <b>Loop</b> is <i>a way of repeating code, which is useful for managing the flow of code</i>. A Loop will repeat the same action(s) for a specified number of times or until a specific Condition is <code>true</code>. There are four types of Loops: <b>while &#47;&#47; do-while &#47;&#47; for &#47;&#47; foreach</b></p>
           
-          <h4 id="whileLoop">while Loops</h4>
+          <h4 id="whileLoop">[1] while Loops</h4>
           <p><code>while () { ..... }</code> Statement are continuously executed provided that the Expression evaluates to <code>true</code>. The Value of these Expressions <i>are checked at the Beginning of every Iteration</i>, so no following statement will execute IF the expression evaluates to <code>false</code>.</p>
           <p></p>          
           
-          <h4>do-while Loops</h4>
+          <h4>[2] do-while Loops</h4>
           <p><code>do { ... } while ( ... );</code> Statements differ from <i>while Loops</i> in that they are checked at the <i>End of every Iteration</i>, so all code is Iterated at least once before the Condtion is checked.</p>
-          <p>In the examples below, these two Loops are used to <i>Create a List of Years</i> that starts at the Current Year and goes back 100 years.</p>
+          <p>In the examples below, these two Loops are used to <i>Create a List of Years from 1917 to 2017</i> that starts at the Current Year and goes back 100 years. The first line <b>Sets a Variable</b> <code>$currentYear</code> that uses the <code>date('');</code> Function to Count from the <i>Current Year</i>. 
+          <br>The second line <i>Adds a Variable </i><code>$year</code> for the <i>Year to Begin its Count, Subtracting 100 from the <code>$currentYear</code> Variable</i>.
+          <br>The <code>while (++$year &#60;= $currentYear)</code> Loop in both examples <b>Increments the <code>$year</code> Variable</b> <i>while it is Less Than or Equal to the <code>$currentYear</code> Variable</i>. The script will end in either case once <i>the year is Greater Than the <code>$currentYear</code> Variable.</i>
+          <br>The <code>echo $year . "&#60; /&#62;\n";</code> Statement will <b>Print a Year on a New Line</b>. Because the Statement is Run before the Condition in the <code>do { ... } while ();</code> Loop, a List of Years will be Displayed before the Condition is ever tested.</p>
           <div class="row">
             <div class="col-6">
               <h5>while LOOP Example</h5>
@@ -125,47 +132,57 @@ $date = date_default_timezone_set('EST');
               <br><code>echo $year . "&#60;br /&#62;\n";</code>
               <br><code>} while (++$year &#60;= $currentYear);</code></p>
             </div>
-            <div class="col-12">
-              <p></p>
-              <h5>Query Explained</h5>
-              <p>Both of these scripts will <code>output</code> <i>a List of Years  from 1917 to 2017</i>. The first line <b>Sets a Variable</b> <code>$currentYear</code> that uses the <code>date('');</code> Function to Count from the <i>Current Year</i>. The second line <i>Adds a Variable </i><code>$year</code> for the <i>Year to Begin its Count, Subtracting 100 from the <code>$currentYear</code> Variable</i>.
-              <br>The <code>while (++$year &#60;= $currentYear)</code> Loop in both examples <b>Increments the <code>$year</code> Variable</b> <i>while it is Less Than or Equal to the <code>$currentYear</code> Variable</i>. The script will end in either case once <i>the year is Greater Than the <code>$currentYear</code> Variable.</i>
-              <br>The <code>echo $year . "&#60; /&#62;\n";</code> Statement will <b>Print a Year on a New Line</b>. Because the Statement is Run before the Condition in the <code>do { ... } while ();</code> Loop, a List of Years will be Displayed before the Condition is ever tested.</p>
-            </div>
           </div>
           
-          <h4>Looping through an Array</h4>
-          <p>Loops allow developers to <i>Loop through an Array</i>, partially or as a whole, and can perform a number of actions on each Item.</p>
+          <h4 id="forLoop">[3] for Loops</h4>
+          <p><code>for (expr1, expr2, expr3) {condition}</code> Loops contain three Expressions. 
+				  <br>(1) <b>expr1</b> is the <i>Initial Value</i>, Executed at the <u>Beginning of each LOOP</u>. 
+				  <br>(2) <b>expr2</b> is the <i>Conditional</i>, Executed at the <u>Beginning of each ITERATION</u>. If it evaluates to <code>TRUE</code>, the loop Continues and the nested Statement(s) are Executed. If it evaluates to <code>FALSE</code>, the Execution of the Loop Ends. 
+				  <br>(3) <b>expr3</b> is the <i>Incrementor</i>, Executed at the <u>End of each INTERATION</u>. *Each of the expressions can be empty or contain multiple expressions separated by commas. In the example below, the <code>for(){}</code> Loop is used to Create a List of 100 years, and is the preferred Loop to use in this situation, in comparison to the <code>do-while</code> Loop.</p>
           <div class="row">
-            <div class="col-6">
-              <h5>Loop through Every Array Item</h5>
-              <p>//Array Variable
-              <br><code>$learn = ['A', 'B', 'C'];</code>
-              <br><code>$learn[] = 'Build something cool!';</code>
-              <br><code>array_push($learn, 'D', 'E', 'F');</code>
-              <br><code>array_unshift($learn, 'G', 'H');</code>
-              <br><code>asort($learn);</code>
-              <br>//Loop
-              <br><code>while (list($key, $val) = each($learn))</code>
-              <br><code>{ echo "$key => $val\n"; }</code></p>
-            </div>
-            <div class="col-6">
-              <h5>Loop through # Array Items</h5>
-              <p>//Array Variable
-              <br><code>$learn = ['A', 'B', 'C'];</code>
-              <br><code>$learn[] = 'Build something cool!';</code>
-              <br><code>array_push($learn, 'D', 'E', 'F');</code>
-              <br><code>array_unshift($learn, 'G', 'H');</code>
-              <br><code>asort($learn);</code>
-              <br>//Loop
-              <br><code>$count</code>
-              <br><code>while ((list($key, $val) = each($learn)) &amp;&amp; $count++ &#60; # {</code>
-              <br><code>echo "$key => $val\n"; }</code></p>
+            <div class="col-12">
+              <h5>More for LOOP Example</h5>
+              <p>//Create a List of 100 Years
+              <br><code>for ($year = date('Y') - 99; $year &#60; date('Y'); $year++) { echo $year . "\n"; }</code></p>
             </div>
             <div class="col-12">
-              <p></p>
+              <p>//Display Numbers 1 - 100.
+              <br><code>for ($i = 1; $i &#60;= 100; $i++) { echo $i . "\n"; }</code></p>
+            </div>
+            <div class="col-12">
+              <p>//Loop through the ABCs
+              <br><code>for ($letter = 'A'; $letter != 'AA'; $letter++) { echo $letter . "\n";</code></p>
+            </div>
+            <div class="col-12">
+              <h5>Queries Explained</h5>
+              <p>xxxx</p>
+            </div>
+          </div>
+          <!-- -->
+          <h4 id="loopArray">[4] Looping through an Array</h4>
+          <p>As of PHP 7, use the <code>for(){}</code> and <code>foreach(){}</code> Loops to Iterate through an Array.</p>
+          <div class="row">
+            <div class="col-6">
+              <h5>Script</h5>
+              <p>//Loop through an Array 
+              <br><code>$learn = ['A', 'B', 'C'];</code>
+              <br><code>$learn[] = 'Build something cool!';</code>
+              <br><code>array_push($learn, 'D', 'E', 'F');</code>
+              <br><code>array_unshift($learn, 'G', 'H');</code>
+              <br><code>asort($learn);</code>
+              <br><code>sort($learn);</code>
+              <br>
+              <br><code>for ($i = 0; $i &#60; count($learn); $i++)</code>
+              <br><code>{ echo $learn[$i] . "\n"; }</code></p>
+              
+            </div>
+            <div class="col-6">
               <h5>Query Explained</h5>
-              <p>The <code>each</code> Function has been <b>Deprecated</b>. == The <code>foreach()</code> Loop performs the same Function that Alena Explained!</p>
+              <p></p>
+            </div>
+            <div class="col-12">
+              <h5></h5>
+              <p></p>
             </div>
           </div>
           <!--<div class="row mb-4">
@@ -191,13 +208,14 @@ $date = date_default_timezone_set('EST');
             <li><b>RESOURCES</b></li>
             <li>Tutorials on 
               <a id="fade" href="https://teamtreehouse.com/library/do-while-looping">Do-While LOOPS</a> &#47;&#47; 
-              <a id="fade" href="https://teamtreehouse.com/library/while-listing-array-values">Looping through Arrays</a> &#47;&#47;
-              <a id="fade" href="https://teamtreehouse.com/library/for-loops-3">For LOOPS</a> &#47;&#47; 
+              <a id="fade" href="https://teamtreehouse.com/library/xxxxx">xxx</a> &#47;&#47;
+              <a id="fade" href="https://teamtreehouse.com/library/for-loops-3">Looping through Arrays</a> &#47;&#47; 
               <a id="fade" href="https://teamtreehouse.com/library/foreach-loops">For-Each LOOPS</a></li>
             <li>Loop Control Structures 
-              <a id="fade" href="http://php.net/manual/en/control-structures.while.php">while</a>
-              <a id="fade" href="http://php.net/manual/en/control-structures.do.while.php">do-while</a>
-              <a id="fade" href="http://php.net/manual/en/control-structures.for.php">for</a><a id="fade" href="http://php.net/manual/en/control-structures.foreach.php">for-each</a></li>
+              <a id="fade" href="http://php.net/manual/en/control-structures.while.php">while</a>  &#47;&#47; 
+              <a id="fade" href="http://php.net/manual/en/control-structures.do.while.php">do-while</a>  &#47;&#47; 
+              <a id="fade" href="http://php.net/manual/en/control-structures.for.php">for</a>  &#47;&#47; 
+              <a id="fade" href="http://php.net/manual/en/control-structures.foreach.php">for-each</a></li>
           </ul>
           <!-- ************************************ -->
           <!-- ************************************ -->
@@ -226,84 +244,6 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
           <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 3> ************ -->
-          <h1>Arrays 3</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 4> ************ -->
-          <h1>Arrays 4</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 5> ************ -->
-          <h1>Arrays 5</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          
-          
         </div>
         <!-- \End of MAIN-CONTENT -->
       </div>
