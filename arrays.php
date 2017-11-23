@@ -106,7 +106,7 @@ $date = date_default_timezone_set('EST');
           <!-- *********** <SECTION 1> ************ -->
           <!--    INTRODUCTION / TYPES of ARRAYS    -->
           <h1>Introduction to Arrays</h1>
-          <p>In PHP, an <b>Array</b> is <i>a Compound Variable-Type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys. This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Hash-Tables, Queues, Dictionaries, Collections, etc. This section focuses on the most essential elements regarding PHP Arrays including <i>Types of Arrays</i>, <i>Creating an Array and Assiging it Values</i>, <i>Querying Array Variable Values [General &amp; Specific]</i> and <i>Manipulating Array Elements</i>.</p>
+          <p>In PHP, an <b>Array</b> is <i>a Compound Variable-Type that Stores multiple pieces of related, yet, complex Data in a single variable</i>, like an ordered map that associates Values to Keys. This type of variable allows us to manipulate data &#40;ie user input&#41; and is especially useful when building Lists, Queues, Dictionaries, Collections, etc. This section focuses on the most essential elements regarding PHP Arrays including <i>Types of Arrays</i>, <i>Creating an Array and Assiging it Values</i>, <i>Querying Array Variable Values [General &amp; Specific]</i> and <i>Manipulating Array Elements</i>.</p>
           <!-- -->
           <h1>Types of Arrays</h1>
           <p>There are three distinctive types of Arrays:</p>
