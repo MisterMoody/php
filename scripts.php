@@ -515,43 +515,221 @@ $date = date_default_timezone_set('EST');
           <p>The <code>var_dump();</code> Function indicates that this Array is <i>a <b>String</b> of Two Arrays</i></p>
         </div>
         
+        <!-- -->
+        
+        <!-- -->
 
-        <!--<div class="col-6">
+        <div class="col-6">
           <code>
-            &#60;?php
-            <br>&#36;student1Name &#61; &#39;Ray&#39;;
-            <br>&#36;student1GPA &#61; 3.5;
-            <br>
-            <br>&#36;student2Name &#61; &#39;James&#39;;
-            <br>&#36;student2GPA &#61; 4.0;
-            <br>
-            <br>if &#40;&#34;&#36;student1GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
-            <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
-            <br>
-            <br>if &#40;&#34;&#36;student2GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
-            <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
-            <br>
-            <br>?&#62;
-          </code>
+          &#60;?php
+<br>//Tutorial https://teamtreehouse.com/library/foreach-loops
+<br>//https://teamtreehouse.com/library/todo-app
+<br>//https://teamtreehouse.com/library/feature-switch-this-week
+<br>//Include Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script
+<br>include 'list.php';
+<br>
+<br>//Set "Status" Variable
+<br>$status = 'all';
+<br>//Set the "Field" Variable to "SORT" by Category
+<br>$field = 'priority';
+<br>//
+<br>$action = 'week';
+<br>//Create an Indexed-Array with a "List of Keys" in a Particular Order
+<br>$order = array();
+<br>//Conditional to Check ALL Statuses
+<br>if ($status == 'all') {
+<br>		//IF Complete or True, Add Keys from $list to $order Array
+<br>		$order = array_keys($list);
+<br>} else {
+<br>		//LOOP through the $list Array and Add  Only Keys of Items with Proper Status
+<br>		foreach ($list as $key => $item) {
+<br>		//Filter to DISPLAY 'Completion Status' using Key-Value pair.
+<br>			if($item['complete'] ==$status) {
+<br>				//Add Key to $order Array
+<br>				$order[] = $key;
+<br>		}
+<br>	}	
+<br>}
+
+<br>switch ($action) {
+<br>	case 'sort' : 
+<br>		//Sort Conditional 
+<br>		if ($field) {
+<br>		//Sort by that Field = Loop through $order Array using Value as a Key for the list
+<br>			$sort = array();
+<br>			foreach ($order as $id) {
+<br>				//Set the Sort Key Equal to ID = Use $id to Set Value Equal to the Chosen Value of the Sort (In this Case 'Priority')
+<br>				$sort[$id] = $list[$id][$field];
+<br>			}
+<br>			//Sort the Array by Value 'priority' == The UPDATE $order Array
+<br>			asort($sort);
+<br>			$order = array_keys($sort);
+<br>		} 
+<br>		break;
+<br>	//
+<br>	//Next Feature or 'Case' : Is $action Equal to 'week'
+<br>	case 'week' :
+<br>			foreach ($order as $key => $value) { 
+<br>					//Check IF Due Date is After the Next Week
+<br>					if (strtotime($list[$value]['due']) > strtotime("+1 week") /*|| !$list[$value]['due'] == Will EXCLUDE Tasks without a Due Date*/) {
+<br>						//Unsets Current Key in Array
+<br>            unset($order[$key]);
+<br>					}
+<br>			}
+<br>	break;
+<br>}
+<br>//Display the Items as a 'Table' with Associated Values
+<br>//MUST 'Wrap' the foreach(){}; Loop Inside the Table
+<br>echo '<table>';
+<br>//Add a 'Header' for all Array Items inside the Table
+<br>echo'<tr>';
+<br>echo'<th>Title</th>';
+<br>echo'<th>Priority</th>';
+<br>echo'<th>Due Date</th>';
+<br>echo'<th>Complete</th>';
+<br>echo'</tr>';
+<br>//For Each Loop, Add a Row to the Table = Do this by Wrapping the foreach() {Statement}
+<br>echo '<tr>';
+<br>//(1) <code>$list</code> tells the Loop which Array to use. 
+<br>//(2) The keyword <i>as</i> is used... 
+<br>//(3) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. 
+<br>//(*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. 
+<br>//(*) <code>$item</code> is now an Associative-Array with a named Key and Value.
+<br>//--
+<br>//Loop through $order Array to ONLY use Items from that Array (use each item as a 'Key' in the $list Array). $id is a Variable that Identifies List Item to Use
+foreach ($order as $id) {
+<br>		//Add a Row to the Table For Each Loop
+<br>		echo '<tr>';
+<br>		//Add Table-Cell Tags around each {statement}
+<br>		echo '<td>' . $list[$id]['title'] . "</td>\n";
+<br>		//Duplicate Table-cells for All 'Header' Elements
+<br>		echo '<td>' . $list[$id]['priority'] . "</td>\n";
+<br>		echo '<td>' . $list[$id]['due'] . "</td>\n";
+<br>		//Add a Conditional to Change the Display of Complete Status
+<br>		echo '<td>';
+<br>		if ($list[$id]['complete']) {
+<br>			echo 'Yes';
+<br>		} else { 
+<br>			echo 'No';
+<br>		}
+<br>		echo "</td>\n";
+<br>		echo '</tr>';
+<br>	}
+<br>
+<br>//Close the Table Tag
+<br>echo '</table>';
+<br>/* Display Array Contents = Production Mode ONLY*/
+<br>//var_dump($list);
+<br>//echo $list[0]['title'];
+<br>
+<br>?&#62;</code>
         </div>
         <!-- -->
-        <!--<div class="col-6">
-          <h3><a href="https://teamtreehouse.com/library/php-basics-2/daily-exercise-program/conditionalls">GPA Challenge</a></h3>
-          <p>This script uses a <i>conditional statement</i> that queries multiple conditions and will <code>output</code> the following results:</p>
-          <?php 
-          $student1Name = 'Ray';
-          $student1GPA = 3.5;
-          
-          $student2Name = 'James';
-          $student2GPA = 4.0;
-          
-          if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
-          else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}
-          
-          if ($student2GPA == 4.0) {echo "<p>$student2Name made the Honor Roll</p>";}
-          else { echo "<p>$student2Name has a GPA of $student2GPA</p>";}
-          ?>
-        </div>-->
+        <div class="col-6">
+          <h3>Build a "To-Do" APPLICATION</h3>
+          <p>This script uses knowledge learned from a <a id="fade" href="https://teamtreehouse.com/library/do-while-looping">PHP Tutorial</a> presented by Aleena Holligan and will <code>output</code> the following results:</p>
+<?php
+//Tutorial https://teamtreehouse.com/library/foreach-loops
+//https://teamtreehouse.com/library/todo-app
+//https://teamtreehouse.com/library/feature-switch-this-week
+//Include Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script
+include 'list.php';
+
+//Set "Status" Variable
+$status = 'all';
+//Set the "Field" Variable to "SORT" by Category
+$field = 'priority';
+//
+$action = 'week';
+//Create an Indexed-Array with a "List of Keys" in a Particular Order
+$order = array();
+//Conditional to Check ALL Statuses
+if ($status == 'all') {
+		//IF Complete or True, Add Keys from $list to $order Array
+		$order = array_keys($list);
+} else {
+		//LOOP through the $list Array and Add  Only Keys of Items with Proper Status
+		foreach ($list as $key => $item) {
+		//Filter to DISPLAY 'Completion Status' using Key-Value pair.
+			if($item['complete'] ==$status) {
+				//Add Key to $order Array
+				$order[] = $key;
+		}
+	}	
+}
+
+switch ($action) {
+	case 'sort' : 
+		//Sort Conditional 
+		if ($field) {
+		//Sort by that Field = Loop through $order Array using Value as a Key for the list
+			$sort = array();
+			foreach ($order as $id) {
+				//Set the Sort Key Equal to ID = Use $id to Set Value Equal to the Chosen Value of the Sort (In this Case 'Priority')
+				$sort[$id] = $list[$id][$field];
+			}
+			//Sort the Array by Value 'priority' == The UPDATE $order Array
+			asort($sort);
+			$order = array_keys($sort);
+		} 
+		break;
+	//
+	//Next Feature or 'Case' : Is $action Equal to 'week'
+	case 'week' :
+			foreach ($order as $key => $value) { 
+					//Check IF Due Date is After the Next Week
+					if (strtotime($list[$value]['due']) > strtotime("+1 week") /*|| !$list[$value]['due'] == Will EXCLUDE Tasks without a Due Date*/) {
+						//Unsets Current Key in Array
+            unset($order[$key]);
+					}
+			}
+	break;
+}
+//Display the Items as a 'Table' with Associated Values
+//MUST 'Wrap' the foreach(){}; Loop Inside the Table
+echo '<table>';
+//Add a 'Header' for all Array Items inside the Table
+echo'<tr>';
+echo'<th>Title</th>';
+echo'<th>Priority</th>';
+echo'<th>Due Date</th>';
+echo'<th>Complete</th>';
+echo'</tr>';
+//For Each Loop, Add a Row to the Table = Do this by Wrapping the foreach() {Statement}
+echo '<tr>';
+//(1) <code>$list</code> tells the Loop which Array to use. 
+//(2) The keyword <i>as</i> is used... 
+//(3) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. 
+//(*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. 
+//(*) <code>$item</code> is now an Associative-Array with a named Key and Value.
+//--
+//Loop through $order Array to ONLY use Items from that Array (use each item as a 'Key' in the $list Array). $id is a Variable that Identifies List Item to Use
+foreach ($order as $id) {
+		//Add a Row to the Table For Each Loop
+		echo '<tr>';
+		//Add Table-Cell Tags around each {statement}
+		echo '<td>' . $list[$id]['title'] . "</td>\n";
+		//Duplicate Table-cells for All 'Header' Elements
+		echo '<td>' . $list[$id]['priority'] . "</td>\n";
+		echo '<td>' . $list[$id]['due'] . "</td>\n";
+		//Add a Conditional to Change the Display of Complete Status
+		echo '<td>';
+		if ($list[$id]['complete']) {
+			echo 'Yes';
+		} else { 
+			echo 'No';
+		}
+		echo "</td>\n";
+		echo '</tr>';
+	}
+
+//Close the Table Tag
+echo '</table>';
+/* Display Array Contents = Production Mode ONLY*/
+//var_dump($list);
+//echo $list[0]['title'];
+?>
+        </div>
       </div>
       <!-- -->
       <!-- -->
