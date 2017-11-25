@@ -84,11 +84,12 @@ $date = date_default_timezone_set('EST');
           <h4>Writing PHP</h4>
           <ul>
             <li id=""><a id="fade" href="#content">Intro</a></li>
-            <li id=""><a id="fade" href="#">Invoking PHP</a></li>
-            <!--<li id=""><a id="fade" href="#">Intro</a></li>
-            <li id=""><a id="fade" href="#">Intro</a></li>
-            <li id=""><a id="fade" href="#">Intro</a></li>
-            <li id=""><a id="fade" href="#">Intro</a></li>-->
+            <li id=""><a id="fade" href="#implement">Implementing PHP</a></li>
+            <li id=""><a id="fade" href="#inject">Injecting PHP</a></li>
+            <li id=""><a id="fade" href="#">Variables 101</a></li>
+            <li id=""><a id="fade" href="#">Data-Types 101</a></li>
+            <li id=""><a id="fade" href="#">Conditionals 101</a></li>
+            <li id=""><a id="fade" href="#">Logical Operators 101</a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -101,16 +102,17 @@ $date = date_default_timezone_set('EST');
         <div id="content" class="col-lg-9">
           
           <!-- *********** <SECTION 1> ************ -->
-          <h1 class="text-center font-weight-bold mb-2">Writing PHP</h1>
-          <p>The task of writing a PHP program is an arduous process that is made easy once you understand what is required when invoking PHP into a web project. Although no two projects are the same, there are certain criteria that is pertinent in the functionality of every project. This involves creating a file with the proper extension, using code blocks, leaving comments, writing variables and using logical operators to build conditional statements, and knowing how to display information in a browser.</p>  
-          <div class="row">
-            
+          <h1 id="invoke" class="text-center font-weight-bold mb-2">Writing PHP</h1>
+          <p>The task of writing a PHP program is an arduous process that is made easy once we understand what is required when invoking PHP into a web project. Although no two projects are the same, there are certain criteria that is pertinent in the functionality and maintenance of every project. This involves creating a file with the proper extension, using code blocks, leaving comments, writing variables and using logical operators to build conditional statements, and knowing how to display information in a browser.</p>
+          
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Implementing PHP</h3>
+          <div class="row mb-2">
             <div class="col-6">
               <div class="card" style="width: 20rem;">
                 <div class="card-body">
                   <h4 class="card-title">Create a PHP File</h4>
                   <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-                  <p class="card-text">'.php' is the <i>File Extension</i> for PHP</p>
+                  <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
                 </div>
               </div>
             </div>
@@ -123,13 +125,21 @@ $date = date_default_timezone_set('EST');
                 </div>
               </div>
             </div>
-            
+            <div class="col-6">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Declare a Variable</h4>
+                  <h4 class="card-subtitle mb-2 text-muted"><code>&#36;varName = "Value";</code></h4>
+                  <p class="card-text">A <i>Variable</i> Stores Information</p>
+                </div>
+              </div>
+            </div>
             <div class="col-6">
               <div class="card" style="width: 20rem;">
                 <div class="card-body">
                   <h4 class="card-title">Comment Code </h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>//Comment</code></h4>
-                  <p class="card-text">Another <code>/*Comment*/</code> Method</p>
+                  <p class="card-text">Another <code>/*Comment*/</code> method</p>
                 </div>
               </div>
             </div>
@@ -138,41 +148,61 @@ $date = date_default_timezone_set('EST');
                 <div class="card-body">
                   <h4 class="card-title">Display a Message</h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>echo "Hello World";</code></h4>
-                  <p class="card-text">Also See <code>print "Hello World";</code></p>
+                  <p class="card-text">Also see <code>print "Hello World";</code></p>
                 </div>
               </div>
             </div>
-            
           </div>
           
+          <h3 id="inject" class="text-center font-weight-bold mb-2">Injecting PHP</h3>
+          <p>Another important concept includes <b>Injecting PHP into an HTML page</b>, which can be done by including the script <code>&#60;&#63;php...&#63;&#62;</code> directly or by using the Include Statement to Import a PHP script from its directory, &#60;&#63;<code>include inc/file.php</code>&#63;&#62;. We will use these concepts regularly so it is important to commit them to memory. Now we are setup to begin writing a program, in fact, we can combine what we know so far with a PHP built-in function to produce a working script writing only 2 Lines.</p>
+          <p><code>&#60;?php
+                &#36;date = date&#95;default&#95;timezone&#95;set&#40;&#39;EST&#39;&#41;;
+                ?&#62;</code>
+                <br>&#60;&#33;DOCTYPE html&#62;
+                <br>&#60;html&#62;
+                <br>&#60;head&#62;&#60;&#47;head&#62;
+                <br>&#60;body&#62;
+                <br>....
+                <br>&#60;footer&#62; 
+                <code>&#60;?php echo &#36;date&#40;&#34;g i a T&#34;&#41;; ?&#62;</code> 
+                &#60;&#47;footer&#62;
+                <br>&#60;&#47;body&#62;
+                <br>&#60;&#47;html&#62;</p>
+          <p>The script above implements the built-in <code>date&#40;&#41;;</code> Function which is used to <i>Format Local Time and Dates</i>. The <code>$date</code> Variable is set above the <code>&#60;&#33;DOCTYPE html&#62;</code> and the script is injected directly into the <code>&#60;footer&#62;...&#60;&#47;footer&#62;</code>. This script will <i>Display the Current Time</i> and yield the following result in the footer: <i><b><?php echo date('g i a T') ?></b></i>.</p>
+          
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Variables 101</h3>
+          <p>As indicated in the example above, <i>Variables</i> are used to store information and that information is known as its <i>Value</i>. A Variable is <i>Declared</i> with <code>&#36;</code> and is followed by an <code>&#95;</code> or a letter as part of its <i>Naming-Convention</i>. Variables are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.</p>
+          <p>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.</p>
+              
+          <p>Variables can store different types of data. You can use the <code>var&#95;dump&#40;x&#41;</code> Function to <i>return the data&#45;type</i> in the console.</p>
+          <p></p>
+          
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Data-Types 101</h3>
+          <p></p>
+          
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Conditional Statements 101</h3>
+          <p></p>
+          
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Logical Operators 101</h3>
+          <p></p>
           <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
             <li><a id="fade" href="https://www.w3schools.com/php/php_echo_print.asp">echo();</a> &#47;&#47; <a id="fade" href="https://www.phptpoint.com/php-echo-print">print();</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
-            <li></li>
-            <li>Import Variables from an Array with the <a id="fade" href="http://php.net/manual/en/function.extract.php">extract</a> Function</li>
-            <li>A-A<a id="fade" href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/associative-quiz">Quiz</a> &#47;&#47; M-A <a id="fade" href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">QUIZ</a> and <a id="fade" href="https://teamtreehouse.com/community/multidimentional-array-questioning-the-question">Answers</a></li>
+            <li>The <a id="fade" href="php.net/manual/en/function.date.php">date ()</a> Function is used to <i>Format Local Time and Dates</i></li>
+            <li>A <a id="fade" href="https://www.w3schools.com/php/php_variables.asp">Variable </a> <i>Stores Information</i>. Also see <a id="fade" href="http://php.net/manual/en/ref.var.php">Function Reference</a> and <a id="fade" href="http://php.net/manual/en/language.variables.scope.php">Scope</a></li>
+            <!--<li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>
+            <li><a id="fade" href=""></a></li>-->
           </ul>
-          
-
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
+          <!-- ************************************ -->
           <!-- ************************************ -->
           
           <!-- ************************************ -->
@@ -199,84 +229,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
           <!-- ************************************ -->
-          
           <!-- ************************************ -->
-          <!-- *********** <SECTION 3> ************ -->
-          <h1>Arrays 3</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 4> ************ -->
-          <h1>Arrays 4</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 5> ************ -->
-          <h1>Arrays 5</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!-- ************************************ -->
-          
-          
-          
         </div>
         <!-- \End of MAIN-CONTENT -->
       </div>
