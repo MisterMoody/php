@@ -170,20 +170,47 @@ $date = date_default_timezone_set('EST');
                 <br>&#60;&#47;body&#62;
                 <br>&#60;&#47;html&#62;</p>
           <p>The script above implements the built-in <code>date&#40;&#41;;</code> Function which is used to <i>Format Local Time and Dates</i>. The <code>$date</code> Variable is set above the <code>&#60;&#33;DOCTYPE html&#62;</code> and the script is injected directly into the <code>&#60;footer&#62;...&#60;&#47;footer&#62;</code>. This script will <i>Display the Current Time</i> and yield the following result in the footer: <i><b><?php echo date('g i a T') ?></b></i>.</p>
-          
+          <!-- -->
+          <!-- -->
           <h3 id="implement" class="text-center font-weight-bold mb-2">Variables 101</h3>
           <p>As indicated in the example above, <i>Variables</i> are used to store information and that information is known as its <i>Value</i>. A Variable is <i>Declared</i> with <code>&#36;</code> and is followed by an <code>&#95;</code> or a letter as part of its <i>Naming-Convention</i>. Variables are case&#45;sensitive and may only contain alpha&#45;numeric characters or underscores.</p>
           <p>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.</p>
-              
-          <p>Variables can store different types of data. You can use the <code>var&#95;dump&#40;x&#41;</code> Function to <i>return the data&#45;type</i> in the console.</p>
-          <p></p>
-          
+          <!-- -->
+          <!-- -->
           <h3 id="implement" class="text-center font-weight-bold mb-2">Data-Types 101</h3>
+          <p>In coding, a Variable Value is a particular type of data that can be used to perform a specific task in a fashion that differs from an action that can be performed using a Value of another data-type. In the Variable example above, <code>'Ray'</code> is the <i>Value</i> and it is a <code>'string'</code> <i>Data-Type</i>. Lets look at the six types of data that we will use throughout this course.</p>
           <p></p>
+          <p>A <b>String</b> is a <i>sequence of characters</i> encapsulated with quotes <code>&#39;xxx&#39;</code> or <code>&#34;xxx&#34;</code>.
+          <br>An <b>Integer</b> is a <i>non&#45;decimal numbers</i> <code>1</code> that can be positive or negative.
+          <br>A <b>Float</b> is a <i>decimal numbers</i> <code>1.52</code>  that can be positive or negative.
+          <br>A <b>Boolean</b> is used for <i>Conditional Testing to confirm if something is </i><code>true</code> or <code>false</code>.
+          <br>An <b>Array</b> is a compound-variable type that stores multiple&#45;values into a single variable.
+          <br>The <b>Null</b> data-type which has only one value: NULL, which is a variable that has no value assigned to it. Variables can also be emptied by setting the value to NULL.</p>
+          <h5>Data-Type Examples</h5>
+          <div class="row">
+            <div class="col-1">string</div>
+            <div class="col-4"><code>$name = "Ray";</code></div>
+            <div class="col-1">boolean</div>
+            <div class="col-6"><code>$orNah = false;</code></div>
+            <div class="col-1">integer</div>
+            <div class="col-4"><code>$number = 1;</code></div>
+            <div class="col-1">array</div>
+            <div class="col-6"><code>$multi = ['var1', 'var2', 'var3'];</code></div>
+            <div class="col-1">float</div>
+            <div class="col-4"><code>$decimal = 2.42;</code></div>
+            <div class="col-1">null</div>
+            <div class="col-6"><code>$empty = " ";</code></div>
+          </div>
+          <p></p>
+          <p><code>var&#95;dump&#40;x&#41;</code> is a built-in function that will allow you to <i>display structured information about a Variable including its type and value</i>.</p>
           
+          <!-- -->
+          <!-- -->
           <h3 id="implement" class="text-center font-weight-bold mb-2">Conditional Statements 101</h3>
           <p></p>
           
+          <!-- -->
+          <!-- -->
           <h3 id="implement" class="text-center font-weight-bold mb-2">Logical Operators 101</h3>
           <p></p>
           <!-- RESOURCES -->
@@ -192,9 +219,23 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href="https://www.w3schools.com/php/php_echo_print.asp">echo();</a> &#47;&#47; <a id="fade" href="https://www.phptpoint.com/php-echo-print">print();</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
             <li>The <a id="fade" href="php.net/manual/en/function.date.php">date ()</a> Function is used to <i>Format Local Time and Dates</i></li>
             <li>A <a id="fade" href="https://www.w3schools.com/php/php_variables.asp">Variable </a> <i>Stores Information</i>. Also see <a id="fade" href="http://php.net/manual/en/ref.var.php">Function Reference</a> and <a id="fade" href="http://php.net/manual/en/language.variables.scope.php">Scope</a></li>
+            <li><a id="fade" href="http://php.net/manual/en/language.types.php">Data&#45;<a id="fade" href="https://www.w3schools.com/php/php_datatypes.asp">Types</a></a> define the type of information stored in a Variable</li>
+            <li>Learn more about Data-Types: 
+              <a id="fade" href="http://php.net/language.types.string">Strings</a>
+              <sup><a id="fade" href="http://php.net/ref.strings">1</a></sup>
+              <sup><a id="fade" href="https://www.tutorialspoint.com/php/php_strings.htm">2</a></sup>
+              <a id="fade" href=""></a>
+              &#47;&#47;
+              <a id="fade" href="http://php.net/manual/en/language.types.integer.php">Integers</a> &amp;
+              <a id="fade" href="http://php.net/manual/en/language.types.float.php">Floats</a>
+              <sup><a id="fade" href="http://vegibit.com/php-integers-and-floating-point-values/">1</a> <a id="fade" href="http://php.net/manual/en/function.is-integer.php">2</a></sup>
+              &#47;&#47;
+              <a id="fade" href="http://php.net/manual/en/language.types.boolean.php">Booleans</a>
+              &#47;&#47;
+              <a id="fade" href="http://php.net/manual/en/language.types.array.php">Arrays</a>
+              </li>
+            <li>View a Variable Value and its Type using the <a id="fade" href="http://php.net/manual/en/function.var-dump.php">var&#95;dump&#40;&#41;;</a> Function</li>
             <!--<li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
