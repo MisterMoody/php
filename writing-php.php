@@ -86,10 +86,9 @@ $date = date_default_timezone_set('EST');
             <li id=""><a id="fade" href="#content">Intro</a></li>
             <li id=""><a id="fade" href="#implement">Implementing PHP</a></li>
             <li id=""><a id="fade" href="#inject">Injecting PHP</a></li>
-            <li id=""><a id="fade" href="#">Variables 101</a></li>
-            <li id=""><a id="fade" href="#">Data-Types 101</a></li>
-            <li id=""><a id="fade" href="#">Conditionals 101</a></li>
-            <li id=""><a id="fade" href="#">Logical Operators 101</a></li>
+            <li id=""><a id="fade" href="#">Variables</a></li>
+            <li id=""><a id="fade" href="#">Data-Types</a></li>
+            <li id=""><a id="fade" href="#usingLogic">Using Logic</a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -177,7 +176,7 @@ $date = date_default_timezone_set('EST');
           <p>This is an example of a Variable <code>&#36;firstName &#61; &#39;Ray&#39;</code> where <code>&#39;Ray&#39;</code> is the Variable <i>Value</i>.</p>
           <!-- -->
           <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Data-Types 101</h3>
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Data-Types</h3>
           <p>In coding, a Variable Value is a particular type of data that can be used to perform a specific task in a fashion that differs from an action that can be performed using a Value of another data-type. In the Variable example above, <code>'Ray'</code> is the <i>Value</i> and it is a <code>'string'</code> <i>Data-Type</i>. Lets look at the six types of data that we will use throughout this course.</p>
           <p></p>
           <p>A <b>String</b> is a <i>sequence of characters</i> encapsulated with quotes <code>&#39;xxx&#39;</code> or <code>&#34;xxx&#34;</code>.
@@ -203,16 +202,131 @@ $date = date_default_timezone_set('EST');
           </div>
           <p></p>
           <p><code>var&#95;dump&#40;x&#41;</code> is a built-in function that will allow you to <i>display structured information about a Variable including its type and value</i>.</p>
+          <!-- -->
+          <!-- -->
+          <h3 id="usingLogic" class="text-center font-weight-bold mb-2">Conditional Statements and Operators</h3>
+          <p><i>Conditionals</i> and <i>Operators</i> are critical Control Structure tools that allows developers to apply a <i>decision-making process</i> based on user responses to given conditions and parameters. When combined, these help developers writer extremely intelligent scripts that are especially useful for creating intuitively interactive programs such as custom messages or a to-do task app with assigned due-dates. Lets focus our attention on the key conditional statements and operator types that will enable us to use Logic within our programs.</p>
+          
+          <h5>Operators</h5>
+          <p><b>Operators</b> are used to <i>perform operations that compare variables and values before returning a <code>true/false</code> result</i>.</p>
+          <p>The <b>Assignment Operator</b> <code><b>&#61;</b></code> is used to <i>assign Values to Variables</i>.
+          </p>
+          <p><b>Arithmetic Operators</b> <code>&#62; &#43; &#45; &#42; &#61; &#60;</code> are used to perform math functions on  Variables.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.</p>
+          <p><b>Arithmetic Operators</b> <code>&#62; &#43; &#45; &#42; &#61; &#60;</code> are used to perform math functions on  Variables.  These can be used together with the assignment operator to create a shorthand. <code>&#36;x <b>&#43;&#61;</b> 2;</code>.
+          </p>
+          <p><b>Comparison Operators</b> <i>are used to compare the values of variables and yield a result</i>.</p>
+          <p><b>Logical Operators</b> are used to <i>combine and test multiple Conditional Statements</i> and are useful to combine Nested <code>if</code> statements. For example, if you want to match a range of numbers between 10 and 1000 you would create two test: one to query if <code>&#36;xxx &#62;&#61; 10</code> and the second to query if <code>&#36;xxx &#60;&#61; 1000</code> <br>'&amp;&amp;' Operator Evaluates if BOTH Conditions are TRUE.</p>
+          <p><b>Concatenation</b> uses <code>.</code> to create a New String by Combining Multiple Strings together.</p>
+          <!-- Operator Cheatsheet -->
+          <div class="row mb-4">
+            <div class="col-12">
+              <p> Below is a reference guide for using Operators</p>
+              <nav class="nav nav-tabs" id="myTab" role="tablist">
+                <!-- Comparison -->
+                <a class="nav-item nav-link active" id="nav-comparison-tab" data-toggle="tab" href="#comparisonoperator" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
+                <!-- Logical -->
+                <a class="nav-item nav-link" id="nav-logical-tab" data-toggle="tab" href="#logicaloperator" role="tab" aria-controls="nav-logical" aria-selected="false">Logical</a>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <!-- Comparison -->
+                <div class="tab-pane fade show active" id="comparisonoperator" role="tabpanel" aria-labelledby="nav-comparison-tab">
+                  <p><a href="http://php.net/manual/en/language.operators.comparison.php">Comparison Operators</a> are used to compare the values of variables and yield a result.</p>
+                  <table style="width: 100%;">
+                    <tr>
+                      <th>equal to <code>&#61;&#61;</code></th>
+                      <th>identical <code>&#61;&#61;&#61;</code></th>
+                      <th>greater than <code>&#62;</code></th>
+                      <th>less than <code>&#60;</code></th>
+                    </tr>
+                    <tr>
+                      <th>not equal to <code>&#33;&#61;</code></th>
+                      <th>not identical <code>&#33;&#61;&#61;</code></th>
+                      <th>greater or equal to <code>&#62;&#61;</code></th>
+                          <th>less or equal to <code>&#60;&#61;</code></th>
+                    </tr>
+                  </table>
+                </div>
+                <!-- Logical -->
+                <div class="tab-pane fade" id="logicaloperator" role="tabpanel" aria-labelledby="nav-logical-tab">
+                  <p><a href="http://php.net/manual/en/language.operators.logical.php">Logical</a><a href="https://www.w3resource.com/php/operators/logical-operators.php"> Operators</a> are used to combine <i>Conditional statements</i>.</p>
+                    <table style="width: 100%;">
+                      <tr>
+                        <th>and <code>&amp;&amp;</code></th>
+                        <th>or <code>&#124;&#124;</code></th>
+                        <th>not <code>&#33;</code></th>
+                      </tr>
+                    </table>
+                  <p>Learn more about <a href="https://teamtreehouse.com/library/booleans">How to Compare Boolean Values</a>.</p>
+                  <p><a href="http://php.net/manual/en/language.operators.logical.php">Logic Operators</a> are used to test multiple conditions and are useful to combine Nested <code>if</code> statements. For example, if you want to match a range of numbers between 10 and 1000 you would create two test: one to query if <code>&#36;xxx &#62;&#61; 10</code> and the second to query if <code>&#36;xxx &#60;&#61; 1000</code> <br>'&&' Operator Evaluates if BOTH Conditions are TRUE. 
+                  <br>'||' Operator Evaluates if EITHER Condition is TRUE.
+                  <br>The '&&' and "||" has higher precendence than 'and' and 'or'. 
+                  <br>'is_string()' Evaluates if the Variable Value is a String Type.</p>
+                  <!-- -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+          <h5>Conditional Statements</h5>
+          <p><b>Conditionals</b> are used to create test conditions that form expressions that evaluates to its <code>boolean</code> value, then perform a certain action based on a specific response. The condition tested is based on a set of <code>keywords</code>.</p>
+          <p></p>
+          <!-- Types of Conditionals -->
+          <div class="row">
+            <div class="col-3">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-if-tab" data-toggle="pill" href="#if" role="tab" aria-controls="v-pills-if" aria-selected="false">if</a>
+          <a class="nav-link" id="v-pills-else-tab" data-toggle="pill" href="#else" role="tab" aria-controls="v-pills-else" aria-selected="false">if...else</a>
+          <a class="nav-link" id="v-pills-elseif-tab" data-toggle="pill" href="#elseif" role="tab" aria-controls="v-pills-elseif" aria-selected="false">elseif</a>
+          <a class="nav-link" id="v-pills-switch-tab" data-toggle="pill" href="#switch" role="tab" aria-controls="v-pills-switch" aria-selected="false">switch</a>
+        </div>
+        </div>
+            <div class="col-9 mb-5">
+          <div class="tab-content" id="v-pills-tabContent">
+            <!-- if -->
+            <div class="tab-pane fade show active" id="if" role="tabpanel" aria-labelledby="v-pills-if-tab">
+              <p>The <a href="http://php.net/manual/en/control-structures.if.php">if</a> Conditional executes code <i>only if the specified condition evaluates to true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored. In the example below, the expression will evaluate to <code>true</code> because <i>10 is greater than 5</i>. <br><br>
+              <code>
+                &#36;a &#61; 10;
+                <br> &#36;b &#61; 5;
+                <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;echo &#34;a is greater thab&#34;;&#125;                
+              </code>
+              </p>
+              <p></p>
+            </div>
+            <!-- -->
+            <!-- if...else -->
+            <div class="tab-pane fade" id="else" role="tabpanel" aria-labelledby="v-pills-else-tab">
+              <p>The <a href="http://php.net/manual/en/control-structures.else.php">if...else</a> Conditional executes code if <i>a condition evaluates to true, otherwise another block of code is executed if condition evaluates to false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.
+              <br><br>
+              <code>
+                &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                <br>if &#40;&#36;t &#60; &#34;20&#34;&#41; &#123;
+                echo &#34;Have a good day&#33;&#34;;&#125;
+                <br>else &#123;echo &#34;Have a good night&#33;&#34;;&#125;
+              </code>
+              </p>
+              </div>
+            <!-- -->
+            <!-- elseif -->
+            <div class="tab-pane fade" id="elseif" role="tabpanel" aria-labelledby="v-pills-elseif-tab">
+              <p>The <a href="http://php.net/manual/en/control-structures.elseif.php">else/if</a> executes <i>different codes for more than two conditions</i>. The elseif statement is only executed if &#40;a&#41; <i>the preceding <code>if</code> expression and any preceding elseif expressions evaluated to FALSE</i>, and &#40;b&#41; <i>the current <code>elseif</code> expression evaluated to TRUE</i>. In the example below, the expression will output <code>&#34;Have a good morning&#33;&#34;</code> if it is earlier than <code>10am</code>. If the time is between <code>10am - 8pm</code>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. And if it is later than <code>8pm</code>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</p>
+            </div>
+            <!-- -->
+            <!-- switch -->
+            <div class="tab-pane fade" id="switch" role="tabpanel" aria-labelledby="v-pills-switch-tab">
+              <p><a href="http://php.net/manual/en/language.control-structures.switch.php">Switch</a> statements are similar to a series of <code>if</code> statements that use the same expression, allowing you to compare many different values with the same variable or expression. The <code>switch-case</code> statement <i>tests a variable against a series of values until it finds a match, and then executes the block of code corresponding to that match</i>.</p>
+            </div>
+            <!-- -->
+            <!-- -->            
+          </div>
+        </div>
+          </div>
           
           <!-- -->
           <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Conditional Statements 101</h3>
+          <h3 id="implement" class="text-center font-weight-bold mb-2"></h3>
           <p></p>
           
-          <!-- -->
-          <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Logical Operators 101</h3>
-          <p></p>
           <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
@@ -235,6 +349,35 @@ $date = date_default_timezone_set('EST');
               <a id="fade" href="http://php.net/manual/en/language.types.array.php">Arrays</a>
               </li>
             <li>View a Variable Value and its Type using the <a id="fade" href="http://php.net/manual/en/function.var-dump.php">var&#95;dump&#40;&#41;;</a> Function</li>
+            <li>Control Structures
+              <br><a id="fade" href="http://php.net/manual/en/language.operators.php">Operators</a>
+              [<a id="fade" href="http://php.net/manual/en/language.operators.assignment.php">Assign</a> &#47;
+              <a id="fade" href="http://php.net/manual/en/language.operators.arithemetic.php">Arithmetic</a> &#47;
+              <a id="fade" href="http://php.net/manual/en/language.operators.comparison.php">Comparison</a> &#47;
+              <a id="fade" href="http://php.net/manual/en/language.operators.logical.php">Logical</a> 
+              <sup><a id="fade" href="https://www.w3resource.com/php/operators/logical-operators.php">1</a></sup>]
+              <br><a id="fade" href="">Conditionals</a>
+              [<a id="fade" href="http://php.net/manual/en/control-structures.if.php">if</a> &#47; 
+              <a id="fade" href="http://php.net/manual/en/control-structures.else.php">if...else</a> &#47; 
+              <a id="fade" href="http://php.net/manual/en/control-structures.elseif.php">else/if</a> &#47; 
+              <a id="fade" href="http://php.net/manual/en/language.control-structures.switch.php">switch</a>] 
+              <br><a id="fade" href="">Loops</a>
+              [<a href="http://php.net/manual/en/language.control-structures.while.php">while</a> 
+                  &#47; 
+              <a href="http://php.net/manual/en/language.control-structures.do.while.php">do-while</a>
+                  &#47; 
+              <a href="http://php.net/manual/en/language.control-structures.for.php">for</a>
+                  &#47; 
+              <a href="http://php.net/manual/en/language.control-structures.foreach.php">for each</a>]
+              <br><a id="fade" href="">Other Control Structures to Learn</a>
+              <a id="fade" href="">break</a> &#47; 
+              <a id="fade" href="">continue</a> &#47; 
+              <a id="fade" href="">declare</a> &#47; 
+              <a id="fade" href="">return</a> &#47; 
+              <a id="fade" href="">include</a> &#47; 
+              <a id="fade" href="">require</a> and
+              <a id="fade" href="">Alternative Syntax</a>
+              <a id="fade" href=""></a></li>
             <!--<li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>
