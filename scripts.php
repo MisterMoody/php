@@ -102,60 +102,140 @@ $date = date_default_timezone_set('EST');
       <div class="row mb-2">
         <div class="col-12">
           <h4>Examples of Conditional Statements</h4>
+          <p>The <b>if</b>, <b>if/else</b> and <b>else</b> statements allow <i>conditional execution of code</i> based on its given expression. All <b>Expressions</b> are <i>evaluated to their</i> <code>boolean</code> value. 
+          <br>The <b>if</b> statement is the foundation for all conditional statements in that it will be executed if the expression evaluates to <code>true</code>. 
+          <br>The <b>else</b> statement extends an <b>if</b> statement <i>to execute a statement in case the expression in the if statement evaluates to</i> <code>false</code>. When an <code>if/else</code> expression evaluates to <code>true</code>, the <b>if</b> statement will be executed. If the expression evaluates to <code>false</code>, the <b>else</b> statement will be executed. 
+          <br>The <b>elseif</b> statement also extends an <b>if</b> statement, but differs from the <b>else</b> statement in that it is only executed if the preceding <b>if</b> expression evaluates to <code>false</code> <i>AND</i> the current <b>elseif</b> expression evaluates to <code>true</code>.</p>
         </div>
+        <!-- if -->
         <div class="col-6 mb-2">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">the <b>if</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                  &#36;a &#61; 10;
+                &#36;a &#61; 10;
                   <br> &#36;b &#61; 5;
-                  <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;
-                  <br>echo &#34;a is greater than b&#34;; &#125;                
-                  </code>
+                  <code><br>if &#40;</code>&#36;a &#62; &#36;b<code>&#41; &#123;</code>
+                  <br>echo &#34;a is greater than b&#34;; <code>&#125;</code>
               </h4>
-              <p class="card-text">Will Evaluate to <code>true</code> because <i>10 is Greater Than 5</i></p>
+              <p class="card-text">Statement is executed because the expression evaluates to <code>true</code>. Had the expression evaluated to <code>false</code>, the statement would be ignored.</p>
             </div>
           </div>
-        </div>        
+        </div> 
+        <!-- if/else -->
         <div class="col-6 mb-2">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">the <b>if/else</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
-                  <br>if &#40;&#36;t &#60; &#34;20&#34;&#41; &#123;
-                  <br>echo &#34;Have a good day&#33;&#34;;
-                  <br>&#125; else &#123;
-                  <br>echo &#34;Have a good night&#33;&#34;;&#125;
-                </code>
+                &#36;a &#61; 10;
+                <br> &#36;b &#61; 5;
+                <br><code>if &#40;</code>&#36;a &#62; &#36;b<code>&#41; &#123;</code>
+                <br>echo &#34;a is greater than b&#34;; 
+                <br><code>&#125;</code> else <code>&#123;</code>
+                <br>echo &#34;b is greater than a&#34;;<code>&#125;</code>
               </h4>
-              <p class="card-text">Expression will evaluate to <code>"Have a good day!"</code> <b>if</b> <i>it is earlier than 8pm</i>. <b>Else</b>, the expression will evaluate to <code>"Have a good night!"</code> <i>if later than 8pm</i>. </p>
-              <h5>Shorthand Syntax</h5>
-              <p><code>echo &#40;&#36;t &#60; 20&#41; &#63; &#34;Good morning&#33;&#34; &#58; &#34;Good night&#33;&#34;
-                  </code></p>
+              <p class="card-text">The <b>if</b> statement is executed because the expression evaluates to <code>true</code>. Had the expression evaluated to <code>false</code>, the <b>else</b> statement would have been executed.</p>
             </div>
           </div>
         </div>
+        <!-- else if -->
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>else if</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                &#36;score&#61; 80;
+                <br>
+                <br><code>if &#40;</code>&#36;score &#62;&#61; 80<code>&#41; &#123;</code>
+                <br>echo &#39;Fantanstic work! Level Up!&#39;; 
+                <br><code>&#125; elseif &#40;</code>&#36;score &#62;&#61; 60<code>&#41; &#123;</code>
+                <br>echo &#39;Good job. Level Up!&#39;; 
+                <br><code>&#125; else &#40;</code>&#36;score &#60;&#61; 59<code>&#41; &#123;</code>
+                <br>echo &#39;Please try again.&#39;;<code>&#125;</code>
+              </h4>
+              <p class="card-text">This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. The code on the left will <code>output</code> the following results:</p>
+              <?php
+                  $score = 80;
+                  if ($score >= 80) {
+                      echo 'Fantanstic work! Level Up!';
+                  } elseif ($score >= 60) {
+                    echo 'Good job. Level Up!';
+                  } elseif ($score <= 59) {
+                    echo 'You should practice more before trying this level again.';
+                  } else {
+                      echo 'Please try again!';
+                  }
+                  ?>
+            </div>
+          </div>
+        </div>
+        <!-- -->  
+        <!-- if/else & elseif Comparison -->
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12">
+              <h4>A Comparative Example of <b>if/else</b> and <b>elseif</b> Statements</h4>
+              <p></p>
+            </div>
+            <div class="col-6 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">the <b>if/else</b> Statement</h4>
+                <h4 class="card-subtitle mb-2 text-muted">
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br><code>if &#40;</code>&#36;t &#60; &#34;12&#34;<code>&#41; &#123;</code>
+                  <br>echo &#34;Good Morning&#33;&#34;;
+                  <br><code>&#125; else &#123;</code>
+                  <br>echo &#34;Good Afternoon&#33;&#34;;<code>&#125;</code>
+                </h4>
+                <p class="card-text">Expression will evaluate to <code>"Good Morning!"</code> <b>if</b> <i>it is earlier than noon</i>. <b>Else</b>, the expression will evaluate to <code>"Good Afternoon!"</code> <i>if later than noon</i>. </p>
+                <h5>Shorthand Syntax</h5>
+                <p><code>echo &#40;&#36;t &#60; 20&#41; &#63; &#34;Good Morning&#33;&#34; &#58; &#34;Good Night&#33;&#34;
+                    </code></p>
+                <p>The <b>Ternary Operator</b> <code>&#40;expr1&#41; &#63; &#40;expr2&#41; &#58; &#40;expr3&#41;</code> offers a shorthand method for the <code>if...else</code> statment that will <i>evaluate the result of an expression</i>. 
+                <br>If <code>&#40;expr1&#41;</code> evaluates to <code>true</code> or <code>false</code>, the result would evaluate to <code>expr2</code> or <code>expr3</code>, respectively.</p>
+              </div>
+            </div>
+          </div>
+            <div class="col-6 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">the <b>else/if</b> Statement</h4>
+                <h4 class="card-subtitle mb-2 text-muted">
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br><code>if &#40;</code>&#36;t &#60; &#34;10&#34;<code>&#41; &#123;</code>
+                  <br>echo &#34;Good Morning&#33;&#34;;
+                  <br><code>&#125; elseif &#40;</code>&#36;t &#60; &#34;20&#34;<code>&#41; &#123;</code>
+                  <br>echo &#34;Good Afternoon&#33;&#34;;
+                  <br><code>&#125; else &#123;</code> 
+                  <br>echo &#34;Good Night&#33;&#34;;<code>&#125;</code>
+                </h4>
+                <p class="card-text">Expression will output <code>&#34;Good Morning&#33;&#34;</code> <b>If</b> <i>it is earlier than 10am</i>. <b>Elseif</b> <i>when the time is between 10am - 8pm</i>, the expression will output <code>&#34;Good Afternoon&#33;&#34;</code>. <b>Else</b> <i>when it is later than 8pm</i>, the expression will evaluate to <code>&#34;Good Night&#33;&#34;</code>.</p>
+              </div>
+            </div>
+          </div>
+            <!-- -->
+          </div>
+        </div>
+        <!-- --> 
+        <!-- -->
+        <!-- Nested if -->
         <div class="col-12 mb-2">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">a Nested <b>if</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                if &#40;$num &#62;= 10&#41; &#123;
-                  <br>if &#40;$num &#60;= 1000&#41; &#123;
+                <code>if &#40;</code>$num &#62;= 10<code>&#41; &#123;</code>
+                  <br><code>if &#40;</code>$num &#60;= 1000<code>&#41; &#123;</code>
                       <br>echo &#39;Number is Within the Range&#39;;
-                  <br>&#125; else &#123; 
+                  <br><code>&#125; else &#123;</code> 
                       <br>echo 'Number is GREATER than 1000, NOT Within Range';
-                  <br>&#125;
-                <br>&#125; else &#123;
+                  <br><code>&#125;</code>
+                <br><code>&#125; else &#123;</code>
                     <br>echo 'Number is LESS than 10, NOT Within Range'; &#123;
-                    <br>&#125;
-                <br>&#125;
-                </code>
+                    <br><code>&#125;</code>
+                <br><code>&#125;</code>
               </h4>
               <p class="card-text">This script uses an Nested <code>if</code> <i>conditional statement</i> that queries <i>a number within a specific range</i>. This script queries if the number is greater than 10 but less than 1000. The nested condition in this example can output statements for whether the number is within the range or not. If the variable value is outside of the range, it will state whether it is greater than or less than, respectively. The code on the left will <code>output</code> the following results:</p>
               <?php
@@ -174,70 +254,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
-        <div class="col-6 mb-2">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">the <b>else/if</b> Statement</h4>
-              <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
-                  <br>if &#40;&#36;t &#60; &#34;10&#34;&#41;&#123;
-                  <br>echo &#34;Have a good morning&#33;&#34;;
-                  <br>&#125; elseif &#40;&#36;t &#60; &#34;20&#34;&#41;  
-                    &#123;
-                  <br>echo &#34;Have a good day&#33;&#34;;
-                  <br>&#125; else &#123; 
-                  <br>echo &#34;Have a good night&#33;&#34;;&#125;
-                </code>
-              </h4>
-              <p class="card-text">Expression will output <code>&#34;Have a good morning&#33;&#34;</code> <b>If</b> <i>it is earlier than 10am</i>. <b>Elseif</b> <i>when the time is between 10am - 8pm</i>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. <b>Else</b> <i>when it is later than 8pm</i>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6 mb-2">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>        
-        <div class="col-12 mb-2">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">the <b>elseif</b> Statement</h4>
-              <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                    &#36;score&#61; 80;
-                    <br>
-                    <br>if &#40;&#36;score &#62;&#61; 80&#41; &#123;
-                    <br>echo &#39;Fantanstic work! Level Up!&#39;; 
-                    <br>&#125; elseif &#40;&#36;score &#62;&#61; 60&#41; &#123;
-                    <br>echo &#39;Good job. Level Up!&#39;; 
-                    <br>&#125; elseif &#40;&#36;score &#60;&#61; 59&#41; &#123;
-                    <br>echo &#39;You should practice more before trying this level again.&#39;;
-                    <br>&#125; else &#123;
-                    <br>echo &#39;Please try again.&#39;;
-                    <br>&#125;
-                  </code>
-              </h4>
-              <p class="card-text">This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. The code on the left will <code>output</code> the following results:</p>
-              <?php
-                  $score = 22;
-                  if ($score >= 80) {
-                      echo 'Fantanstic work! Level Up!';
-                  } elseif ($score >= 60) {
-                    echo 'Good job. Level Up!';
-                  } elseif ($score <= 59) {
-                    echo 'You should practice more before trying this level again.';
-                  } else {
-                      echo 'Please try again!';
-                  }
-                  ?>
-            </div>
-          </div>
-        </div>
+        <!-- -->
         <div class="col-12 mb-2">
           <div class="card">
             <div class="card-body">
