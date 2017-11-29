@@ -115,8 +115,9 @@ ol {
 
 /*Code Snippets*/
 code, h4.card-subtitle {font-family: monospace;}
-
-
+.card-subtitle > code {font-size: 18px; line-height: 2;}
+/*Code NON Snippets*/
+code {font-size: 14px; line-height: 1;}
 
 /* ===================================== 
    END of Main-Page Layout
