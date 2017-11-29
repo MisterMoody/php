@@ -87,7 +87,7 @@ $date = date_default_timezone_set('EST');
       
       <!-- -->
       <!-- -->
-      <!-- Scripts -->
+      <!-- Scripts Intro -->
       <div class="row">
         <!-- -->
         <div class="col-12">
@@ -96,6 +96,262 @@ $date = date_default_timezone_set('EST');
         </div>
       </div>
       <!-- -->
+      <!-- -->
+      
+      <!-- Examples of Conditional Statements-->
+      <div class="row mb-2">
+        <div class="col-12">
+          <h4>Examples of Conditional Statements</h4>
+        </div>
+        <div class="col-6 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>if</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                  &#36;a &#61; 10;
+                  <br> &#36;b &#61; 5;
+                  <br>if &#40;&#36;a &#62; &#36;b&#41; &#123;
+                  <br>echo &#34;a is greater than b&#34;; &#125;                
+                  </code>
+              </h4>
+              <p class="card-text">Will Evaluate to <code>true</code> because <i>10 is Greater Than 5</i></p>
+            </div>
+          </div>
+        </div>        
+        <div class="col-6 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>if/else</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br>if &#40;&#36;t &#60; &#34;20&#34;&#41; &#123;
+                  <br>echo &#34;Have a good day&#33;&#34;;
+                  <br>&#125; else &#123;
+                  <br>echo &#34;Have a good night&#33;&#34;;&#125;
+                </code>
+              </h4>
+              <p class="card-text">Expression will evaluate to <code>"Have a good day!"</code> <b>if</b> <i>it is earlier than 8pm</i>. <b>Else</b>, the expression will evaluate to <code>"Have a good night!"</code> <i>if later than 8pm</i>. </p>
+              <h5>Shorthand Syntax</h5>
+              <p><code>echo &#40;&#36;t &#60; 20&#41; &#63; &#34;Good morning&#33;&#34; &#58; &#34;Good night&#33;&#34;
+                  </code></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">a Nested <b>if</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                if &#40;$num &#62;= 10&#41; &#123;
+                  <br>if &#40;$num &#60;= 1000&#41; &#123;
+                      <br>echo &#39;Number is Within the Range&#39;;
+                  <br>&#125; else &#123; 
+                      <br>echo 'Number is GREATER than 1000, NOT Within Range';
+                  <br>&#125;
+                <br>&#125; else &#123;
+                    <br>echo 'Number is LESS than 10, NOT Within Range'; &#123;
+                    <br>&#125;
+                <br>&#125;
+                </code>
+              </h4>
+              <p class="card-text">This script uses an Nested <code>if</code> <i>conditional statement</i> that queries <i>a number within a specific range</i>. This script queries if the number is greater than 10 but less than 1000. The nested condition in this example can output statements for whether the number is within the range or not. If the variable value is outside of the range, it will state whether it is greater than or less than, respectively. The code on the left will <code>output</code> the following results:</p>
+              <?php
+                  $num = 100;
+                  if ($num >= 10) {
+                    if ($num >= 10 && $num <= 1000) {
+                        echo 'Number is Within the Range';
+                    } else { 
+                        echo 'Number is GREATER than 1000, NOT Within Range';
+                    }
+                  } else {
+                      echo 'Number is LESS than 10, NOT Within Range'; {
+                      }
+                  }
+                  ?>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>else/if</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                  &#36;t &#61; date&#40;&#34;H&#34;&#41;;
+                  <br>if &#40;&#36;t &#60; &#34;10&#34;&#41;&#123;
+                  <br>echo &#34;Have a good morning&#33;&#34;;
+                  <br>&#125; elseif &#40;&#36;t &#60; &#34;20&#34;&#41;  
+                    &#123;
+                  <br>echo &#34;Have a good day&#33;&#34;;
+                  <br>&#125; else &#123; 
+                  <br>echo &#34;Have a good night&#33;&#34;;&#125;
+                </code>
+              </h4>
+              <p class="card-text">Expression will output <code>&#34;Have a good morning&#33;&#34;</code> <b>If</b> <i>it is earlier than 10am</i>. <b>Elseif</b> <i>when the time is between 10am - 8pm</i>, the expression will output <code>&#34;Have a good day&#33;&#34;</code>. <b>Else</b> <i>when it is later than 8pm</i>, the expression will evaluate to <code>&#34;Have a good night&#33;&#34;</code>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>        
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>elseif</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                    &#36;score&#61; 80;
+                    <br>
+                    <br>if &#40;&#36;score &#62;&#61; 80&#41; &#123;
+                    <br>echo &#39;Fantanstic work! Level Up!&#39;; 
+                    <br>&#125; elseif &#40;&#36;score &#62;&#61; 60&#41; &#123;
+                    <br>echo &#39;Good job. Level Up!&#39;; 
+                    <br>&#125; elseif &#40;&#36;score &#60;&#61; 59&#41; &#123;
+                    <br>echo &#39;You should practice more before trying this level again.&#39;;
+                    <br>&#125; else &#123;
+                    <br>echo &#39;Please try again.&#39;;
+                    <br>&#125;
+                  </code>
+              </h4>
+              <p class="card-text">This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. The code on the left will <code>output</code> the following results:</p>
+              <?php
+                  $score = 22;
+                  if ($score >= 80) {
+                      echo 'Fantanstic work! Level Up!';
+                  } elseif ($score >= 60) {
+                    echo 'Good job. Level Up!';
+                  } elseif ($score <= 59) {
+                    echo 'You should practice more before trying this level again.';
+                  } else {
+                      echo 'Please try again!';
+                  }
+                  ?>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>switch</b> Statement</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                &#36;today &#61; date&#40;&#39;l&#39;&#41;
+                <br>switch &#40;date&#40;&#39;l&#39;&#41;&#41; &#123;
+                <br> case &#34;Monday&#34;&#58; echo &#34;Study Mandarin on Monday&#34;&#59; break;
+                <br> case &#34;Tuesday&#34;&#58; echo &#34;Study PHP on Tuesday&#34;&#59; break;
+                <br> case &#34;Wednesday&#34;&#58; echo &#34;Call Grams on Wednesday&#34;&#59; break;
+                <br> case &#34;Thursday&#34;&#58; echo &#34;Study Espanol on Thursday&#34;&#59; break;
+                <br> case &#34;Friday&#34;&#58; echo &#34;Touch Base with Friends on Friday&#34;&#59;  break;
+                <br> case &#34;Saturday&#34;&#58; echo &#34;Clean on Saturday&#34;&#59; break;
+                <br> case &#34;Sunday&#34;&#58; echo &#34;Search for Work on Sunday&#34;&#59; break&#59;
+                <br> default&#58; echo &#34;I don't know what day it is&#34;&#59; break&#59;  
+                <br>  &#125;  
+                </code>
+              </h4>
+              <p class="card-text"><i>???</i> Uses the <code>date();</code> Function to determine which statement to use.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <code>&amp;&amp;</code> Operator</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                  &#36;num = 100;
+                  <br>if &#40;&#36;num &#62;= 10 &amp;&amp; &#36;num &#60;= 1000&#41; &#123;
+                        <br>echo 'Number is Within the Range';
+                    <br>&#125; else &#123; 
+                        <br> 'Number is NOT Within the Range';
+                    <br>&#125;
+                </code>
+              </h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <code>||</code> Operator</h4>
+              <h4 class="card-subtitle mb-2 text-muted">
+                <code>
+                &#36;num = 1000;
+                <br>if &#40;&#36;num == 10 || is_string&#40;$num&#41;&#41; &#123;
+                  <br>echo '10 or string';
+                <br>&#125; else &#123;
+                  <br>echo 'Not 10 or string';
+                <br>&#125;
+                </code>
+              </h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>-->
+      </div>
       <!-- -->
       
       <!-- GPA Challenge -->
@@ -138,7 +394,6 @@ $date = date_default_timezone_set('EST');
         </div>
       </div>
       <!-- -->
-      <!-- -->
       
       <!-- Unit Converter: Pounds to Kilograms -->
       <div class="row mb-3">
@@ -176,7 +431,6 @@ $date = date_default_timezone_set('EST');
           <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
         </div>
       </div>
-      <!-- -->
       <!-- -->
       
       <!-- Unit Converter: Milies to Kilometers -->
