@@ -151,6 +151,17 @@ $date = date_default_timezone_set('EST');
                 </div>
               </div>
             </div>
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Escape Sequence</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>&#34;br/&#62;&#92;n&#34;</code> or <code>&#34;&#92;n&#34;</code>
+                  </h4>
+                  <p class="card-text">This is a Line-Break</p>
+                </div>
+              </div>
+            </div>
           </div>
           
           <h3 id="inject" class="text-center font-weight-bold mb-2">Injecting PHP</h3>
@@ -207,7 +218,7 @@ $date = date_default_timezone_set('EST');
           <!-- -->
           <!-- -->
           <h3 id="usingLogic" class="text-center font-weight-bold mb-2">Conditional Statements and Operators</h3>
-          <p><i>Conditionals</i> and <i>Operators</i> are critical Control Structure tools that allows developers to apply a <i>decision-making process</i> based on user responses to given conditions and parameters. When combined, these help developers writer extremely intelligent scripts that are especially useful for creating intuitively interactive programs such as custom messages or a to-do task app with assigned due-dates. Lets focus our attention on the key conditional statements and operator types that will enable us to use Logic within our programs.</p>
+          <p><i>Conditionals</i> and <i>Operators</i> are critical Control Structure tools that allows developers to apply a <i>decision-making process</i> based on user responses to given conditions and parameters. When combined, these help developers write extremely intelligent scripts that are especially useful for creating intuitively interactive programs such as custom messages or a to-do task app with assigned due-dates. Lets focus our attention on the key conditional statements and operator types that will enable us to use Logic within our programs.</p>
           
           <h5>Operators</h5>
           <p><b>Operators</b> are used to <i>perform operations that compare variables and values before returning a <code>true/false</code> result</i> depending on its conditional statement.</p>
@@ -272,13 +283,10 @@ $date = date_default_timezone_set('EST');
           <h5>Conditional Statements</h5>
           <p><b>Conditionals</b> are used to create test conditions that form expressions that evaluates to its <code>boolean</code> value, then perform a certain action based on a specific response. The condition tested is based on a set of <code>keywords</code>.</p>
           <!-- -->
-          <p>The <b>if</b> Conditional executes code <i>only if the specified condition evaluates to true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored. In the example below, the expression will evaluate to <code>true</code> because <i>10 is greater than 5</i>.</p>
+          <p>The <b>if</b> Conditional executes code <i>only if the specified condition evaluates to true</i>. If this expression evaluates to <code>true</code>, PHP will execute the statement. If the expression evaluates to <code>false</code>, the statement will be ignored.</p>
           <!-- -->
-          <p>The <b>if...else</b> Conditional executes code if <i>a condition evaluates to true, otherwise another block of code is executed if condition evaluates to false</i>. In the example below, the expression will evaluate to <code>&#34;Have a good day&#33;&#34;</code> if it is <i>earlier than</i> <code>8pm</code> or <code>&#34;Have a good night&#33;&#34;</code> <i>if later than</i> <code>8pm</code>.
-          <br>A shorthand alternative for the <code>if...else</code> statment is to use the <code><b>ternary operator</b></code>, which is used to <i>evaluate the result of an expression</i>. A ternary expression would look like so:<br>
-            <code>&#40;expr1&#41; &#63; &#40;expr2&#41; &#58; &#40;expr3&#41;</code>
-          <br>
-          If <code>&#40;expr1&#41;</code> evaluates to <code>true</code> or <code>false</code>, the result would evaluate to <code>expr2</code> or <code>expr3</code>.</p>
+          <p>The <b>if...else</b> Conditional executes code if <i>a condition evaluates to true, otherwise another block of code is executed if condition evaluates to false</i>. 
+          <br>&#42;View the shorthand <code><b>ternary operator</b></code> method for the <code>if...else</code> statment&#42;</p>
           <!-- -->
           <p>The <b>else/if</b> executes <i>different codes for more than two conditions</i>. The elseif statement is only executed if &#40;a&#41; <i>the preceding <code>if</code> expression and any preceding elseif expressions evaluated to FALSE</i>, and &#40;b&#41; <i>the current <code>elseif</code> expression evaluated to TRUE</i>.</p>
           <!-- -->
@@ -311,6 +319,7 @@ $date = date_default_timezone_set('EST');
               <a id="fade" href="http://php.net/manual/en/language.types.array.php">Arrays</a>
               </li>
             <li>View a Variable Value and its Type using the <a id="fade" href="http://php.net/manual/en/function.var-dump.php">var&#95;dump&#40;&#41;;</a> Function</li>
+            <li>Create a Line-Break using an <a id="fade" href="http://php.net/manual/en/regexp.reference.escape.php">Escape Sequence</a> Function</li>
             <li>Control Structures
               <br><a id="fade" href="http://php.net/manual/en/language.operators.php">Operators</a>
               [<a id="fade" href="http://php.net/manual/en/language.operators.assignment.php">Assign</a> &#47;

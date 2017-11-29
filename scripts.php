@@ -231,9 +231,8 @@ $date = date_default_timezone_set('EST');
                       <br>echo &#39;Number is Within the Range&#39;;
                   <br><code>&#125; else &#123;</code> 
                       <br>echo 'Number is GREATER than 1000, NOT Within Range';
-                  <br><code>&#125;</code>
                 <br><code>&#125; else &#123;</code>
-                    <br>echo 'Number is LESS than 10, NOT Within Range'; &#123;
+                    <br>echo 'Number is LESS than 10, NOT Within Range';
                     <br><code>&#125;</code>
                 <br><code>&#125;</code>
               </h4>
@@ -254,63 +253,67 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
-        <!-- -->
+        <!-- switch-->
         <div class="col-12 mb-2">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">the <b>switch</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
-                <code>
+                
                 &#36;today &#61; date&#40;&#39;l&#39;&#41;
-                <br>switch &#40;date&#40;&#39;l&#39;&#41;&#41; &#123;
-                <br> case &#34;Monday&#34;&#58; echo &#34;Study Mandarin on Monday&#34;&#59; break;
-                <br> case &#34;Tuesday&#34;&#58; echo &#34;Study PHP on Tuesday&#34;&#59; break;
-                <br> case &#34;Wednesday&#34;&#58; echo &#34;Call Grams on Wednesday&#34;&#59; break;
-                <br> case &#34;Thursday&#34;&#58; echo &#34;Study Espanol on Thursday&#34;&#59; break;
-                <br> case &#34;Friday&#34;&#58; echo &#34;Touch Base with Friends on Friday&#34;&#59;  break;
-                <br> case &#34;Saturday&#34;&#58; echo &#34;Clean on Saturday&#34;&#59; break;
-                <br> case &#34;Sunday&#34;&#58; echo &#34;Search for Work on Sunday&#34;&#59; break&#59;
-                <br> default&#58; echo &#34;I don't know what day it is&#34;&#59; break&#59;  
-                <br>  &#125;  
-                </code>
+                <br><code>switch &#40;</code>date&#40;&#39;l&#39;&#41;<code>&#41; &#123;</code>
+                <br> <code>case &#34;Monday&#34;&#58;</code> echo &#34;Study Mandarin on Monday&#34;&#59; <code>break&#59;</code>
+                <br><code>case &#34;Tuesday&#34;&#58;</code> echo &#34;Study PHP on Tuesday&#34;&#59; 
+                <code>break&#59;</code>
+                <br><code>case &#34;Wednesday&#34;&#58;</code> echo &#34;Call Grams on Wednesday&#34;&#59; <code>break&#59;</code>
+                <br><code>case &#34;Thursday&#34;&#58;</code> echo &#34;Study Espanol on Thursday&#34;&#59; <code>break&#59;</code>
+                <br><code>case &#34;Friday&#34;&#58;</code> echo &#34;Touch Base with Friends on Friday&#34;&#59;  break;
+                <br><code>case &#34;Saturday&#34;&#58;</code> echo &#34;Clean on Saturday&#34;&#59; 
+                <code>break&#59;</code>
+                <br><code>case &#34;Sunday&#34;&#58;</code> echo &#34;Search for Work on Sunday&#34;&#59; <code>break&#59;</code>
+                <br><code>default&#58;</code> echo &#34;I don't know what day it is&#34;&#59; <code>break&#59;</code>  
+                <br><code>&#125;</code>
               </h4>
               <p class="card-text"><i>???</i> Uses the <code>date();</code> Function to determine which statement to use.</p>
             </div>
           </div>
         </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">the <code>&amp;&amp;</code> Operator</h4>
-              <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                  &#36;num = 100;
-                  <br>if &#40;&#36;num &#62;= 10 &amp;&amp; &#36;num &#60;= 1000&#41; &#123;
+        <!-- Examples using Logical Operators with Conditional Statements -->
+        <div class="col-12">
+          <h4>Examples Using Logical Operators</h4>
+          <p>Logical Operators are used to <i>simultaneously test multiple conditional statements</i>. The <b>&amp;&amp;</b> Operator will evalute to <code>true</code> if <i>both conditions are true</i>. The <b>||</b> Operator will evaluate to <code>true</code> if <i>either condition is true</i>.</p>
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">the <code>&amp;&amp;</code> Operator</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#36;num = 100;
+                    <br><code>if &#40;</code>&#36;num &#62;= 10 <code>&amp;&amp;</code> &#36;num &#60;= 1000<code>&#41; &#123;</code>
                         <br>echo 'Number is Within the Range';
-                    <br>&#125; else &#123; 
+                    <br><code>&#125; else &#123;</code> 
                         <br> 'Number is NOT Within the Range';
-                    <br>&#125;
-                </code>
-              </h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+                    <br><code>&#125;</code>
+                  </h4>
+                  <p class="card-text">Both conditions evaluate to <code>true</code> so the <b>if</b> statment will be executed.</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">the <code>||</code> Operator</h4>
-              <h4 class="card-subtitle mb-2 text-muted">
-                <code>
-                &#36;num = 1000;
-                <br>if &#40;&#36;num == 10 || is_string&#40;$num&#41;&#41; &#123;
-                  <br>echo '10 or string';
-                <br>&#125; else &#123;
-                  <br>echo 'Not 10 or string';
-                <br>&#125;
-                </code>
-              </h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">the <code>||</code> Operator</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#36;num = 1000;
+                    <br><code>if &#40;</code>&#36;num==10 <code>||</code> is_string&#40;$num&#41;<code>&#41; &#123;</code>
+                      <br>echo '10 or string';
+                    <br><code>&#125; else &#123;</code>
+                      <br>echo 'Not 10 or string';
+                    <br><code>&#125;</code>
+                  </h4>
+                  <p class="card-text">The 1st condition evaluates to <code>false</code>, but the 2nd condition evaluates to <code>true</code>, thus, the <b>if</b> statment will be executed.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
