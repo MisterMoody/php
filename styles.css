@@ -113,7 +113,10 @@ ol {
 }
 /* ============================================= */
 
-code {background: #333;}
+/*Code Snippets*/
+code, h4.card-subtitle {font-family: monospace;}
+
+
 
 /* ===================================== 
    END of Main-Page Layout
