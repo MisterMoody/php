@@ -84,12 +84,10 @@ $date = date_default_timezone_set('EST');
     </div>-->
     <!-- -->
     <div class="container">
-      
       <!-- -->
       <!-- -->
       <!-- Scripts Intro -->
       <div class="row">
-        <!-- -->
         <div class="col-12">
           <h1 class="text-center font-weight-bold mb-2">PHP Scripts</h1>
           <p>These are some basic <a href="https://www.w3schools.com/php/php_examples.asp">PHP Script Examples</a> that I have encountered in my web development journey. For each example, I provide the actual code via <code>&#60;html&#62;</code> as well as a description of how the code is processed when injected into html. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis laoreet nunc. Donec ut ligula eget dolor pellentesque vestibulum vel in elit. Morbi posuere aliquam diam sit amet sagittis. Nulla facilisi. Cras a malesuada leo, id malesuada neque. Phasellus vestibulum venenatis velit non mattis. Nam lobortis velit nec sollicitudin cursus. Nam maximus consectetur iaculis.</p>
@@ -460,10 +458,101 @@ $date = date_default_timezone_set('EST');
               ?>
             </div>
           </div>
-        </div>        
-        <!-- Examples using Logical Operators with Conditional Statements -->
+        </div>    
+        <!-- -->
+      </div>
+      <!-- -->
+      <!-- -->
+      
+      
+      
+      <!-- -->
+      <!-- MATH & OPERATOR MANIPULATIONS -->
+      <div class="row mb-5">
+        <!-- Intro -->
         <div class="col-12">
-          <h4>Examples Using Logical Operators</h4>
+          <h2><b>Math &amp; Operator Manipulation</b> Usage Examples</h2>
+          <p>Arithmetic Operators allow developers to add specificity when creating expressions.</p>
+          
+        </div>
+        <!-- Math Equations -->
+        <div class="col-12 mb-2">
+          <h4>Math Equation </h4>
+          <p>Unit Conversion Equations</p>
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Convert <b>Pounds to Kilograms</b></h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                    <code>&#36;</code>pounds &#61; 180;
+                    <br><code>&#36;</code>lb_to_kg &#61; 0.453592;
+                    <br><code>&#36;kilograms </code>&#61; <code>&#36;</code>pounds <code>&#42;</code> <code>&#36;</code>lb_to_kg;
+                    <br>
+                    <br><code>echo</code> &#34;Weight:&#34;<code>;</code>
+                    <br><code>echo</code> &#34;&#36;pounds&#34;<code>;</code>
+                    <br><code>echo</code> &#34;lb &#61; &#34;<code>;</code>
+                    <br><code>echo</code> &#34;&#36;kilograms&#34;<code>;</code>
+                    <br><code>echo</code> &#34;kg&#34;<code>;</code>
+                  </h5>
+                  <p class="card-text">The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
+                  <?php 
+                  $pounds = 180;
+                  $lb_to_kg = 0.453592;
+                  $kilograms = $pounds * $lb_to_kg;
+
+                  echo "<p>Weight: ";
+                  echo $pounds;
+                  echo " lb = ";
+                  echo $kilograms;
+                  echo " kg</p>";
+                  ?>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Convert <b>Miles to Kilometers</b></h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                    <code>&#36;</code>miles &#61; 2.5;
+                    <br><code>&#36;</code>mile_to_km &#61; 1.60934;
+                    <br><code>&#36;kilometers</code> &#61; <code>&#36;</code>miles <code>&#42;</code> <code>&#36;</code>mile_to_km;
+                    <br>
+                    <br><code>echo</code> &#34;Distance:&#34;<code>;</code>
+                    <br><code>echo</code> &#34;&#36;miles&#34;<code>;</code>
+                    <br><code>echo</code> &#34;miles &#61; &#34;<code>;</code>
+                    <br><code>echo</code> &#34;&#36;kilometers&#34;<code>;</code>
+                    <br><code>echo</code> &#34;km&#34;<code>;</code>
+                  </h5>
+                  <p class="card-text">The <code>&#36;miles &#61; 2.5;</code> variable <i>stores the # in miles to convert</i> to kilometers. The <code>&#36;mile_to_km &#61; 1.60934;</code> is the <i>kilometer equivalent of miles</i> when converted. The <code>&#36;kilometers &#61; &#36;miles &#42; &#36;mile_to_km;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
+                  <?php 
+                  $miles = 2.5;
+                  $mile_to_km = 1.60934;
+                  $kilometers = $miles * $mile_to_km;
+
+                  echo "<p>Distance: ";
+                  echo $miles;
+                  echo " miles = ";
+                  echo $kilometers;
+                  echo " km</p>";
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+        <!-- Logical Operator -->
+        <div class="col-12 mb-2">
+          <h4>Logial Operator Usage</h4>
           <p>Logical Operators are used to <i>simultaneously test multiple conditional statements</i>. The <b>&amp;&amp;</b> Operator will evalute to <code>true</code> if <i>both conditions are true</i>. The <b>||</b> Operator will evaluate to <code>true</code> if <i>either condition is true</i>.</p>
           <div class="row">
             <div class="col-6">
@@ -500,28 +589,31 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>
         <!-- -->
+        <!-- -->
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- -->
       <!-- -->
+      
+      
       
       <!-- -->
       <!-- BUILT-IN FUNCTIONS USAGE EXAMPLES-->
@@ -530,6 +622,53 @@ $date = date_default_timezone_set('EST');
         <div class="col-12">
           <h2><b>Built-In Functions</b> Usage Examples</h2>
           <p>These are script examples that rely on PHP built-in Functions.</p>
+        </div>
+        <!-- The var_dump() Function -->
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>var_dump();</b> Function</h4>
+              <p class="card-text">The <a id="fade" href="http://php.net/manual/en/function.var-dump.php">var_dump();</a> Function is used to <i>display structured information about the Variable Type and Value of an Expression</i>, and is especially useful when working with <i>Arrays</i>.</p>
+              <h5 class="card-subtitle mb-2 text-muted">
+              //Task 1 "Todo List Item"
+              <br><code>$list[] = [</code>
+              'title' <code>=></code> 'Laundry'<code>,</code>
+              'priority' <code>=></code> 2<code>,</code>
+              'due' <code>=></code> ''<code>,</code>
+              'complete' <code>=></code> true<code>,</code>
+              <code>];</code>
+              <br>//Task 2 "Todo List Item"
+              <br><code>$list[] = [</code>
+              'title' => 'Clean fridge'<code>,</code>
+              'priority' => 2<code>,</code>
+              'due' => ''<code>,</code>
+              'complete' => true<code>,</code>
+              <code>];</code>
+              <br>
+              <br><code>var_dump("\n", $list);</code>
+              </h5>
+              <p class="card-text">The following <code>output</code> gives an overview of the results indicating that <i>this Array is a String of Two Arrays</i>.</p>
+              <p><?php
+              //Associative Array of Details
+              //Task 1 "Todo List Item"
+              $list[] = [
+                 'title' => 'Laundry',
+                 'priority' => 2,
+                 'due' => '',
+                 'complete' => true,
+              ];
+              //Task 2 "Todo List Item"
+              $list[] = [
+                'title' => 'Clean fridge',
+                'priority' => 2,
+                'due' => '',
+                'complete' => true,
+              ];
+              //View Structured Info about Variables, Expression, Data-Types & Values
+              var_dump("\n", $list);
+              ?></p>
+            </div>
+          </div>
         </div>
         <!-- The date() Function -->
         <div class="col-12 mb-2">
@@ -580,13 +719,167 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
-        <!-- -->
-        <div class="col-6">
+        <!-- The sort() Function -->
+        <div class="col-12 mb-2">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+              <h4 class="card-title">The <b>sort()</b> Function</h4>
+              <p>This script utilizes the <code>sort()</code> Function in conjunction with <i>if else foreach switch</i>.</p>
+              <h5 class="card-subtitle mb-2 text-muted">
+              //Tutorial 1 https://teamtreehouse.com/library/foreach-loops
+              <br>//Tutorial 2 https://teamtreehouse.com/library/todo-app
+              <br>//Tutorial 3 https://teamtreehouse.com/library/feature-switch-this-week
+              <br>
+              <br><code>include '</code>list.php<code>';</code>
+              <br>
+              <br>$status = 'all';
+              <br>$field = 'priority';
+              <br>$action = 'week';
+              <br>$order = array();
+              <br>
+              <br><code>if ($</code>status <code>==</code> 'all'<code>) {</code>
+              <code>$</code>order = <code>array_keys(</code>$list<code>);</code>
+              <br><code>} else {</code>
+              <br>		<code>foreach ($</code>list as <code>$</code>key <code>=></code> <code>$</code>item<code>) {</code>
+              <br>			<code>if($</code>item['complete'] <code>== $</code>status<code>) {</code>
+              <code>$</code>order[] = $key<code>; } } }</code>;
+              <br>
+              <br>switch<code>switch ($</code>action<code>) {</code>
+              <br><code>case</code> 'sort'<code>:</code> 
+              <br>		<code>if ($</code>field<code>) { $</code>sort = array();
+              <br>			<code>foreach ($</code>order as <code>$</code>id<code>) {</code>
+              <code>$</code>sort[<code>$</code>id] = <code>$</code>list[<code>$</code>id][<code>$</code>field]<code>; }</code>
+              <br>
+              <br>			<code>$</code>order = <code>array_keys($</code>sort<code>); }</code>
+              <br><code>break;</code>
+                <br>
+              <br><code>case</code> 'week'<code>:</code>
+              <br><code>foreach ($</code>order as $key => $value<code>) {</code> 
+              <br><code>if (</code>strtotime($list[$value]['due']) > strtotime("+1 week"<code>) { unset($</code>order[$key]<code>); } }</code>
+              <br>	<code>break; }</code>
+              <br>
+              <br>echo '&#60;table&#62;'<code>;</code>
+              <br>echo'&#60;tr&#62;'<code>;</code>
+              <br>echo'&#60;th&#62;Title&#60;/th&#62;'<code>;</code>
+              <br>echo'&#60;th&#62;Priority&#60;/th&#62;'<code>;</code>
+              <br>echo'&#60;th&#62;Due Date&#60;/th&#62;'<code>;</code>
+              <br>echo'&#60;th&#62;Complete&#60;/th&#62;'<code>;</code>
+              <br>echo'&#60;/tr&#62;'<code>;</code>
+              <br>echo '&#60;tr&#62;'<code>;</code>
+              <br>echo '&#60;tr&#62;'<code>;</code>
+              <br>echo '&#60;td&#62;' . $list[$id]['title'] . "&#60;/td&#62;\n"<code>;</code>
+              <br>echo '&#60;td&#62;' . $list[$id]['priority'] . "&#60;/td&#62;\n"<code>;</code>
+              <br>echo '&#60;td&#62;' . $list[$id]['due'] . "&#60;/td&#62;\n"<code>;</code>
+              <br>echo '&#60;td&#62;'<code>;</code>
+              <br>
+              <br><code>if ($</code>list[$id]['complete']<code>) {</code> echo 'Yes'; <code>} else {</code> echo 'No'; <code>}</code>
+              <br>echo "&#60;/td&#62;\n"<code>;</code>
+              <br>echo '&#60;/tr&#62;'<code>; }</code>
+              <br>
+              <br>echo '&#60;/table&#62;'<code>;</code>
+              </h5>
+              <p class="card-text">This script will <code>output</code> the following results:</p>
+              <?php
+              //Tutorial https://teamtreehouse.com/library/foreach-loops
+              //https://teamtreehouse.com/library/todo-app
+              //https://teamtreehouse.com/library/feature-switch-this-week
+              //Include Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script
+              include 'list.php';
+
+              //Set "Status" Variable
+              $status = 'all';
+              //Set the "Field" Variable to "SORT" by Category
+              $field = 'priority';
+              //
+              $action = 'week';
+              //Create an Indexed-Array with a "List of Keys" in a Particular Order
+              $order = array();
+              //Conditional to Check ALL Statuses
+              if ($status == 'all') {
+                  //IF Complete or True, Add Keys from $list to $order Array
+                  $order = array_keys($list);
+              } else {
+                  //LOOP through the $list Array and Add  Only Keys of Items with Proper Status
+                  foreach ($list as $key => $item) {
+                  //Filter to DISPLAY 'Completion Status' using Key-Value pair.
+                    if($item['complete'] ==$status) {
+                      //Add Key to $order Array
+                      $order[] = $key;
+                  }
+                }	
+              }
+
+              switch ($action) {
+                case 'sort' : 
+                  //Sort Conditional 
+                  if ($field) {
+                  //Sort by that Field = Loop through $order Array using Value as a Key for the list
+                    $sort = array();
+                    foreach ($order as $id) {
+                      //Set the Sort Key Equal to ID = Use $id to Set Value Equal to the Chosen Value of the Sort (In this Case 'Priority')
+                      $sort[$id] = $list[$id][$field];
+                    }
+                    //Sort the Array by Value 'priority' == The UPDATE $order Array
+                    asort($sort);
+                    $order = array_keys($sort);
+                  } 
+                  break;
+                //
+                //Next Feature or 'Case' : Is $action Equal to 'week'
+                case 'week' :
+                    foreach ($order as $key => $value) { 
+                        //Check IF Due Date is After the Next Week
+                        if (strtotime($list[$value]['due']) > strtotime("+1 week") /*|| !$list[$value]['due'] == Will EXCLUDE Tasks without a Due Date*/) {
+                          //Unsets Current Key in Array
+                          unset($order[$key]);
+                        }
+                    }
+                break;
+              }
+              //Display the Items as a 'Table' with Associated Values
+              //MUST 'Wrap' the foreach(){}; Loop Inside the Table
+              echo '<table>';
+              //Add a 'Header' for all Array Items inside the Table
+              echo'<tr>';
+              echo'<th>Title</th>';
+              echo'<th>Priority</th>';
+              echo'<th>Due Date</th>';
+              echo'<th>Complete</th>';
+              echo'</tr>';
+              //For Each Loop, Add a Row to the Table = Do this by Wrapping the foreach() {Statement}
+              echo '<tr>';
+              //(1) <code>$list</code> tells the Loop which Array to use. 
+              //(2) The keyword <i>as</i> is used... 
+              //(3) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. 
+              //(*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. 
+              //(*) <code>$item</code> is now an Associative-Array with a named Key and Value.
+              //--
+              //Loop through $order Array to ONLY use Items from that Array (use each item as a 'Key' in the $list Array). $id is a Variable that Identifies List Item to Use
+              foreach ($order as $id) {
+                  //Add a Row to the Table For Each Loop
+                  echo '<tr>';
+                  //Add Table-Cell Tags around each {statement}
+                  echo '<td>' . $list[$id]['title'] . "</td>\n";
+                  //Duplicate Table-cells for All 'Header' Elements
+                  echo '<td>' . $list[$id]['priority'] . "</td>\n";
+                  echo '<td>' . $list[$id]['due'] . "</td>\n";
+                  //Add a Conditional to Change the Display of Complete Status
+                  echo '<td>';
+                  if ($list[$id]['complete']) {
+                    echo 'Yes';
+                  } else { 
+                    echo 'No';
+                  }
+                  echo "</td>\n";
+                  echo '</tr>';
+                }
+
+              //Close the Table Tag
+              echo '</table>';
+              /* Display Array Contents = Production Mode ONLY*/
+              //var_dump($list);
+              //echo $list[0]['title'];
+              ?>
             </div>
           </div>
         </div>
@@ -598,28 +891,14 @@ $date = date_default_timezone_set('EST');
               <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
             </div>
           </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
         </div>-->
         <!--  -->
-        <div class="col-12">
-        
-        </div>
-        <!-- -->
       </div>
       <!-- -->
       <!-- -->
       
       
-      
-      
+            
       <!-- -->
       <!-- FORMATTING PHP (Using HTML)-->
       <!-- <p> @ echo -->
@@ -628,393 +907,6 @@ $date = date_default_timezone_set('EST');
           
           if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
           else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}*/          ?>
-      <!-- -->
-      <!-- -->
-      
-      
-      <!-- Unit Converter: Pounds to Kilograms -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-            &#60;?php
-            <br>&#36;pounds &#61; 180;
-            <br>&#36;lb_to_kg &#61; 0.453592;
-            <br>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;
-            <br>
-            <br>echo &#34;Weight:&#34;;
-            <br>echo &#34;&#36;pounds&#34;;
-            <br>echo &#34;lb &#61; &#34;;
-            <br>echo &#34;&#36;kilograms&#34;;
-            <br>echo &#34;kg&#34;;
-            <br>?&#62;
-          </code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3><a href="">Unit Converter: Pounds to Kilograms</a></h3>
-          <p>This script uses a <i>conditional statement</i> that converts Pounds to Kilograms and will <code>output</code> the following results:</p>
-          <?php 
-          
-          $pounds = 180;
-          $lb_to_kg = 0.453592;
-          $kilograms = $pounds * $lb_to_kg;
-          
-          echo "<p>Weight: ";
-          echo $pounds;
-          echo " lb = ";
-          echo $kilograms;
-          echo " kg</p>";
-          ?>
-          <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
-        </div>
-      </div>
-      <!-- -->
-      
-      <!-- Unit Converter: Milies to Kilometers -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-            &#60;?php
-            <br>&#36;miles &#61; 2.5;
-            <br>&#36;mile_to_km &#61; 1.60934;
-            <br>&#36;kilometers &#61; &#36;miles &#42; &#36;mile_to_km;
-            <br>
-            <br>echo &#34;Distance:&#34;;
-            <br>echo &#34;&#36;miles&#34;;
-            <br>echo &#34;miles &#61; &#34;;
-            <br>echo &#34;&#36;kilometers&#34;;
-            <br>echo &#34;km&#34;;
-            <br>?&#62;
-          </code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3><a href="">Unit Converter: Miles to Kilometers</a></h3>
-          <p>This script uses a <i>conditional statement</i> that converts Miles to Kilometers and will <code>output</code> the following results:</p>
-          <?php 
-          
-          $miles = 2.5;
-          $mile_to_km = 1.60934;
-          $kilometers = $miles * $mile_to_km;
-          
-          echo "<p>Distance: ";
-          echo $miles;
-          echo " miles = ";
-          echo $kilometers;
-          echo " km</p>";
-          ?>
-          <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
-        </div>
-      </div>
-      <!-- -->
-      <!-- -->
-      
-
-      
-      <!-- Working with Arrays -->
-      <div class="row mb-3">
-        <div id="arrays" class="col-12"><h3>Working with Arrays</h3></div>
-        <!-- Associative Array-->
-        <div class="col-7">
-          <h5>Associative-Array EXAMPLE</h5>
-          <p><code>&#60;?php</code>
-          <br><code>$contacts = ['James Moody', 'Ray Moody']; </code>
-          <br><code>$contacts = [</code>
-          <br><code>['name' => 'James Moody',</code>
-          <br><code>'email' => 'jmoody@world.com'],</code>
-          <br><code>['name' => 'Ray Moody',</code>
-          <br><code>'email' => 'rmoody@world.com'],</code>
-          <br><code>];</code>
-          <br>
-          <br><code>echo $contacts[1]['name'] . " : ". $contacts[1]['email'];</code>
-          <br><code>?&#62;</code></p>
-        </div>
-        <!-- -->
-        <div class="col-5">
-          <h5><a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/associative-quiz">Build a Contact List</a></h5>
-          <p>This script will <code>output</code> the following results:</p>
-          <?php
-          $contacts = ['James Moody', 'Ray Moody'];
-          $contacts = [
-            ['name' => 'James Moody',
-            'email' => 'jmoody@world.com'],
-            ['name' => 'Ray Moody',
-            'email' => 'rmoody@world.com'],
-          ];
-          //$contacts[1] will return 'Ray Moody' in this Array of Contacts.
-          echo $contacts[1]['name'] . " : ". $contacts[1]['email'];
-          ?>
-        </div>
-        
-        <!-- Multidimensional Array -->
-        <div class="col-6">
-          <h5>Multidimensional-Array EXAMPLE</h5>
-          <p>//Task 1 "Todo List Item"
-            <br><code>&#60;?php</code>
-            <br><code>$list[] = [</code>
-            <br><code>'title' => 'Laundry',</code>
-            <br><code>'priority' => 2,</code>
-            <br><code>'due' => '',</code>
-            <br><code>'complete' => true,</code>
-            <br><code>];</code>
-            <br>//Task 2 "Todo List Item"
-            <br><code>$list[] = [</code>
-            <br><code>'title' => 'Clean fridge',</code>
-            <br><code>'priority' => 2,</code>
-            <br><code>'due' => '',</code>
-            <br><code>'complete' => true,</code>
-            <br><code>];</code>
-            <br>
-            <br><code>var_dump("\n", $list);</code>
-            <br><code>?&#62;</code></p>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h5><a href="https://teamtreehouse.com/library/php-arrays-and-control-structures/php-arrays/multidimensional-arrays">Multidimensional-Array</a></h5>
-          <p>This script will <code>output</code> the following results:</p>
-          <?php
-              //Associative Array of Details
-              //Task 1 "Todo List Item"
-              $list[] = [
-                 'title' => 'Laundry',
-                 'priority' => 2,
-                 'due' => '',
-                 'complete' => true,
-              ];
-              //Task 2 "Todo List Item"
-              $list[] = [
-                'title' => 'Clean fridge',
-                'priority' => 2,
-                'due' => '',
-                'complete' => true,
-              ];
-
-              //View Structured Info about Variables, Expression, Data-Types & Values
-              var_dump("\n", $list);
-
-              //Access 'Element' of First List
-              //echo $list[0]['title'];
-              ?>
-          <p></p>
-          <p>The <code>var_dump();</code> Function indicates that this Array is <i>a <b>String</b> of Two Arrays</i></p>
-        </div>
-        
-        <!-- -->
-        
-        <!-- -->
-
-        <div class="col-6">
-          <code>
-          &#60;?php
-<br>//Tutorial https://teamtreehouse.com/library/foreach-loops
-<br>//https://teamtreehouse.com/library/todo-app
-<br>//https://teamtreehouse.com/library/feature-switch-this-week
-<br>//Include Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script
-<br>include 'list.php';
-<br>
-<br>//Set "Status" Variable
-<br>$status = 'all';
-<br>//Set the "Field" Variable to "SORT" by Category
-<br>$field = 'priority';
-<br>//
-<br>$action = 'week';
-<br>//Create an Indexed-Array with a "List of Keys" in a Particular Order
-<br>$order = array();
-<br>//Conditional to Check ALL Statuses
-<br>if ($status == 'all') {
-<br>		//IF Complete or True, Add Keys from $list to $order Array
-<br>		$order = array_keys($list);
-<br>} else {
-<br>		//LOOP through the $list Array and Add  Only Keys of Items with Proper Status
-<br>		foreach ($list as $key => $item) {
-<br>		//Filter to DISPLAY 'Completion Status' using Key-Value pair.
-<br>			if($item['complete'] ==$status) {
-<br>				//Add Key to $order Array
-<br>				$order[] = $key;
-<br>		}
-<br>	}	
-<br>}
-
-<br>switch ($action) {
-<br>	case 'sort' : 
-<br>		//Sort Conditional 
-<br>		if ($field) {
-<br>		//Sort by that Field = Loop through $order Array using Value as a Key for the list
-<br>			$sort = array();
-<br>			foreach ($order as $id) {
-<br>				//Set the Sort Key Equal to ID = Use $id to Set Value Equal to the Chosen Value of the Sort (In this Case 'Priority')
-<br>				$sort[$id] = $list[$id][$field];
-<br>			}
-<br>			//Sort the Array by Value 'priority' == The UPDATE $order Array
-<br>			asort($sort);
-<br>			$order = array_keys($sort);
-<br>		} 
-<br>		break;
-<br>	//
-<br>	//Next Feature or 'Case' : Is $action Equal to 'week'
-<br>	case 'week' :
-<br>			foreach ($order as $key => $value) { 
-<br>					//Check IF Due Date is After the Next Week
-<br>					if (strtotime($list[$value]['due']) > strtotime("+1 week") /*|| !$list[$value]['due'] == Will EXCLUDE Tasks without a Due Date*/) {
-<br>						//Unsets Current Key in Array
-<br>            unset($order[$key]);
-<br>					}
-<br>			}
-<br>	break;
-<br>}
-<br>//Display the Items as a 'Table' with Associated Values
-<br>//MUST 'Wrap' the foreach(){}; Loop Inside the Table
-<br>echo '<table>';
-<br>//Add a 'Header' for all Array Items inside the Table
-<br>echo'<tr>';
-<br>echo'<th>Title</th>';
-<br>echo'<th>Priority</th>';
-<br>echo'<th>Due Date</th>';
-<br>echo'<th>Complete</th>';
-<br>echo'</tr>';
-<br>//For Each Loop, Add a Row to the Table = Do this by Wrapping the foreach() {Statement}
-<br>echo '<tr>';
-<br>//(1) <code>$list</code> tells the Loop which Array to use. 
-<br>//(2) The keyword <i>as</i> is used... 
-<br>//(3) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. 
-<br>//(*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. 
-<br>//(*) <code>$item</code> is now an Associative-Array with a named Key and Value.
-<br>//--
-<br>//Loop through $order Array to ONLY use Items from that Array (use each item as a 'Key' in the $list Array). $id is a Variable that Identifies List Item to Use
-foreach ($order as $id) {
-<br>		//Add a Row to the Table For Each Loop
-<br>		echo '<tr>';
-<br>		//Add Table-Cell Tags around each {statement}
-<br>		echo '<td>' . $list[$id]['title'] . "</td>\n";
-<br>		//Duplicate Table-cells for All 'Header' Elements
-<br>		echo '<td>' . $list[$id]['priority'] . "</td>\n";
-<br>		echo '<td>' . $list[$id]['due'] . "</td>\n";
-<br>		//Add a Conditional to Change the Display of Complete Status
-<br>		echo '<td>';
-<br>		if ($list[$id]['complete']) {
-<br>			echo 'Yes';
-<br>		} else { 
-<br>			echo 'No';
-<br>		}
-<br>		echo "</td>\n";
-<br>		echo '</tr>';
-<br>	}
-<br>
-<br>//Close the Table Tag
-<br>echo '</table>';
-<br>/* Display Array Contents = Production Mode ONLY*/
-<br>//var_dump($list);
-<br>//echo $list[0]['title'];
-<br>
-<br>?&#62;</code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3>Build a "To-Do" APPLICATION</h3>
-          <p>This script uses knowledge learned from a <a id="fade" href="https://teamtreehouse.com/library/do-while-looping">PHP Tutorial</a> presented by Aleena Holligan and will <code>output</code> the following results:</p>
-<?php
-//Tutorial https://teamtreehouse.com/library/foreach-loops
-//https://teamtreehouse.com/library/todo-app
-//https://teamtreehouse.com/library/feature-switch-this-week
-//Include Multi-dimensional Array of "List-Items" to Perform as Part of the ToDo List from list.php Script
-include 'list.php';
-
-//Set "Status" Variable
-$status = 'all';
-//Set the "Field" Variable to "SORT" by Category
-$field = 'priority';
-//
-$action = 'week';
-//Create an Indexed-Array with a "List of Keys" in a Particular Order
-$order = array();
-//Conditional to Check ALL Statuses
-if ($status == 'all') {
-		//IF Complete or True, Add Keys from $list to $order Array
-		$order = array_keys($list);
-} else {
-		//LOOP through the $list Array and Add  Only Keys of Items with Proper Status
-		foreach ($list as $key => $item) {
-		//Filter to DISPLAY 'Completion Status' using Key-Value pair.
-			if($item['complete'] ==$status) {
-				//Add Key to $order Array
-				$order[] = $key;
-		}
-	}	
-}
-
-switch ($action) {
-	case 'sort' : 
-		//Sort Conditional 
-		if ($field) {
-		//Sort by that Field = Loop through $order Array using Value as a Key for the list
-			$sort = array();
-			foreach ($order as $id) {
-				//Set the Sort Key Equal to ID = Use $id to Set Value Equal to the Chosen Value of the Sort (In this Case 'Priority')
-				$sort[$id] = $list[$id][$field];
-			}
-			//Sort the Array by Value 'priority' == The UPDATE $order Array
-			asort($sort);
-			$order = array_keys($sort);
-		} 
-		break;
-	//
-	//Next Feature or 'Case' : Is $action Equal to 'week'
-	case 'week' :
-			foreach ($order as $key => $value) { 
-					//Check IF Due Date is After the Next Week
-					if (strtotime($list[$value]['due']) > strtotime("+1 week") /*|| !$list[$value]['due'] == Will EXCLUDE Tasks without a Due Date*/) {
-						//Unsets Current Key in Array
-            unset($order[$key]);
-					}
-			}
-	break;
-}
-//Display the Items as a 'Table' with Associated Values
-//MUST 'Wrap' the foreach(){}; Loop Inside the Table
-echo '<table>';
-//Add a 'Header' for all Array Items inside the Table
-echo'<tr>';
-echo'<th>Title</th>';
-echo'<th>Priority</th>';
-echo'<th>Due Date</th>';
-echo'<th>Complete</th>';
-echo'</tr>';
-//For Each Loop, Add a Row to the Table = Do this by Wrapping the foreach() {Statement}
-echo '<tr>';
-//(1) <code>$list</code> tells the Loop which Array to use. 
-//(2) The keyword <i>as</i> is used... 
-//(3) ... 'for each' Item in the List to work with it as the Variable <code>$item</code>. 
-//(*) This will Assign one Item from the List to the Variable <code>$item</code> on each Loop. 
-//(*) <code>$item</code> is now an Associative-Array with a named Key and Value.
-//--
-//Loop through $order Array to ONLY use Items from that Array (use each item as a 'Key' in the $list Array). $id is a Variable that Identifies List Item to Use
-foreach ($order as $id) {
-		//Add a Row to the Table For Each Loop
-		echo '<tr>';
-		//Add Table-Cell Tags around each {statement}
-		echo '<td>' . $list[$id]['title'] . "</td>\n";
-		//Duplicate Table-cells for All 'Header' Elements
-		echo '<td>' . $list[$id]['priority'] . "</td>\n";
-		echo '<td>' . $list[$id]['due'] . "</td>\n";
-		//Add a Conditional to Change the Display of Complete Status
-		echo '<td>';
-		if ($list[$id]['complete']) {
-			echo 'Yes';
-		} else { 
-			echo 'No';
-		}
-		echo "</td>\n";
-		echo '</tr>';
-	}
-
-//Close the Table Tag
-echo '</table>';
-/* Display Array Contents = Production Mode ONLY*/
-//var_dump($list);
-//echo $list[0]['title'];
-?>
-        </div>
-      </div>
       <!-- -->
       <!-- -->
     </div>
