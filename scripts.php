@@ -98,10 +98,11 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
       
+      <!-- -->
       <!-- Examples of Conditional Statements-->
-      <div class="row mb-2">
+      <div class="row mb-5">
         <div class="col-12">
-          <h4>Examples of Conditional Statements</h4>
+          <h2><b>Conditional Statement</b> Usage Examples</h2>
           <p>The <b>if</b>, <b>if/else</b> and <b>else</b> statements allow <i>conditional execution of code</i> based on its given expression. All <b>Expressions</b> are <i>evaluated to their</i> <code>boolean</code> value. 
           <br>The <b>if</b> statement is the foundation for all conditional statements in that it will be executed if the expression evaluates to <code>true</code>. 
           <br>The <b>else</b> statement extends an <b>if</b> statement <i>to execute a statement in case the expression in the if statement evaluates to</i> <code>false</code>. When an <code>if/else</code> expression evaluates to <code>true</code>, the <b>if</b> statement will be executed. If the expression evaluates to <code>false</code>, the <b>else</b> statement will be executed. 
@@ -122,7 +123,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div> 
-        <!-- if/else -->
+        <!-- if/else 1 -->
         <div class="col-6 mb-2">
           <div class="card">
             <div class="card-body">
@@ -139,6 +140,40 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
+        <!-- if/else 2 -->
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>if/else</b> Statement</h4>
+              <p class="card-text">This script uses the <b>if/else</b> statement to query <b><i>if</i></b> a student earned high enough marks to qualify for the <i>Honor Roll</i>,  <b><i>else</i></b> state the students grade point average.</p>
+              <h4 class="card-subtitle mb-2 text-muted"> 
+              &#36;student1Name &#61; &#39;Moody_R&#39;; &#36;student1GPA &#61; 3.5;<br>
+              &#36;student2Name &#61; &#39;Moody_J&#39;; &#36;student2GPA &#61; 4.0;
+              <br><code>if &#40;</code>&#34;&#36;student1GPA &#61;&#61; 4.0&#34;<code>&#41; &#123;</code> 
+              echo &#34;&#36;student1Name made the Honor Roll&#34;; 
+              <br><code>&#125; else &#123;</code>echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; <code>&#125;</code>
+              <br><code>if &#40;</code>&#34;&#36;student2GPA &#61;&#61; 4.0&#34;<code>&#41; &#123;</code>
+              echo &#34;&#36;student2Name made the Honor Roll&#34;; 
+              <br><code>&#125; else &#123;</code> 
+              echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; <code>&#125;</code>
+              </h4>
+              <p class="card-text">The 1st <b>if</b> expression evaluates to <code>false</code> because <code>&#36;student1Name</code> did not earn the qualifying score. Thus, the <code>else</code> expression will execute to display the students <i>G.P.A.</i> The 2nd <b>if</b> expression evaluates to <code>true</code> because <code>&#36;student2Name</code> earned a qualifying score. This code will <code>output</code> the following results:</p>
+              <?php 
+              $student1Name = 'Ray';
+              $student1GPA = 3.5;
+
+              $student2Name = 'James';
+              $student2GPA = 4.0;
+
+              if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
+              else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}
+
+              if ($student2GPA == 4.0) {echo "<p>$student2Name made the Honor Roll</p>";}
+              else { echo "<p>$student2Name has a GPA of $student2GPA</p>";}
+              ?>
+            </div>
+          </div>
+        </div>
         <!-- else if -->
         <div class="col-12 mb-2">
           <div class="card">
@@ -146,15 +181,14 @@ $date = date_default_timezone_set('EST');
               <h4 class="card-title">the <b>else if</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
                 &#36;score&#61; 80;
-                <br>
                 <br><code>if &#40;</code>&#36;score &#62;&#61; 80<code>&#41; &#123;</code>
-                <br>echo &#39;Fantanstic work! Level Up!&#39;; 
+                echo &#39;Fantanstic work! Level Up!&#39;; 
                 <br><code>&#125; elseif &#40;</code>&#36;score &#62;&#61; 60<code>&#41; &#123;</code>
-                <br>echo &#39;Good job. Level Up!&#39;; 
+                echo &#39;Good job. Level Up!&#39;; 
                 <br><code>&#125; else &#40;</code>&#36;score &#60;&#61; 59<code>&#41; &#123;</code>
-                <br>echo &#39;Please try again.&#39;;<code>&#125;</code>
+                echo &#39;You Lose. Try Again.&#39;;<code>&#125;</code>
               </h4>
-              <p class="card-text">This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. The code on the left will <code>output</code> the following results:</p>
+              <p class="card-text">This script uses an <code>elseif</code> <i>conditional statement</i> that queries multiple conditions that are defined using the <code>&#62;&#61;</code> <i>operator</i>. The primary objective is to <i>ascertain if a user has achieved a <b>passing score</b></i>. Thus, a score of 60 or greater is passing and a score greater than 80 is excellent. This code will <code>output</code> the following results:</p>
               <?php
                   $score = 80;
                   if ($score >= 80) {
@@ -164,7 +198,7 @@ $date = date_default_timezone_set('EST');
                   } elseif ($score <= 59) {
                     echo 'You should practice more before trying this level again.';
                   } else {
-                      echo 'Please try again!';
+                      echo 'You Lose! Try Again.';
                   }
                   ?>
             </div>
@@ -218,7 +252,6 @@ $date = date_default_timezone_set('EST');
             <!-- -->
           </div>
         </div>
-        <!-- --> 
         <!-- -->
         <!-- Nested if -->
         <div class="col-12 mb-2">
@@ -317,6 +350,96 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+      </div>
+      <!-- -->
+      <!-- -->
+      
+      <!-- -->
+      <!-- BUILT-IN FUNCTIONS USAGE EXAMPLES-->
+      <div class="row mb-5">
+        <!-- Intro -->
+        <div class="col-12">
+          <h2><b>Built-In Functions</b> Usage Examples</h2>
+          <p>These are script examples that rely on PHP built-in Functions.</p>
+        </div>
+        <!-- The date() Function -->
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>date();</b> Function</h4>
+              <p class="card-text">The <a id="fade" href="http://php.net/manual/en/function.date.php">date();</a> Function is used to <i>Format a Local Time/Date.</i> It returns a string formatted according to the given format string using the given integer timestamp or the current time if no timestamp is given. You can set <b>time</b> according to <i>hours, minutes and seconds</i> or you can set the <b>date</b> by <i>year, month, week and day</i>. Check out the referenced link above for more details on setting the parameters for this function.</p>
+              <p class="card-text">To use this function, declare a <i>date</i> Variable, then set the timezone parameters to reflect local time &#40;<code>'EST'</code>&#41;. Once you have declared the variable, you can create expressions based on the time/date parameters that you set to accomplish your objectives. Here are a few examples that use <code>echo</code> to <i>Output (ie Display)</i> Time expressions:</p>
+              <!-- Examples -->
+              <div class="row">
+                <div class="col-7">
+                  <h5 class="card-subtitle mb-2 text-muted">
+                    <br><code>&#36;date</code> &#61; <code>date_default_timezone_set&#40;</code>&#39;EST&#39;<code>&#41;;</code>
+                    <br>
+                    <br><code>echo date&#40;</code>&#34;D d M, Y&#34;<code>&#41;;</code>
+                    <br>
+                    <br><code>echo date&#40;</code>&#34;g i a T&#34;<code>&#41;;</code>
+                    <br>
+                    <br><code>echo date&#40;</code>&#34;F d Y g:i:s&#34;<code>&#41;;</code>
+                    <br>
+                    <br><code>echo date&#40;</code>&#34;W&#34;<code>&#41;;</code>
+                  </h5>
+                </div>
+                <div class="col-5">
+                  <br><br><br>
+                  <?php 
+
+                  $date = date_default_timezone_set('EST');
+
+                  echo "<p>Today is ";
+                  echo date('D M d, Y');
+                  echo " </p>";
+
+                  echo "<p>The current time is ";
+                  echo date('g i a T');
+                  echo " </p>";
+
+                  echo "<p>Last modified ";
+                  echo date('F d Y g:i:s', getlastmod());
+                  echo " </p>";
+
+                  echo "<p>Week of the Year ";
+                  echo date('W');
+                  echo " </p>";
+                  ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Create a PHP File</h4>
+              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+            </div>
+          </div>
+        </div>
         <!--<div class="col-6">
           <div class="card">
             <div class="card-body">
@@ -334,45 +457,25 @@ $date = date_default_timezone_set('EST');
               <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
             </div>
           </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <h4 class="card-title">Create a PHP File</h4>
-              <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-              <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-            </div>
-          </div>
         </div>-->
+        <!--  -->
+        <div class="col-12">
+        
+        </div>
+        <!-- -->
       </div>
       <!-- -->
+      <!-- -->
+      
+      
+      
+      
+      <!-- -->
+      <!-- -->
+      
+      <!-- -->
+      <!-- -->
+      
       
       <!-- GPA Challenge -->
       <div class="row mb-3">
@@ -487,56 +590,6 @@ $date = date_default_timezone_set('EST');
           echo " km</p>";
           ?>
           <p>The <code>&#36;pounds &#61; 180;</code> variable <i>stores the # in pounds to convert</i> to kilograms. The <code>&#36;lb_to_kg &#61; 0.453592;</code> is the <i>kilogram equivalent of pounds</i> when converted. The <code>&#36;kilograms &#61; &#36;pounds &#42; &#36;lb_to_kg;</code> retrieves variable data that is calculated once converted. The <code>echo</code> statement is used to <i>display the results</i>.</p>
-        </div>
-      </div>
-      <!-- -->
-      <!-- -->
-      
-      
-      <!-- The date() Function -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-            &#60;?php
-            <br>
-            <br>&#36;date &#61; date_default_timezone_set&#40;&#39;EST&#39;&#41;;
-            <br>
-            <br>echo &#34;Today is &#34;; &#62;&#62;&#62; echo date&#40;&#34;D d M, Y&#34;&#41;&#34;;
-            <br>
-            <br>echo &#34;The current time is&#34;; &#62;&#62;&#62; echo date&#40;&#34;g i a T&#34;&#41;&#34;;
-            <br>
-            <br>echo &#34;Last Modified&#34;; &#62;&#62;&#62; echo date&#40;&#34;F d Y g:i:s&#34;&#41;&#34;;
-            <br>
-            <br>echo &#34;Week of the Year&#34;; &#62;&#62;&#62; echo date&#40;&#34;W&#34;&#41;&#34;;
-            <br>
-            <br>?&#62;
-          </code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3><a href="">The date&#40;&#41; Function</a></h3>
-          <p>This script uses the <code>date&#40;&#41;;</code> Function to <i>structure time</i> based on established parameters and will <code>output</code> the following results:</p>
-          <?php 
-          
-          $date = date_default_timezone_set('EST');
-          
-          echo "<p>Today is ";
-          echo date('D M d, Y');
-          echo " </p>";
-          
-          echo "<p>The current time is ";
-          echo date('g i a T');
-          echo " </p>";
-          
-          echo "<p>Last modified ";
-          echo date('F d Y g:i:s', getlastmod());
-          echo " </p>";
-          
-          echo "<p>Week of the Year ";
-          echo date('W');
-          echo " </p>";
-          ?>
-          <p><i>Learn more about the <a href="http://php.net/manual/en/function.date.php">date()</a> Function.</i></p>
         </div>
       </div>
       <!-- -->
