@@ -286,31 +286,181 @@ $date = date_default_timezone_set('EST');
             </div>
           </div>
         </div>
-        <!-- switch-->
+        <!-- switch 1-->
+        <div class="col-12 mb-2">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>switch</b> Statement</h4>
+              <h5 class="card-subtitle mb-2 text-muted">
+              <code>if &#40;</code>&#33;isset&#40;&#36;role&#41;<code>&#41;</code> 
+              <code> &#123;</code>	&#36;role &#61; &#39;subscriber&#39;;		<code>&#125;</code>
+              <br>
+              <br><code>switch &#40;</code>&#36;role&#41; <code>&#123;</code>
+              <br><code>case</code> &#34;admin&#34;<code>&#58;</code> echo &#34;As an admin, you can add, edit, or delete any post.&#34;;
+              <br><code>break;</code>
+              <br>
+              <br><code>case</code> &#34;editor&#34;<code>&#58;</code> echo &#34;As an editor, you can add or edit any post, and delete your own posts.&#34;;
+              <br><code>break;</code>
+              <br>
+              <br><code>case</code> &#34;author&#34;<code>&#58;</code> echo &#34;As an author, you can add, edit, or delete your own post.&#34;;
+              <br><code>break;</code>
+              <br>
+              <br><code>default&#58;</code> echo &#34;You do not have access to this page. Please contact your administrator.&#34;;
+              <br><code>break;</code> <code>&#125;</code>
+              </h5>
+              <p class="card-text">This script uses the <code>switch</code> statement to <i>define User Privileges based on their Role</i> and will <code>output</code>:</p>
+              <?php
+              if (!isset($role)) {	$role = 'admin';		}
+              switch ($role) {
+                case "admin":
+                  echo "As an admin, you can add, edit, or delete any post.";
+                  break;
+
+                case "editor";
+                  echo "As an editor, you can add or edit any post, and delete your own posts.";
+                  break;
+
+                case "author";
+                  echo "As an author, you can add, edit, or delete your own post.";
+                  break;
+
+                default:
+                  echo "You do not have access to this page. Please contact your administrator.";
+                  break;
+              }
+              ?>
+            </div>
+          </div>
+        </div>
+        <!-- switch 2-->
         <div class="col-12 mb-2">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">the <b>switch</b> Statement</h4>
               <h4 class="card-subtitle mb-2 text-muted">
-                
-                &#36;today &#61; date&#40;&#39;l&#39;&#41;
+                &#36;today &#61; date&#40;&#39;l&#39;&#41;;
                 <br><code>switch &#40;</code>date&#40;&#39;l&#39;&#41;<code>&#41; &#123;</code>
                 <br> <code>case &#34;Monday&#34;&#58;</code> echo &#34;Study Mandarin on Monday&#34;&#59; <code>break&#59;</code>
                 <br><code>case &#34;Tuesday&#34;&#58;</code> echo &#34;Study PHP on Tuesday&#34;&#59; 
                 <code>break&#59;</code>
                 <br><code>case &#34;Wednesday&#34;&#58;</code> echo &#34;Call Grams on Wednesday&#34;&#59; <code>break&#59;</code>
                 <br><code>case &#34;Thursday&#34;&#58;</code> echo &#34;Study Espanol on Thursday&#34;&#59; <code>break&#59;</code>
-                <br><code>case &#34;Friday&#34;&#58;</code> echo &#34;Touch Base with Friends on Friday&#34;&#59;  break;
-                <br><code>case &#34;Saturday&#34;&#58;</code> echo &#34;Clean on Saturday&#34;&#59; 
+                <br><code>case &#34;Friday&#34;&#58;</code> echo &#34;Touch Base with Friends on Friday&#34;&#59;  <code>break&#59;</code>
+                <!--<br><code>case &#34;Saturday&#34;&#58;</code> echo &#34;Clean on Saturday&#34;&#59; 
                 <code>break&#59;</code>
-                <br><code>case &#34;Sunday&#34;&#58;</code> echo &#34;Search for Work on Sunday&#34;&#59; <code>break&#59;</code>
-                <br><code>default&#58;</code> echo &#34;I don't know what day it is&#34;&#59; <code>break&#59;</code>  
-                <br><code>&#125;</code>
+                <br><code>case &#34;Sunday&#34;&#58;</code> echo &#34;Search for Work on Sunday&#34;&#59; <code>break&#59;</code>-->
+                <br><code>default&#58;</code> echo &#34;I chill on the weekend&#34;&#59; <code>break&#59; &#125;</code>
               </h4>
-              <p class="card-text"><i>???</i> Uses the <code>date();</code> Function to determine which statement to use.</p>
+              <p class="card-text">This script uses a <code>switch();</code> statement based on the built-in <code>date()</code> Function to <i>evaluate an expression based on the current day</i> and will <code>output</code> the corresponding <i>task of the day</i>:</p>
+              <?php
+              $today = date('l'); 
+              switch (date('l')) { 
+              case "Monday": echo "<b>Study Mandarin</b> on Monday</p>"; break; 
+              case "Tuesday": echo "<b>Study PHP</b> on Tuesday"; break; 
+              case "Wednesday": echo "<b>Call Grams</b> on Wednesday"; break; 
+              case "Thursday": echo "<b>Study Espanol</b> on Thursday"; break; 
+              case "Friday": echo "<b>Touch Base with Friends</b> on Friday"; break; 
+              case "Saturday": echo "<b>Clean</b> on Saturday"; break; 
+              case "Sunday": echo "<b>Search for Work</b> on Sunday"; break; 
+              default: echo "<b>I don't know what day it is"; break; }
+              ?>
             </div>
           </div>
         </div>
+        <!-- *if elseif else switch* -->
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">the <b>if</b> - <b>elseif</b> - <b>else</b> - <b>switch</b> Statement (Multi-Usage Case)</h4>
+              <p class="card-text">This script uses a combination of conditional statements to <i>sends a specialized message to students based on their grade level and final grade point average</i>.</p>
+              <h5 class="card-subtitle mb-2 text-muted">
+                &#36;firstName &#61; &#39;Ray&#39;;
+                <br>&#36;lastName &#61; &#39;Moody&#39;;
+                <br>&#36;currentGrad &#61; 12;
+                <br>&#36;finalAverage &#61; .80;
+                <br>&#36;messageBody &#61; &#39; &#39;;
+                <br>
+                <br><code>if (</code>!$firstName <code>||</code> !$lastName<code>) &#123;</code>
+                echo &#34;Please enter a student name&#34;<code>;</code>
+                <br>
+                <br><code>&#125; elseif &#40;</code>$currentGrade &#60; 9 <code>||</code> $currentGrade &#62; 12<code>&#41; &#123;</code>
+                <br>    echo &#34;This is for high school students. Enter a grade between 9 and 12.&#34;<code>;</code>	
+                <br><code>&#125; else &#123;</code>
+                <br><code>if &#40;</code>$finalAverage &#60; .70&#41; <code>&#123;</code>
+                <br>    &#36;messageBody = 'We look forward to seeing you at summer school, flunky!'<code>;</code>
+                <br><code>&#125; else &#123;</code>
+                <br>
+                <br><code>switch (</code>$currentGrade<code>) &#123;</code>
+                <br><code>case 9:</code>
+                &#36;messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!'<code>;</code>
+                <br><code>break;</code>
+                <br>
+                <br><code>case 10:</code>
+                &#36;messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!'<code>;</code>
+                <br><code>break;</code>
+                <br>
+                <br><code>case 11:</code>
+                &#36;messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!'<code>;</code>
+                <br><code>break;</code>
+                <br>
+                <br><code>case 12:</code>
+                &#36;messageBody = 'Congratulations on graduating High School! Good luck!'<code>;</code>
+                <br><code>break;</code>
+                <br>
+                <br><code>default:</code>
+                &#36;messageBody = 'Error: Grade level is not 9-12!';
+                <br>echo "Dear &#36;firstName &#36;lastName\n";	
+                <br>echo &#36;messageBody;
+                <br><code>&#125;</code>
+                <p class="card-text">The <code>output</code> will display:</p>
+              </h5>
+              <?php 
+              //Variables
+              $firstName = 'Ray ';	
+              $lastName = 'Moody';
+              $currentGrade = 12;
+              $finalAverage = .80;
+              $messageBody = '';
+              //Check for Values of Required Variables
+                //if NOT firstName 'or' lastName
+                //if less than grade 9 'or' greater than grade 12
+                  //Nested Conditions
+                    //Display Message  >>  $messageBody
+              if (!$firstName || !$lastName) {
+                  echo 'Please enter a student name';
+              } elseif ($currentGrade < 9 || $currentGrade > 12) {
+                  echo 'This is for high school students. Enter a grade between 9 and 12.';	
+              } else {
+                  if ($finalAverage < .70) {
+                    $messageBody = 'We look forward to seeing you at summer school, flunky!';
+                  } else {
+                      switch ($currentGrade) {
+                        case 9:
+                          $messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!';
+                          break;
+
+                        case 10:
+                          $messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!';
+                          break;
+
+                        case 11:
+                          $messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!';
+                          break;
+
+                        case 12:
+                          $messageBody = 'Congratulations on graduating High School! Good luck!';
+                          break;
+                        default:
+                          $messageBody = 'Error: Grade level is not 9-12!';
+                      }
+                  }
+                  echo "Dear $firstName $lastName\n";	
+                  echo $messageBody;
+              }
+              ?>
+            </div>
+          </div>
+        </div>        
         <!-- Examples using Logical Operators with Conditional Statements -->
         <div class="col-12">
           <h4>Examples Using Logical Operators</h4>
@@ -471,52 +621,16 @@ $date = date_default_timezone_set('EST');
       
       
       <!-- -->
-      <!-- -->
-      
-      <!-- -->
-      <!-- -->
-      
-      
-      <!-- GPA Challenge -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-            &#60;?php
-            <br>&#36;student1Name &#61; &#39;Ray&#39;;
-            <br>&#36;student1GPA &#61; 3.5;
-            <br>
-            <br>&#36;student2Name &#61; &#39;James&#39;;
-            <br>&#36;student2GPA &#61; 4.0;
-            <br>
-            <br>if &#40;&#34;&#36;student1GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student1Name made the Honor Roll&#34;; &#125;
-            <br>else &#123;echo &#34;&#36;student1Name has a GPA of &#36;student1GPA&#34;; &#125;
-            <br>
-            <br>if &#40;&#34;&#36;student2GPA &#61;&#61; 4.0&#34;&#41; &#123;echo &#34;&#36;student2Name made the Honor Roll&#34;; &#125;
-            <br>else &#123;echo &#34;&#36;student2Name has a GPA of &#36;student2GPA&#34;; &#125;
-            <br>
-            <br>?&#62;
-          </code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3><a href="https://teamtreehouse.com/library/php-basics-2/daily-exercise-program/conditionalls">GPA Challenge</a></h3>
-          <p>This script uses a <i>conditional statement</i> that queries multiple conditions and will <code>output</code> the following results:</p>
-          <?php 
-          $student1Name = 'Ray';
+      <!-- FORMATTING PHP (Using HTML)-->
+      <!-- <p> @ echo -->
+          <?php           /*$student1Name = 'Ray';
           $student1GPA = 3.5;
           
-          $student2Name = 'James';
-          $student2GPA = 4.0;
-          
           if ($student1GPA == 4.0) {echo "<p>$student1Name made the Honor Roll</p>";}
-          else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}
-          
-          if ($student2GPA == 4.0) {echo "<p>$student2Name made the Honor Roll</p>";}
-          else { echo "<p>$student2Name has a GPA of $student2GPA</p>";}
-          ?>
-        </div>
-      </div>
+          else { echo "<p>$student1Name has a GPA of $student1GPA</p>";}*/          ?>
       <!-- -->
+      <!-- -->
+      
       
       <!-- Unit Converter: Pounds to Kilograms -->
       <div class="row mb-3">
@@ -595,164 +709,7 @@ $date = date_default_timezone_set('EST');
       <!-- -->
       <!-- -->
       
-      
-      <!-- Message to Student -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-            &#60;?php
-            <br>&#36;firstName &#61; &#39;Ray&#39;;
-            <br>&#36;lastName &#61; &#39;Moody&#39;;
-            <br>&#36;currentGrad &#61; 12;
-            <br>&#36;finalAverage &#61; .80;
-            <br>&#36;messageBody &#61; &#39; &#39;;
-            <br>
-            <br>?&#62;
-            
-            <br>if (!$firstName || !$lastName) &#123;
-            <br>    echo &#34;Please enter a student name&#34;;
-            <br>
-            <br>&#125; elseif &#40;$currentGrade &#60; 9 || $currentGrade &#62; 12&#41; &#123;
-            <br>    echo &#34;This is for high school students. Enter a grade between 9 and 12.&#34;;	
-            <br>
-            <br>&#125; else &#123;
-            <br>if &#40;$finalAverage &#60; .70&#41; &#123;
-            <br>    &#36;messageBody = 'We look forward to seeing you at summer school, flunky!';
-            <br>
-            <br>  &#125; else &#123;
-            <br>
-            <br>switch ($currentGrade) &#123;
-            <br>        case 9:
-            <br>          &#36;messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!';
-            <br>          break;
-            <br>
-            <br>        case 10:
-                      &#36;messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!';
-            <br>          break;
-            <br>
-            <br>        case 11:
-            <br>          &#36;messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!';
-            <br>          break;
-            <br>
-            <br>        case 12:
-                      &#36;messageBody = 'Congratulations on graduating High School! Good luck!';
-            <br>          break;
-            <br>
-            <br>        default:
-            <br>          &#36;messageBody = 'Error: Grade level is not 9-12!';
-            <br>          echo "Dear &#36;firstName &#36;lastName\n";	
-            <br>      echo &#36;messageBody;
-            <br>&#125;
-            <br>&#63;&#62;
-          </code>
-        </div>
-        <!-- -->
-        <div class="col-6">
-          <h3><a href="">Letter to Student</a></h3>
-          <p>This script <i>sends a message</i> to students based on their grade level and final grade point average [<a href="https://teamtreehouse.com/library/schools-out">Tutorial</a>] and will <code>output</code> the following results:</p>
-          <?php 
-          //Variables
-          $firstName = 'Ray ';	
-          $lastName = 'Moody';
-          $currentGrade = 12;
-          $finalAverage = .80;
-          $messageBody = '';
-          //Check for Values of Required Variables
-            //if NOT firstName 'or' lastName
-            //if less than grade 9 'or' greater than grade 12
-              //Nested Conditions
-                //Display Message  >>  $messageBody
-          if (!$firstName || !$lastName) {
-              echo 'Please enter a student name';
-          } elseif ($currentGrade < 9 || $currentGrade > 12) {
-              echo 'This is for high school students. Enter a grade between 9 and 12.';	
-          } else {
-              if ($finalAverage < .70) {
-                $messageBody = 'We look forward to seeing you at summer school, flunky!';
-              } else {
-                  switch ($currentGrade) {
-                    case 9:
-                      $messageBody = 'Congratulations on completing your freshman year in High School! See you September for your sophomore year!';
-                      break;
 
-                    case 10:
-                      $messageBody = 'Congratulations on completing your sophomore year in High School! See you September for your junior year!';
-                      break;
-
-                    case 11:
-                      $messageBody = 'Congratulations on completing your junior year in High School! See you September for your senior year!';
-                      break;
-
-                    case 12:
-                      $messageBody = 'Congratulations on graduating High School! Good luck!';
-                      break;
-                    default:
-                      $messageBody = 'Error: Grade level is not 9-12!';
-                  }
-              }
-              echo "Dear $firstName $lastName\n";	
-              echo $messageBody;
-          }
-          ?>
-        </div>
-      </div>
-      <!-- -->
-      <!-- -->
-       
-      <!-- User 'Privilege' based on 'Role' -->
-      <div class="row mb-3">
-        <div class="col-6">
-          <code>
-          if &#40;&#33;isset&#34;&#36;role&#41;&#41; &#123;	&#36;role &#61; &#39;subscriber&#39;;		&#125;
-          <br>
-          <br>switch &#40;&#36;role&#41; &#123;
-          <br>  case &#34;admin&#34;&#58;
-          <br>    echo &#34;As an admin, you can add, edit, or delete any post.&#34;;
-          <br>    break;
-          <br>
-          <br>  case &#34;editor&#34;&#58;
-          <br>    echo &#34;As an editor, you can add or edit any post, and delete your own posts.&#34;;
-          <br>    break;
-          <br>
-          <br>  case &#34;author&#34;&#58;
-          <br>    echo &#34;As an author, you can add, edit, or delete your own post.&#34;;
-          <br>    break;
-          <br>
-          <br>  default&#58;
-          <br>    echo &#34;You do not have access to this page. Please contact your administrator.&#34;;
-          <br>    break;
-          <br>&#125;
-          <br>&#63;&#62;
-          </code>
-        </div>
-        <div class="col-6">
-          <h3>User Privilege based on Role</h3>
-          <p></p>
-          <?php
-          if (!isset($role)) {	$role = 'admin';		}
-
-          switch ($role) {
-            case "admin":
-              echo "As an admin, you can add, edit, or delete any post.";
-              break;
-
-            case "editor";
-              echo "As an editor, you can add or edit any post, and delete your own posts.";
-              break;
-
-            case "author";
-              echo "As an author, you can add, edit, or delete your own post.";
-              break;
-
-            default:
-              echo "You do not have access to this page. Please contact your administrator.";
-              break;
-          }
-          ?>
-        </div>
-      </div>
-      <!-- -->
-      <!-- -->
       
       <!-- Working with Arrays -->
       <div class="row mb-3">
