@@ -205,7 +205,7 @@ $date = date_default_timezone_set('EST');
     <div class="container">
       <div class="row no-gutters clearfix">
         <div class="col-6">
-          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <span>&#9829;</span> by Mister Moody.</h6>
+          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <i class="fa fa-heart"></i> by Mister Moody.</h6>
         </div>
         <div class="col-6">
           <h6 class="text-right"><?php echo date("D d M "); echo date(" g:i a T"); ?></h6>

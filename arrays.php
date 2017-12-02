@@ -358,7 +358,7 @@ $date = date_default_timezone_set('EST');
             <br><code>true => 'd'</code>			//Boolean
             <br><code>var_dump($keys);</code>
             <br><code>&#63;&#62;</code>
-              <p>When implementing the <code>var_dump();</code> Function, we can better understand the Casting effect. Because ALL the Keys in this example are Cast to 1, the Value will be overwritten on every new Element. And the last assigned value 'd' is the only remaining Element. The actual result will display:</p>
+              <p>The actual result will display:</p>
               <?php
               $keys = array(
               1 => 'a',				//Integer 1
@@ -373,50 +373,7 @@ $date = date_default_timezone_set('EST');
             ?>
             </div>
           </div>
-          
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 3> ************ -->
-          <h1>Arrays 3</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-            <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
-            </div>
-          </div>
-          <!--<div class="row">
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-            <div class="col-6">
-              <h5></h5>
-              <p></p>
-            </div>
-          </div>-->
-          <!-- RESOURCES-->
-          <ul>
-            <li><b>RESOURCES</b></li>
-            <li><a id="fade"  href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li> <a id="fade" href=""></a></li>
-            <li><a id="fade" href=""></a></li>
-          </ul>
-          <!-- ************************************ -->
+          <!-- -->
                               
                     
         </div>
@@ -431,7 +388,7 @@ $date = date_default_timezone_set('EST');
     <!-- -->
     <!-- -->
     <!-- -->
-    <!-- ** FOOTER ** -->
+    <!-- ** FOOTER *** -->
     <div class="container">
       <div class="row no-gutters clearfix">
         <div class="col-6">
@@ -443,7 +400,7 @@ $date = date_default_timezone_set('EST');
       </div>
     </div>
     <!-- END of FOOTER --> 
-    <!-- ************ -->
+    <!-- ************* -->
     <!-- -->
     <!-- -->
     <!-- -->

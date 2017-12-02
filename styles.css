@@ -119,6 +119,22 @@ code, h4.card-subtitle {font-family: monospace; line-height: 2;}
 /*Code NON Snippets*/
 code {font-size: 14px; line-height: 1;}
 
+
+
+
+
+/*Footer*/
+.fa-heart {
+  color: red;
+  animation: pulse 1.3s ease infinite;
+  padding-top: -50px;  /*Required for Heart Animation*/
+}
+@keyframes pulse {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(0.7);}
+  100% {transform: scale(0.5);}
+}
+
 /* ===================================== 
    END of Main-Page Layout
 ======================================== */

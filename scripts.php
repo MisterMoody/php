@@ -740,24 +740,24 @@ $date = date_default_timezone_set('EST');
               <br><code>if ($</code>status <code>==</code> 'all'<code>) {</code>
               <code>$</code>order = <code>array_keys(</code>$list<code>);</code>
               <br><code>} else {</code>
-              <br>		<code>foreach ($</code>list as <code>$</code>key <code>=></code> <code>$</code>item<code>) {</code>
-              <br>			<code>if($</code>item['complete'] <code>== $</code>status<code>) {</code>
-              <code>$</code>order[] = $key<code>; } } }</code>;
+              <br>		<code>foreach (</code>$list <code>as</code> $key <code>=></code> $item<code>) {</code>
+              <br>			<code>if(</code>$item['complete'] <code>==</code> $status<code>) {</code>
+              $order[] = $key<code>; } } }</code>;
               <br>
-              <br>switch<code>switch ($</code>action<code>) {</code>
+              <br><code>switch (</code>$action<code>) {</code>
               <br><code>case</code> 'sort'<code>:</code> 
-              <br>		<code>if ($</code>field<code>) { $</code>sort = array();
-              <br>			<code>foreach ($</code>order as <code>$</code>id<code>) {</code>
-              <code>$</code>sort[<code>$</code>id] = <code>$</code>list[<code>$</code>id][<code>$</code>field]<code>; }</code>
+              <br>		<code>if (</code>$field<code>) { </code>$sort = array();
+              <br>			<code>foreach (</code>$order <code>as</code> $id<code>) {</code>
+              $sort[$id] = $list[$id][$field]<code>; }</code>
               <br>
-              <br>			<code>$</code>order = <code>array_keys($</code>sort<code>); }</code>
+              <br>$order = <code>array_keys(</code>$sort<code>); }</code>
               <br><code>break;</code>
                 <br>
               <br><code>case</code> 'week'<code>:</code>
-              <br><code>foreach ($</code>order as $key => $value<code>) {</code> 
-              <br><code>if (</code>strtotime($list[$value]['due']) > strtotime("+1 week"<code>) { unset($</code>order[$key]<code>); } }</code>
+              <br><code>foreach (</code>$order <code>as</code> $key => $value<code>) {</code> 
+              <br><code>if (</code>strtotime($list[$value]['due']) > strtotime("+1 week")<code> { unset($</code>order[$key]<code>); } }</code>
               <br>	<code>break; }</code>
-              <br>
+              <br>      
               <br>echo '&#60;table&#62;'<code>;</code>
               <br>echo'&#60;tr&#62;'<code>;</code>
               <br>echo'&#60;th&#62;Title&#60;/th&#62;'<code>;</code>
