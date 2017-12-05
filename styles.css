@@ -28,9 +28,6 @@ body {
   font-family: 'Raleway', sans-serif;
   overflow-x: hidden;
 }
-.container {
-  padding: 1em;
-}
 /*  */
 
 /*LISTS*/
@@ -100,16 +97,16 @@ ol {
 /* ============================================= */
 /* <Sidebar> =================================== */
 #sideNav {
-   background-color: yellow;
-    width: 200px;
-    position: fixed;
-    height: 100%;
+  background-color: yellow;
+  width: 200px;
+  position: fixed;
+  height: 79%;
 }
 
 #content {
   float: left;
-    width: 84%;
-    margin-left: 200px;
+  width: 84%;
+  margin-left: 200px;
 }
 /* ============================================= */
 

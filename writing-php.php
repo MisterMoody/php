@@ -363,25 +363,19 @@ $date = date_default_timezone_set('EST');
           
           <!-- ************************************ -->
           <!-- *********** <SECTION 2> ************ -->
-          <h1>Arrays 2</h1>
-          <p>qmlsdkjmqlsdkjfmlq djfpoqds joqdj fmlqdj fmlqdj fmlqdj foqidjs fpoq djisfpoq idfjpo qdjsp ofijqsdpo fjqdpos fiqdpos fjqds qdmlsfjqdpsofi jqdposfji qdosifjmqlds fjqoims fjmlq dkjsf qsdjf omq fjiq dsfjfmlqdksjfoqdsfjpoafjpaoi fjqmds fjeoqidjs foiazje fdqisfoqi djfoqisdjfpo ajezfzjfp fjpoqjiz fe qsdjfpom fjpoa fjepoazi fjepoaz jefpo jfqojifpoajiz efpoafjezaomlqp fjopdfjoqsj dfpofj qposd fjpaoz fjiapoz fjiaz
-                ef mjqsdfi jofi japzfji apoz fja fjpo a</p>
-          <div class="row mb-4">
+          <h1>Next Steps</h1>
+          <div class="row">
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h3>Study Arrays</h3>
             </div>
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h3>Study Loops</h3>
             </div>
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h3>Study Functions</h3>
             </div>
             <div class="col-6">
-              <h3>aaa</h3>
-              <p>lorem ipsum 1 abcdefghijklmnopqrstuvwxyz</p>
+              <h3>???</h3>
             </div>
           </div>
           <!-- ************************************ -->
@@ -402,7 +396,7 @@ $date = date_default_timezone_set('EST');
     <div class="container">
       <div class="row no-gutters clearfix">
         <div class="col-6">
-          <h6 class="text-left"><small>&#169;<?php echo date('Y'); ?></small> Made with <span>&#9829;</span> by Mister Moody.</h6>
+          <h6 class="text-left"><small>&#169;<span class="d-none d-sm-inline-block"><?php echo date('Y'); ?></span></small> <span class="d-none d-sm-inline-block"> Made with <i class="fa fa-heart"></i> by </span> Mister Moody.</h6>
         </div>
         <div class="col-6">
           <h6 class="text-right"><?php echo date("D d M "); echo date(" g:i a T"); ?></h6>
