@@ -83,11 +83,17 @@ $date = date_default_timezone_set('EST');
           <h4>Functions 101</h4>
           <ul>
             <li id=""><a id="fade" href="#content">Intro</a></li>
-            <li id=""><a id="fade" href="#implement">xxxxx</a></li>
-            <li id=""><a id="fade" href="#inject">xxxxx</a></li>
-            <li id=""><a id="fade" href="#">xxxxx</a></li>
-            <li id=""><a id="fade" href="#">xxxxx</a></li>
-            <li id=""><a id="fade" href="#usingLogic">xxxxx</a></li>
+            <li id=""><a id="fade" href="#implement">Arguments</a></li>
+            <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
+            <li id=""><a id="fade" href="#inject">Returning Values</a></li>
+            <li id=""><a id="fade" href="#">var Functions</a></li>
+            <li id=""><a id="fade" href="#">Closures</a></li>
+            <li id=""><a id="fade" href="#usingLogic">Returns</a></li>
+            <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
+            <li id=""><a id="fade" href="#">Built-Ins</a></li>
+            <li id=""><a id="fade" href="#">String Functions</a></li>
+            <li id=""><a id="fade" href="#">Array Functions</a></li>
+            <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -100,81 +106,304 @@ $date = date_default_timezone_set('EST');
         <div id="content" class="col-lg-9">
           
           <!-- *********** <SECTION 1> ************ -->
+          <!-- INTRO to FUNCTIONS -->
           <h1 id="invoke" class="text-center font-weight-bold mb-2">Introduction to Functions</h1>
-          <p>The task of writing a PHP program is an arduous process that is made easy once we understand what is required when invoking PHP into a web project. Although no two projects are the same, there are certain criteria that is pertinent in the functionality and maintenance of every project. This involves creating a file with the proper extension, using code blocks, leaving comments, writing variables and using logical operators to build conditional statements, and knowing how to display information in a browser.</p>
-          
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Implementing PHP</h3>
-          <div class="row mb-2">
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+          <p>A <b>Function</b> is a way to <i>Organize and Group Statements of Code</i>. This article illustrates how <i>a Function is Structured</i> and offers advice on how to <i>Pass Arguments &amp; Set Defaults for those Arguments</i>.</p>
+          <p>Hampton Paulk taught me this anology of <i>What a Function is</i>: A Coffee Pot is like a Function called Make Coffee. The coffee pot takes grounds and water, then heats the water and pours the water over the coffee. The coffee is poured through a Filter before Returning a Cup of Coffee.</p>
+          <p>Lets look at some examples:</p>
+          <!-- Function Examples-->
+          <div class="row mb-5">
+            <div class="col-md-12 mb-2">
+              <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Create a PHP File</h4>
-                  <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
-                  <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">Invoke PHP Code-Blocks</h4>
-                  <h4 class="card-subtitle mb-2 text-muted"><code>&#60;&#63;php</code> PHP Code <code>&#63;&#62;</code></h4>
-                  <p class="card-text">A <i>Container</i> for PHP Code</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">Declare a Variable</h4>
-                  <h4 class="card-subtitle mb-2 text-muted"><code>&#36;varName = "Value";</code></h4>
-                  <p class="card-text">A <i>Variable</i> Stores Information</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">Comment Code </h4>
-                  <h4 class="card-subtitle mb-2 text-muted"><code>//Comment</code></h4>
-                  <p class="card-text">Another <code>/*Comment*/</code> method</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">Display a Message</h4>
-                  <h4 class="card-subtitle mb-2 text-muted"><code>echo "Hello World";</code></h4>
-                  <p class="card-text">Also see <code>print "Hello World";</code></p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h4 class="card-title">Escape Sequence</h4>
+                  <h4 class="card-title"><b>Syntax</b> for Understanding Functions</h4>
                   <h4 class="card-subtitle mb-2 text-muted">
-                    <code>&#34;br/&#62;&#92;n&#34;</code> or <code>&#34;&#92;n&#34;</code>
+                  &#60;&#63;php
+                  <code>function hello() {
+                    echo "Hello, World!";
+                  }
+                  hello();</code>
+                  &#63;&#62;
                   </h4>
-                  <p class="card-text">This is a Line-Break</p>
+                  <p>Run this Code in the Console to Reveal the Output: <?php function hello() { echo "<b>Hello, World!</b>";} hello(); ?></p>
+                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Review</b> How to Make a Function</h4>
+                  
+                  <dl class="row">
+                    <dt class="col-sm-4 card-title"><b>Create</b> a Function</dt>
+                    <dd class="col-sm-8 card-subtitle mb-2 text-muted"><code>function hi()&#123;&#125;</code></dd>
+
+
+                    <dt class="col-sm-4"><b>Pass a Value</b></dt>
+                    <dd class="col-sm-8">function hi<code>&#40;&#36;name &#61; 'Ray'&#41;</code>&#123;&#125;</dd>
+
+                    <dt class="col-sm-4 text-truncate"><b>Call</b> a Function</dt>
+                    <dd class="col-sm-8">function hello&#40;&#36;name &#61; 'Ray'&#41;&#123;&#125;
+                    <br><code>function hi&#40;&#41;;</code></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            
+            <!--<div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Create</b> a Function</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>function hi()&#123;&#125;</code>
+                  </h4>
+                  <p>xxx</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Call</b> a Function</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    function hello&#40;&#36;name &#61; 'Ray'&#41;&#123;&#125;
+                    <br><code>function hello&#40;&#41;;</code>
+                  </h4>
+                  <p>xx</p>
+                </div>
+              </div>
+            </div>-->
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Standard Function <b>Syntax</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                  &#60;&#63;php <code>function foo($arg_1 $arg_2) {statement;}</code>&#63;&#62;
+                  </h4>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Conditional Function <b>Syntax</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                  &#60;&#63;php
+                  <code>$current_user = "Ray";
+                  <br>function is_ray(){ global $current_user;
+                  <br>if ($current_user == 'Ray'){ echo "It is Ray.";
+                  <br>} else { echo "It is NOT Ray."; } }
+                  <br>is_ray();</code> &#63;&#62;
+                  </h4>
+                  <p class="card-text">Output: <?php
+                    $current_user = "Ray";
+                    function is_ray(){
+                      global $current_user;
+                      if ($current_user == 'Ray'){
+                        echo "<b>It is Ray.</b>";
+                      } else {
+                        echo "<b>It is NOT Ray.</b>";
+                      }
+                    }
+                    is_ray();
+                    ?></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- PASSING ARGUMENTS-->
+          <h2 class="text-center font-weight-bold mb-2">Passing Arguments</h2>
+          <p>Information may be Passed to a Function through an <i>Argument List</i>, which is a comma demlimited List of Expressions that are Evaluated from Left to Right. <b>Arguments</b> are Passed into a Function via its Parenthesis <code>&#40;&#41;</code> after the Function-Name Definition. There are two methods to <b>Pass an Argument</b>:</p>
+          <div class="row mb-5">
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Passing by <b>Value</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>&#60;&#63;php ... &#63;&#62;</code>
+                  </h4>
+                  <p>Default. The Arguments Value is NOT affected by the Function Ouside-of-Function-Scope. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Passing by <b>Reference</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>&#60;&#63;php ... &#63;&#62;</code>
+                  </h4>
+                  <p>The Arguments Value, IF Modified by the Function-Scope, IS affected on the Ouside-of-Function-Scope.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- RETURNING VALUES-->
+          <h2 class="text-center font-weight-bold mb-2">Returning Values</h2>
+          <p>We use the <code>return&#40;&#41;</code> Statment to <b>Return Values</b>, which can be of any Data-Type including Arrays and Objects. This statement will <i>cause the Function to End its Execution then return control back to the line where it was called</i>.</p>
+          <div class="row mb-5">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Return a <b>Variable Value</b> <i>without Arguments</i></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    function hello&#40;&#41; {<code>return 'Hello, World!';</code>}
+                    <br>&#36;greeting = hello&#40;&#41;;
+                    <br>echo &#36;greeting;&#63;&#62;
+                  </h4>
+                  <p>This example will Print the <code>echo &#36;greeting;</code> Variable which Stores the Function <code>&#36;greeting &#61; hello&#40;&#41;;</code>. The Function <code>function hello&#40;&#41; {}</code> will Return the String <code>return 'Hello, World!';</code></p>
+                  <!-- -->
+                  <hr>
+                  <h4 class="card-title">Return a <b>Variable Value</b> <i>with Arguments</i></h4>
+                  <p>The example below Passes an Argument to the Variable and Tests Multiple Conditions</p>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    function hey&#40;$name&#41; { 
+                    <br>if($name == 'Ray') {
+                    <code>return 'Hey, Ray!';</code>
+                    <br>} else { <code>return 'Hey, Ray!';</code> } }
+                    <br>&#36;howdy = hey&#40;'Ray'&#41;; echo &#36;howdy;&#63;&#62;
+                  </h4>
+                  <!-- -->
+                  <hr>
+                  <h4 class="card-title">Return <b>Multiple Values</b> <i>(ONLY works with Arrays)</i></h4>
+                  <p>The example below Performs a Match Function and Prints the Values using the <code>print_r</code> Statement.</p>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    function add_up&#40;$x, $y&#41; {
+                    <br>$arr = array($x, $z, $x + $z);
+                    <br><code>return $arr;</code>}
+                    <br>&#36;value = add_up&#40;2,4&#41;; print_r&#40;&#36;value;&#41;&#63;&#62;
+                  </h4>
+                  <p>This is the Output: <?php 
+                    function add_up($x, $z) {
+                      $arr = [$x, $z, $x + $z];
+                        return $arr;
+                    }
+                    $value = add_up(2,4); 
+                    print_r($value); 
+                    ?> It displays the Keys and their Values.</p>
+                  <hr>
+                  <!-- -->
                 </div>
               </div>
             </div>
           </div>
           
-          <h3 id="inject" class="text-center font-weight-bold mb-2">Injecting PHP</h3>
-          <p>Another important concept includes <b>Injecting PHP into an HTML page</b>, which can be done by including the script <code>&#60;&#63;php...&#63;&#62;</code> directly or by using the Include Statement to Import a PHP script from its directory, &#60;&#63;<code>include inc/file.php</code>&#63;&#62;. We will use these concepts regularly so it is important to commit them to memory. Now we are setup to begin writing a program, in fact, we can combine what we know so far with a PHP built-in function to produce a working script writing only 2 Lines.</p>
-          <h5>PHP Injection Example</h5>
-          <p>www</p>
+          
           <!-- -->
           <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Variables 101</h3>
-          <p>xxx</p>
+          <!-- VARIABLE FUNCTIONS -->
+          <h2 class="text-center font-weight-bold mb-2">Variable Functions</h2>
+          <p>A <b>Variable Function</b> is a method to that <i>uses a Variable's Value to Call a Function of the same name</i> and is best used to <i>Implement Callbacks and Function Tables</i>. A <code>$variable</code> with Parentheses <code>''</code> Appended to it is the Variable Funciton that is Executed.
+          <br>For example, there is an Existing Function called <code>hi()</code>. I create the Variable-Function like this: <code>$func = 'hi';</code> and then I Call the Function like so <code>$func();</code>.</p>
+          <div class="row mb-5">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">var  <b> </b> </h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    <code>function answer() {return 42; }
+                    <br>function add_high($x, $z) {return $x + $z; }
+                    <br>$func = 'answer';
+                    <br>echo $func();</code>&#63;&#62;
+                  </h4>
+                  <p>xx</p>
+                  <p>This is the Output: 
+                    <?php 
+                    function answer() {
+                      return 42;
+                    }
+                    function add_high($x, $z) {
+                      return $x + $z;
+                    } 
+                    
+                    $func = 'answer';
+                    echo $func();
+                    
+                    ?></p>
+                  <!-- -->
+                  <hr>
+                  <h4 class="card-title"><b>Call</b>  a Variable Function </h4>
+                  <h4 class="card-subtitle mb-2 text-muted"><code>$func();</code>
+                  </h4>
+                  <h4 class="card-title"><b>Pass</b> an Argument to a Variable Function </h4>
+                  <h4 class="card-subtitle mb-2 text-muted">$func(<code>'argument'</code>);
+                  </h4>
+                  <!-- -->
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <p class="text-muted"><b>Challenges:</b> Recursive Function &#47; Variable Scope &#47; </p>
           <!-- -->
           <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2">Data-Types</h3>
-          <p>yyy</p>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <h3 id="implement" class="text-center font-weight-bold mb-2">Closures</h3>
+          <p><b>Closures</b> are <i>Anonymous Functions</i> that are Capable of Accessing Variables Outside-of-Function-Scope. Closures can be used as <b>Callbaks</b> for <i>Internal Funtions</i>. Create a Closure by Creating a Variable and Setting is Value to that of an Empty Function <code>$greet = function(){};</code>. The Statements inside of the <code>{}</code> will <i>Set its Output to <b>$greet</b></i>.<br>Think of a Closure as a <i>Single-Line Function that is Assigned to a Variable</i>.</p>
+          
+          <div class="row mb-5">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Create</b> a Closure</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    <code>$greet = function(){echo 'Hello there.'}; $greet();</code>&#63;&#62;
+                  </h4>
+                  <p>The example Calls <code>$greet();</code> and will output: <?php $greet = function(){echo '<b>Hello there.</b>';}; $greet();?></p>
+                  <!-- -->
+                  <hr>
+                  <h4 class="card-title"><b>Access a Value</b> Outside of Function Scope</h4>
+                  <p>In this example, we  use the <code>use</code> Keyword to <i>Access a Value Outside-of-the-Function-Scope</i>. This example <i>Passes a Value from Outside-of-the-FunctionScope</i> into the Closure as opposed to instead of actually passing tthe function anonymously.</p>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    &#60;&#63;php
+                    <code>$name = 'friend';</code>
+                    <br>$greet = function(){} <code>use ($name)</code> {echo 'Hello there.'}; 
+                    <br>$greet();&#63;&#62;
+                  </h4>
+                  <!-- -->
+                </div>
+              </div>
+            </div>
+            <!-- 
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Passing by <b>Value</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>&#60;&#63;php ... &#63;&#62;</code>
+                  </h4>
+                  <p>Default. The Arguments Value is NOT affected by the Function Ouside-of-Function-Scope. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mb-2">
+              <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                  <h4 class="card-title">Passing by <b>Reference</b></h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    <code>&#60;&#63;php ... &#63;&#62;</code>
+                  </h4>
+                  <p>The Arguments Value, IF Modified by the Function-Scope, IS affected on the Ouside-of-Function-Scope.</p>
+                </div>
+              </div>
+            </div>-->
+          </div>
           <h5>Data-Type Examples</h5>
           <div class="row">
             <div class="col-1">string</div>
@@ -193,7 +422,8 @@ $date = date_default_timezone_set('EST');
           <p>zzz</p>
           <!-- -->
           <!-- -->
-          
+          <!-- -->
+          <!-- -->
           <!-- RESOURCES -->
           <ul>
             <li><b>RESOURCES</b></li>
@@ -237,12 +467,6 @@ $date = date_default_timezone_set('EST');
             <li><a id="fade" href=""></a></li>
             <li><a id="fade" href=""></a></li>-->
           </ul>
-          <!-- ************************************ -->
-          <!-- ************************************ -->
-          
-          <!-- ************************************ -->
-          <!-- *********** <SECTION 2> ************ -->
-          
           <!-- ************************************ -->
           <!-- ************************************ -->
         </div>
