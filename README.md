@@ -1,5 +1,5 @@
 # php
-__________
+
 ## A Self-Directing Guidebook to Building an Application Using PHP 
 
 ### Content Areas
@@ -13,7 +13,9 @@ __________
 
 
 ### Explanation of Content Areas
-**Areas 1 & 2** covers the essentials for understanding the tools required to work with PHP or any programming language. **Areas 3-6** refers to PHP language concepts that are essential for creating an application. **Area 7
+**Areas 1 & 2** covers the essentials for understanding the tools required to work with PHP or any programming language. 
+**Areas 3-6** refers to PHP language concepts that are essential for creating an application. 
+**Area 7** offers Reusable Scripts
 1.  An Introduction to this Resource (TBC)
 2.  DIY for Setting Up a Developer Environment
     +Selecting an IDE
@@ -22,9 +24,16 @@ __________
     +Deploying an Application
     +Using a Package Manager
 3.  Process for Implementing PHP
-    +Using Code-Blocks to Inject PHP
-    +Understanding Data-Types & Logic
-    +Creating & Using Variables
+    ...Using Code-Blocks to Inject PHP
+    ...Understanding Data-Types & Logic
+    ...Creating & Using Variables
+    Learn How to 
+    ...[a] Create a PHP File
+    ...[b] Invoke Code-Blocks
+    ...[c] Instantiate/Declare a Variable & Assign it a Value
+    ...[d] Comment Code
+    ...[e] Display a Message
+    ...[f] Line-Break
 4.  Creating & Using Variables and Arrays
     +Understanding the Types of Arrays
     +How to Minipulate Arrays (Add,Remove, Edit & Sort)
