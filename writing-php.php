@@ -89,6 +89,8 @@ $date = date_default_timezone_set('EST');
             <li id=""><a id="fade" href="#">Variables</a></li>
             <li id=""><a id="fade" href="#">Data-Types</a></li>
             <li id=""><a id="fade" href="#usingLogic">Using Logic</a></li>
+            <li id=""><a id="fade" href="#handleErrors">Handling Errors</a></li>
+            <li id=""><a id="fade" href="#handleExceptions">Handling Exceptions</a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -217,7 +219,8 @@ $date = date_default_timezone_set('EST');
           <p><code>var&#95;dump&#40;x&#41;</code> is a built-in function that will allow you to <i>display structured information about a Variable including its type and value</i>.</p>
           <!-- -->
           <!-- -->
-          <h3 id="usingLogic" class="text-center font-weight-bold mb-2">Conditional Statements and Operators</h3>
+          <hr id="usingLogic" class="my-5">
+          <h3 class="text-center font-weight-bold mb-2">Conditional Statements and Operators</h3>
           <p><i>Conditionals</i> and <i>Operators</i> are critical Control Structure tools that allows developers to apply a <i>decision-making process</i> based on user responses to given conditions and parameters. When combined, these help developers write extremely intelligent scripts that are especially useful for creating intuitively interactive programs such as custom messages or a to-do task app with assigned due-dates. Lets focus our attention on the key conditional statements and operator types that will enable us to use Logic within our programs.</p>
           
           <h5>Operators</h5>
@@ -294,10 +297,106 @@ $date = date_default_timezone_set('EST');
           
           <!-- -->
           <!-- -->
-          <h3 id="implement" class="text-center font-weight-bold mb-2"></h3>
+          <hr id="handleErrors" class="my-5">
+          <h3 class="text-center font-weight-bold mb-2">Handling Errors</h3>
+          <p>Whenever there is an issue with processing a script, PHP will output an <b>Error</b>, which is either Internal (ie issues with code) or External (ie network connection, missing file, etc.) in nature. There are three levels of Errors, two of which: Notice and Warning, will not stop the script. A Fatal Error, however, will completely halt the script, which is a good thing because the program identifies where a specific internal issue exists within the code itself. Errors can be addressed in various ways, but what is important is that errors should never be ignored.</p>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Set PHP to <b>Display Errors</b> <small>in a PHP File</small></h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  &#60;?php
+                  <br><code class="mb-4">error_reporting(E_ALL);</code>
+                    <?php echo str_repeat("&nbsp;", 38); ?>
+                    <small>//Report Simple Errors</small>
+                  <br><code>ini_set('display_errors', 1);</code>
+                    <?php echo str_repeat("&nbsp;", 26); ?> 
+                    <small>//Turn Errors 'On'</small>
+                  <br><code>ini_set("html_errors", 1);</code>
+                    <?php echo str_repeat("&nbsp;", 32); ?> 
+                    <small>//Format Errors in &#60;html&#62;</small>
+                  <br><code>include('file2check.php');</code>
+                    <?php echo str_repeat("&nbsp;", 32); ?> 
+                    <small>//File to Check</small>
+                  <br>?&#62;
+                  </h5>
+                  <p class="card-text">Add these lines at the TOP of any script to Check for Errors Prior to writing Code. <br><code>1</code> and <code>'on'</code> are interchangeable for Turning Errors On.</p>
+                </div>
+              </div>
+              <p>There is also a way to <u>Set PHP to Display Errors in a Development Server</u>, but the practice does not add additional benefits so I will not elaborate, but essentially you access the php.ini and make the same changes either in the Console or using an IDE.</p>
+              <p>Taking Error Handling a step further, it is good practice to <b>Log Errors</b> to a specific location to keep track of project issues. In the example below, Errors will be Logged to the <code>"php-error.txt"</code> File.</p>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Logging Errors</b> to a Specific Location</h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  &#60;?php
+                  <br><code class="mb-4">ini_set("log_errors", 1);</code>
+                    <?php echo str_repeat("&nbsp;", 30); ?>
+                    <small>//Turn Log Errors 'On'</small>
+                  <br><code>ini_set("error_log", "php-error.txt");</code>
+                    <?php echo str_repeat("&nbsp;", 5); ?> 
+                    <small>//Specify Error Log Location</small>
+                  <br>$error_levels = array(<code>"E_ALL", "E_NOTICE", "E_STRICT", "E_DEPRECATED", "E_ERROR", "E_WARNING", "E_PARSE"</code>);
+                  <br>foreach ($errors as $error){echo $error . "&#60;br / &#62;";}
+                  <br>?&#62;
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <!--<div class="col-6 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Addressing Errors</h4>
+                  <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
+                  <p class="card-text"><i>.php</i> is the <i>File Extension</i> for PHP</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Error Levels</h4>
+                  <dl class="row">
+                    <dt class="col-sm-4 card-title">Notice</dt>
+                    <dd class="col-sm-8 card-subtitle mb-2 text-muted"><code>function hi()&#123;&#125;</code></dd>
+
+
+                    <dt class="col-sm-4">Warning</dt>
+                    <dd class="col-sm-8">function hi<code>&#40;&#36;name &#61; 'Ray'&#41;</code>&#123;&#125;</dd>
+
+                    <dt class="col-sm-4 text-truncate">Error</dt>
+                    <dd class="col-sm-8">function hello&#40;&#36;name &#61; 'Ray'&#41;&#123;&#125;
+                    <br><code>function hi&#40;&#41;;</code></dd>
+                  </dl>
+                </div>
+              </div>
+            </div>-->
+          </div>
+          
+          
+          <!-- -->
+          <!-- -->
+          <!--<hr class="my-5">
+          <h3 id="" class="text-center font-weight-bold mb-2"></h3>
           <p></p>
           
+          
+          
+          <!-- -->
+          <!-- -->
+          <!--<hr class="my-5">
+          <h3 id="" class="text-center font-weight-bold mb-2"></h3>
+          <p></p>
+          
+          
+          <!-- -->
+          <!-- -->
+          
           <!-- RESOURCES -->
+          <hr class="my-5">
           <ul>
             <li><b>RESOURCES</b></li>
             <li><a id="fade" href="https://www.w3schools.com/php/php_echo_print.asp">echo();</a> &#47;&#47; <a id="fade" href="https://www.phptpoint.com/php-echo-print">print();</a> &#47;&#47; Another List of Array <a id="fade" href="http://php.net/manual/en/ref.array.php">Functions</a></li>
