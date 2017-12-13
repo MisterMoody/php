@@ -462,7 +462,7 @@ $date = date_default_timezone_set('EST');
                     } catch (Exception $e) { echo "ERROR! " . $e->getMessage(); }
                     <br>echo "End of File";</code>
                   </h5>
-                  <p>When utilizing a Default Handler, it is importan to <i>Turn Off</i> Display Errors using <code>ini_set('display_errors', 'Off');</code>. The <code>set_error_handler(...);</code> Built-In Function is used to <i>Define our own Function for Handling Errors</i>. The name of this Function  is <code>"exception_error_handler"</code>. 
+                  <p>When utilizing a Default Handler, it is important to <i>Turn Off</i> Display Errors using <code>ini_set('display_errors', 'Off');</code>. The <code>set_error_handler(...);</code> Built-In Function is used to <i>Define our own Function for Handling Errors</i>. The name of this Function  is <code>"exception_error_handler"</code>. 
                   <br>The Function setup begins with <code>function exception_error_handler();</code> and is designed to <i>Pass 5 Parameters</i> (2 are required). 
                   <br>The <b>1st Param</b> <code>$severity</code> is an <i>Integer that Denotes the Level of Error raised</i>.  The <b>2nd Param</b> <code>$message</code> is a <i>String that Contains the Error Message</i>. The <b>3rd Optional Param</b> <code>$file</code> is a <i>String that Contains the File Name in which the Error was raised</i>. The <b>4th Param</b> <code>$line</code> is an <i>Integer that Contains the Line Number in which the Error was raised</i>.
                   <br>The Exception <code>throw new ErrorException(...)</code> is thrown from within the Function, and <i>Error Details</i> <code>($message, 0, $severity, $file, $line)</code> are Passed into the Exception.
