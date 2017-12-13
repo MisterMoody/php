@@ -30,6 +30,7 @@ body {
 }
 /*  */
 
+
 /*LISTS*/
 /*Unordered*/
 ul {
@@ -86,32 +87,37 @@ ol {
   background: #fff;
 }
 /**/
-
-/* ============================================= */
-/* ============================================= */
 .nav > .nav-tabs {
   text-align: center;
 }
 /**/
-
 /* ============================================= */
+/* MAIN BODY CONTAINER ========================= */
+.container {
+  max-width: 100%;
+  /*margin: 0 auto;
+  width: auto !important;*/ /*Find a way to Remove Right-Side Margin/Padding*/
+}
+/**/
 /* <Sidebar> =================================== */
 #sideNav {
-  background-color: yellow;
+  background-color: mistyrose;
   width: 200px;
   position: fixed;
-  height: 79%;
+  height: 81%;
 }
-
+/**/
+/* <Main Content Section> ====================== */
 #content {
-  float: left;
-  width: 84%;
+  float: right;
+  max-width: 100%;
   margin-left: 200px;
 }
 /* ============================================= */
 
 /*Code Snippets*/
 code, h4.card-subtitle {font-family: monospace; line-height: 2;}
+h5.card-subtitle {line-height: 2;}
 .card-subtitle > code {font-size: 18px;}
 /*Code NON Snippets*/
 code {font-size: 14px; line-height: 1;}
