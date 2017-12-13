@@ -379,10 +379,98 @@ $date = date_default_timezone_set('EST');
           
           <!-- -->
           <!-- -->
-          <!--<hr class="my-5">
-          <h3 id="" class="text-center font-weight-bold mb-2"></h3>
-          <p></p>
-          
+          <hr id="handleExceptions" class="my-5">
+          <h3 class="text-center font-weight-bold mb-2">Handling Exceptions</h3>
+          <p>An <b>Exception</b> is a <i>Data-Object</i> that is 'Thrown' by a program whenever there is an Error. Developers use the <code>try{} catch(){}</code> Conditional Statement to <i>Catch Exceptions</i>, which helps <i>End a Program Gracefully</i>. Exceptions work best with the Object-Oriented Programming practices and should not be used to manage program flow like a typical conditional statement.<br>*<i>Exceptions are an Object-Oriented approach to programming, while Errors are a Procedural apprach.</i></p>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Catching</b> an Exception</h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  <code>try { $db = new PDO("sqlite:" .__DIR__. "/database.db");
+                  <br>} catch (Exception $e) {
+                  <br><?php echo str_repeat("&nbsp;", 3); ?> 
+                    echo "Unable to connect: " . $e->getMessage()
+                  <br><?php echo str_repeat("&nbsp;", 5); ?> 
+                    . " in File: " . $e->getFile()
+                  <br><?php echo str_repeat("&nbsp;", 5); ?> 
+                    . " on line " . $e->getLine();
+                  <?php echo str_repeat("&nbsp;", 5); ?>}</code>
+                  </h5>
+                  <p class="card-text">In this example, a <code>try{} catch(){}</code> <b>Conditional Statement</b> is used to <i>Catch the Exception</i>. 
+                  <br>The <code>$db = new PDO("...");</code> <b>Variable</b> is <i>what we Attempt to Execute or 'Try'</i>. 
+                  <br>The <b>Value</b> <code>"sqlite:" .__DIR__. "/database.db"</code>requests to be <i>Connected to a SQL Lite Database</i> and if there is an <i>Connection Error</i>, the <code>PDO()</code> <b>Class</b> will <i>Throw an Exception</i>.
+                  <br>The <code>catch()</code> <b>Statement</b> tells PHP <i>What we are Catching</i>, which is catch(<code>Exception $e</code>). Our <code>Exception</code> is <i>Assigned a new Variable</i> <code>$e</code>. Then, it uses the Exception Variable<code>$e</code> to <i>get Details using the Exception Methods</i> as follows: 
+                  <br>The <code>$e->getMessage()</code> explains that <i>No Driver was Found in File</i>. 
+                  <br>The <code>$e->getFile()</code> <i>Returns the File Path</i>. 
+                  <br>The <code>$e->getLine()</code> <i>Returns the Line Number where Exception occurred</i>.</p>
+                </div>
+              </div>
+              <p></p>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Throwing</b> an Exception</h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  <code>try { if (!$file = fopen("data.txt", "r")){
+                  <br><?php echo str_repeat("&nbsp;", 3); ?> 
+                  throw new Exception('Unable to Access File'); <?php echo str_repeat("&nbsp;", 3); ?> }
+                  <br>} catch (Exception $e) {echo $e->getMessage(); }
+                  <br>echo "End of File";</code>
+                  </h5>
+                  <p class="card-text">In this example, <code>if (!$file = fopen("data.txt", "r"))</code> explains that <i>IF the File does NOT Open (with Reading Privliges)</i>, we <b>Throw</b> an Exception using <code>throw new Exception('Unable to Access File');</code>.</p>
+                </div>
+              </div>
+              <p></p>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Throwing</b> an Exception <span class="text-muted">[OOP Style]</span></h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  <code>class myData { function getData() {
+                  <?php echo str_repeat("&nbsp;", 3); ?></code>
+                  <br><?php echo str_repeat("&nbsp;", 3); ?>
+                    if (!$file = fopen("data.txt", "r")){
+                  <br><?php echo str_repeat("&nbsp;", 6); ?> 
+                  throw new Exception('Unable to Access File'); }<code> } }
+                  <br>$data = new myData();</code>
+                  <br>try { <code>$data->getData(); </code>} 
+                  <br><?php echo str_repeat("&nbsp;", 3); ?>catch (Exception $e) { echo $e->getMessage(); }
+                  <br>echo "End of File";
+                  </h5>
+                  <p class="card-text">In this example, OOP best practice is implemented by placing the previous code within a Class and Reads the File through the <code>getData()</code> Function. <br>The <code>getData</code> Method is used in a Class that uses a Function. Then, a new Object is <b>Instantiated</b> with <code>$data = new myData();</code>, which is used to <i>Place a Call</i> to the <code>getData</code> Method.
+                  <br>*The <code>fopen()</code> Method utilizes different modes <code>"r"</code> to Perform different actions for <i>What to do When Opening Files</i>.</p>
+                </div>
+              </div>
+              <p></p>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Use a <b>Default Handler</b> to Throw and Catch Exceptions</h4>
+                  <h5 class="card-subtitle mb-2 text-muted">
+                  <code>ini_set('display_errors', 'Off');
+                  <br>function exception_error_handler($severity, $message, $file, $line) {
+                  <br><?php echo str_repeat("&nbsp;", 3); ?>
+                    throw new ErrorException($message, 0, $severity, $file, $line); }
+                  <br>set_error_handler("exception_error_handler");
+                  <br>try { strpos();  
+                  <br><?php echo str_repeat("&nbsp;", 3); ?> 
+                    } catch (Exception $e) { echo "ERROR! " . $e->getMessage(); }
+                    <br>echo "End of File";</code>
+                  </h5>
+                  <p>When utilizing a Default Handler, it is importan to <i>Turn Off</i> Display Errors using <code>ini_set('display_errors', 'Off');</code>. The <code>set_error_handler(...);</code> Built-In Function is used to <i>Define our own Function for Handling Errors</i>. The name of this Function  is <code>"exception_error_handler"</code>. 
+                  <br>The Function setup begins with <code>function exception_error_handler();</code> and is designed to <i>Pass 5 Parameters</i> (2 are required). 
+                  <br>The <b>1st Param</b> <code>$severity</code> is an <i>Integer that Denotes the Level of Error raised</i>.  The <b>2nd Param</b> <code>$message</code> is a <i>String that Contains the Error Message</i>. The <b>3rd Optional Param</b> <code>$file</code> is a <i>String that Contains the File Name in which the Error was raised</i>. The <b>4th Param</b> <code>$line</code> is an <i>Integer that Contains the Line Number in which the Error was raised</i>.
+                  <br>The Exception <code>throw new ErrorException(...)</code> is thrown from within the Function, and <i>Error Details</i> <code>($message, 0, $severity, $file, $line)</code> are Passed into the Exception.
+                  <br>The <code>try{} catch(){}</code> Code-Block is used here to <i>Catch the Error that was Thrown</i> by the code above.</p>
+                </div>
+              </div>
+            </div>
+          </div>
           
           
           <!-- -->
