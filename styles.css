@@ -109,7 +109,7 @@ ol {
 /**/
 /* <Main Content Section> ====================== */
 #content {
-  float: right;
+  float: left;
   max-width: 100%;
   margin-left: 200px;
 }
