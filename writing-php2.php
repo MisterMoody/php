@@ -85,7 +85,7 @@ $date = date_default_timezone_set('EST');
           <ul>
             <li id=""><a id="fade" href="#content">Introduction</a></li>
             <li id=""><a id="fade" href="#templating">Templating</a></li>
-            <li id=""><a id="fade" href="#">xxx</a></li>
+            <li id=""><a id="fade" href="#varTags">&#60;html&#62; Variable Tags</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
             <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
@@ -114,7 +114,7 @@ $date = date_default_timezone_set('EST');
           <!-- ********** -->
           <!-- TEMPLATING -->
           <!-- ********** -->
-          <hr id="templating">
+          <hr id="templating"  class="my-4">
           <h3 class="text-center font-weight-bold mb-2">Templating</h3>
           <p><b>Templating</b> is a technique that is used to <u>Include Re-Usable Code that can be redistributed throughout a website from a single File</u>, which reduces the amount of code required, essentially limiting the number of errors a program contain. The basic principle is that certain structural patterns are common across multiple pages and these patterns should be separated to maintain clean code. For example, the Header, Navigation and Footer Sections most definitely will not change so we would create three files to contain the code for those sections, add those files to a specified Folder and then reference those scripts where required for individual pages. Lets look at the code that will facilitate this process.</p>
           <div class="row">
@@ -134,7 +134,10 @@ $date = date_default_timezone_set('EST');
                     <dt class="col-sm-1 text-truncate">3</dt>
                     <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage.</dd>
                   </dl>
-                  <p>The process is simple: <b>&#60;a&#62;</b> Create a traditional <code>index.php</code> File with a Navigation, Main Content and Footer Section. <b>&#60;b&#62;</b> Next, Create Files for both the Navigation and the Footer then place them in a <code>inc/</code> Folder. <b>&#60;c&#62;</b> Finally, Reference these Sections on all pages by Including them where required:</p>
+                  <p>The process is simple: 
+                  <br><b>&#60;a&#62;</b> Create a traditional <code>index.php</code> File with a Navigation, Main Content and Footer Section. 
+                  <br><b>&#60;b&#62;</b> Next, Create Files for both the Navigation and the Footer then place them in a <code>inc/</code> Folder. 
+                  <br><b>&#60;c&#62;</b> Finally, Reference these Sections on all pages by Including them where required. The first two steps are self-explanatory. For the third step, use the model below to guide you:</p>
                   <h4 class="card-subtitle mb-2 text-muted">
                   &#60;&#63;php<code>include("inc/header.php")</code>&#63;&#62;
                   &#60;&#63;php<code>include("inc/footer.php")</code>&#63;&#62;
@@ -144,81 +147,51 @@ $date = date_default_timezone_set('EST');
                 </div>
               </div>
             </div>
-            <div class="col-12 mb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title"><b>Review</b> How to Make a Function</h4>
-                  
-                  <dl class="row">
-                    <dt class="col-sm-4 card-title"><b>Create</b> a Function</dt>
-                    <dd class="col-sm-8 card-subtitle mb-2 text-muted"><code>function hi()&#123;&#125;</code></dd>
-
-
-                    <dt class="col-sm-4"><b>Pass a Value</b></dt>
-                    <dd class="col-sm-8">function hi<code>&#40;&#36;name &#61; 'Ray'&#41;</code>&#123;&#125;</dd>
-
-                    <dt class="col-sm-4 text-truncate"><b>Call</b> a Function</dt>
-                    <dd class="col-sm-8">function hello&#40;&#36;name &#61; 'Ray'&#41;&#123;&#125;
-                    <br><code>function hi&#40;&#41;;</code></dd>
-                  </dl>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 mb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Set PHP to <b>Display Errors</b> <small>in a PHP File</small></h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                  &#60;?php
-                  <br><code class="mb-4">error_reporting(E_ALL);</code>
-                    <?php echo str_repeat("&nbsp;", 38); ?>
-                    <small>//Report Simple Errors</small>
-                  <br><code>ini_set('display_errors', 1);</code>
-                    <?php echo str_repeat("&nbsp;", 26); ?> 
-                    <small>//Turn Errors 'On'</small>
-                  <br><code>ini_set("html_errors", 1);</code>
-                    <?php echo str_repeat("&nbsp;", 32); ?> 
-                    <small>//Format Errors in &#60;html&#62;</small>
-                  <br><code>include('file2check.php');</code>
-                    <?php echo str_repeat("&nbsp;", 32); ?> 
-                    <small>//File to Check</small>
-                  <br>?&#62;
-                  </h5>
-                  <p class="card-text">Add these lines at the TOP of any script to Check for Errors Prior to writing Code. <br><code>1</code> and <code>'on'</code> are interchangeable for Turning Errors On.</p>
-                </div>
-              </div>
-              <p>There is also a way to <u>Set PHP to Display Errors in a Development Server</u>, but the practice does not add additional benefits so I will not elaborate, but essentially you access the php.ini and make the same changes either in the Console or using an IDE.</p>
-              <p>Taking Error Handling a step further, it is good practice to <b>Log Errors</b> to a specific location to keep track of project issues. In the example below, Errors will be Logged to the <code>"php-error.txt"</code> File.</p>
-            </div>
-            <div class="col-12 mb-2">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title"><b>Catching</b> an Exception</h4>
-                  <h5 class="card-subtitle mb-2 text-muted">
-                  <code>try { $db = new PDO("sqlite:" .__DIR__. "/database.db");
-                  <br>} catch (Exception $e) {
-                  <br><?php echo str_repeat("&nbsp;", 3); ?> 
-                    echo "Unable to connect: " . $e->getMessage()
-                  <br><?php echo str_repeat("&nbsp;", 5); ?> 
-                    . " in File: " . $e->getFile()
-                  <br><?php echo str_repeat("&nbsp;", 5); ?> 
-                    . " on line " . $e->getLine();
-                  <?php echo str_repeat("&nbsp;", 5); ?>}</code>
-                  </h5>
-                  <p class="card-text">In this example, a <code>try{} catch(){}</code> <b>Conditional Statement</b> is used to <i>Catch the Exception</i>. 
-                  <br>The <code>$db = new PDO("...");</code> <b>Variable</b> is <i>what we Attempt to Execute or 'Try'</i>. 
-                  <br>The <b>Value</b> <code>"sqlite:" .__DIR__. "/database.db"</code>requests to be <i>Connected to a SQL Lite Database</i> and if there is an <i>Connection Error</i>, the <code>PDO()</code> <b>Class</b> will <i>Throw an Exception</i>.
-                  <br>The <code>catch()</code> <b>Statement</b> tells PHP <i>What we are Catching</i>, which is catch(<code>Exception $e</code>). Our <code>Exception</code> is <i>Assigned a new Variable</i> <code>$e</code>. Then, it uses the Exception Variable<code>$e</code> to <i>get Details using the Exception Methods</i> as follows: 
-                  <br>The <code>$e->getMessage()</code> explains that <i>No Driver was Found in File</i>. 
-                  <br>The <code>$e->getFile()</code> <i>Returns the File Path</i>. 
-                  <br>The <code>$e->getLine()</code> <i>Returns the Line Number where Exception occurred</i>.</p>
-                </div>
-              </div>
-              <p></p>
-            </div>
           </div>
           <!-- ********** -->
           <!-- ********** -->
+          
+          
+          <!-- ******************** -->
+          <!-- <html> VARIABLE TAGS -->
+          <!-- ******************** -->
+          <hr id="varTags" class="my-4">
+          <h3 class="text-center font-weight-bold mb-2">Using Variables for &#60;html&#62; Tags</h3>
+          <p>Sometimes you want to Modify a particular Template component and PHP allows us to do that without altering its code by using <b>&#60;html&#62; Variable Tags</b>. This technique is useful for repetitive, yet, unique Content.</p>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"> Using <b>&#60;html&#62; Variable Tags</b> for the <i>&#60;title&#62;</i> of all Pages.</h4>
+                  <p>In this example, we are going to write two lines of code that will Instantiate a Variable called <i>$pageTitle</i> that will <u>Display the Name of the Page in the Browser-Tab</u>.</p>
+                  <!-- [2] <html> Variable Tags Process -->
+                  <dl class="row">
+                    <dt class="col-sm-1">1</dt>
+                    <dd class="col-sm-11">Instantiate Variable &amp; Echo it through a script in the Template &#60;title&#62; Placeholder.</dd>
+
+                    <dt class="col-sm-1">2</dt>
+                    <dd class="col-sm-11">Use the Variable on the page and Specify its unique Value.. <i>*Dont forget to Include the File</i>.</dd>
+                  </dl>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    inc/header.php
+                    <?php echo str_repeat("&nbsp;", 5); ?>
+                    &#60;?php &#60;title&#62; &#60;php<code> echo $pageTitle</code>&#62; &#60;&#47;title&#62; ?&#62;
+                  </h4>
+                  <h4 class="card-subtitle mb-2 text-muted">
+                    index.php
+                    <?php echo str_repeat("&nbsp;", 10); ?>
+                    &#60;?php<code>&#36;pageTitle = "Unique Title for that Page";</code>
+                    <br><?php echo str_repeat("&nbsp;", 20); ?>
+                    <code>include("inc/header.php");</code>?&#62;
+                  </h4>
+                  <p><i>You MUST Assign the Variable Above the Include-File in order to Re-Use that Code for that page!</i></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ******************** -->
+          <!-- ******************** -->
+          
           
           <!-- 
             <div class="col-12 mb-2">
