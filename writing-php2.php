@@ -84,7 +84,7 @@ $date = date_default_timezone_set('EST');
           <h4>Build a PHP Website</h4>
           <ul>
             <li id=""><a id="fade" href="#content">Introduction</a></li>
-            <li id=""><a id="fade" href="#templating"><b>Templating</b></a></li>
+            <li id=""><a id="fade" href="#templating">Templating</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
@@ -114,22 +114,33 @@ $date = date_default_timezone_set('EST');
           <!-- ********** -->
           <!-- TEMPLATING -->
           <!-- ********** -->
-          <h3 id="templating" class="text-center font-weight-bold mb-2">Templating</h3>
+          <hr id="templating">
+          <h3 class="text-center font-weight-bold mb-2">Templating</h3>
+          <p><b>Templating</b> is a technique that is used to <u>Include Re-Usable Code that can be redistributed throughout a website from a single File</u>, which reduces the amount of code required, essentially limiting the number of errors a program contain. The basic principle is that certain structural patterns are common across multiple pages and these patterns should be separated to maintain clean code. For example, the Header, Navigation and Footer Sections most definitely will not change so we would create three files to contain the code for those sections, add those files to a specified Folder and then reference those scripts where required for individual pages. Lets look at the code that will facilitate this process.</p>
           <div class="row">
-            <div class="col-md-12 mb-2">
+            <div class="col-12 mb-2">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title"><b>Syntax</b> for Understanding Functions</h4>
+                  <h4 class="card-title"> <b>Templating</b> for <i>&#60;nav&#62; and &#60;footer&#62; Sections</i></h4>
+                  <p>In this example, we are going to set up two Template Files for for both the Navigation and the Footer in three simple steps.</p>
+                  <!-- [1] Templating Process -->
+                  <dl class="row">
+                    <dt class="col-sm-1 card-title">1</dt>
+                    <dd class="col-sm-11"><b>Create an inc/ Folder</b> <u>to store all Templates</u>.</dd>
+
+                    <dt class="col-sm-1">2</dt>
+                    <dd class="col-sm-11"><b>Create Files &#40;ie Templates&#41;</b> <u>to Store the Code for the Nav and Footer Sections</u>.</dd>
+
+                    <dt class="col-sm-1 text-truncate">3</dt>
+                    <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage.</dd>
+                  </dl>
+                  <p>The process is simple: <b>&#60;a&#62;</b> Create a traditional <code>index.php</code> File with a Navigation, Main Content and Footer Section. <b>&#60;b&#62;</b> Next, Create Files for both the Navigation and the Footer then place them in a <code>inc/</code> Folder. <b>&#60;c&#62;</b> Finally, Reference these Sections on all pages by Including them where required:</p>
                   <h4 class="card-subtitle mb-2 text-muted">
-                  &#60;&#63;php
-                  <code>function hello() {
-                    echo "Hello, World!";
-                  }
-                  hello();</code>
-                  &#63;&#62;
+                  &#60;&#63;php<code>include("inc/header.php")</code>&#63;&#62;
+                  &#60;&#63;php<code>include("inc/footer.php")</code>&#63;&#62;
                   </h4>
-                  <p>Run this Code in the Console to Reveal the Output: <?php function hello() { echo "<b>Hello, World!</b>";} hello(); ?></p>
-                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                  <p>It should be obvious that you would place the <i>header.php</i> and <i>footer.php</i> Files at the Top and Bottom of the page, respectively. That is to say, placement of such statements matter.</p>
+                  <p>Where <i>inc/header.php</i> contains <u>the Opening</u> &#60;html&#62; and &#60;body&#62; <u>Tags</u>, the &#60;head&#62; Tag, &#60;header&#62; and &#60;nav&#62; Tags, and the Opening &#60;div&#62; Tag for Main-Content. Conversly, the <i>inc/footer.php</i> contains <u>the Closing</u>u> &#60;&#47;html&#62; and &#60;&#47;body&#62; <u>Tags</u>, the &#60;footer&#62; Tag and the Closing &#60;&#47;div&#62; Tag for Main-Content.</p>
                 </div>
               </div>
             </div>
@@ -209,6 +220,52 @@ $date = date_default_timezone_set('EST');
           <!-- ********** -->
           <!-- ********** -->
           
+          <!-- 
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"> <b>Templating</b> for <i>&#60;nav&#62; and &#60;footer&#62; Sections</i></h4>
+                  <p>In this example, we are going to set up two Template Files for for both the Navigation and the Footer in three simple steps.</p>
+                  <dl class="row">
+                    <dt class="col-sm-1 card-title">1</dt>
+                    <dd class="col-sm-11"><b>Create an inc/ Folder</b> <u>to store all Templates</u>.</dd>
+
+                    <dt class="col-sm-1">2</dt>
+                    <dd class="col-sm-11"><b>Create Files &#40;ie Templates&#41;</b> <u>to Store the Code for the Nav and Footer Sections</u>.</dd>
+
+                    <dt class="col-sm-1 text-truncate">3</dt>
+                    <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage.</dd>
+                  </dl>
+                  <p>This process looks like this in code:</p>
+                  <div class="row">
+                    <div class="col-md-6">
+                  <h4 class="card-subtitle mb-2 text-muted">
+                  &#60;&#63;php
+                  <code>function hello() {
+                    echo "Hello, World!";
+                  }
+                  hello();</code>
+                  &#63;&#62;
+                  </h4>
+                  <p>Run this Code in the Console to Reveal </p>
+                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                    </div>
+                    <div class="col-md-6">
+                  <h4 class="card-subtitle mb-2 text-muted">
+                  &#60;&#63;php
+                  <code>function hello() {
+                    echo "Hello, World!";
+                  }
+                  hello();</code>
+                  &#63;&#62;
+                  </h4>
+                  <p>xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxx</p>
+                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
           
           <!-- ********* -->
           <!-- RESOURCES -->
