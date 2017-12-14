@@ -8,7 +8,7 @@ $date = date_default_timezone_set('EST');
 <!DOCTYPE html>
 <html lang="en">
   
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A Self-Directing Guidebook  to Building an Application Using PHP">
@@ -50,13 +50,16 @@ $date = date_default_timezone_set('EST');
             <a class="nav-link" href="../index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">101</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="syntax.php">Basics</a>
-              <a class="dropdown-item" href="control_structures.php">Control Structures</a>
+              <a class="dropdown-item" href="devenviron.php">Dev Environment</a>
+              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>
+              <a class="dropdown-item" href="writing-php2.php">Writing PHP II</a>
               <a class="dropdown-item" href="arrays.php">Arrays</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Examples</a>
+              <a class="dropdown-item" href="loops.php">Loops</a>
+              <a class="dropdown-item" href="functions.php">Functions</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>-->
             </div>
           </li>
           <li class="nav-item">
@@ -67,7 +70,7 @@ $date = date_default_timezone_set('EST');
      </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
-         
+    
     
     <!-- ********************************************************* -->
     <!-- *************** <MAIN> CONTAINER ************************ -->
@@ -109,7 +112,7 @@ $date = date_default_timezone_set('EST');
           <h3 id="implement" class="text-center font-weight-bold mb-2">Implementing PHP</h3>
           <div class="row mb-2">
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Create a PHP File</h4>
                   <h4 class="card-subtitle mb-2 text-muted">file-name<code>.php</code></h4>
@@ -118,7 +121,7 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Invoke PHP Code-Blocks</h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>&#60;&#63;php</code> PHP Code <code>&#63;&#62;</code></h4>
@@ -127,7 +130,7 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Declare a Variable</h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>&#36;varName = "Value";</code></h4>
@@ -136,7 +139,7 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Comment Code </h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>//Comment</code></h4>
@@ -145,7 +148,7 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Display a Message</h4>
                   <h4 class="card-subtitle mb-2 text-muted"><code>echo "Hello World";</code></h4>
@@ -154,7 +157,7 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
             <div class="col-6 mb-2">
-              <div class="card" style="width: 20rem;">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Escape Sequence</h4>
                   <h4 class="card-subtitle mb-2 text-muted">

@@ -33,6 +33,7 @@ $date = date_default_timezone_set('EST');
   </head>
   
   <body>
+
     <!-- ********************************************************* -->
     <!-- *************** <NAVIGATION> CONTAINER[S] *************** -->
     <!-- ********************************************************* -->
@@ -52,13 +53,14 @@ $date = date_default_timezone_set('EST');
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">101</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="devenviron.php">Set Up a Dev Environ</a>
-              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>       
-              <a class="dropdown-item" href="arrays.php">Arrays</a>       
-              <a class="dropdown-item" href="loops.php">Loops</a>       
-              <a class="dropdown-item" href="functions.php">Functions</a> 
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Examples</a>
+              <a class="dropdown-item" href="devenviron.php">Dev Environment</a>
+              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>
+              <a class="dropdown-item" href="writing-php2.php">Writing PHP II</a>
+              <a class="dropdown-item" href="arrays.php">Arrays</a>
+              <a class="dropdown-item" href="loops.php">Loops</a>
+              <a class="dropdown-item" href="functions.php">Functions</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>-->
             </div>
           </li>
           <li class="nav-item">
@@ -69,6 +71,7 @@ $date = date_default_timezone_set('EST');
      </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
+ 
          
     
     <!-- ********************************************************* -->

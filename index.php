@@ -35,6 +35,7 @@ $date = date_default_timezone_set('EST');
   <body>
     <!-- ********************************************************* -->
     <!-- *************** <NAVIGATION> CONTAINER[S] *************** -->
+    <!-- ********************************************************* -->
     <nav class="navbar sticky-top navbar-expand-md navbar-toggleable-sm navbar-light"> 
       <a class="navbar-brand"><span class="font-weight-bold navPhone pl-1">PHP 101</span>
         <!--<span class="font-weight-bold navPhone pl-1"><i class="fa fa-phone d-lg-inline-block"></i> +1.502.558.9240 </span>-->
@@ -46,28 +47,30 @@ $date = date_default_timezone_set('EST');
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
           <li class="nav-item active text-right">
-            <a class="nav-link" href="index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
+            <a class="nav-link" href="../index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="devenviron.php">Set Up a Dev Environ</a>
-              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>       
-              <a class="dropdown-item" href="arrays.php">Arrays</a>       
-              <a class="dropdown-item" href="loops.php">Loops</a>       
-              <a class="dropdown-item" href="functions.php">Functions</a> 
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Examples</a>
+              <a class="dropdown-item" href="devenviron.php">Dev Environment</a>
+              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>
+              <a class="dropdown-item" href="writing-php2.php">Writing PHP II</a>
+              <a class="dropdown-item" href="arrays.php">Arrays</a>
+              <a class="dropdown-item" href="loops.php">Loops</a>
+              <a class="dropdown-item" href="functions.php">Functions</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>-->
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" src="#" href="scripts.php" alt="PHP Scripts">Scripts</a>
+            <a class="nav-link" src="#" href="../scripts.php" alt="PHP Scripts">Scripts</a>
           </li>
         </ul>
       </div>
      </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
+ 
     <!-- -->
     <!-- -->
     <!-- -->

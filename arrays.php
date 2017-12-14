@@ -49,13 +49,16 @@ $date = date_default_timezone_set('EST');
             <a class="nav-link" href="../index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Syntax</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">101</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="syntax.php">Basics</a>
-              <a class="dropdown-item" href="control_structures.php">Control Structures</a>
+              <a class="dropdown-item" href="devenviron.php">Dev Environment</a>
+              <a class="dropdown-item" href="writing-php.php">Writing PHP</a>
+              <a class="dropdown-item" href="writing-php2.php">Writing PHP II</a>
               <a class="dropdown-item" href="arrays.php">Arrays</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Examples</a>
+              <a class="dropdown-item" href="loops.php">Loops</a>
+              <a class="dropdown-item" href="functions.php">Functions</a>
+              <!--<div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Examples</a>-->
             </div>
           </li>
           <li class="nav-item">
@@ -66,7 +69,7 @@ $date = date_default_timezone_set('EST');
      </nav>
     <!-- ********************************************************* -->
     <!-- ********************************************************* -->
-         
+       
     
     <!-- ********************************************************* -->
     <!-- *************** <MAIN> CONTAINER ************************ -->
