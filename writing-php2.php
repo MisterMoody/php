@@ -86,7 +86,7 @@ $date = date_default_timezone_set('EST');
             <li id=""><a id="fade" href="#content">Introduction</a></li>
             <li id=""><a id="fade" href="#templating">Templating</a></li>
             <li id=""><a id="fade" href="#varTags">&#60;html&#62; Variable Tags</a></li>
-            <li id=""><a id="fade" href="#">xxx</a></li>
+            <li id=""><a id="fade" href="#getVar">Same-Page &#60;nav&#62;</a></li>
             <li id=""><a id="fade" href="#">xxx</a></li>
             <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
           </ul>
@@ -126,13 +126,13 @@ $date = date_default_timezone_set('EST');
                   <!-- [1] Templating Process -->
                   <dl class="row">
                     <dt class="col-sm-1 card-title">1</dt>
-                    <dd class="col-sm-11"><b>Create an inc/ Folder</b> <u>to store all Templates</u>.</dd>
+                    <dd class="col-sm-11"><b>Create an inc/ Folder</b> <u>to store all Templates</u></dd>
 
                     <dt class="col-sm-1">2</dt>
-                    <dd class="col-sm-11"><b>Create Files &#40;ie Templates&#41;</b> <u>to Store the Code for the Nav and Footer Sections</u>.</dd>
+                    <dd class="col-sm-11"><b>Create Files &#40;ie Templates&#41;</b> <u>to Store the Code for the Nav and Footer Sections</u></dd>
 
                     <dt class="col-sm-1 text-truncate">3</dt>
-                    <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage.</dd>
+                    <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage</dd>
                   </dl>
                   <p>The process is simple: 
                   <br><b>&#60;a&#62;</b> Create a traditional <code>index.php</code> File with a Navigation, Main Content and Footer Section. 
@@ -167,10 +167,10 @@ $date = date_default_timezone_set('EST');
                   <!-- [2] <html> Variable Tags Process -->
                   <dl class="row">
                     <dt class="col-sm-1">1</dt>
-                    <dd class="col-sm-11">Instantiate Variable &amp; Echo it through a script in the Template &#60;title&#62; Placeholder.</dd>
+                    <dd class="col-sm-11"><b>Instantiate Variable &amp; Echo it</b> through a script in the Template &#60;title&#62; Placeholder.</dd>
 
                     <dt class="col-sm-1">2</dt>
-                    <dd class="col-sm-11">Use the Variable on the page and Specify its unique Value.. <i>*Dont forget to Include the File</i>.</dd>
+                    <dd class="col-sm-11">Use the Variable on the page and <b>Specify its unique Value</b>. <i>*Dont forget to Include the File</i>.</dd>
                   </dl>
                   <h4 class="card-subtitle mb-2 text-muted">
                     inc/header.php
@@ -193,52 +193,68 @@ $date = date_default_timezone_set('EST');
           <!-- ******************** -->
           
           
-          <!-- 
+          <!-- *************** -->
+          <!-- SAME-PAGE <NAV> -->
+          <!-- *************** -->
+          <hr id="getVar" class="my-4">
+          <h3 class="text-center font-weight-bold mb-2">
+          Linking to Different Sections within the Same Page
+          </h3>
+          <p>PHP offers a <b>Server Variable</b> called <b>$_GET[""]</b>, which enables Users to <u>Receive Data</u>. As we continue, we will use such superpowers to <u>setup an in-page Navigation system</u> that will allow users to look at different types of content. This Variable will <i>Return Specified Variable Values</i> and is especially useful when creating an in-page &#60;nav&#62; system. Lets explore!</p>
+          <div class="row">
             <div class="col-12 mb-2">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title"> <b>Templating</b> for <i>&#60;nav&#62; and &#60;footer&#62; Sections</i></h4>
-                  <p>In this example, we are going to set up two Template Files for for both the Navigation and the Footer in three simple steps.</p>
-                  <dl class="row">
-                    <dt class="col-sm-1 card-title">1</dt>
-                    <dd class="col-sm-11"><b>Create an inc/ Folder</b> <u>to store all Templates</u>.</dd>
-
-                    <dt class="col-sm-1">2</dt>
-                    <dd class="col-sm-11"><b>Create Files &#40;ie Templates&#41;</b> <u>to Store the Code for the Nav and Footer Sections</u>.</dd>
-
-                    <dt class="col-sm-1 text-truncate">3</dt>
-                    <dd class="col-sm-11"><b>Use the built-in Include Statement</b> <u>to Add those Files from the inc/ Folder</u> and <u>Reference those statements where required</u> on each webpage.</dd>
-                  </dl>
-                  <p>This process looks like this in code:</p>
+                  <h4 class="card-title">Same-Page Navigation using the <b>$_GET[]</b> Variable </h4>
+                  <p></p>
                   <div class="row">
-                    <div class="col-md-6">
-                  <h4 class="card-subtitle mb-2 text-muted">
-                  &#60;&#63;php
-                  <code>function hello() {
-                    echo "Hello, World!";
-                  }
-                  hello();</code>
-                  &#63;&#62;
-                  </h4>
-                  <p>Run this Code in the Console to Reveal </p>
-                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                    <div class="col-12">
+                      <dl class="row">
+                        <dt class="col-sm-1 card-title">1</dt>
+                        <dd class="col-sm-11">Instantiate a Default $pageTitle (after Storing it in the Template)</dd>
+
+                        <dt class="col-sm-1">2</dt>
+                        <dd class="col-sm-11">Create a Conditional that Checks the Value of all Category-Links using the $_GET Variable.
+                        <br>Add the $pageTitle to the &#60;html&#63; Tag.</dd>
+
+                        <dt class="col-sm-1">3</dt>
+                        <dd class="col-sm-11">Add a Query-String to the &#60;nav&#62; in the inc/header.php File</dd>
+
+                        <dt class="col-sm-1">4</dt>
+                        <dd class="col-sm-11">Check Conditional Before Execution using the isset() Function</dd>
+                      </dl>
                     </div>
-                    <div class="col-md-6">
-                  <h4 class="card-subtitle mb-2 text-muted">
-                  &#60;&#63;php
-                  <code>function hello() {
-                    echo "Hello, World!";
-                  }
-                  hello();</code>
-                  &#63;&#62;
-                  </h4>
-                  <p>xxxxxxxxxxxxxx xxxxxxxxxxxxxx xxxxxxxxxxxx</p>
-                  <p class="card-text">The <code>function</code> Keyword signals the PHP Interpreter that this script is a <b>Function</b>. The Function-Name <code>hello() {}</code> is then <b><i>Passed to the function</i></b>. The <code>&#40;&#41;</code> take on the <i>Arugments</i> while the <code>&#123;&#125;</code> take on any <i>Statements</i> &#40;there are no Arguments and the Statment is "Hello, World!"&#41;. Finally, you <b><i>Call the Function</i></b> by using the Function-Name at the End of the Script.</p>
+                    <div class="col-12">
+                      <p>Steps <b>1</b>, <b>2</b> and <b>4</b> would look like this:</p>
+                      <h4 class="card-subtitle mb-2 text-muted">&#60;&#63;php
+                      <code>$pageTitle = "Catalog"</code>
+                      <br>if <code>(isset($_GET[""])) {</code>
+                      <br><code>if ($_GET["cat"] == "books") </code>{$pageTitle = "Books";}
+                      <br>else <code>if ($_GET["cat"] == "movies") </code>{ $pageTitle = "Movies";}
+                      <br>else <code>if ($_GET["cat"] == "music") </code>{ $pageTitle = "Music";} <code>}</code>
+                      <br>include("inc.header.php"); &#63;&#62;
+                      <br>&#60;div class="section page"&#62;
+                      <br>&#60;h1&#62;<code>$pageTitle</code> &#60;/h1&#62;
+                      </h4>
+                      <p><b>catalog.php</b><?php echo str_repeat("&nbsp;", 5); ?>The <code>$pageTitle</code> Variable is instantiated for the Page Title. Its Value is <i>"Full Catalog"</i>, and would be used in the case that a Value does not exist for that Section. The <code>if($_GET[]){}</code> Conditional determines how the Browser will react to User input. This Conditional is placed inside a <code>if(isset()){}</code> Variable to <u>Test the Execution of the script itself</u>. The <code>$pageTitle</code> Variable is then appropriately placed, allowing Users to switch between book, movie and music <code>"Cat"</code> content.</p>
+                    </div>
+                    <div class="col-12">
+                      <p>Steps <b>3</b> would look like this:</p>
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      &#60;li class="books"&#62;&#60;a href="catalog.php<code>?cat=books</code>"&#62;
+                      </h4>
+                      <p><b>header.php</b><?php echo str_repeat("&nbsp;", 5); ?> The <u>Query String</u> is applied to all Links for that Page. <code>?cat</code> represents the <u>Catalog Variable</u>, while <code>=books</code> represents the <u>Specified Category Value</u>.</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
+          </div>
+          
+          
+          <!-- *************** -->
+          <!-- *************** -->
+          
           
           <!-- ********* -->
           <!-- RESOURCES -->
