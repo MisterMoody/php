@@ -87,7 +87,7 @@ $date = date_default_timezone_set('EST');
             <li id=""><a id="fade" href="#templating">Templating</a></li>
             <li id=""><a id="fade" href="#varTags">&#60;html&#62; Variable Tags</a></li>
             <li id=""><a id="fade" href="#getVar">Same-Page &#60;nav&#62;</a></li>
-            <li id=""><a id="fade" href="#">xxx</a></li>
+            <li id=""><a id="fade" href="#activeState">Active-State</a></li>
             <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
           </ul>
         </nav>
@@ -114,7 +114,7 @@ $date = date_default_timezone_set('EST');
           <!-- ********** -->
           <!-- TEMPLATING -->
           <!-- ********** -->
-          <hr id="templating"  class="my-4">
+          <hr id="templating"  class="my-5 pt-3">
           <h3 class="text-center font-weight-bold mb-2">Templating</h3>
           <p><b>Templating</b> is a technique that is used to <u>Include Re-Usable Code that can be redistributed throughout a website from a single File</u>, which reduces the amount of code required, essentially limiting the number of errors a program contain. The basic principle is that certain structural patterns are common across multiple pages and these patterns should be separated to maintain clean code. For example, the Header, Navigation and Footer Sections most definitely will not change so we would create three files to contain the code for those sections, add those files to a specified Folder and then reference those scripts where required for individual pages. Lets look at the code that will facilitate this process.</p>
           <div class="row">
@@ -155,7 +155,7 @@ $date = date_default_timezone_set('EST');
           <!-- ******************** -->
           <!-- <html> VARIABLE TAGS -->
           <!-- ******************** -->
-          <hr id="varTags" class="my-4">
+          <hr id="varTags" class="my-5 pt-3">
           <h3 class="text-center font-weight-bold mb-2">Using Variables for &#60;html&#62; Tags</h3>
           <p>Sometimes you want to Modify a particular Template component and PHP allows us to do that without altering its code by using <b>&#60;html&#62; Variable Tags</b>. This technique is useful for repetitive, yet, unique Content.</p>
           <div class="row">
@@ -196,7 +196,7 @@ $date = date_default_timezone_set('EST');
           <!-- *************** -->
           <!-- SAME-PAGE <NAV> -->
           <!-- *************** -->
-          <hr id="getVar" class="my-4">
+          <hr id="getVar" class="my-5 pt-3">
           <h3 class="text-center font-weight-bold mb-2">
           Linking to Different Sections within the Same Page
           </h3>
@@ -250,16 +250,72 @@ $date = date_default_timezone_set('EST');
               </div>
             </div>
           </div>
-          
-          
           <!-- *************** -->
           <!-- *************** -->
+          
+          
+          <!-- ********************** -->
+          <!-- CSS Active-State <NAV> -->
+          <!-- ********************** -->
+          <hr id="activeState" class="my-5 pt-3">
+          <h3 class="text-center font-weight-bold mb-2">
+          Addin an Active-State Styles to &#60;a&#62; Links
+          </h3>
+          <p>At this juncture, we simply want Navigational Links to Highlight the Current Section of the <b>catalog.php</b> Page. This simple objective will implement Scroll-Spy powers and is performed with a little help from CSS.</p>
+          <div class="row">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title"><b>Active-State</b> CSS Styles </h4>
+                  <p></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <dl class="row">
+                        <dt class="col-sm-1 card-title">1</dt>
+                        <dd class="col-sm-11">Create a CSS Class for Styles</dd>
+
+                        <dt class="col-sm-1">2</dt>
+                        <dd class="col-sm-11">Instantiate a Variable to <u>Highlight Links</u> and Add the Variable to the Conditional-Block</dd>
+
+                        <dt class="col-sm-1">3</dt>
+                        <dd class="col-sm-11">Assign the CSS Class to the &#60;a&#62; Links</dd>
+
+                      </dl>
+                    </div>
+                    <div class="col-12">
+                      <p><b>Step 1</b> is performed in the <b>styles.css</b> File and simply involves adding a <u>Text-Decoration with a Value of 'Underline'</u>, like so:</p>
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      .header > .nav > li<code>.on {</code>text-decoration: underline;<code>}</code>
+                      </h4>
+                      <!-- -->  
+                      <p><b>Step 2</b> is a Two-Part process. The <u>1st part</u> is performed in the <b>index.php</b> and <b>catalog.php</b> Files. These pages represent the main-page and content-page, respectively, and must be included in both pages with a value of <i>'null'</i>, which is a <u>Default Parameter</u>, meaning that initially no page will be underlined. The <u>2nd part</u> is performed only in the <b>catalog.php</b> File where the Variable is <u>Assigned a Value for All Links</u>. Simply add the Variable beneath the <u>$pageTitle</u> Variable.</p>
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      $pageTitle = "Catalog" 
+                      <br><code>$section = null;</code><small>(Part 1)</small>
+                      <br>if (isset($_GET[""])) { if ($_GET["cat"] == "books")  {
+                      <br>$pageTitle = "Books";
+                      <br><code>$section = "books";</code><small>(Part 2)</small>
+                      </h4>
+                      <!-- -->
+                      <p><b>Step 3</b> is performed in the <b>header.php</b> File. Here, we want to <u>Add the $section Variable to all &#60;li&#62; Tags in a Conditional Statement</u> and then <u>Reference the CSS Class</u>. The Conditional states that <i>IF</i> the <u>$section Variable is Equal to '#', Display the Text-Decoration</u>. The Reference then <u>Echos</u> the Variable Value. Here is an example:</p>
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      &#60;li class="books <u>&#60;&#63;php if</u> <code>(section == "books")</code> {<code>echo "on";</code>} <u>&#63;&#62;"</u>&#62;
+                      </h4>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ********************** -->
+          <!-- ********************** -->
           
           
           <!-- ********* -->
           <!-- RESOURCES -->
           <!-- ********* -->
-          <hr class="my-5">
+          <hr class="my-5 pt-3">
           <ul>
             <li><b>RESOURCES</b></li>
             <li><a id="fade" href="">xx</a> &#47;&#47; 
@@ -277,6 +333,8 @@ $date = date_default_timezone_set('EST');
           </ul>
           <!-- ********* -->
           <!-- ********* -->
+          
+          
           <!-- ************************************ -->
           <!-- ************************************ -->
         </div><!-- \End of MAIN-CONTENT -->
