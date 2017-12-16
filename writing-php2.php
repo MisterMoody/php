@@ -88,7 +88,10 @@ $date = date_default_timezone_set('EST');
             <li id=""><a id="fade" href="#varTags">&#60;html&#62; Variable Tags</a></li>
             <li id=""><a id="fade" href="#getVar">Same-Page &#60;nav&#62;</a></li>
             <li id=""><a id="fade" href="#activeState">Active-State</a></li>
-            <li id=""><a id="fade" href="#"><b>xxx</b></a></li>
+            <li id=""><a id="fade" href="#storeData">Storing Catalog Data</a></li>
+            <li id=""><a id="fade" href="#"></a></li>
+            <li id=""><a id="fade" href="#"></a></li>
+            <li id=""><a id="fade" href="#"></a></li>
           </ul>
         </nav>
         <!-- \End of SIDEBAR -->
@@ -259,7 +262,7 @@ $date = date_default_timezone_set('EST');
           <!-- ********************** -->
           <hr id="activeState" class="my-5 pt-3">
           <h3 class="text-center font-weight-bold mb-2">
-          Addin an Active-State Styles to &#60;a&#62; Links
+          Adding an Active-State Styles to &#60;a&#62; Links
           </h3>
           <p>At this juncture, we simply want Navigational Links to Highlight the Current Section of the <b>catalog.php</b> Page. This simple objective will implement Scroll-Spy powers and is performed with a little help from CSS.</p>
           <div class="row">
@@ -310,6 +313,70 @@ $date = date_default_timezone_set('EST');
           </div>
           <!-- ********************** -->
           <!-- ********************** -->
+          
+          
+          <!-- ******************** -->
+          <!-- Storing Catalog Data -->
+          <!-- ******************** -->
+          <hr id="storeData" class="my-5 pt-3">          
+          <h3 class="text-center font-weight-bold mb-2">Storing Catalog Content</h3>
+          <p>This project is a <b>Catalog</b> of <u>Content that describes Books, Movies and Music</u>. This exercise utilizes a Single <i>Array</i> to Store the Content Data for the aforementioned Elements. Let's explore!</p>
+          
+          <div class="row">
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Using Arrays to <b>Store Catalog Content-Data</b></h4>
+                  <p></p>
+                  <div class="row">
+                    <div class="col-12">
+                      <dl class="row">
+                        <dt class="col-sm-1 card-title">1</dt>
+                        <dd class="col-sm-11">Instantiate an Array for the Catalog<br>Add Array Items</dd>
+                        
+                        <dt class="col-sm-1">2</dt>
+                        <dd class="col-sm-11">Create a CSS Class for the Catalog Variable and Add to the Section &#60;div&#62;</dd>
+
+                        <dt class="col-sm-1">3</dt>
+                        <dd class="col-sm-11">Create a Wrapper &#60;div&#62; to...</dd>
+                         
+                        <dt class="col-sm-1">4</dt>
+                        <dd class="col-sm-11">Create a foreach() Loop for the Catalog Variable &#60;nav&#62; Link Items
+                        <br>Assign each Item to the Item Variable and Display</dd>
+                      </dl>
+                    </div>
+                    <div class="col-12">
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      <code>$catalog = array();</code>
+                      <br><code>$catalog[101] = "</code>Design Patterns<code>";</code>
+                      <br><code>$catalog[201] = "</code>Forrest Gump<code>";</code>
+                      <br><code>$catalog[301] = "</code>Beethoven<code>";</code>
+                      <br><code>$catalog[102] = "</code>Clean Code<code>";</code>
+                      <br>&#60;div class="section<code>catalog</code>page"&#62;
+                      <br><?php echo str_repeat("&nbsp;", 2); ?> &#60;div class="<code>wrapper</code>"&#62;
+                      <br><?php echo str_repeat("&nbsp;", 4); ?> 
+                        &#60;h1&#62; &#60;&#63;php echo $pageTitle; &#63;&#62;
+                      <br><?php echo str_repeat("&nbsp;", 4); ?> &#60;ul&#62;
+                      <br><?php echo str_repeat("&nbsp;", 6); ?>  
+                        &#60;&#63;php <code>foreach(</code>$catalog as $item<code>)</code> 
+                        <code>{echo</code>"&#60;li&#62;$item&#60;/li&#62;";<code>}</code> 
+                      <br><?php echo str_repeat("&nbsp;", 4); ?> &#60;/ul&#62;
+                      <br>.........
+                      </h4>
+                      <p>I'm sure that you remember creating an Array from an earlier lesson, I will provide a refresher here. 
+                      <br>In the <b>catalog.php</b> File we, <b>Instantiated an Empty Array</b> <code>$catalog = array();</code> so that <u>All Elements can be Added Individualy</u>. Because our Array Values belong to Different Categories, we want to <u>Specigy our own Index-Keys</u> rather than use PHPs Default settings. We can accomplish this goal by using 100-Blocks for each Category and as is apparent our Index-Key Blocks will be divided into <code>100</code>, <code>200</code> and <code>300</code> Blocks, allowing easy Reference later. And we <u>Increment</u> whenever we Add a New Element.
+                      <br>The <code>foreach(){}</code> Loop Stores the <code>$catalog</code> Elements, where each Element is Assigned to the <code>$item</code> Variable. It will then Display the <code>$item</code> with the <code>echo</code> Statement.</p>
+                      <p><b>*!IMPORTANT:</b> Where there is only 1 &#60;ul&#62; Nav setup, <u>Add the foreach() Conditional <b>Inside the &#60;ul&#62;</b></u>. However, if there are Multiple &#60;ul&#62; Tags, then <u>the Conditional should be placed <b>Outside of the &#60;ul&#62;</b></u>.
+                        <br><code>"&#60;li&#62; . $item . &#60;/li&#62;";</code></p>
+                      <!-- --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ******************** -->
+          <!-- ******************** -->
           
           
           <!-- ********* -->
