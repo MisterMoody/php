@@ -326,7 +326,7 @@ $date = date_default_timezone_set('EST');
             <div class="col-12 mb-2">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Using Arrays to <b>Store Catalog Content-Data</b></h4>
+                  <h4 class="card-title">Use an Array to <b>Store Catalog Content-Data</b></h4>
                   <p></p>
                   <div class="row">
                     <div class="col-12">
@@ -347,7 +347,7 @@ $date = date_default_timezone_set('EST');
                     </div>
                     <div class="col-12">
                       <h4 class="card-subtitle mb-2 text-muted">
-                      <code>$catalog = array();</code>
+                      <code>$catalog = [];</code>
                       <br><code>$catalog[101] = "</code>Design Patterns<code>";</code>
                       <br><code>$catalog[201] = "</code>Forrest Gump<code>";</code>
                       <br><code>$catalog[301] = "</code>Beethoven<code>";</code>
@@ -368,6 +368,43 @@ $date = date_default_timezone_set('EST');
                       <br>The <code>foreach(){}</code> Loop Stores the <code>$catalog</code> Elements, where each Element is Assigned to the <code>$item</code> Variable. It will then Display the <code>$item</code> with the <code>echo</code> Statement.</p>
                       <p><b>*!IMPORTANT:</b> Where there is only 1 &#60;ul&#62; Nav setup, <u>Add the foreach() Conditional <b>Inside the &#60;ul&#62;</b></u>. However, if there are Multiple &#60;ul&#62; Tags, then <u>the Conditional should be placed <b>Outside of the &#60;ul&#62;</b></u>.
                         <br><code>"&#60;li&#62; . $item . &#60;/li&#62;";</code></p>
+                      <!-- --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Use an Assoc-Array to <b>Store Attributive-Content for Catalog Items</b></h4>
+                  <p>This practice extends the example above to include <u>Details for each Item in the Catalog</u>. <br>Using an <b>Associative Array</b> allows us to <u>Use Different Keys to Specify our Search</u>.</p>
+                  <div class="row">
+                    <div class="col-12">
+                      <dl class="row">
+                        <dt class="col-sm-1 card-title">1</dt>
+                        <dd class="col-sm-11">Instantiate an Associative Array for the Catalog <b>&amp;</b> Specify Index-Key</dd>
+                        
+                        <dt class="col-sm-1">2</dt>
+                        <dd class="col-sm-11">Display a Single Value in &#60;html&#62;
+                        &amp; Display a Multiple-Values in &#60;html&#62;</dd>
+                      </dl>
+                    </div>
+                    <div class="col-12">
+                      <h4 class="card-subtitle mb-2 text-muted">
+                      <code>$catalog = [];</code>
+                      <br><code>$catalog[101] = [</code>
+                      <br><?php echo str_repeat("&nbsp;", 2); ?> <code>"title" => </code>"Design Patterns",
+                      <?php echo str_repeat("&nbsp;", 2); ?> <code>"img" => </code>"img/filePath.jpg",
+                      <br><?php echo str_repeat("&nbsp;", 2); ?> <code>"genre" => </code>"Tech", 
+                      <?php echo str_repeat("&nbsp;", 2); ?> <code>"year" = </code>"1994",
+                      <?php echo str_repeat("&nbsp;", 2); ?> <code>"category" =" </code>"Books",
+                      <br><?php echo str_repeat("&nbsp;", 2); ?> <code>"authors" => </code>[
+                      <code>"Ray", "James"</code>]
+                      <br>]
+                      <br>.........
+                      </h4>
+                      <p>As you see, each Array Item has multiple Attributes of which we can  create a wide search that will return all Items based on that particular Index-Key. Furthermore, you realize that the <code>"authors =></code> Key is an Associative Array with a few values to recognize the writers who assisted with producing that particular book.</p>
                       <!-- --> 
                     </div>
                   </div>
