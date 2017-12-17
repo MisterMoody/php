@@ -404,7 +404,20 @@ $date = date_default_timezone_set('EST');
                       <br>]
                       <br>.........
                       </h4>
-                      <p>As you see, each Array Item has multiple Attributes of which we can  create a wide search that will return all Items based on that particular Index-Key. Furthermore, you realize that the <code>"authors =></code> Key is an Associative Array with a few values to recognize the writers who assisted with producing that particular book.</p>
+                      <p>As you see, each Array Item has multiple Attributes of which we can  create a wide search that will return all Items based on that particular Index-Key. Furthermore, you realize that the <code>"authors =></code> Key is an Associative Array with a few values to recognize the writers who assisted with producing that particular book. And with all of these Keys we can <u>Display All Items</u> by modifying the &#60;html&#62; in the <b>catalog.php</b> File.</p>
+                      <h3 class="card-subtitle mb-2 text-muted">
+                        <small>foreach($catalog as $item)</small><b>{</b>
+                        <br><?php echo str_repeat("&nbsp;", 2); ?> <small>echo</small><code>"&#60;li&#62;&#60;a href='#'>&#60;img src='" 
+                        <br><?php echo str_repeat("&nbsp;", 4); ?>. $item["img] . "' alt='"
+                        <br><?php echo str_repeat("&nbsp;", 4); ?>. $item["title] . "' /&#62; 
+                        <br><?php echo str_repeat("&nbsp;", 4); ?>. "&#60;p&#62;View Details&#60;/p&#62;"
+                        <br><?php echo str_repeat("&nbsp;", 4); ?>. "&#60;/a&#62;&#60;/li&#62;";</code>
+                        <b>}</b>
+                      </h3>
+                      <h5 class="card-subtitle mb-2">
+                        <b>*Bonus*</b> Display Specified Values with <code>echo $category["key"];</code>
+                      </h5>
+                      <p>Take a moment to look back at <u>Using &#60;html&#62; Variable Tags</u>. In this example, we want to request a list of movie "title"s and would do so like this: <code>echo $movie["title"];</code></p>
                       <!-- --> 
                     </div>
                   </div>
