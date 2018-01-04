@@ -36,15 +36,13 @@ $date = date_default_timezone_set('EST');
     <!-- *************** <NAVIGATION> CONTAINER[S] *************** -->
     <!-- ********************************************************* -->
     <nav class="navbar sticky-top navbar-expand-md navbar-toggleable-sm navbar-light"> 
-      <a class="navbar-brand"><span class="font-weight-bold navPhone pl-1">PHP 101</span>
-        <!--<span class="font-weight-bold navPhone pl-1"><i class="fa fa-phone d-lg-inline-block"></i> +1.502.558.9240 </span>-->
-        <!--<img src="..." width="30" height="30" class="d-inline-block align-top" alt="">-->
+      <a class="navbar-brand"><span class="font-weight-bold navPhone pl-1">Learning PHP</span>
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto"> <!-- Use "ml-auto" for Right Side Alignment-->
+        <ul class="navbar-nav mx-auto"> <!-- Use "ml-auto" to Align on Right-Side -->
           <li class="nav-item active text-right">
             <a class="nav-link" href="../index.php"><i class="fa fa-home d-none d-lg-inline-block"></i></a>
           </li>
