@@ -57,6 +57,7 @@ $date = date_default_timezone_set('EST');
               <a class="dropdown-item" href="arrays.php">Arrays</a>
               <a class="dropdown-item" href="loops.php">Loops</a>
               <a class="dropdown-item" href="functions.php">Functions</a>
+              <a class="dropdown-item" href="forms.php">Forms</a>
               <!--<div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Examples</a>-->
             </div>
