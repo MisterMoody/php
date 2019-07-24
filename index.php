@@ -62,7 +62,7 @@ $date = date_default_timezone_set('EST');
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" src="#" href="../scripts.php" alt="PHP Scripts">Scripts</a>
+            <a class="nav-link" href="scripts.php" alt="PHP Scripts">Scripts</a>
           </li>
         </ul>
       </div>
